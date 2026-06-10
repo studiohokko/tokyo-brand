@@ -1,0 +1,58 @@
+// -----------------------------------------------------------
+//  フォントファミリー
+// -----------------------------------------------------------
+$ff: 'Noto Sans JP', sans-serif; // bodyに指定するフォント
+$ff-ja: 'Noto Sans JP', sans-serif; //日本語onlyのフォント
+$ff-serif: 'Zen Old Mincho', serif; //セリフ体のフォント
+$ff-en: 'Roboto', sans-serif; //英語onlyのフォント
+$ff-both: 'Roboto', 'Noto Sans JP', sans-serif;
+
+// -----------------------------------------------------------
+//  レイアウト（単位不要）
+// -----------------------------------------------------------
+// ======== PCインナー基本設定
+$pc-inner: 1200; // pc版inner幅
+$pc-sidePadding: 50; //pc版サイドのpadding
+$pc-inner-sum: calc($pc-inner + $pc-sidePadding * 2);
+$pc-narrow-inner: 1100; //狭いinner幅
+$pc-narrow-inner-sum: calc($pc-narrow-inner + $pc-sidePadding * 2);
+
+// ======== SPインナー設定
+$sp-sidePadding: 20; //sp版サイドのpadding
+$sp-inner: 600;
+$sp-inner-sum: calc($sp-inner + $sp-sidePadding * 2);
+
+// ======== ブレイクポイント
+$breakpoint: 768; // ブレイクポイント (pc版カンプとsp版カンプの境界)
+$md-breakpoint: 550; // medium版ブレイクポイント
+$tb-breakpoint: 1024; // タブレット版ブレイクポイント
+
+// ======== カンプ
+$pc-camp: 1440; // pc版のカンプサイズを入力
+$sp-camp: 390; // sp版のカンプサイズを入力
+
+// ======== z-index
+$z-header: 100;
+$z-drawerIcon: 102;
+$z-drawer: 101;
+
+// ======== header
+$sp-header-height: 59;
+$pc-header-height: 181;
+
+// -----------------------------------------------------------
+//  color
+// -----------------------------------------------------------
+$color-text: #031f4f; // テキストカラー
+$color-main: #031f4f; //一番よく使われるカラー
+$color-accent-001: #f76b14;
+$color-accent-002: #06c755;
+$color-accent-003: #b2bfd8;
+$color-accent-004: #8594ac;
+$color-bg: #f0f5ff; //全体の背景色
+
+$white: #ffffff;
+$black: #000000;
+$gray: #f5f5f5;
+
+$gradation: linear-gradient(88deg, #1a366c 1.63%, #3369d2 98.14%);

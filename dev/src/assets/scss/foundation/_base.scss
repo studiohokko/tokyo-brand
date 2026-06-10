@@ -1,0 +1,63 @@
+@use '../global' as *;
+
+html {
+	@media screen and (max-width: #{px($pc-camp) - 1px}) and (min-width: #{px($breakpoint)}) {
+		font-size: calc(16 / #{$pc-camp} * 100vw);
+	}
+	@media screen and (max-width: #{px($breakpoint) - 1px}) {
+		font-size: calc(16 / #{$sp-camp} * 100vw);
+	}
+}
+
+body {
+	overflow-x: clip;
+	// background-color
+	color: $color-text;
+	line-height: 1.8;
+	font-size: rm(16);
+	font-family: $ff;
+
+	// ドロワーメニュー用
+	&.is_fixed {
+		overflow: hidden;
+		left: 0;
+		width: 100%;
+	}
+}
+
+body *,
+body *::before,
+body *::after {
+	letter-spacing: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+video,
+img,
+picture,
+svg {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+a,
+span {
+	display: inline-block;
+}
+
+button {
+	border: none;
+}
+
+// ******** responsive(pc)
+@include mq(pc) {
+	//pcではtelかけられないように
+	a[href*='tel:'] {
+		pointer-events: none;
+		cursor: default;
+		text-decoration: none;
+	}
+}
