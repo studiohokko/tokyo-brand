@@ -158,7 +158,9 @@ const browserReload = (done) => {
 	done();
 };
 
-// public 配下の png/jpg を TinyPNG で圧縮する(ソースは変更しない)
+// src 配下の png/jpg を TinyPNG で圧縮して public へ出力する(ソースは変更しない)
+// 入力を「変更されない src」にすることで、シグネチャ(未圧縮ソースのmd5)が安定し、
+// 一度圧縮した画像は dev/build を再実行してもスキップされる(API 消費を防ぐ)
 const tinyPng = () => {
 	const sigFilePath = './src/assets/img/.tinypng-sigs';
 
@@ -168,8 +170,9 @@ const tinyPng = () => {
 		console.log('TinyPNG signature file created');
 	}
 
-	return src('./public/assets/img/**/*.{png,jpg,jpeg}', {
+	return src('./src/assets/img/**/*.{png,jpg,jpeg}', {
 		since: lastRun(tinyPng), // 前回実行以降に変更されたファイルのみ
+		encoding: false,
 	})
 		.pipe(plumber())
 		.pipe(
@@ -178,7 +181,6 @@ const tinyPng = () => {
 				sigFile: sigFilePath,
 				log: true,
 				summarise: true,
-				sameDest: true,
 				parallel: 10,
 			}),
 		)
@@ -186,7 +188,9 @@ const tinyPng = () => {
 };
 
 const copyImages = () => {
-	return src(['./src/assets/img/**/*'], {
+	// png/jpg は tinyPng が src から直接圧縮して public へ出力するため、ここでは除外する
+	// (圧縮済みの public 画像を未圧縮ソースで上書きして再圧縮させないため)
+	return src(['./src/assets/img/**/*', '!./src/assets/img/**/*.{png,jpg,jpeg}'], {
 		since: lastRun(copyImages),
 		encoding: false,
 	}).pipe(dest('./public/assets/img'));

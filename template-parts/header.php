@@ -5,8 +5,8 @@
             <div class="p-header__logo">
                <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logoLink">
                   <figure class="p-header__logoImage">
-                     <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/c-logo_b.webp')); ?>'
-                     alt='' width='' height='' loading='lazy'>
+                     <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/c-logo_b.webp')); ?>' alt=''
+                        width='' height='' loading='lazy'>
                   </figure>
                   <!-- /.p-header__logoImage -->
                </a>
@@ -16,10 +16,11 @@
 
             <div class="p-header__right u-only__pc">
                <div class="p-header__rightWrapper">
-                  <a href="" class="p-header__telLink">
+                  <div class="p-header__telLink">
                      <p class="p-header__telNumber">03-5990-4745</p>
                      <p class="p-header__telTime">受付時間 12:30-21:00</p>
-                  </a>
+                  </div>
+                  <!-- /.p-header__telLink -->
                   <ul class="p-header__buttons">
                      <li class="p-header__button -line">
                         <a href="" class="p-header__buttonLink">

@@ -4,6 +4,7 @@
 $ff: 'Noto Sans JP', sans-serif; // bodyに指定するフォント
 $ff-ja: 'Noto Sans JP', sans-serif; //日本語onlyのフォント
 $ff-serif: 'Zen Old Mincho', serif; //セリフ体のフォント
+$ff-catch: 'BIZ UDPMincho', serif; //キャッチコピーフォント
 $ff-en: 'Roboto', sans-serif; //英語onlyのフォント
 $ff-both: 'Roboto', 'Noto Sans JP', sans-serif;
 
@@ -36,7 +37,7 @@ $z-header: 100;
 $z-drawer: 101;
 
 // ======== header
-$sp-header-height: 81;
+$sp-header-height: 80;
 $pc-header-height: 132;
 
 // -----------------------------------------------------------

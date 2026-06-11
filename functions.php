@@ -22,7 +22,7 @@ function my_script_init()
 {
    // △▽△▽△▽△▽ CSS
    // Fonts
-   wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap', array(), null, 'all');
+   wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap', array(), null, 'all');
    // Swiper（CDN）
    wp_enqueue_style('swiper', '//cdnjs.cloudflare.com/ajax/libs/Swiper/12.2.0/swiper-bundle.min.css', array(), '12.2.0', 'all');
    // メインスタイルシート
@@ -86,8 +86,20 @@ add_action('after_setup_theme', 'setup_post_thumbnails');
 
 
 // -----------------------------------------------------------
+//  固定ページのエディタを無効化する
+// -----------------------------------------------------------
+add_filter('use_block_editor_for_post', function ($use_block_editor, $post) {
+   if ($post->post_type === 'page') {
+      remove_post_type_support('page', 'editor');
+      return false;
+   }
+   return $use_block_editor;
+}, 10, 2);
+
+
+// -----------------------------------------------------------
 //  デフォルトの投稿タイプの管理画面上の名前を変更する
-// // -----------------------------------------------------------
+// -----------------------------------------------------------
 // function post_has_archive($args, $post_type)
 // {
 //    if ('post' == $post_type) {
