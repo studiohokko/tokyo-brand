@@ -17,9 +17,9 @@ body {
 	font-size: rm(16);
 	font-family: $ff;
 
-	// ドロワーメニュー用
+	// ドロワーメニュー用（背景スクロール固定：top はJSで設定）
 	&.is_fixed {
-		overflow: hidden;
+		position: fixed;
 		left: 0;
 		width: 100%;
 	}

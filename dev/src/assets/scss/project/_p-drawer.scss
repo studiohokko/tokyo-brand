@@ -1,0 +1,288 @@
+@use '../global' as *;
+
+.p-drawer {
+	position: fixed;
+	top: rm($sp-header-height);
+	right: 0;
+	z-index: $z-drawer;
+	width: 100%;
+	height: calc(100vh - rm($sp-header-height));
+	background: $white;
+	overflow-y: auto;
+	transition: $transition;
+	translate: 100% 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.p-drawer__inner {
+	padding-block: rm(8) rm(40);
+	padding-inline: rm(40);
+}
+
+.p-drawer__nav {
+}
+
+.p-drawer__list {
+}
+
+.p-drawer__item {
+	width: 100%;
+	border-bottom: rm(1) dashed rgba($color: $color-main, $alpha: 0.4);
+}
+
+.p-drawer__link {
+	display: block;
+	position: relative;
+	margin-block: $leading-trim;
+	padding-inline-end: rm(32);
+	padding-block: rm(22) rm(23);
+	color: #222;
+	font-size: rm(18);
+	font-weight: 500;
+	line-height: 1.33;
+	letter-spacing: 0.06em;
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		top: 50%;
+		translate: 0 -50%;
+		transition: translate $easing;
+		content: '';
+	}
+
+	&::before {
+		right: 0;
+		width: rm(20);
+		height: rm(20);
+		background: $color-main;
+		border-radius: 50%;
+	}
+
+	&::after {
+		right: rm(5);
+		@include chevron($size: rm(10), $thickness: 4, $color: $white, $direction: right);
+	}
+}
+
+.p-drawer__foot {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-block-start: rm(11);
+}
+
+.p-drawer__telLink {
+	transition: opacity $easing;
+}
+
+.p-drawer__telNumber {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: rm(6);
+	position: relative;
+	padding-inline-start: rm(30);
+	font-family: $ff-en;
+	font-size: rm(29);
+	font-weight: 700;
+
+	&::before {
+		display: block;
+		position: absolute;
+		top: 50%;
+		translate: 0 -50%;
+		left: 0;
+		width: rm(28);
+		height: rm(28);
+		mask-position: center center;
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		mask-image: url(../img/icon_tel.svg);
+		background: $color-main;
+		content: '';
+	}
+}
+
+.p-drawer__telTime {
+	margin-block-start: rm(-15);
+	color: #8a8a8a;
+	font-size: rm(14);
+	font-weight: 500;
+	line-height: 1.71;
+	letter-spacing: 0.06em;
+	text-align: center;
+}
+
+.p-drawer__buttons {
+	display: flex;
+	flex-direction: column;
+	gap: rm(8);
+	width: 100%;
+	margin-block-start: rm(17);
+}
+
+.p-drawer__button {
+	width: 100%;
+}
+
+.p-drawer__buttonLink {
+	display: grid;
+	place-content: center;
+	width: 100%;
+	padding-block: rm(18);
+	padding-inline: rm(20);
+	border-radius: rm(5);
+	transition: background $easing;
+}
+
+.p-drawer__buttonText {
+	position: relative;
+	color: $white;
+	font-size: rm(20);
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: 0.04em;
+
+	&::before {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		translate: 0 -50%;
+		mask-position: center center;
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		background: $white;
+		content: '';
+	}
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.p-drawer__button {
+	&.-line {
+		.p-drawer__buttonLink {
+			background: $color-accent-002;
+		}
+
+		.p-drawer__buttonText {
+			padding-inline-start: rm(33);
+
+			&::before {
+				width: rm(24);
+				height: rm(24);
+				mask-image: url(../img/icon_line.svg);
+			}
+		}
+	}
+	&.-mail {
+		.p-drawer__buttonLink {
+			background: #092e6e;
+		}
+
+		.p-drawer__buttonText {
+			padding-inline-start: rm(32);
+
+			&::before {
+				width: rm(23);
+				height: rm(17);
+				mask-image: url(../img/icon_mail.svg);
+			}
+		}
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.p-drawer__link {
+	@media (any-hover: hover) {
+		&:hover {
+			&::before,
+			&::after {
+				translate: rm(5) -50%;
+			}
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+
+		&::before,
+		&::after {
+			translate: rm(5) -50%;
+		}
+	}
+}
+
+.p-drawer__telLink {
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		opacity: 0.7;
+	}
+}
+
+.p-drawer__button {
+	&.-line {
+		.p-drawer__buttonLink {
+			@media (any-hover: hover) {
+				&:hover {
+					background: #00a745;
+				}
+			}
+			&:focus {
+				outline: none;
+			}
+
+			&:focus-visible {
+				outline: none;
+				background: #00a745;
+			}
+		}
+	}
+
+	&.-mail {
+		.p-drawer__buttonLink {
+			@media (any-hover: hover) {
+				&:hover {
+					background: #001945;
+				}
+			}
+			&:focus {
+				outline: none;
+			}
+
+			&:focus-visible {
+				outline: none;
+				background: #001945;
+			}
+		}
+	}
+}
+
+// △▽△▽△▽△▽ JS用クラス
+.js_drawer {
+	&.is_open {
+		translate: 0;
+		opacity: 1;
+		visibility: visible;
+	}
+}

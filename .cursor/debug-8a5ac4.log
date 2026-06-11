@@ -1,0 +1,11 @@
+{"sessionId":"8a5ac4","runId":"post-fix","hypothesisId":"scroll","location":"js_drawer.js:lockScroll","message":"lockScroll","data":{"scrollPosition":0,"bodyTop":"0px"},"timestamp":1781135229002}
+{"sessionId":"8a5ac4","runId":"post-fix","hypothesisId":"scroll","location":"js_drawer.js:unlockScroll","message":"unlockScroll","data":{"restoredTo":0,"afterScrollY":0},"timestamp":1781135230474}
+{"sessionId":"8a5ac4","runId":"post-fix","hypothesisId":"double","location":"js_drawer.js:closeDrawer","message":"closeDrawer called","data":{"returnFocus":false},"timestamp":1781135230474}
+{"sessionId":"8a5ac4","runId":"post-fix","hypothesisId":"scroll","location":"js_drawer.js:lockScroll","message":"lockScroll","data":{"scrollPosition":0,"bodyTop":"0px"},"timestamp":1781135232962}
+{"sessionId":"8a5ac4","runId":"post-fix","hypothesisId":"a11y","location":"js_drawer.js:trap","message":"wrap forward (last->first)","data":{"count":12},"timestamp":1781135240419}
+{"sessionId":"8a5ac4","runId":"post-fix","hypothesisId":"scroll","location":"js_drawer.js:unlockScroll","message":"unlockScroll","data":{"restoredTo":0,"afterScrollY":0},"timestamp":1781135241994}
+{"sessionId":"8a5ac4","runId":"post-fix","hypothesisId":"double","location":"js_drawer.js:closeDrawer","message":"closeDrawer called","data":{"returnFocus":true},"timestamp":1781135241996}
+{"sessionId":"8a5ac4","runId":"post-fix","hypothesisId":"scroll","location":"js_drawer.js:lockScroll","message":"lockScroll","data":{"scrollPosition":0,"bodyTop":"0px"},"timestamp":1781135286675}
+{"sessionId":"8a5ac4","runId":"post-fix","hypothesisId":"scroll","location":"js_drawer.js:unlockScroll","message":"unlockScroll","data":{"restoredTo":0,"afterScrollY":0},"timestamp":1781135294302}
+{"sessionId":"8a5ac4","runId":"post-fix","hypothesisId":"double","location":"js_drawer.js:closeDrawer","message":"closeDrawer called","data":{"returnFocus":false},"timestamp":1781135294302}
+{"sessionId":"8a5ac4","runId":"post-fix","hypothesisId":"scroll","location":"js_drawer.js:lockScroll","message":"lockScroll","data":{"scrollPosition":0,"bodyTop":"0px"},"timestamp":1781135299369}

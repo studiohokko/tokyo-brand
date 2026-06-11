@@ -1,0 +1,351 @@
+@use '../global' as *;
+
+.p-header {
+	padding-inline-start: rm(20);
+	border-bottom: rm(1) solid rgba(0, 0, 0, 0.1);
+	background: $white;
+	height: 100%;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-inline-start: 0;
+	}
+}
+
+.p-header__inner {
+	height: 100%;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.p-header__main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	padding-block: rm(4);
+	border-bottom: rm(1) solid rgba(0, 0, 0, 0.1);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(8);
+		padding-inline: rm(32) rm(31);
+	}
+}
+
+.p-header__right {
+}
+
+.p-header__rightWrapper {
+	display: flex;
+	align-items: center;
+	gap: rm(26);
+	margin-block-start: rm(-1);
+}
+
+.p-header__telLink {
+	transition: opacity $easing;
+}
+
+.p-header__telNumber {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: rm(6);
+	position: relative;
+	margin-block-start: rm(-1);
+	padding-inline-start: rm(30);
+	font-family: $ff-en;
+	font-size: rm(29);
+	font-weight: 700;
+
+	&::before {
+		display: block;
+		position: absolute;
+		top: 50%;
+		translate: 0 -50%;
+		left: 0;
+		width: rm(28);
+		height: rm(28);
+		mask-position: center center;
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		mask-image: url(../img/icon_tel.svg);
+		background: $color-main;
+		content: '';
+	}
+}
+
+.p-header__telTime {
+	margin-block-start: rm(-16);
+	color: #8a8a8a;
+	font-size: rm(14);
+	font-weight: 500;
+	line-height: 1.71;
+	letter-spacing: 0.06em;
+	text-align: center;
+}
+
+.p-header__buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.p-header__button {
+	width: rm(194);
+}
+
+.p-header__buttonLink {
+	display: grid;
+	place-content: center;
+	width: 100%;
+	padding-block: rm(10) rm(12);
+	padding-inline: rm(10);
+	border-radius: rm(5);
+	transition: background $easing;
+}
+
+.p-header__buttonText {
+	position: relative;
+	color: $white;
+	font-size: rm(16);
+	font-weight: 600;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
+
+	&::before {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		translate: 0 -50%;
+		mask-position: center center;
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		background: $white;
+		content: '';
+	}
+}
+
+.p-header__logo {
+	display: flex;
+	flex-direction: column;
+	gap: rm(8);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-direction: row;
+		align-items: center;
+		gap: rm(20);
+	}
+}
+
+.p-header__logoLink {
+	transition: opacity $easing;
+}
+
+.p-header__logoImage {
+	width: rm(159);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(177);
+	}
+
+	img {
+	}
+}
+
+.p-header__logoCatch {
+	color: #0c0c0c;
+	font-size: rm(10);
+	font-weight: 600;
+	line-height: 1.3;
+	letter-spacing: 0.05em;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(14);
+		line-height: 1.27;
+	}
+}
+
+.p-header__hamburger {
+}
+
+.p-header__nav {
+}
+
+.p-header__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: rm(41);
+}
+
+.p-header__item {
+}
+
+.p-header__link {
+	position: relative;
+	padding-block: rm(13) rm(18);
+	color: #222;
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.06em;
+
+	&::before {
+		display: block;
+		position: absolute;
+		bottom: rm(1);
+		left: 0;
+		width: 100%;
+		height: rm(3);
+		background: $color-main;
+		opacity: 0;
+		visibility: hidden;
+		transition:
+			opacity $easing,
+			visibility $easing;
+		content: '';
+	}
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.p-header__button {
+	&.-line {
+		.p-header__buttonLink {
+			border-radius: rm(6) 0 0 rm(6);
+			background: $color-accent-002;
+		}
+
+		.p-header__buttonText {
+			padding-inline-start: rm(28);
+
+			&::before {
+				width: rm(22);
+				height: rm(22);
+				mask-image: url(../img/icon_line.svg);
+			}
+		}
+	}
+	&.-mail {
+		.p-header__buttonLink {
+			border-radius: 0 rm(6) rm(6) 0;
+			background: #092e6e;
+		}
+	}
+	.p-header__buttonText {
+		padding-inline-start: rm(29);
+
+		&::before {
+			width: rm(21);
+			height: rm(16);
+			mask-image: url(../img/icon_mail.svg);
+		}
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.p-header__logoLink {
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		opacity: 0.7;
+	}
+}
+
+.p-header__telLink {
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		opacity: 0.7;
+	}
+}
+
+.p-header__button {
+	&.-line {
+		.p-header__buttonLink {
+			@media (any-hover: hover) {
+				&:hover {
+					background: #00a745;
+				}
+			}
+			&:focus {
+				outline: none;
+			}
+
+			&:focus-visible {
+				outline: none;
+				background: #00a745;
+			}
+		}
+	}
+
+	&.-mail {
+		.p-header__buttonLink {
+			@media (any-hover: hover) {
+				&:hover {
+					background: #001945;
+				}
+			}
+			&:focus {
+				outline: none;
+			}
+
+			&:focus-visible {
+				outline: none;
+				background: #001945;
+			}
+		}
+	}
+}
+
+.p-header__link {
+	@media (any-hover: hover) {
+		&:hover {
+			&::before {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		&::before {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

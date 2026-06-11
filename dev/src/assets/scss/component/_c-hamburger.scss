@@ -1,0 +1,76 @@
+@use '../global' as *;
+
+.c-hamburger {
+	display: grid;
+	place-content: center;
+	width: rm(80);
+	height: rm(80);
+	background: $color-main;
+	transition: opacity $easing;
+}
+
+.c-hamburger__line {
+	position: relative;
+	width: rm(38);
+	height: rm(2);
+	border-radius: 100vmax;
+	background: $white;
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: rm(2);
+		border-radius: 100vmax;
+		background: $white;
+		transition: $transition;
+		content: '';
+	}
+
+	&::before {
+		top: rm(-10);
+	}
+
+	&::after {
+		bottom: rm(-10);
+	}
+}
+
+// △▽△▽△▽△▽ JS用クラス
+.c-hamburger {
+	&.is_open {
+		.c-hamburger__line {
+			background: transparent;
+
+			&::before {
+				top: rm(0);
+				rotate: 45deg;
+			}
+
+			&::after {
+				bottom: rm(0);
+				rotate: -45deg;
+			}
+		}
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.c-hamburger {
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		opacity: 0.7;
+	}
+}

@@ -1,4 +1,6 @@
 @use 'sass:map';
+@use 'sass:meta';
+@use 'sass:math';
 @use './variables' as *;
 
 // -----------------------------------------------------------
@@ -46,20 +48,6 @@ $mediaqueries: ();
 	}
 }
 
-// $breakpoints: (
-//     'sp': 'screen and (max-width: #{$breakpoint - 1px})',
-//     'md': '(min-width: #{$sp-inner-sum * 1px})',
-//     'pc': '(min-width: #{$breakpoint * 1px})',
-//     'tb': '(max-width: #{$tb-breakpoint - 1px}) and (min-width: #{$breakpoint * 1px})',
-//     'lg': '(min-width: #{$pc-inner-sum * 1px})',
-// ) !default;
-
-// @mixin mq($breakpoint: pc) {
-//     @media #{map.get($breakpoints, $breakpoint)} {
-//         @content;
-//     }
-// }
-
 // -----------------------------------------------------------
 //  フォント情報
 // -----------------------------------------------------------
@@ -89,4 +77,80 @@ $leading-trim: calc((1em - 1lh) / 2);
 
 @supports not (top: 1lh) {
 	$leading-trim: 0px;
+}
+
+// -----------------------------------------------------------
+//  矢印アイコンをsvgで作成する
+// -----------------------------------------------------------
+// 小数を2桁に丸める（data URIを短く保つ）
+@function _r($n) {
+	@return math.div(math.round($n * 100), 100);
+}
+
+// キーワード → 回転角度（向き）
+$_chevron-rotate: (
+	left: 0,
+	up-left: 45,
+	up: 90,
+	up-right: 135,
+	right: 180,
+	down-right: 225,
+	down: 270,
+	down-left: 315,
+);
+
+@function _chevron-rot($direction) {
+	@if meta.type-of($direction) == 'number' {
+		@if math.is-unitless($direction) {
+			@return $direction;
+		} @else if math.unit($direction) == 'deg' {
+			@return math.div($direction, 1deg);
+		} @else {
+			@error "chevron: $direction は deg か単位なしで指定してください";
+		}
+	}
+	@if map.has-key($_chevron-rotate, $direction) {
+		@return map.get($_chevron-rotate, $direction);
+	}
+	@error "chevron: $direction が不正です（指定値: #{$direction}）";
+}
+
+@mixin chevron(
+	$size: rm(24),
+	// 表示サイズ
+	$thickness: 3,
+	// 線の太さ
+	$color: currentColor,
+	// 線の色（background-colorで描画。hover時はbackground-colorを上書き）
+	$direction: left,
+	// 向き（回転）
+	$angle: 90 // 矢印の開き角（度）
+) {
+	$rot: _chevron-rot($direction);
+
+	// 開き角から3点の座標を計算（中心 12,12 を基準）
+	$L: 10; // 腕の長さ
+	$half: math.div($angle, 2); // 半角
+	$dx: _r($L * math.cos($half * 1deg));
+	$dy: _r($L * math.sin($half * 1deg));
+	$ax: _r(12 - math.div($dx, 2)); // apex（頂点）のX
+	$tx: _r(12 + math.div($dx, 2)); // tip（先端）のX
+	$y1: _r(12 - $dy); // 上の先端Y
+	$y2: _r(12 + $dy); // 下の先端Y
+
+	// maskは形だけ使うのでstroke色は不透明なら何でもよい（black固定）
+	$svg: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="#{$thickness}" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(#{$rot} 12 12)"><path d="M#{$tx},#{$y1} L#{$ax},12 L#{$tx},#{$y2}"/></g></svg>';
+
+	display: inline-block;
+	width: $size;
+	height: $size;
+	background-color: $color;
+	mask-image: url('#{$svg}');
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+	-webkit-mask-image: url('#{$svg}');
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	-webkit-mask-size: contain;
 }

@@ -33,12 +33,11 @@ $sp-camp: 390; // sp版のカンプサイズを入力
 
 // ======== z-index
 $z-header: 100;
-$z-drawerIcon: 102;
 $z-drawer: 101;
 
 // ======== header
-$sp-header-height: 59;
-$pc-header-height: 181;
+$sp-header-height: 81;
+$pc-header-height: 132;
 
 // -----------------------------------------------------------
 //  color
@@ -56,3 +55,9 @@ $black: #000000;
 $gray: #f5f5f5;
 
 $gradation: linear-gradient(88deg, #1a366c 1.63%, #3369d2 98.14%);
+
+// -----------------------------------------------------------
+//  その他
+// -----------------------------------------------------------
+$easing: 0.4s ease-out;
+$transition: all 0.4s ease-out;

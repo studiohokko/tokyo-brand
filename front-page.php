@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<?php get_header(); ?>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="format-detection" content="telephone=no, email=no, address=no">
-   <?php wp_head(); ?>
-</head>
+<!-- header   ///////////////////////////////////////////////////// -->
+<?php get_template_part('template-parts/header'); ?>
 
-<body <?php body_class(); ?>>
-   <?php wp_body_open(); ?>
-
-
-   <?php wp_footer(); ?>
-</body>
-
-</html>
+<?php get_footer(); ?>
