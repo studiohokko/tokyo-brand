@@ -1,0 +1,246 @@
+@use '../global' as *;
+
+.p-choice {
+	position: relative;
+}
+
+.p-choice__pop {
+	display: block;
+	position: absolute;
+	top: rm(-14);
+	left: 50%;
+	translate: -50%;
+	width: rm(199);
+	padding: rm(3) rm(31) rm(3) rm(30);
+	background: $white;
+	border-radius: 100vmax;
+	color: #092e6e;
+	text-align: center;
+	font-size: rm(14);
+	font-weight: 700;
+	line-height: 1.297;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		top: rm(-22);
+		width: rm(338);
+		padding: rm(4) rm(40) rm(6);
+		font-size: rm(24);
+	}
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		bottom: rm(-5);
+		width: rm(15);
+		height: rm(7);
+		background: $white;
+		content: '';
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			bottom: rm(-9);
+			width: rm(26);
+			height: rm(12);
+		}
+	}
+
+	&::before {
+		left: rm(73);
+		clip-path: polygon(0 0, 0% 100%, 100% 0);
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			left: rm(124);
+		}
+	}
+
+	&::after {
+		right: rm(73);
+		clip-path: polygon(0 0, 100% 100%, 100% 0);
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			right: rm(124);
+		}
+	}
+}
+
+.p-choice__methods {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border-block: rm(1) solid rgba($white, 0.5);
+}
+
+.p-choice__method {
+}
+
+.p-choice__methodLink {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: rm(3);
+	padding: rm(13) rm(16) rm(17);
+	transition: background $easing;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-direction: row;
+		gap: rm(15);
+		padding: rm(23) rm(30) rm(25);
+	}
+}
+
+.p-choice__methodImage {
+	width: rm(38);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(42);
+	}
+
+	img {
+	}
+}
+
+.p-choice__methodText {
+	position: relative;
+	padding-inline-end: rm(31);
+	color: $white;
+	font-size: rm(24);
+	font-weight: 700;
+	line-height: 1;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-inline-end: rm(54);
+		font-size: rm(36);
+	}
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		translate: 0 -50%;
+		transition: top $easing;
+		content: '';
+	}
+
+	&::before {
+		top: 50%;
+		right: 0;
+		width: rm(24);
+		height: rm(24);
+		background: $white;
+		border-radius: 50%;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			width: rm(32);
+			height: rm(32);
+		}
+	}
+
+	&::after {
+		top: 51%;
+		right: rm(5);
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			right: rm(7);
+		}
+	}
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.p-choice__pop {
+	span {
+		&.-color {
+			color: $color-accent-001;
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				font-size: rm(28);
+			}
+		}
+
+		&.-small {
+			font-size: rm(12);
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				font-size: rm(21);
+			}
+		}
+	}
+}
+
+.p-choice__methodLink {
+	&.-store {
+		background: $color-accent-001;
+
+		.p-choice__methodText {
+			&::after {
+				@include chevron($size: rm(14), $thickness: 4, $color: $color-accent-001, $direction: down);
+
+				// ******** responsive(pc)
+				@include mq(pc) {
+					@include chevron($size: rm(18), $thickness: 4, $color: $color-accent-001, $direction: down);
+				}
+			}
+		}
+	}
+
+	&.-delivery {
+		background: $color-main;
+
+		.p-choice__methodText {
+			&::after {
+				@include chevron($size: rm(14), $thickness: 4, $color: $color-main, $direction: down);
+
+				// ******** responsive(pc)
+				@include mq(pc) {
+					@include chevron($size: rm(18), $thickness: 4, $color: $color-main, $direction: down);
+				}
+			}
+		}
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.p-choice__methodLink {
+	@media (any-hover: hover) {
+		&:hover {
+			.p-choice__methodText {
+				&::before {
+					top: 60%;
+				}
+
+				&::after {
+					top: 63%;
+				}
+			}
+
+			&.-store {
+				background: #d95b0d;
+			}
+
+			&.-delivery {
+				background: #092e6e;
+			}
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+	}
+}
