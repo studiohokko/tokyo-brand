@@ -1686,6 +1686,14 @@ button {
   outline: none;
 }
 
+.p-banner {
+  width: 100%;
+}
+
+.p-banner__image {
+  width: 100%;
+}
+
 .u-only__sp {
   display: block;
 }

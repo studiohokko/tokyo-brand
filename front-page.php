@@ -70,6 +70,42 @@
    </div>
    <!-- /.p-choice -->
 
+   <!-- banner   ///////////////////////////////////////////////////// -->
+   <?php
+   // ACFから画像IDを取得
+   $banner_sp_id = get_field('banner_sp');
+   $banner_pc_id = get_field('banner_pc');
+
+   // 片方しか登録がない場合は、登録済みの画像をもう一方にも使う
+   if (!$banner_sp_id && $banner_pc_id) {
+      $banner_sp_id = $banner_pc_id;
+   }
+   if (!$banner_pc_id && $banner_sp_id) {
+      $banner_pc_id = $banner_sp_id;
+   }
+
+   // どちらかに登録がある場合のみ表示
+   if ($banner_sp_id && $banner_pc_id) :
+      $banner_pc = wp_get_attachment_image_src($banner_pc_id, 'full');
+      $banner_sp = wp_get_attachment_image_src($banner_sp_id, 'full');
+      $banner_alt = get_post_meta($banner_sp_id, '_wp_attachment_image_alt', true);
+   ?>
+   <div class="p-banner">
+      <figure class="p-banner__image">
+         <picture>
+            <!-- PC用 -->
+            <source media="(min-width: 768px)" srcset="<?php echo esc_url($banner_pc[0]); ?>"
+               width="<?php echo esc_attr($banner_pc[1]); ?>" height="<?php echo esc_attr($banner_pc[2]); ?>">
+            <!-- スマホ用 -->
+            <img src="<?php echo esc_url($banner_sp[0]); ?>" alt="<?php echo esc_attr($banner_alt); ?>"
+               width="<?php echo esc_attr($banner_sp[1]); ?>" height="<?php echo esc_attr($banner_sp[2]); ?>"
+               loading="lazy">
+         </picture>
+      </figure>
+   </div>
+   <!-- /.p-banner -->
+   <?php endif; ?>
+
 </main>
 
 <?php get_footer(); ?>
