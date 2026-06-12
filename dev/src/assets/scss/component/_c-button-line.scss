@@ -1,0 +1,117 @@
+@use '../global' as *;
+
+.c-button-line {
+	display: grid;
+	place-content: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: $color-accent-002;
+	overflow: hidden;
+	border-radius: rm(5);
+	box-shadow: 0 0 rm(12) 0 rgba(3, 31, 79, 0.18);
+	transition: background $easing;
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: rm(60);
+		content: '';
+		transition: opacity $easing;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			height: rm(70);
+		}
+	}
+
+	&::before {
+		z-index: 2;
+		background: url(../img/c-button_bg-g.webp) no-repeat center center / 100% 100%;
+	}
+
+	&::after {
+		z-index: 1;
+		background: url(../img/c-button_bg-g_hover.webp) no-repeat center center / 100% 100%;
+	}
+}
+
+.c-button-line__text {
+	position: relative;
+	z-index: 3;
+	color: $white;
+	font-weight: 700;
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.c-button-line {
+	&.-simple {
+		.c-button-line__text {
+			position: relative;
+			padding-inline-start: rm(39);
+			font-size: rm(26);
+			line-height: 1.5;
+			letter-spacing: 0.03em;
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				padding-inline-start: rm(68);
+				font-size: rm(32);
+				letter-spacing: 0.05em;
+			}
+
+			&::before {
+				display: block;
+				position: absolute;
+				top: 50%;
+				translate: 0 -50%;
+				left: 0;
+				width: rm(32);
+				height: rm(32);
+				mask-image: url(../img/icon_line.svg);
+				mask-size: contain;
+				mask-position: center center;
+				mask-repeat: no-repeat;
+				background: $white;
+				content: '';
+
+				// ******** responsive(pc)
+				@include mq(pc) {
+					width: rm(52);
+					height: rm(52);
+				}
+			}
+		}
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.c-button-line {
+	@media (any-hover: hover) {
+		&:hover {
+			background: #00a745;
+
+			&::before {
+				opacity: 0;
+			}
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		background: #00a745;
+
+		&::before {
+			opacity: 0;
+		}
+	}
+}

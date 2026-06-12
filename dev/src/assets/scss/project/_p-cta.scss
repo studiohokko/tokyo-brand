@@ -1,0 +1,140 @@
+@use '../global' as *;
+
+.p-cta {
+	position: relative;
+	padding-block: rm(55) rm(33);
+	background: url(../img/sp/p-cta_bg.webp) no-repeat center center / cover;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(56) rm(58);
+		background: url(../img/p-cta_bg.webp) no-repeat center center / cover;
+	}
+}
+
+.p-cta__deco {
+	position: absolute;
+	top: rm(9);
+	right: rm(31);
+	width: rm(138);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		top: unset;
+		bottom: 0;
+		width: rm(274);
+		right: calc(50% - rm(656));
+	}
+
+	img {
+	}
+}
+
+.p-cta__inner {
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: calc(rm(720) + rm($pc-sidePadding) * 2);
+		margin-inline: auto;
+	}
+}
+
+.p-cta__content {
+}
+
+.p-cta__pop {
+	position: relative;
+	width: fit-content;
+	margin-inline-start: rm(26);
+	color: $white;
+	text-align: center;
+	font-size: rm(20);
+	font-weight: 700;
+	line-height: 1.1;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(26);
+		margin-inline: auto;
+	}
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		left: rm(6);
+		width: rm(168);
+		height: rm(2);
+		background: $white;
+		content: '';
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			width: rm(2);
+			height: rm(37);
+			left: unset;
+		}
+	}
+
+	&::before {
+		top: rm(-16);
+		rotate: 7deg;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			top: 0;
+			left: rm(-30);
+			rotate: 152.736deg;
+		}
+	}
+
+	&::after {
+		bottom: rm(-21);
+		rotate: -7deg;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			top: 0;
+			right: rm(-30);
+			bottom: unset;
+			rotate: 27.264deg;
+		}
+	}
+}
+
+.p-cta__buttons {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: rm(14);
+	margin-block-start: rm(50);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		grid-template-columns: 1fr 1fr;
+		gap: rm(20);
+		margin-block-start: rm(24);
+	}
+}
+
+.p-cta__button {
+	width: 100%;
+	min-height: rm(105);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		min-height: rm(110);
+	}
+
+	&:first-child {
+		// ******** responsive(pc)
+		@include mq(pc) {
+			grid-column: 1 / -1;
+		}
+	}
+
+	&:not(:first-child) {
+		// ******** responsive(pc)
+		@include mq(pc) {
+			min-height: rm(122);
+		}
+	}
+}
