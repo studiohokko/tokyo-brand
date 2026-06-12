@@ -2062,8 +2062,10 @@ button {
 }
 
 .p-cta {
+  -webkit-margin-before: -0.0625rem;
   position: relative;
-  padding-block: 3.4375rem 2.0625rem;
+  margin-block-start: -0.0625rem;
+  padding-block: 3.5rem 2.0625rem;
   background: url(../img/sp/p-cta_bg.webp) no-repeat center center/cover;
 }
 @media (min-width: 768px) {
@@ -2801,11 +2803,11 @@ button {
 
 .p-items {
   -webkit-margin-before: -2.4375rem;
-  -webkit-clip-path: polygon(0 0, 50% 2.3%, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 50% 2%, 100% 0, 100% 100%, 0 100%);
   z-index: 2;
   position: relative;
   margin-block-start: -2.4375rem;
-  clip-path: polygon(0 0, 50% 2.3%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 50% 2%, 100% 0, 100% 100%, 0 100%);
 }
 @media (min-width: 768px) {
   .p-items {
@@ -3165,6 +3167,176 @@ button {
   .p-items__boxText.-lh {
     line-height: 1.1;
   }
+}
+
+.p-select {
+  position: relative;
+  padding-block: 3.8125rem 5.8125rem;
+  background: #f0f5ff;
+}
+@media (min-width: 768px) {
+  .p-select {
+    padding-block: 5.375rem 10.9375rem;
+  }
+}
+.p-select::before {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 23.0625rem;
+  background: url(../img/sp/p-select_bg.webp) no-repeat center center/cover;
+  content: "";
+}
+@media (min-width: 768px) {
+  .p-select::before {
+    height: 29.3125rem;
+    background: url(../img/p-select_bg.webp) no-repeat center center/cover;
+  }
+}
+
+.p-select__inner {
+  z-index: 2;
+  position: relative;
+}
+
+.p-select__subCatch {
+  -webkit-margin-before: 0.5rem;
+  margin-block-start: 0.5rem;
+  padding-inline: 1.25rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .p-select__subCatch {
+    -webkit-margin-before: 1.375rem;
+    margin-block-start: 1.375rem;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}
+
+.p-select__content {
+  -webkit-margin-before: 2.5625rem;
+  margin-block-start: 2.5625rem;
+}
+@media (min-width: 768px) {
+  .p-select__content {
+    -webkit-margin-before: 2.75rem;
+    max-width: 68.75rem;
+    margin-inline: auto;
+    margin-block-start: 2.75rem;
+  }
+}
+
+.p-select__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .p-select__list {
+    gap: 2rem;
+  }
+}
+
+.p-media {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1.25rem;
+  gap: 1rem;
+  border-radius: 0.3125rem;
+  background: #ffffff;
+  box-shadow: 0 0 0.75rem 0 rgba(3, 31, 79, 0.18);
+}
+@media (min-width: 768px) {
+  .p-media {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 1.125rem 2.1875rem 1.125rem 1.125rem;
+    gap: 2.4375rem;
+  }
+  .p-media:nth-child(even) {
+    flex-direction: row;
+    padding: 1.125rem 1.125rem 1.125rem 2.8125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-media__textArea {
+    flex-grow: 1;
+  }
+}
+
+.p-media__head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+@media (min-width: 768px) {
+  .p-media__head {
+    gap: 0.5625rem;
+  }
+}
+
+.p-media__number {
+  color: #6a92ce;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .p-media__number {
+    font-size: 1.25rem;
+    text-align: left;
+  }
+}
+
+.p-media__title {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(88deg, #1a366c 1.63%, #3369d2 98.14%);
+  background-clip: text;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-family: "Zen Old Mincho", serif;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .p-media__title {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+
+.p-media__text {
+  -webkit-margin-before: 0.625rem;
+  margin-block-start: 0.625rem;
+  color: #031f4f;
+  font-weight: 500;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .p-media__text {
+    -webkit-margin-before: 1.375rem;
+    margin-block-start: 1.375rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-media__imageArea {
+    flex-shrink: 0;
+    width: 29.0625rem;
+  }
+}
+
+.p-media__image img {
+  width: 100%;
 }
 
 .u-only__sp {

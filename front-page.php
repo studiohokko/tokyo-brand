@@ -391,132 +391,19 @@
          <!-- /.p-items__heading -->
          <div class="p-items__content">
             <ul class="p-items__list">
-               <li class="p-items__item">
-                  <div class="p-items__textArea">
-                     <h4 class="p-items__title">バッグ</h4>
-                     <p class="p-items__en">Bag</p>
-                  </div>
-                  <!-- /.p-items__textArea -->
-                  <div class="p-items__imageArea">
-                     <figure class="p-items__image">
-                        <picture>
-                           <source
-                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-001.webp')); ?>"
-                              media="(min-width: 768px)">
-                           <img
-                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-001.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
-                        </picture>
-                     </figure>
-                     <!-- /.p-items__image -->
-                  </div>
-                  <!-- /.p-items__imageArea -->
-               </li>
-               <li class="p-items__item">
-                  <div class="p-items__textArea">
-                     <h4 class="p-items__title">財布・小物</h4>
-                     <p class="p-items__en">Wallet & Accessory</p>
-                  </div>
-                  <!-- /.p-items__textArea -->
-                  <div class="p-items__imageArea">
-                     <figure class="p-items__image">
-                        <picture>
-                           <source
-                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-002.webp')); ?>"
-                              media="(min-width: 768px)">
-                           <img
-                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-002.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
-                        </picture>
-                     </figure>
-                     <!-- /.p-items__image -->
-                  </div>
-                  <!-- /.p-items__imageArea -->
-               </li>
-               <li class="p-items__item">
-                  <div class="p-items__textArea">
-                     <h4 class="p-items__title">アパレル</h4>
-                     <p class="p-items__en">Apparel</p>
-                  </div>
-                  <!-- /.p-items__textArea -->
-                  <div class="p-items__imageArea">
-                     <figure class="p-items__image">
-                        <picture>
-                           <source
-                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-003.webp')); ?>"
-                              media="(min-width: 768px)">
-                           <img
-                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-003.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
-                        </picture>
-                     </figure>
-                     <!-- /.p-items__image -->
-                  </div>
-                  <!-- /.p-items__imageArea -->
-               </li>
-               <li class="p-items__item">
-                  <div class="p-items__textArea">
-                     <h4 class="p-items__title">時計</h4>
-                     <p class="p-items__en">Watch</p>
-                  </div>
-                  <!-- /.p-items__textArea -->
-                  <div class="p-items__imageArea">
-                     <figure class="p-items__image">
-                        <picture>
-                           <source
-                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-004.webp')); ?>"
-                              media="(min-width: 768px)">
-                           <img
-                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-004.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
-                        </picture>
-                     </figure>
-                     <!-- /.p-items__image -->
-                  </div>
-                  <!-- /.p-items__imageArea -->
-               </li>
-               <li class="p-items__item">
-                  <div class="p-items__textArea">
-                     <h4 class="p-items__title">ジュエリー</h4>
-                     <p class="p-items__en">Jewelry</p>
-                  </div>
-                  <!-- /.p-items__textArea -->
-                  <div class="p-items__imageArea">
-                     <figure class="p-items__image">
-                        <picture>
-                           <source
-                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-005.webp')); ?>"
-                              media="(min-width: 768px)">
-                           <img
-                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-005.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
-                        </picture>
-                     </figure>
-                     <!-- /.p-items__image -->
-                  </div>
-                  <!-- /.p-items__imageArea -->
-               </li>
-               <li class="p-items__item">
-                  <div class="p-items__textArea">
-                     <h4 class="p-items__title">地金</h4>
-                     <p class="p-items__en">Bullion</p>
-                  </div>
-                  <!-- /.p-items__textArea -->
-                  <div class="p-items__imageArea">
-                     <figure class="p-items__image">
-                        <picture>
-                           <source
-                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-006.webp')); ?>"
-                              media="(min-width: 768px)">
-                           <img
-                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-006.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
-                        </picture>
-                     </figure>
-                     <!-- /.p-items__image -->
-                  </div>
-                  <!-- /.p-items__imageArea -->
-               </li>
+               <?php
+               $items = [
+                  ['title' => 'バッグ', 'en' => 'Bag', 'image' => '001'],
+                  ['title' => '財布・小物', 'en' => 'Wallet & Accessory', 'image' => '002'],
+                  ['title' => 'アパレル', 'en' => 'Apparel', 'image' => '003'],
+                  ['title' => '時計', 'en' => 'Watch', 'image' => '004'],
+                  ['title' => 'ジュエリー', 'en' => 'Jewelry', 'image' => '005'],
+                  ['title' => '地金', 'en' => 'Bullion', 'image' => '006'],
+               ];
+               foreach ($items as $item) {
+                  get_template_part('template-parts/p-item', null, $item);
+               }
+               ?>
             </ul>
             <section class="p-items__box">
                <div class="p-items__boxHeading">
@@ -618,6 +505,63 @@
 
    <!-- cta   ///////////////////////////////////////////////////// -->
    <?php get_template_part('template-parts/cta'); ?>
+
+
+   <!-- select   ///////////////////////////////////////////////////// -->
+   <section class="p-select">
+      <div class="p-select__inner l-inner">
+         <div class="p-select__heading">
+            <div class="c-heading">
+               <h2 class="c-heading__title"><span>東京ぶらんどが</span>選ばれる理由</h2>
+               <p class="c-heading__en">Reasons</p>
+            </div>
+            <!-- /.c-heading -->
+            <h3 class="p-select__subCatch">数ある買取サービスの中から、当社がお客様に選ばれ続けている理由をご紹介します。</h3>
+         </div>
+         <!-- /.p-select__heading -->
+         <div class="p-select__content">
+            <ul class="p-select__list">
+               <?php
+               $reasons = [
+                  [
+                     'number' => 'Reasons 01',
+                     'title'  => '経験20年以上の<br class="u-only__sp">ブランド専門鑑定士',
+                     'text'   => '豊富な知識を持った査定士が、ブランド品や貴金属を一点一点丁寧に査定します。<br>プライバシーに配慮した個室で対応するので安心です。',
+                     'image'  => '001',
+                  ],
+                  [
+                     'number' => 'Reasons 02',
+                     'title'  => '相場以上の高額査定',
+                     'text'   => '独自の国内外への販売ルートを持っています。<br class="u-only__pc">だからこそ、一般的な国内相場にとらわれない、真の価値に基づいた高額査定が可能です。<br>査定士が最新の相場をもとに、他店に負けない高額査定を目指します。',
+                     'image'  => '002',
+                  ],
+                  [
+                     'number' => 'Reasons 03',
+                     'title'  => '査定理由を一点一点ご説明',
+                     'text'   => '「なぜこの価格なのか」を、相場データと状態評価に基づいて丁寧にお伝えします。納得いただけるまでご質問ください。',
+                     'image'  => '003',
+                  ],
+                  [
+                     'number' => 'Reasons 04',
+                     'title'  => '無理な営業・押し売りは<br>一切しません',
+                     'text'   => '「考えてから決めたい」「他店とも比較したい」といったご要望も歓迎。<br>査定だけでお帰りいただくお客様も多数いらっしゃいます',
+                     'image'  => '004',
+                  ],
+               ];
+               foreach ($reasons as $reason) {
+                  get_template_part('template-parts/p-media', null, $reason);
+               }
+               ?>
+            </ul>
+         </div>
+         <!-- /.p-select__content -->
+      </div>
+      <!-- /.p-select__inner-->
+   </section>
+   <!-- /.p-select -->
+
+
+
 
 
 </main>

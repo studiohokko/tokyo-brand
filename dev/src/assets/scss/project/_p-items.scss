@@ -4,7 +4,7 @@
 	position: relative;
 	z-index: 2;
 	margin-block-start: rm(-39);
-	clip-path: polygon(0 0, 50% 2.3%, 100% 0, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 50% 2%, 100% 0, 100% 100%, 0 100%);
 
 	// ******** responsive(pc)
 	@include mq(pc) {

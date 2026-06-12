@@ -1,0 +1,74 @@
+@use '../global' as *;
+
+.p-select {
+	position: relative;
+	padding-block: rm(61) rm(93);
+	background: $color-bg;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(86) rm(175);
+	}
+
+	&::before {
+		display: block;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: rm(369);
+		background: url(../img/sp/p-select_bg.webp) no-repeat center center / cover;
+		content: '';
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			height: rm(469);
+			background: url(../img/p-select_bg.webp) no-repeat center center / cover;
+		}
+	}
+}
+
+.p-select__inner {
+	position: relative;
+	z-index: 2;
+}
+
+.p-select__heading {
+}
+
+.p-select__subCatch {
+	margin-block-start: rm(8);
+	padding-inline: rm(20);
+	font-size: rm(16);
+	font-weight: 500;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(22);
+		text-align: center;
+		font-size: rm(18);
+	}
+}
+
+.p-select__content {
+	margin-block-start: rm(41);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(44);
+		max-width: rm($pc-narrow-inner);
+		margin-inline: auto;
+	}
+}
+
+.p-select__list {
+	display: flex;
+	flex-direction: column;
+	gap: rm(20);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		gap: rm(32);
+	}
+}

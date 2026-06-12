@@ -2,7 +2,8 @@
 
 .p-cta {
 	position: relative;
-	padding-block: rm(55) rm(33);
+	margin-block-start: rm(-1);
+	padding-block: rm(56) rm(33);
 	background: url(../img/sp/p-cta_bg.webp) no-repeat center center / cover;
 
 	// ******** responsive(pc)
