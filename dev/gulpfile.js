@@ -24,6 +24,7 @@ const webpackConfig = require('./webpack.config');
 const cheerio = require('gulp-cheerio');
 const fs = require('fs');
 const path = require('path');
+const { Transform } = require('stream');
 
 // 自動生成するSCSSファイルのインデント(タブ3個分。HTML整形の設定に合わせる)
 const SCSS_INDENT = '\t\t\t';
@@ -196,8 +197,37 @@ const copyImages = () => {
 	}).pipe(dest('./public/assets/img'));
 };
 
+// WebP が未生成、または PNG/JPG より古い場合のみ変換する
+const filterWebpTargets = () =>
+	new Transform({
+		objectMode: true,
+		transform(file, _enc, cb) {
+			if (file.isNull()) {
+				cb(null, file);
+				return;
+			}
+			if (file.isStream()) {
+				cb(new Error('Streaming not supported'));
+				return;
+			}
+
+			const webpPath = file.path.replace(/\.(png|jpe?g)$/i, '.webp');
+			try {
+				const webpStat = fs.statSync(webpPath);
+				if (webpStat.mtimeMs >= file.stat.mtimeMs) {
+					cb();
+					return;
+				}
+			} catch {
+				// WebP が存在しない
+			}
+			cb(null, file);
+		},
+	});
+
 const generateWebp = () => {
-	return src('./public/assets/img/**/*.{png,jpg,jpeg}', { since: lastRun(generateWebp) })
+	return src('./public/assets/img/**/*.{png,jpg,jpeg}', { encoding: false })
+		.pipe(filterWebpTargets())
 		.pipe(webp())
 		.pipe(dest('public/assets/img'));
 };

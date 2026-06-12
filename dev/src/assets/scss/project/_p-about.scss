@@ -1,0 +1,55 @@
+@use '../global' as *;
+
+.p-about {
+	position: relative;
+	padding-block: rm(60) rm(134);
+	background: $color-bg;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(69) rm(151);
+	}
+
+	&::before {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: rm(299);
+		background: url(../img/sp/p-about_bg.webp) no-repeat center left / contain;
+		content: '';
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			height: rm(565);
+			background: url(../img/p-about_bg.webp) no-repeat center left / contain;
+		}
+	}
+}
+
+.p-about__inner {
+	position: relative;
+	z-index: 2;
+}
+
+.p-about__heading {
+}
+
+.p-about__content {
+	margin-block-start: rm(32);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(45);
+	}
+}
+
+.p-about__feature {
+	margin-block-start: rm(49);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(79);
+	}
+}

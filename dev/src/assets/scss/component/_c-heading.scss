@@ -1,0 +1,50 @@
+@use '../global' as *;
+
+.c-heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: rm(5);
+}
+
+.c-heading__title {
+	font-family: $ff-serif;
+	font-size: rm(40);
+	font-weight: 900;
+	line-height: 1.3;
+	text-align: center;
+	background: $gradation;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(52);
+	}
+
+	span {
+		display: block;
+		font-size: rm(28);
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			font-size: rm(42);
+		}
+	}
+}
+
+.c-heading__en {
+	color: $color-accent-003;
+	text-align: center;
+	font-family: $ff-en;
+	font-size: rm(24);
+	font-weight: 300;
+	line-height: 1.3;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(34);
+	}
+}

@@ -1,0 +1,405 @@
+@use '../global' as *;
+
+// ----------------------------
+//  タブ
+// ----------------------------
+.p-shops {
+}
+
+.p-shops__inner {
+}
+
+.p-shops__tabs {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	border-radius: rm(5) rm(5) 0 0;
+	overflow: hidden;
+}
+
+.p-shops__tab {
+	display: grid;
+	place-content: center;
+	min-height: rm(108);
+	background: $color-main;
+	color: $white;
+	text-align: center;
+	font-size: rm(15);
+	font-weight: 700;
+	line-height: 1.5;
+	transition:
+		background $easing,
+		color $easing;
+
+	&:not(:first-child) {
+		border-left: rm(1) solid $white;
+	}
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		min-height: rm(100);
+		padding-block-start: rm(10);
+		font-size: rm(18);
+	}
+}
+
+.p-shops__panels {
+	display: grid;
+	padding: rm(20) rm(20) rm(28);
+	background: $white;
+	border-radius: 0 0 rm(5) rm(5);
+	overflow: hidden;
+	transition: height $easing;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding: rm(50);
+	}
+}
+
+.p-shops__panel {
+	grid-area: 1 / 1;
+	align-self: start;
+	width: 100%;
+	min-width: 0;
+}
+
+.p-shops__content {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: rm(18);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
+		gap: rm(56);
+	}
+}
+
+.p-shops__textArea {
+	flex-grow: 1;
+}
+
+.p-shops__name {
+	font-size: rm(26);
+	font-weight: 700;
+	line-height: 1.5;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(32);
+	}
+}
+
+.p-shops__accessList {
+	margin-block-start: rm(16);
+}
+
+.p-shops__accessItem {
+	font-size: rm(16);
+	font-weight: 500;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(18);
+	}
+}
+
+.p-shops__mapButton {
+	background: $color-accent-001;
+	border-radius: rm(5);
+	padding: rm(13) rm(25) rm(16);
+	margin-block-start: rm(22);
+	transition: background $easing;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(32);
+		padding-block-start: rm(17);
+	}
+}
+
+.p-shops__mapButtonText {
+	display: inline-block;
+	position: relative;
+	padding-inline-end: rm(32);
+	color: $white;
+	text-align: center;
+	font-size: rm(16);
+	font-weight: 700;
+	line-height: 1.5;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(18);
+	}
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		top: 50%;
+		translate: 0 -50%;
+		transition: translate $easing;
+		content: '';
+	}
+
+	&::before {
+		right: 0;
+		width: rm(20);
+		height: rm(20);
+		background: $white;
+		border-radius: 50%;
+	}
+
+	&::after {
+		right: rm(5);
+		@include chevron($size: rm(10), $thickness: 4, $color: $color-accent-001, $direction: right);
+	}
+}
+
+.p-shops__imageArea {
+	flex-shrink: 0;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(484);
+	}
+}
+
+.p-shops__image {
+	border-radius: rm(5);
+	overflow: hidden;
+
+	img {
+		aspect-ratio: 310 / 190;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			aspect-ratio: 484 / 296;
+		}
+	}
+}
+
+.p-shops__mapButton {
+	@media (any-hover: hover) {
+		&:hover {
+			background: #d95b0d;
+
+			.p-shops__mapButtonText {
+				&::before,
+				&::after {
+					translate: rm(5) -50%;
+				}
+			}
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		background: #d95b0d;
+
+		.p-shops__mapButtonText {
+			&::before,
+			&::after {
+				translate: rm(5) -50%;
+			}
+		}
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.p-shops__tab {
+	@media (any-hover: hover) {
+		&:hover {
+			background: $white;
+			color: $color-main;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		background: $white;
+		color: $color-main;
+	}
+}
+
+// △▽△▽△▽△▽ JS用クラス
+// 非アクティブなパネルの設定
+.p-shops__panel {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition:
+		opacity $easing,
+		visibility 0s linear 0.3s;
+}
+
+.js_shopsTab {
+	&.is_show {
+		background: $white;
+		color: $color-main;
+		pointer-events: none;
+	}
+}
+
+.js_shopsPanel {
+	&.is_show {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		z-index: 1;
+		transition:
+			opacity $easing,
+			visibility 0s linear 0s;
+	}
+}
+
+// ----------------------------
+//  モーダル
+// ----------------------------
+.p-shops__modals {
+}
+
+.p-shops__modal {
+	position: fixed;
+	inset: 0;
+	z-index: $z-modal;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: scroll;
+	padding: rm(60) rm(20) rm(40);
+	visibility: hidden;
+	pointer-events: none;
+	transition: visibility 0s 0.3s;
+}
+
+.p-shops__modalOverlay {
+	position: fixed;
+	inset: 0;
+	border: none;
+	padding: 0;
+	background: rgba(0, 0, 0, 0.6);
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity $easing;
+}
+
+.p-shops__modalInner {
+	position: relative;
+	z-index: 1;
+	flex-shrink: 0;
+	width: min(rm(800), 100%);
+	margin-block: auto;
+	background: $white;
+	opacity: 0;
+	transition: opacity $easing;
+}
+
+.p-shops__modalClose {
+	position: absolute;
+	top: rm(-50);
+	right: rm(0);
+	z-index: 1;
+	width: rm(40);
+	height: rm(40);
+	border: none;
+	padding: 0;
+	border-radius: 50%;
+	background: $white;
+	transition: background $easing;
+	cursor: pointer;
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: rm(20);
+		height: rm(2);
+		background: $color-main;
+		transition: background $easing;
+		content: '';
+	}
+
+	&::before {
+		translate: -50% -50%;
+		rotate: 45deg;
+	}
+
+	&::after {
+		translate: -50% -50%;
+		rotate: -45deg;
+	}
+}
+
+.p-shops__modalMap {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 3 / 2;
+}
+
+.p-shops__modalMap iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.p-shops__modalClose {
+	@media (any-hover: hover) {
+		&:hover {
+			background: $color-main;
+
+			&::before,
+			&::after {
+				background: $white;
+			}
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		background: $color-main;
+
+		&::before,
+		&::after {
+			background: $white;
+		}
+	}
+}
+
+// △▽△▽△▽△▽ JS用クラス
+.p-shops__modal {
+	&.is_open {
+		visibility: visible;
+		pointer-events: auto;
+		transition: visibility 0s;
+	}
+}
+
+.p-shops__modal.is_open .p-shops__modalOverlay {
+	opacity: 1;
+}
+
+.p-shops__modal.is_open .p-shops__modalInner {
+	opacity: 1;
+}
