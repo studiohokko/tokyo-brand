@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 
+
 <!-- header   ///////////////////////////////////////////////////// -->
 <?php get_template_part('template-parts/header'); ?>
+
 
 <main class="l-main">
    <!-- fv   ///////////////////////////////////////////////////// -->
@@ -371,6 +373,252 @@
       <!-- /.p-shops__modals -->
    </section>
    <!-- /.p-about -->
+
+
+   <!-- items   ///////////////////////////////////////////////////// -->
+   <section class="p-items">
+      <div class="p-items__bg"></div>
+      <!-- /.p-items__bg -->
+      <div class="p-items__inner l-inner">
+         <div class="p-items__heading">
+            <div class="c-heading -white">
+               <h2 class="c-heading__title">買取品目</h2>
+               <p class="c-heading__en">Items</p>
+            </div>
+            <!-- /.c-heading -->
+            <h3 class="p-items__subCatch">時計・ジュエリーからバッグ、アパレルまで、<br>幅広いブランド品の買取に対応しています。</h3>
+         </div>
+         <!-- /.p-items__heading -->
+         <div class="p-items__content">
+            <ul class="p-items__list">
+               <li class="p-items__item">
+                  <div class="p-items__textArea">
+                     <h4 class="p-items__title">バッグ</h4>
+                     <p class="p-items__en">Bag</p>
+                  </div>
+                  <!-- /.p-items__textArea -->
+                  <div class="p-items__imageArea">
+                     <figure class="p-items__image">
+                        <picture>
+                           <source
+                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-001.webp')); ?>"
+                              media="(min-width: 768px)">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-001.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </picture>
+                     </figure>
+                     <!-- /.p-items__image -->
+                  </div>
+                  <!-- /.p-items__imageArea -->
+               </li>
+               <li class="p-items__item">
+                  <div class="p-items__textArea">
+                     <h4 class="p-items__title">財布・小物</h4>
+                     <p class="p-items__en">Wallet & Accessory</p>
+                  </div>
+                  <!-- /.p-items__textArea -->
+                  <div class="p-items__imageArea">
+                     <figure class="p-items__image">
+                        <picture>
+                           <source
+                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-002.webp')); ?>"
+                              media="(min-width: 768px)">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-002.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </picture>
+                     </figure>
+                     <!-- /.p-items__image -->
+                  </div>
+                  <!-- /.p-items__imageArea -->
+               </li>
+               <li class="p-items__item">
+                  <div class="p-items__textArea">
+                     <h4 class="p-items__title">アパレル</h4>
+                     <p class="p-items__en">Apparel</p>
+                  </div>
+                  <!-- /.p-items__textArea -->
+                  <div class="p-items__imageArea">
+                     <figure class="p-items__image">
+                        <picture>
+                           <source
+                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-003.webp')); ?>"
+                              media="(min-width: 768px)">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-003.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </picture>
+                     </figure>
+                     <!-- /.p-items__image -->
+                  </div>
+                  <!-- /.p-items__imageArea -->
+               </li>
+               <li class="p-items__item">
+                  <div class="p-items__textArea">
+                     <h4 class="p-items__title">時計</h4>
+                     <p class="p-items__en">Watch</p>
+                  </div>
+                  <!-- /.p-items__textArea -->
+                  <div class="p-items__imageArea">
+                     <figure class="p-items__image">
+                        <picture>
+                           <source
+                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-004.webp')); ?>"
+                              media="(min-width: 768px)">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-004.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </picture>
+                     </figure>
+                     <!-- /.p-items__image -->
+                  </div>
+                  <!-- /.p-items__imageArea -->
+               </li>
+               <li class="p-items__item">
+                  <div class="p-items__textArea">
+                     <h4 class="p-items__title">ジュエリー</h4>
+                     <p class="p-items__en">Jewelry</p>
+                  </div>
+                  <!-- /.p-items__textArea -->
+                  <div class="p-items__imageArea">
+                     <figure class="p-items__image">
+                        <picture>
+                           <source
+                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-005.webp')); ?>"
+                              media="(min-width: 768px)">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-005.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </picture>
+                     </figure>
+                     <!-- /.p-items__image -->
+                  </div>
+                  <!-- /.p-items__imageArea -->
+               </li>
+               <li class="p-items__item">
+                  <div class="p-items__textArea">
+                     <h4 class="p-items__title">地金</h4>
+                     <p class="p-items__en">Bullion</p>
+                  </div>
+                  <!-- /.p-items__textArea -->
+                  <div class="p-items__imageArea">
+                     <figure class="p-items__image">
+                        <picture>
+                           <source
+                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items-006.webp')); ?>"
+                              media="(min-width: 768px)">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-items-006.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </picture>
+                     </figure>
+                     <!-- /.p-items__image -->
+                  </div>
+                  <!-- /.p-items__imageArea -->
+               </li>
+            </ul>
+            <section class="p-items__box">
+               <div class="p-items__boxHeading">
+                  <h3 class="p-items__boxTitle">「売れないかも」と<br class="u-only__sp">思っているお品物こそ<br class="u-only__sp">ご相談ください
+                  </h3>
+                  <p class="p-items__boxLead">お品物の状態が完璧でなくても価値がなくなるわけではありません。<br>以下のような状態でも専門の鑑定士がしっかりと価値を評価します。</p>
+               </div>
+               <!-- /.p-items__boxHeading -->
+               <ul class="p-items__boxList">
+                  <li class="p-items__boxItem">
+                     <div class="p-items__boxTextArea">
+                        <p class="p-items__boxText">キズ、シミ、<br>汚れがある</p>
+                     </div>
+                     <!-- /.__textArea -->
+                     <div class="p-items__boxImageArea">
+                        <figure class="p-items__boxImage">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items_box-001.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-items__boxImage -->
+                     </div>
+                     <!-- /.p-items__boxImageArea -->
+                  </li>
+                  <li class="p-items__boxItem">
+                     <div class="p-items__boxTextArea">
+                        <p class="p-items__boxText">古いモデルや<br>デザイン</p>
+                     </div>
+                     <!-- /.__textArea -->
+                     <div class="p-items__boxImageArea">
+                        <figure class="p-items__boxImage">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items_box-002.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-items__boxImage -->
+                     </div>
+                     <!-- /.p-items__boxImageArea -->
+                  </li>
+                  <li class="p-items__boxItem">
+                     <div class="p-items__boxTextArea">
+                        <p class="p-items__boxText -lh">箱や保証書<br><span>（ギャランティカード）</span>がない</p>
+                     </div>
+                     <!-- /.__textArea -->
+                     <div class="p-items__boxImageArea">
+                        <figure class="p-items__boxImage">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items_box-003.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-items__boxImage -->
+                     </div>
+                     <!-- /.p-items__boxImageArea -->
+                  </li>
+                  <li class="p-items__boxItem">
+                     <div class="p-items__boxTextArea">
+                        <p class="p-items__boxText">他社で買取を<br>断られた</p>
+                     </div>
+                     <!-- /.__textArea -->
+                     <div class="p-items__boxImageArea">
+                        <figure class="p-items__boxImage">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items_box-004.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-items__boxImage -->
+                     </div>
+                     <!-- /.p-items__boxImageArea -->
+                  </li>
+               </ul>
+               <section class="p-items__boxFoot">
+                  <div class="p-items__boxFootTextArea">
+                     <h3 class="p-items__boxFootTitle">シャネル・エルメス・<br class="u-only__sp">ロレックス<br
+                           class="u-only__pc">は特に<br class="u-only__sp">高価買取！</h3>
+                     <p class="p-items__boxFootLead">
+                        他店と違うのは「販売力」です。<br>多くの買取店がBtoB（業者間取引）での流通を前提とする中、当社はシャネル・エルメス・時計の専門店を自社で運営。<br>そのため余計な中間コストがかからず、買取価格へ還元できます。
+                     </p>
+                  </div>
+                  <!-- /.p-items__boxFootTextArea -->
+                  <div class="p-items__boxFootImageArea">
+                     <figure class="p-items__boxFootImage">
+                        <img
+                           src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items_boxFoot.webp')); ?>'
+                           alt='' width='' height='' loading='lazy'>
+                     </figure>
+                     <!-- /.p-items__boxFootImage -->
+                  </div>
+                  <!-- /.p-items__boxFootImageArea -->
+               </section>
+               <!-- /.p-items__boxFoot -->
+            </section>
+         </div>
+         <!-- /.p-items__content -->
+      </div>
+      <!-- /.p-items__inner-->
+   </section>
+   <!-- /.p-items -->
+
+
+   <!-- cta   ///////////////////////////////////////////////////// -->
+   <?php get_template_part('template-parts/cta'); ?>
+
 
 </main>
 

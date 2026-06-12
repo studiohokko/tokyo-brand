@@ -1,0 +1,367 @@
+@use '../global' as *;
+
+.p-items {
+	position: relative;
+	z-index: 2;
+	margin-block-start: rm(-39);
+	clip-path: polygon(0 0, 50% 2.3%, 100% 0, 100% 100%, 0 100%);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(-87);
+		clip-path: polygon(0 0, 50% 4.1%, 100% 0, 100% 100%, 0 100%);
+	}
+}
+
+.p-items__bg {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	margin-bottom: -100vh;
+	background: url(../img/sp/p-items_bg.webp) no-repeat center center / cover;
+	z-index: 0;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		background: url(../img/p-items_bg.webp) no-repeat center center / cover;
+	}
+}
+
+.p-items__inner {
+	position: relative;
+	z-index: 3;
+	padding-block: rm(86) rm(60);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(178) rm(100);
+	}
+}
+
+.p-items__heading {
+}
+
+.p-items__subCatch {
+	margin-block-start: rm(8);
+	color: $white;
+	text-align: center;
+	font-size: rm(16);
+	font-weight: 700;
+	line-height: 1.8;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(20);
+		font-size: rm(18);
+	}
+}
+
+.p-items__content {
+	margin-block-start: rm(32);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(43);
+	}
+}
+
+.p-items__list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rm(19) rm(13);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		grid-template-columns: repeat(3, 1fr);
+		gap: rm(47) rm(26);
+		max-width: rm($pc-narrow-inner);
+		margin-inline: auto;
+	}
+}
+
+.p-items__item {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: rm(10);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		gap: rm(20);
+	}
+}
+
+.p-items__textArea {
+}
+
+.p-items__title {
+	color: $white;
+	text-align: center;
+	font-size: rm(20);
+	font-weight: 600;
+	line-height: 1.5;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(28);
+	}
+}
+
+.p-items__en {
+	margin-block-start: rm(2);
+	color: #d2d2d2;
+	text-align: center;
+	font-family: $ff-en;
+	font-size: rm(14);
+	font-weight: 300;
+	line-height: 1.3;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(16);
+	}
+}
+
+.p-items__imageArea {
+	width: 100%;
+}
+
+.p-items__image {
+	position: relative;
+	border-radius: rm(5);
+	overflow: hidden;
+
+	&::before {
+		display: block;
+		position: absolute;
+		inset: 0;
+		border-radius: rm(5);
+		border: rm(2) solid rgba(255, 255, 255, 0.14);
+		content: '';
+	}
+
+	img {
+		aspect-ratio: 168 / 120;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			aspect-ratio: 350 / 217;
+		}
+	}
+}
+
+.p-items__box {
+	margin-block-start: rm(49);
+	padding: rm(34) rm(20);
+	background: $white;
+	border-radius: rm(5);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(69);
+		padding: rm(62) rm(50);
+	}
+}
+
+.p-items__boxHeading {
+}
+
+.p-items__boxTitle {
+	text-align: center;
+	font-family: $ff-serif;
+	font-size: rm(28);
+	font-weight: 900;
+	line-height: 1.3;
+	background: $gradation;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(34);
+	}
+}
+
+.p-items__boxLead {
+	margin-block-start: rm(22);
+	color: $color-text;
+	font-size: rm(16);
+	font-weight: 500;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(24);
+		text-align: center;
+	}
+}
+
+.p-items__boxList {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: rm(8);
+	margin-block-start: rm(22);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: rm(15) rm(8);
+		max-width: rm(842);
+		margin-block-start: rm(25);
+		margin-inline: auto;
+	}
+}
+
+.p-items__boxItem {
+	display: flex;
+	flex-direction: row-reverse;
+	border-radius: rm(5);
+	background: #dfe9fd;
+	overflow: hidden;
+}
+
+.p-items__boxTextArea {
+	flex-grow: 1;
+	padding: rm(14) rm(10) rm(13) 0;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		display: grid;
+		place-content: center;
+		padding: rm(18) rm(10) rm(18) 0;
+	}
+}
+
+.p-items__boxText {
+	color: #1a366c;
+	text-align: center;
+	font-size: rm(18);
+	font-weight: 700;
+	line-height: 1.4;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(24);
+	}
+
+	span {
+		font-size: rm(12);
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			font-size: rm(15);
+		}
+	}
+}
+
+.p-items__boxImageArea {
+	flex-shrink: 0;
+	align-self: stretch;
+}
+
+.p-items__boxImage {
+	width: rm(102);
+	height: 100%;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(137);
+	}
+
+	img {
+	}
+}
+
+.p-items__boxFoot {
+	display: flex;
+	flex-direction: column;
+	gap: rm(22);
+	margin-block-start: rm(26);
+	padding-block-start: rm(27);
+	border-top: rm(2) solid #ececec;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-direction: row;
+		align-items: center;
+		gap: rm(40);
+		margin-block-start: rm(50);
+		padding-block-start: rm(50);
+	}
+}
+
+.p-items__boxFootTextArea {
+	display: contents;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		display: block;
+		flex-grow: 1;
+	}
+}
+
+.p-items__boxFootTitle {
+	order: 1;
+	text-align: center;
+	font-family: $ff-serif;
+	font-size: rm(28);
+	font-weight: 900;
+	line-height: 1.3;
+	background: $gradation;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		text-align: left;
+		font-size: rm(34);
+	}
+}
+
+.p-items__boxFootLead {
+	order: 3;
+	color: $color-text;
+	font-size: rm(16);
+	font-weight: 500;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(20);
+	}
+}
+
+.p-items__boxFootImageArea {
+	order: 2;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-shrink: 0;
+	}
+}
+
+.p-items__boxFootImage {
+	overflow: hidden;
+	border-radius: rm(5);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(514);
+	}
+
+	img {
+	}
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.p-items__boxText {
+	&.-lh {
+		// ******** responsive(pc)
+		@include mq(pc) {
+			line-height: 1.1;
+		}
+	}
+}

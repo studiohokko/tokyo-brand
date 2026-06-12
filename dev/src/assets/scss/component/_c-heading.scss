@@ -48,3 +48,20 @@
 		font-size: rm(34);
 	}
 }
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.c-heading {
+	&.-white {
+		.c-heading__title {
+			color: $white;
+			background: none;
+			-webkit-text-fill-color: $white;
+		}
+
+		.c-heading__en {
+			color: #d2d2d2;
+		}
+	}
+}
