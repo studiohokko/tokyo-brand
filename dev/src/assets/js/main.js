@@ -17,3 +17,7 @@ js_shops(); // 実行
 // Googleマップモーダル
 import { js_shopsMap } from './js_shopsMap';
 js_shopsMap(); // 実行
+
+// アコーディオン
+import { js_accordion } from './js_accordion';
+js_accordion(); // 実行

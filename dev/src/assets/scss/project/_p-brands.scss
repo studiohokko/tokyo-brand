@@ -1,0 +1,256 @@
+@use '../global' as *;
+
+.p-brands {
+	position: relative;
+	margin-block-start: rm(-48);
+	clip-path: polygon(0 0, 50% 1.6%, 100% 0, 100% 100%, 0 100%);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(-85);
+	}
+
+	&::before {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		height: rm(361);
+		background: url(../img/p-brands_deco.webp) no-repeat center center / cover;
+		content: '';
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			background: url(../img/p-brands_deco.webp) no-repeat center center / cover;
+			height: rm(560);
+		}
+	}
+}
+
+.p-brands__bg {
+	position: sticky;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	margin-bottom: -100vh;
+	background: url(../img/sp/p-brands_bg.webp) no-repeat center center / cover;
+	z-index: 0;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		background: url(../img/p-brands_bg.webp) no-repeat center center / cover;
+	}
+}
+
+.p-brands__inner {
+	position: relative;
+	z-index: 3;
+	padding-block: rm(87) rm(59) !important;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(198) rm(175) !important;
+	}
+}
+
+.p-brands__heading {
+}
+
+.p-brands__content {
+	margin-block-start: rm(24);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(48);
+	}
+}
+
+.p-brands__campaign {
+}
+
+.p-brands__campaignHeading {
+}
+
+.p-brands__campaignLead {
+	margin-block-start: rm(16);
+	color: $white;
+	text-align: center;
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.8;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(28);
+		font-size: rm(18);
+	}
+}
+
+.p-brands__campaignList {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rm(19) rm(13);
+	margin-block-start: rm(30);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		grid-template-columns: repeat(3, 1fr);
+		gap: rm(50) rm(26);
+		max-width: rm($pc-narrow-inner);
+		margin-inline: auto;
+		margin-block-start: rm(44);
+	}
+}
+
+.p-brands__campaignItem {
+}
+
+.p-brands__order {
+	margin-block-start: rm(60);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(100);
+	}
+}
+
+.p-brands__orderHeading {
+}
+
+.p-brands__orderList {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: rm(19);
+	margin-block-start: rm(32);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(56);
+		gap: rm(24);
+	}
+}
+
+.p-brands__orderListItem {
+}
+
+.p-brands__orderDetails {
+	display: flex;
+	flex-direction: column;
+}
+
+.p-brands__orderSummary {
+	position: relative;
+	padding: rm(12) rm(40) rm(12) rm(16);
+	border-radius: rm(5);
+	background: $white;
+	list-style: none;
+	cursor: pointer;
+	transition: opacity $easing;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding: rm(12) rm(24) rm(12) rm(12);
+	}
+
+	&::-webkit-details-marker,
+	&::marker {
+		display: none;
+	}
+
+	&::after {
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: rm(16);
+		translate: 0 -50%;
+		width: rm(14);
+		height: rm(10);
+		background: $color-main;
+		clip-path: polygon(0 0, 100% 0, 50% 100%);
+		transition: rotate $easing;
+		content: '';
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			right: rm(23);
+			width: rm(18);
+			height: rm(10);
+		}
+	}
+
+	&:focus-visible {
+		outline: none;
+		opacity: 0.7;
+	}
+}
+
+.p-brands__orderSummaryText {
+}
+
+.p-brands__orderSummaryTitle {
+	font-size: rm(20);
+	font-weight: 600;
+	line-height: 1.5;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(24);
+	}
+}
+
+.p-brands__orderContent {
+	overflow: hidden;
+}
+
+.p-brands__orderSubList {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rm(10);
+	padding-block-start: rm(20);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		grid-template-columns: repeat(4, 1fr);
+		gap: rm(9);
+	}
+}
+
+.p-brands__orderSubItem {
+	display: flex;
+	align-items: center;
+	padding: rm(5) rm(4) rm(5) rm(6);
+	height: rm(80);
+	border-radius: rm(5);
+	border: rm(2) solid rgba(3, 31, 79, 0.2);
+	background: #f0f5ff;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding: rm(10) rm(16) rm(8) rm(16);
+	}
+}
+
+.p-brands__orderSubText {
+	font-size: rm(15);
+	font-weight: 600;
+	line-height: 1.3;
+
+	span {
+		display: inline;
+	}
+}
+
+// △▽△▽△▽△▽ JS用クラス
+.js_details {
+	&.is_opened {
+		.js_summary {
+			&::after {
+				rotate: 180deg;
+			}
+		}
+	}
+}

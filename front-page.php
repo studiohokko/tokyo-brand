@@ -401,7 +401,11 @@
                   ['title' => '地金', 'en' => 'Bullion', 'image' => '006'],
                ];
                foreach ($items as $item) {
-                  get_template_part('template-parts/p-item', null, $item);
+                  ?>
+                  <li class="p-items__item">
+                     <?php get_template_part('template-parts/p-item', null, $item); ?>
+                  </li>
+                  <?php
                }
                ?>
             </ul>
@@ -516,7 +520,7 @@
                <p class="c-heading__en">Reasons</p>
             </div>
             <!-- /.c-heading -->
-            <h3 class="p-select__subCatch">数ある買取サービスの中から、当社がお客様に選ばれ続けている理由をご紹介します。</h3>
+            <p class="p-select__lead">数ある買取サービスの中から、当社がお客様に選ばれ続けている理由をご紹介します。</p>
          </div>
          <!-- /.p-select__heading -->
          <div class="p-select__content">
@@ -525,27 +529,27 @@
                $reasons = [
                   [
                      'number' => 'Reasons 01',
-                     'title'  => '経験20年以上の<br class="u-only__sp">ブランド専門鑑定士',
-                     'text'   => '豊富な知識を持った査定士が、ブランド品や貴金属を一点一点丁寧に査定します。<br>プライバシーに配慮した個室で対応するので安心です。',
-                     'image'  => '001',
+                     'title' => '経験20年以上の<br class="u-only__sp">ブランド専門鑑定士',
+                     'text' => '豊富な知識を持った査定士が、ブランド品や貴金属を一点一点丁寧に査定します。<br>プライバシーに配慮した個室で対応するので安心です。',
+                     'image' => '001',
                   ],
                   [
                      'number' => 'Reasons 02',
-                     'title'  => '相場以上の高額査定',
-                     'text'   => '独自の国内外への販売ルートを持っています。<br class="u-only__pc">だからこそ、一般的な国内相場にとらわれない、真の価値に基づいた高額査定が可能です。<br>査定士が最新の相場をもとに、他店に負けない高額査定を目指します。',
-                     'image'  => '002',
+                     'title' => '相場以上の高額査定',
+                     'text' => '独自の国内外への販売ルートを持っています。<br class="u-only__pc">だからこそ、一般的な国内相場にとらわれない、真の価値に基づいた高額査定が可能です。<br>査定士が最新の相場をもとに、他店に負けない高額査定を目指します。',
+                     'image' => '002',
                   ],
                   [
                      'number' => 'Reasons 03',
-                     'title'  => '査定理由を一点一点ご説明',
-                     'text'   => '「なぜこの価格なのか」を、相場データと状態評価に基づいて丁寧にお伝えします。納得いただけるまでご質問ください。',
-                     'image'  => '003',
+                     'title' => '査定理由を一点一点ご説明',
+                     'text' => '「なぜこの価格なのか」を、相場データと状態評価に基づいて丁寧にお伝えします。納得いただけるまでご質問ください。',
+                     'image' => '003',
                   ],
                   [
                      'number' => 'Reasons 04',
-                     'title'  => '無理な営業・押し売りは<br>一切しません',
-                     'text'   => '「考えてから決めたい」「他店とも比較したい」といったご要望も歓迎。<br>査定だけでお帰りいただくお客様も多数いらっしゃいます',
-                     'image'  => '004',
+                     'title' => '無理な営業・押し売りは<br>一切しません',
+                     'text' => '「考えてから決めたい」「他店とも比較したい」といったご要望も歓迎。<br>査定だけでお帰りいただくお客様も多数いらっしゃいます',
+                     'image' => '004',
                   ],
                ];
                foreach ($reasons as $reason) {
@@ -561,7 +565,412 @@
    <!-- /.p-select -->
 
 
-
+   <!-- brands   ///////////////////////////////////////////////////// -->
+   <section class="p-brands">
+      <div class="p-brands__bg"></div>
+      <!-- /.p-brands__bg -->
+      <div class="p-brands__inner l-inner -narrow">
+         <div class="p-brands__heading">
+            <div class="c-heading -white">
+               <h2 class="c-heading__title">買取ブランド一覧</h2>
+               <p class="c-heading__en">Brands</p>
+            </div>
+            <!-- /.c-heading -->
+         </div>
+         <!-- /.p-brands__heading -->
+         <div class="p-brands__content">
+            <section class="p-brands__campaign">
+               <div class="p-brands__campaignHeading">
+                  <h3 class="c-heading-underline">高価買取中のブランド</h3>
+                  <!-- /.c-heading-underline -->
+                  <p class="p-brands__campaignLead">時計・ジュエリーからバッグ、アパレルまで、<br class="u-only__sp">幅広いブランド品の買取に対応しています。</p>
+               </div>
+               <!-- /.p-brands__campaignHeading -->
+               <ul class="p-brands__campaignList">
+                  <?php
+                  $items = [
+                     ['title' => 'エルメス', 'en' => 'Hermes', 'image' => '007', 'en_modifier' => '-uppercase'],
+                     ['title' => 'シャネル', 'en' => 'Chanel', 'image' => '008', 'en_modifier' => '-uppercase'],
+                     ['title' => 'ルイヴィトン', 'en' => 'Louis Vuitton', 'image' => '009', 'en_modifier' => '-uppercase'],
+                     ['title' => 'ロレックス', 'en' => 'Rolex', 'image' => '010', 'en_modifier' => '-uppercase'],
+                     ['title' => 'カルティエ', 'en' => 'Cartier', 'image' => '011', 'en_modifier' => '-uppercase'],
+                     ['title' => 'ヴァンクリーフ＆<br class="u-only__sp">アーペル', 'en' => 'Van Cleef & Arpels', 'image' => '012'],
+                  ];
+                  foreach ($items as $item) {
+                     ?>
+                     <li class="p-brands__campaignItem">
+                        <?php get_template_part('template-parts/p-item', null, $item); ?>
+                     </li>
+                     <?php
+                  }
+                  ?>
+               </ul>
+            </section>
+            <section class="p-brands__order">
+               <div class="p-brands__orderHeading">
+                  <h3 class="c-heading-underline">ブランド一覧を<br class="u-only__sp">五十音順で調べる</h3>
+                  <!-- /.c-heading-underline -->
+               </div>
+               <!-- /.p-brands__orderHeading -->
+               <ul class="p-brands__orderList">
+                  <li class="p-brands__orderListItem">
+                     <details class="p-brands__orderDetails js_details is_opened" open>
+                        <summary class="p-brands__orderSummary js_summary">
+                           <span class="p-brands__orderSummaryText">
+                              <span class="p-brands__orderSummaryTitle">「ア」行から調べる</span>
+                           </span>
+                        </summary>
+                        <div class="p-brands__orderContent js_content">
+                           <ul class="p-brands__orderSubList">
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">アーカー<span
+                                       aria-hidden="true">（AHKAH）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">アイダブリューシー<span
+                                       aria-hidden="true">（IWC）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">アニヤ・ハインドマーチ<span
+                                       aria-hidden="true">（Anya Hindmarch）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">アンテプリマ<span
+                                       aria-hidden="true">（ANTEPRIMA）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">アルマーニ<span
+                                       aria-hidden="true">（ARMANI）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">アレキサンダーワン<span
+                                       aria-hidden="true">（Alexander Wang）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">イッセイミヤケ<span
+                                       aria-hidden="true">（ISSEY MIYAKE）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span
+                                    class="p-brands__orderSubText">ヴァシュロン・コンスタンタン<span aria-hidden="true">（VACHERON
+                                       CONSTANTIN）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ヴァレンティノ<span
+                                       aria-hidden="true">（VALENTINO）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ヴァレクストラ<span
+                                       aria-hidden="true">（Valextra）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ヴァン クリーフ＆アーペル<span
+                                       aria-hidden="true">（Van Cleef ＆ Arpels）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ヴァンドーム青山<span
+                                       aria-hidden="true">（VENDOME AOYAMA）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span
+                                    class="p-brands__orderSubText">ヴィヴィアン・ウエストウッド<span aria-hidden="true">（Vivienne
+                                       Westwood）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ヴェルサーチ<span
+                                       aria-hidden="true">（VERSACE）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ウブロ<span
+                                       aria-hidden="true">（HUBLOT）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">エミリオプッチ<span
+                                       aria-hidden="true">（Emilio Pucci）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">エムシーエム<span
+                                       aria-hidden="true">（MCM）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">エルメス<span
+                                       aria-hidden="true">（HERMES）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">オーデマ ピゲ<span
+                                       aria-hidden="true">（AUDEMARS PIGUET）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">オメガ<span
+                                       aria-hidden="true">（OMEGA）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">オリス<span
+                                       aria-hidden="true">（ORIS）</span>買取</span></li>
+                           </ul>
+                        </div>
+                     </details>
+                  </li>
+                  <li class="p-brands__orderListItem">
+                     <details class="p-brands__orderDetails js_details">
+                        <summary class="p-brands__orderSummary js_summary">
+                           <span class="p-brands__orderSummaryText">
+                              <span class="p-brands__orderSummaryTitle">「カ」行から調べる</span>
+                           </span>
+                        </summary>
+                        <div class="p-brands__orderContent js_content">
+                           <ul class="p-brands__orderSubList">
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">カルティエ<span
+                                       aria-hidden="true">（Cartier）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">グッチ<span
+                                       aria-hidden="true">（GUCCI）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">グラハム<span
+                                       aria-hidden="true">（GRAHAM）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">グラフ<span
+                                       aria-hidden="true">（GRAFF）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">グランドセイコー<span
+                                       aria-hidden="true">（GRAND SEIKO）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">グラスヒュッテ・オリジナル<span
+                                       aria-hidden="true">（GLASHÜTTE ORIGINAL）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">クリスチャン・ディオール<span
+                                       aria-hidden="true">（Christian Dior）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">クリスチャン ルブタン<span
+                                       aria-hidden="true">（Christian Loubutin）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">クロエ<span
+                                       aria-hidden="true">（Chloé）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">クロノスイス<span
+                                       aria-hidden="true">（CHRONOSWISS）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">クロムハーツ<span
+                                       aria-hidden="true">（CHROME HEARTS）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ケイト・スペード<span
+                                       aria-hidden="true">（Katespade）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">コーチ<span
+                                       aria-hidden="true">（COACH）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">コムデギャルソン<span
+                                       aria-hidden="true">（COMME des GARÇONS）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">コルム<span
+                                       aria-hidden="true">（CORUM）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ゴヤール<span
+                                       aria-hidden="true">（GOYARD）</span>買取</span></li>
+                           </ul>
+                        </div>
+                     </details>
+                  </li>
+                  <li class="p-brands__orderListItem">
+                     <details class="p-brands__orderDetails js_details">
+                        <summary class="p-brands__orderSummary js_summary">
+                           <span class="p-brands__orderSummaryText">
+                              <span class="p-brands__orderSummaryTitle">「サ」行から調べる</span>
+                           </span>
+                        </summary>
+                        <div class="p-brands__orderContent js_content">
+                           <ul class="p-brands__orderSubList">
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">サルヴァトーレ・フェラガモ<span
+                                       aria-hidden="true">（Salvatore Ferragamo）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">サンローランパリ<span
+                                       aria-hidden="true">（SAINT LAURENT PARIS）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ジバンシィ<span
+                                       aria-hidden="true">（GIVENCHY）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ジミー チュウ<span
+                                       aria-hidden="true">（JIMMY CHOO）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ジラールペルゴ<span
+                                       aria-hidden="true">（GIRARD-PERREGAUX）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ジル サンダー<span
+                                       aria-hidden="true">（Jil Sander）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">シュプリーム<span
+                                       aria-hidden="true">（Supreme）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ショパール<span
+                                       aria-hidden="true">（CHOPARD）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ショーメ<span
+                                       aria-hidden="true">（CHAUMET）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ジン<span
+                                       aria-hidden="true">（SINN）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">セイコー<span
+                                       aria-hidden="true">（SEIKO）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">セリーヌ<span
+                                       aria-hidden="true">（CELINE）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ゼニス<span
+                                       aria-hidden="true">（ZENITH）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">スタージュエリー<span
+                                       aria-hidden="true">（STAR JEWELRY）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ステラ マッカートニー<span
+                                       aria-hidden="true">（STELLA McCARTNEY）</span>買取</span></li>
+                           </ul>
+                        </div>
+                     </details>
+                  </li>
+                  <li class="p-brands__orderListItem">
+                     <details class="p-brands__orderDetails js_details">
+                        <summary class="p-brands__orderSummary js_summary">
+                           <span class="p-brands__orderSummaryText">
+                              <span class="p-brands__orderSummaryTitle">「タ」行から調べる</span>
+                           </span>
+                        </summary>
+                        <div class="p-brands__orderContent js_content">
+                           <ul class="p-brands__orderSubList">
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">タグ・ホイヤー<span
+                                       aria-hidden="true">（TAG HEUER）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">タサキ<span
+                                       aria-hidden="true">（TASAKI）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">タトラス<span
+                                       aria-hidden="true">（TATRAS）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ダミアーニ<span
+                                       aria-hidden="true">（DAMIANI）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ダンヒル<span
+                                       aria-hidden="true">（dunhill）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ティソ<span
+                                       aria-hidden="true">（TISSOT）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ティファニー<span
+                                       aria-hidden="true">（Tiffany & Co.）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">デルヴォー<span
+                                       aria-hidden="true">（DELVAUX）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">デュベティカ<span
+                                       aria-hidden="true">（DUVETICA）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">トゥミ<span
+                                       aria-hidden="true">（TUMI）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">トッズ<span
+                                       aria-hidden="true">（TOD’S）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">トリーバーチ<span
+                                       aria-hidden="true">（TORY BURCH）</span>買取</span></li>
+                           </ul>
+                        </div>
+                     </details>
+                  </li>
+                  <li class="p-brands__orderListItem">
+                     <details class="p-brands__orderDetails js_details">
+                        <summary class="p-brands__orderSummary js_summary">
+                           <span class="p-brands__orderSummaryText">
+                              <span class="p-brands__orderSummaryTitle">「ナ」行から調べる</span>
+                           </span>
+                        </summary>
+                        <div class="p-brands__orderContent js_content">
+                           <ul class="p-brands__orderSubList">
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ノーブランド<span
+                                       aria-hidden="true">（NO BRAND）</span>買取</span></li>
+                           </ul>
+                        </div>
+                     </details>
+                  </li>
+                  <li class="p-brands__orderListItem">
+                     <details class="p-brands__orderDetails js_details">
+                        <summary class="p-brands__orderSummary js_summary">
+                           <span class="p-brands__orderSummaryText">
+                              <span class="p-brands__orderSummaryTitle">「ハ」行から調べる</span>
+                           </span>
+                        </summary>
+                        <div class="p-brands__orderContent js_content">
+                           <ul class="p-brands__orderSubList">
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ハミルトン<span
+                                       aria-hidden="true">（HAMILTON）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ハリー・ウィンストン<span
+                                       aria-hidden="true">（HARRY WINSTON）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">バーバリー<span
+                                       aria-hidden="true">（BURBERRY）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">バリー<span
+                                       aria-hidden="true">（BALLY）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">バレンシアガ<span
+                                       aria-hidden="true">（BALENCIAGA）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">パテック フィリップ<span
+                                       aria-hidden="true">（PATEK PHILIPPE）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">パネライ<span
+                                       aria-hidden="true">（PANERAI）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ピアジェ<span
+                                       aria-hidden="true">（PIAGET）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">フォクシー<span
+                                       aria-hidden="true">（FOXEY）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">フェンディ<span
+                                       aria-hidden="true">（FENDI）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ブシュロン<span
+                                       aria-hidden="true">（Boucheron）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ブランパン<span
+                                       aria-hidden="true">（BLANCPAIN）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ブレゲ<span
+                                       aria-hidden="true">（BREGUET）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ブライトリング<span
+                                       aria-hidden="true">（BREITLING）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">フランク ミュラー<span
+                                       aria-hidden="true">（FRANCK MULLER）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">フルラ<span
+                                       aria-hidden="true">（FURLA）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ブルガリ<span
+                                       aria-hidden="true">（BVLGARI）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ベル＆ロス<span
+                                       aria-hidden="true">（Bell ＆ Ross）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ベルルッティ<span
+                                       aria-hidden="true">（Berluti）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ボーム＆メルシエ<span
+                                       aria-hidden="true">（Baume＆Mercier）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ボッテガ・ヴェネタ<span
+                                       aria-hidden="true">（Bottega Veneta）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ポメラート<span
+                                       aria-hidden="true">（POMELLATO）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ポンテヴェキオ<span
+                                       aria-hidden="true">（Ponte Vecchio）</span>買取</span></li>
+                           </ul>
+                        </div>
+                     </details>
+                  </li>
+                  <li class="p-brands__orderListItem">
+                     <details class="p-brands__orderDetails js_details">
+                        <summary class="p-brands__orderSummary js_summary">
+                           <span class="p-brands__orderSummaryText">
+                              <span class="p-brands__orderSummaryTitle">「マ」行から調べる</span>
+                           </span>
+                        </summary>
+                        <div class="p-brands__orderContent js_content">
+                           <ul class="p-brands__orderSubList">
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">マーク ジェイコブス<span
+                                       aria-hidden="true">（MARC JACOBS）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">マイケル・コース<span
+                                       aria-hidden="true">（MICHAEL KORS）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">マックスマーラ<span
+                                       aria-hidden="true">（Max Mara）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">マルニ<span
+                                       aria-hidden="true">（MARNI）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ミキモト<span
+                                       aria-hidden="true">（MIKIMOTO）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ミュウミュウ<span
+                                       aria-hidden="true">（miumiu）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">メゾン マルジェラ<span
+                                       aria-hidden="true">（Maison Margiela）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">モンクレール<span
+                                       aria-hidden="true">（Moncler）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">モンブラン<span
+                                       aria-hidden="true">（MONTBLANC）</span>買取</span></li>
+                           </ul>
+                        </div>
+                     </details>
+                  </li>
+                  <li class="p-brands__orderListItem">
+                     <details class="p-brands__orderDetails js_details">
+                        <summary class="p-brands__orderSummary js_summary">
+                           <span class="p-brands__orderSummaryText">
+                              <span class="p-brands__orderSummaryTitle">「ヤ」行から調べる</span>
+                           </span>
+                        </summary>
+                        <div class="p-brands__orderContent js_content">
+                           <ul class="p-brands__orderSubList">
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ユリス・ナルダン<span
+                                       aria-hidden="true">（ULYSSE NARDIN）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">4ドシー<span
+                                       aria-hidden="true">（4℃）</span>買取</span></li>
+                           </ul>
+                        </div>
+                     </details>
+                  </li>
+                  <li class="p-brands__orderListItem">
+                     <details class="p-brands__orderDetails js_details">
+                        <summary class="p-brands__orderSummary js_summary">
+                           <span class="p-brands__orderSummaryText">
+                              <span class="p-brands__orderSummaryTitle">「ラ」行から調べる</span>
+                           </span>
+                        </summary>
+                        <div class="p-brands__orderContent js_content">
+                           <ul class="p-brands__orderSubList">
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ライバン<span
+                                       aria-hidden="true">（RayBan）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">リモワ<span
+                                       aria-hidden="true">（Rimowa）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ルイ・ヴィトン<span
+                                       aria-hidden="true">（LOUIS VUITTON）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ルミノックス<span
+                                       aria-hidden="true">（Luminox）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ロエベ<span
+                                       aria-hidden="true">（LOEWE）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ロジェ・デュブイ<span
+                                       aria-hidden="true">（Roger Dubuis）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ロレックス<span
+                                       aria-hidden="true">（ROLEX）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ロンシャン<span
+                                       aria-hidden="true">（LONGCHAMP）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ロンジン<span
+                                       aria-hidden="true">（LONGINES）</span>買取</span></li>
+                           </ul>
+                        </div>
+                     </details>
+                  </li>
+                  <li class="p-brands__orderListItem">
+                     <details class="p-brands__orderDetails js_details">
+                        <summary class="p-brands__orderSummary js_summary">
+                           <span class="p-brands__orderSummaryText">
+                              <span class="p-brands__orderSummaryTitle">「ワ」行から調べる</span>
+                           </span>
+                        </summary>
+                        <div class="p-brands__orderContent js_content">
+                           <ul class="p-brands__orderSubList">
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">買取</span></li>
+                           </ul>
+                        </div>
+                     </details>
+                  </li>
+               </ul>
+               <!-- /.p-brands__orderList -->
+            </section>
+         </div>
+         <!-- /.p-brands__content -->
+      </div>
+      <!-- /.p-brands__inner-->
+   </section>
+   <!-- /.p-brands -->
 
 
 </main>

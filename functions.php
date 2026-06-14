@@ -24,21 +24,21 @@ function my_script_init()
    // Fonts
    wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap', array(), null, 'all');
    // Swiper（CDN）
-   wp_enqueue_style('swiper', '//cdnjs.cloudflare.com/ajax/libs/Swiper/12.2.0/swiper-bundle.min.css', array(), '12.2.0', 'all');
+   wp_enqueue_style('swiper', '//cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css', array(), '12.2.0', 'all');
    // メインスタイルシート
    wp_enqueue_style('main-style', get_theme_file_uri('/dev/public/assets/css/style.css'), array(), filemtime(get_theme_file_path('/dev/public/assets/css/style.css')), 'all');
 
    // △▽△▽△▽△▽ JavaScript
    // Swiper（CDN）
-   wp_enqueue_script('swiper', '//cdnjs.cloudflare.com/ajax/libs/Swiper/12.2.0/swiper-bundle.min.js', array('jquery'), '12.2.0', true);
+   wp_enqueue_script('swiper', '//cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js', array('jquery'), '12.2.0', true);
    // GSAP Core
-   wp_enqueue_script('gsap-core', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js', array('jquery'), '3.15.0', true);
+   wp_enqueue_script('gsap-core', '//cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js', array('jquery'), '3.15.0', true);
    // GSAP ScrollToPlugin
-   wp_enqueue_script('gsap-scrollto', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollToPlugin.min.js', array('jquery', 'gsap-core'), '3.15.0', true);
+   wp_enqueue_script('gsap-scrollto', '//cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollToPlugin.min.js', array('jquery', 'gsap-core'), '3.15.0', true);
    // GSAP ScrollTrigger
-   wp_enqueue_script('gsap-scrolltrigger', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js', array('jquery', 'gsap-core'), '3.15.0', true);
+   wp_enqueue_script('gsap-scrolltrigger', '//cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js', array('jquery', 'gsap-core'), '3.15.0', true);
    // メインスクリプト
-   wp_enqueue_script('main-script', get_theme_file_uri('/dev/public/assets/js/bundle.js'), array('jquery', 'swiper'), filemtime(get_theme_file_path('/dev/public/assets/js/bundle.js')), true);
+   wp_enqueue_script('main-script', get_theme_file_uri('/dev/public/assets/js/bundle.js'), array('jquery', 'swiper', 'gsap-core'), filemtime(get_theme_file_path('/dev/public/assets/js/bundle.js')), true);
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
