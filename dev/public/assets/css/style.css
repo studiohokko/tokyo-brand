@@ -4120,10 +4120,73 @@ button {
   }
 }
 
+.p-gold__newsBannerWrapper {
+  position: relative;
+}
+
 .p-gold__newsBanner {
   overflow: hidden;
   border-radius: 0.3125rem;
 }
+.p-gold__bannerPrice {
+  position: absolute;
+  bottom: 3.4375rem;
+  left: 1.125rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 3.0625rem;
+  line-height: 1;
+  font-family: "Zen Old Mincho", serif;
+  text-shadow: 0.3125rem 0.25rem 0.25rem rgba(0, 0, 0, 0.7);
+}
+@media (min-width: 768px) {
+  .p-gold__bannerPrice {
+    right: 2.6875rem;
+    bottom: 6.6875rem;
+    left: unset;
+    font-size: 5.0625rem;
+    letter-spacing: -0.01em;
+  }
+}
+.p-gold__bannerPrice span {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: -0.1em;
+}
+@media (min-width: 768px) {
+  .p-gold__bannerPrice span {
+    font-size: 2.0625rem;
+  }
+}
+
+.p-gold__bannerTime {
+  position: absolute;
+  bottom: 1.0625rem;
+  left: 0.875rem;
+  min-width: 11.875rem;
+  padding: 0.25rem 0.625rem 0.3125rem;
+  border-radius: 100vmax;
+  background: #031f4f;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-family: "Zen Old Mincho", serif;
+  text-align: center;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .p-gold__bannerTime {
+    right: 2.4375rem;
+    bottom: 3.1875rem;
+    left: unset;
+    min-width: 20.3125rem;
+    padding: 0.25rem 0.625rem 0.375rem;
+    font-size: 1.625rem;
+  }
+}
+
 .p-gold__rate {
   -webkit-margin-before: 3.75rem;
   margin-block-start: 3.75rem;

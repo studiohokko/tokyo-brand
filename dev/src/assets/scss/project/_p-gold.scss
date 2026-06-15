@@ -83,11 +83,75 @@
 	}
 }
 
+.p-gold__newsBannerWrapper {
+	position: relative;
+}
+
 .p-gold__newsBanner {
 	border-radius: rm(5);
 	overflow: hidden;
 
 	img {
+	}
+}
+
+.p-gold__bannerPrice {
+	position: absolute;
+	bottom: rm(55);
+	left: rm(18);
+	color: $white;
+	font-family: $ff-serif;
+	font-size: rm(49);
+	font-weight: 700;
+	line-height: 1;
+	text-shadow: rm(5) rm(4) rm(4) rgba(0, 0, 0, 0.7);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		left: unset;
+		right: rm(43);
+		bottom: rm(107);
+		font-size: rm(81);
+		letter-spacing: -0.01em;
+	}
+
+	span {
+		font-size: rm(16);
+		font-weight: 700;
+		line-height: 1.5;
+		letter-spacing: -0.1em;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			font-size: rm(33);
+		}
+	}
+}
+
+.p-gold__bannerTime {
+	position: absolute;
+	min-width: rm(190);
+	bottom: rm(17);
+	left: rm(14);
+	padding: rm(4) rm(10) rm(5);
+	border-radius: 100vmax;
+	background: $color-main;
+	font-family: $ff-serif;
+	color: $white;
+	font-size: rm(16);
+	font-weight: 900;
+	line-height: 1.4;
+	white-space: nowrap;
+	text-align: center;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		left: unset;
+		right: rm(39);
+		bottom: rm(51);
+		min-width: rm(325);
+		padding: rm(4) rm(10) rm(6);
+		font-size: rm(26);
 	}
 }
 

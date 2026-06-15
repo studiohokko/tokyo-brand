@@ -1090,16 +1090,32 @@
                </div>
                <!-- /.p-gold__newsHeading -->
                <div class="p-gold__newsBody">
-                  <figure class="p-gold__newsBanner">
-                     <picture>
-                        <source
-                           srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-gold_banner.webp')); ?>"
-                           media="(min-width: 768px)">
-                        <img
-                           src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-gold_banner.webp')); ?>'
-                           alt='' width='' height='' loading='lazy'>
-                     </picture>
-                  </figure>
+                  <?php
+                  $gold_time = get_field('gold_time');
+                  $gold_items = get_field('gold_group') ?: [];
+                  $first_gold_price = $gold_items[0]['gold_price'] ?? '';
+                  $timestamp = $gold_time ? strtotime($gold_time) : null;
+                  ?>
+                  <div class="p-gold__newsBannerWrapper">
+                     <figure class="p-gold__newsBanner">
+                        <picture>
+                           <source
+                              srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-gold_banner.webp')); ?>"
+                              media="(min-width: 768px)">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-gold_banner.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </picture>
+                     </figure>
+                     <?php if ($first_gold_price): ?>
+                        <p class="p-gold__bannerPrice"><?php echo esc_html($first_gold_price); ?><span>円/g</span></p>
+                     <?php endif; ?>
+                     <?php if ($timestamp): ?>
+                        <time class="p-gold__bannerTime" datetime="<?php echo esc_attr(date('c', $timestamp)); ?>">
+                           <?php echo esc_html(date_i18n('Y年n月j日 G:i', $timestamp)); ?>
+                        </time>
+                     <?php endif; ?>
+                  </div>
                </div>
                <!-- /.p-gold__newsBody -->
             </section>
@@ -1112,11 +1128,7 @@
                   <section class="p-gold__rateBox">
                      <div class="p-gold__rateBoxTitle">
                         <h3 class="p-gold__rateTitle">今日の金・貴金属1gあたりの<br class="u-only__sp">買取相場価格</h3>
-                        <?php $gold_time = get_field('gold_time');
-
-                        if ($gold_time):
-                           $timestamp = strtotime($gold_time);
-                           ?>
+                        <?php if ($gold_time): ?>
                            <p class="p-gold__rateDate">
                               ※
                               <time class="p-gold__rateTime" datetime="<?php echo esc_attr(date('c', $timestamp)); ?>">
@@ -1128,7 +1140,6 @@
                      </div>
                      <!-- /.p-gold__rateBoxTitle -->
                      <div class="p-gold__rateTableWrapper">
-                        <?php $gold_items = get_field('gold_group') ?: []; ?>
                         <?php if ($gold_items): ?>
                            <ul class="p-gold__rateList">
                               <?php foreach ($gold_items as $gold_row): ?>
