@@ -1563,6 +1563,82 @@
    <!-- /.p-flow -->
 
 
+   <div class="p-wrapper">
+      <div class="p-wrapper__bg"></div>
+      <!-- /.p-wrapper__bg -->
+      <section class="p-point">
+         <div class="p-point__inner l-inner -narrow">
+            <div class="p-point__heading">
+               <div class="c-heading -white">
+                  <h2 class="c-heading__title -nowrap">ブランド品<br class="u-only__sp">高価買取のポイント</h2>
+                  <p class="c-heading__en">Point</p>
+               </div>
+               <!-- /.c-heading -->
+            </div>
+            <!-- /.p-point__heading -->
+            <div class="p-point__content">
+               <p class="p-point__pop"><span class="p-point__popText">査定額アップの<br class="u-only__sp">3つのコツ</span></p>
+               <ul class="p-point__list">
+                  <li class="p-point__item">
+                     <div class="p-point__textArea">
+                        <h3 class="p-point__title">売り時を逃さない</h3>
+                        <p class="p-point__text">需要が高い時期や流行のモデルが出た直後は相場が高い傾向があります。相場情報を確認し、タイミング良く売却しましょう。</p>
+                     </div>
+                     <!-- /.p-point__textArea -->
+                     <div class="p-point__imageArea">
+                        <figure class="p-point__image">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-point_001.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-point__image -->
+                     </div>
+                     <!-- /.p-point__imageArea -->
+                  </li>
+                  <li class="p-point__item">
+                     <div class="p-point__textArea">
+                        <h3 class="p-point__title">付属品と複数持込が鍵</h3>
+                        <p class="p-point__text">保証書や箱、ストラップなどの付属品を揃え、複数点まとめて査定に出すと高価買取になります。</p>
+                     </div>
+                     <!-- /.p-point__textArea -->
+                     <div class="p-point__imageArea">
+                        <figure class="p-point__image">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-point_002.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-point__image -->
+                     </div>
+                     <!-- /.p-point__imageArea -->
+                  </li>
+                  <li class="p-point__item">
+                     <div class="p-point__textArea">
+                        <h3 class="p-point__title">お品物の状態を整える</h3>
+                        <p class="p-point__text">
+                           お持ち込み前に簡単なお手入れをしていただくことで、より良い査定結果につながる場合があります。汚れや傷があっても問題ございませんが、可能な範囲で整えていただくことをおすすめしております。
+                        </p>
+                     </div>
+                     <!-- /.p-point__textArea -->
+                     <div class="p-point__imageArea">
+                        <figure class="p-point__image">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-point_003.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-point__image -->
+                     </div>
+                     <!-- /.p-point__imageArea -->
+                  </li>
+               </ul>
+            </div>
+            <!-- /.p-point__content -->
+         </div>
+         <!-- /.p-point__inner-->
+      </section>
+      <!-- /.p-point -->
+   </div>
+   <!-- /.p-wrapper -->
+
 </main>
 
 <?php get_footer(); ?>

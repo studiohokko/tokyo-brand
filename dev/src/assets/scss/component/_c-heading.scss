@@ -65,3 +65,9 @@
 		}
 	}
 }
+
+.c-heading__title {
+	&.-nowrap {
+		white-space: nowrap;
+	}
+}
