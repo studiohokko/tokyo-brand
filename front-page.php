@@ -538,6 +538,7 @@
                      'title' => '相場以上の高額査定',
                      'text' => '独自の国内外への販売ルートを持っています。<br class="u-only__pc">だからこそ、一般的な国内相場にとらわれない、真の価値に基づいた高額査定が可能です。<br>査定士が最新の相場をもとに、他店に負けない高額査定を目指します。',
                      'image' => '002',
+                     'modifier' => '-reverse',
                   ],
                   [
                      'number' => 'Reasons 03',
@@ -550,10 +551,15 @@
                      'title' => '無理な営業・押し売りは<br>一切しません',
                      'text' => '「考えてから決めたい」「他店とも比較したい」といったご要望も歓迎。<br>査定だけでお帰りいただくお客様も多数いらっしゃいます',
                      'image' => '004',
+                     'modifier' => '-reverse',
                   ],
                ];
                foreach ($reasons as $reason) {
-                  get_template_part('template-parts/p-media', null, $reason);
+                  ?>
+                  <li class="p-select__item">
+                     <?php get_template_part('template-parts/p-media', null, $reason); ?>
+                  </li>
+                  <?php
                }
                ?>
             </ul>
@@ -1244,6 +1250,62 @@
       <!-- /.p-price__inner-->
    </section>
    <!-- /.p-price -->
+
+
+   <!-- reasons   ///////////////////////////////////////////////////// -->
+   <section class="p-reasons">
+      <div class="p-reasons__bg"></div>
+      <!-- /.p-reasons__bg -->
+      <div class="p-reasons__inner l-inner -narrow">
+         <div class="p-reasons__heading">
+            <div class="c-heading -white">
+               <h2 class="c-heading__title">高価買取の理由</h2>
+               <p class="c-heading__en">Reasons</p>
+            </div>
+            <!-- /.c-heading -->
+            <p class="p-reasons__lead">当社では「ブランド品をどこよりも高価買取すること」が可能です。その理由についてご説明します。</p>
+         </div>
+         <!-- /.p-reasons__heading -->
+         <div class="p-reasons__content">
+            <ul class="p-reasons__list">
+               <?php
+               $reasons = [
+                  [
+                     'number' => 'Reasons 01',
+                     'title' => '国内相場に左右されない、<br>世界基準の買取',
+                     'text' => '世界中からお客様が訪れる店舗を複数展開しているため、安定した販売力を背景に高価買取を実現しています。国内の販売価格に左右されることなく、世界基準の相場で買取が可能です。',
+                     'image' => '005',
+                  ],
+                  [
+                     'number' => 'Reasons 02',
+                     'title' => '経験豊富な鑑定士',
+                     'text' => '豊富な知識と経験を持つ鑑定士が、一点一点丁寧に査定いたします。市場動向やモデルごとの価値を見極め、本来の価値を反映した適正価格での買取を行っています。',
+                     'image' => '006',
+                     'modifier' => '-reverse',
+                  ],
+                  [
+                     'number' => 'Reasons 03',
+                     'title' => '自社オークションの運営',
+                     'text' => '自社オークションを運営しているため、幅広い販路を活かした買取が可能です。市場の需要を直接反映できるため、最新の相場を踏まえた高価買取<br class="u-only__pc">を実現しています。',
+                     'image' => '007',
+                  ],
+               ];
+               foreach ($reasons as $reason) {
+                  ?>
+                  <li class="p-reasons__item">
+                     <?php get_template_part('template-parts/p-media', null, $reason); ?>
+                  </li>
+                  <?php
+               }
+               ?>
+            </ul>
+         </div>
+         <!-- /.p-reasons__content -->
+      </div>
+      <!-- /.p-reasons__inner-->
+   </section>
+   <!-- /.p-reasons -->
+
 
 
 </main>

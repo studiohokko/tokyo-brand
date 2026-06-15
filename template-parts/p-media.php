@@ -1,10 +1,11 @@
 <?php
-$number = $args['number'] ?? '';
-$title  = $args['title'] ?? '';
-$text   = $args['text'] ?? '';
-$image  = $args['image'] ?? '';
+$number   = $args['number'] ?? '';
+$title    = $args['title'] ?? '';
+$text     = $args['text'] ?? '';
+$image    = $args['image'] ?? '';
+$modifier = $args['modifier'] ?? '';
 ?>
-<li class="p-media">
+<section class="p-media<?php echo $modifier ? ' ' . esc_attr($modifier) : ''; ?>">
    <div class="p-media__textArea">
       <div class="p-media__head">
          <p class="p-media__number"><?php echo esc_html($number); ?></p>
@@ -22,4 +23,4 @@ $image  = $args['image'] ?? '';
       <!-- /.p-media__image -->
    </div>
    <!-- /.p-media__imageArea -->
-</li>
+</section>

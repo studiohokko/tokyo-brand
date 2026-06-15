@@ -15,11 +15,6 @@
 		flex-direction: row-reverse;
 		gap: rm(39);
 		align-items: center;
-
-		&:nth-child(even) {
-			padding: rm(18) rm(18) rm(18) rm(45);
-			flex-direction: row;
-		}
 	}
 }
 
@@ -95,7 +90,23 @@
 }
 
 .p-media__image {
+	border-radius: rm(5);
+	overflow: hidden;
+
 	img {
 		width: 100%;
+	}
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.p-media {
+	&.-reverse {
+		// ******** responsive(pc)
+		@include mq(pc) {
+			padding: rm(18) rm(18) rm(18) rm(45);
+			flex-direction: row;
+		}
 	}
 }
