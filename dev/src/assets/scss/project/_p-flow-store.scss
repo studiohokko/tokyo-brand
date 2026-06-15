@@ -1,0 +1,58 @@
+@use '../global' as *;
+
+.p-flow-store {
+	// ******** responsive(pc)
+	@include mq(pc) {
+		max-width: rm(1100);
+		margin-inline: auto;
+	}
+}
+
+.p-flow-store__heading {
+}
+
+.p-flow-store__content {
+	margin-block-start: rm(20);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(36);
+	}
+}
+
+.p-flow-store__list {
+	display: flex;
+	flex-direction: column;
+	gap: rm(56);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		gap: rm(61);
+	}
+}
+
+.p-flow-store__item {
+	position: relative;
+
+	&:not(:last-child) {
+		&::before {
+			display: block;
+			position: absolute;
+			bottom: rm(-38);
+			left: 50%;
+			translate: -50%;
+			width: rm(80);
+			height: rm(20);
+			background: #bbc6dd;
+			clip-path: polygon(0 0, 50% 100%, 100% 0);
+			content: '';
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				bottom: rm(-45);
+				width: rm(117);
+				height: rm(29);
+			}
+		}
+	}
+}

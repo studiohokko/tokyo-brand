@@ -1,9 +1,8 @@
 <div class="p-cta">
    <figure class="p-cta__deco">
-      <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-cta_person.webp')); ?>' alt=''
-      width='' height='' loading='lazy'>
+      <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-cta_person.webp')); ?>' alt='' width=''
+         height='' loading='lazy'>
    </figure>
-   <!-- /.p-cta__pop -->
    <div class="p-cta__inner l-inner">
       <div class="p-cta__content">
          <p class="p-cta__pop">写真を送るだけ！<br class="u-only__sp">最短当日で査定OK</p>

@@ -1,0 +1,222 @@
+@use '../global' as *;
+
+.p-flow-item {
+	display: flex;
+	flex-direction: column;
+	border-radius: rm(5);
+	overflow: hidden;
+	box-shadow: 0 0 rm(12) 0 rgba(3, 31, 79, 0.18);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-direction: row;
+		align-items: stretch;
+	}
+}
+
+.p-flow-item__head {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: rm(5);
+	height: rm(59);
+	color: $white;
+	text-align: center;
+	font-family: $ff-en;
+	font-weight: 500;
+	line-height: 1.3;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-shrink: 0;
+		flex-direction: column;
+		gap: 0;
+		width: rm(110);
+		height: auto;
+		align-self: stretch;
+	}
+}
+
+.p-flow-item__step {
+	font-size: rm(24);
+	text-transform: uppercase;
+}
+
+.p-flow-item__number {
+	font-size: rm(38);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(-5);
+		font-size: rm(44);
+	}
+}
+
+.p-flow-item__body {
+	padding: rm(18) rm(20) rm(28);
+	background: $white;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-grow: 1;
+		padding: rm(28) rm(32);
+	}
+}
+
+.p-flow-item__title {
+	font-family: $ff-serif;
+	font-size: rm(24);
+	font-weight: 900;
+	line-height: 1.3;
+	background: $gradation;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(28);
+	}
+}
+
+.p-flow-item__text {
+	margin-block-start: rm(14);
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.8;
+}
+
+.p-flow-item__foot {
+	margin-block-start: rm(12);
+}
+
+.p-flow-item__footLinks {
+	display: flex;
+	flex-direction: column;
+	gap: rm(17);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-direction: row;
+		gap: rm(20);
+	}
+}
+
+.p-flow-item__footLinkItem {
+}
+
+.p-flow-item__footLink {
+	position: relative;
+	padding-inline-end: rm(32);
+	padding-block-end: rm(7);
+	border-bottom: rm(1) solid $color-text;
+	font-size: rm(16);
+	font-weight: 600;
+	line-height: 1.5;
+	transition: opacity $easing;
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		top: 40%;
+		translate: 0 -50%;
+		transition: translate $easing;
+		content: '';
+	}
+
+	&::before {
+		right: 0;
+		width: rm(20);
+		height: rm(20);
+		background: $color-text;
+		border-radius: 50%;
+	}
+
+	&::after {
+		right: rm(5);
+		@include chevron($size: rm(10), $thickness: 4, $color: $white, $direction: right);
+	}
+}
+
+.p-flow-item__lineButton {
+	height: rm(80);
+	margin-block-start: rm(15);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(488);
+		height: rm(102);
+		margin-block-start: rm(20);
+	}
+}
+
+.p-flow-item__footBox {
+	display: flex;
+	flex-direction: column;
+	padding: rm(14) rm(12) rm(12);
+	border-radius: rm(5);
+	background: $color-bg;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-direction: row;
+		gap: rm(15);
+		padding: rm(14) rm(22) rm(13);
+	}
+}
+
+.p-flow-item__footBoxTitle {
+	font-size: rm(16);
+	font-weight: 700;
+	line-height: 1.8;
+}
+
+.p-flow-item__slash {
+	// ******** responsive(pc)
+	@include mq(pc) {
+		color: #b9b9b9;
+	}
+}
+
+.p-flow-item__footAddress {
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.8;
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.p-flow-item {
+	&.-store {
+		.p-flow-item__head {
+			background: $color-accent-001;
+		}
+	}
+
+	&.-delivery {
+		.p-flow-item__head {
+			background: $color-main;
+		}
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.p-flow-item__footLink {
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		opacity: 0.7;
+	}
+}

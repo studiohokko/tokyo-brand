@@ -219,11 +219,11 @@
 		&:hover {
 			.p-choice__methodText {
 				&::before {
-					top: 60%;
+					top: 63%;
 				}
 
 				&::after {
-					top: 63%;
+					top: 66%;
 				}
 			}
 
@@ -242,5 +242,23 @@
 
 	&:focus-visible {
 		outline: none;
+
+		.p-choice__methodText {
+			&::before {
+				top: 63%;
+			}
+
+			&::after {
+				top: 66%;
+			}
+		}
+
+		&.-store {
+			background: #d95b0d;
+		}
+
+		&.-delivery {
+			background: #092e6e;
+		}
 	}
 }

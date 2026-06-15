@@ -1,0 +1,134 @@
+@use '../global' as *;
+
+.p-flow-cta {
+}
+
+.p-flow-cta__box {
+	position: relative;
+	padding: rm(34) rm(20) rm(30);
+	background: url(../img/sp/p-flow-cta_bg.webp) no-repeat center center / cover;
+	border-radius: rm(5);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding: rm(46) rm(36) rm(52);
+		background: url(../img/p-flow-cta_bg.webp) no-repeat center center / cover;
+	}
+}
+
+.p-flow-cta__deco {
+	position: absolute;
+	top: rm(96);
+	right: rm(14);
+	width: rm(138);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		top: unset;
+		bottom: 0;
+		width: rm(274);
+		right: calc(50% - rm(656));
+	}
+
+	img {
+	}
+}
+
+.p-flow-cta__title {
+}
+
+.p-flow-cta__body {
+	margin-block-start: rm(53);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(34);
+	}
+}
+
+.p-flow-cta__pop {
+	position: relative;
+	width: fit-content;
+	margin-inline-start: rm(3);
+	color: $white;
+	text-align: center;
+	font-size: rm(20);
+	font-weight: 700;
+	line-height: 1.1;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(26);
+		margin-inline: auto;
+	}
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		left: rm(6);
+		width: rm(168);
+		height: rm(2);
+		background: $white;
+		content: '';
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			width: rm(2);
+			height: rm(37);
+			left: unset;
+		}
+	}
+
+	&::before {
+		top: rm(-16);
+		rotate: 7deg;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			top: 0;
+			left: rm(-30);
+			rotate: 152.736deg;
+		}
+	}
+
+	&::after {
+		bottom: rm(-21);
+		rotate: -7deg;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			top: 0;
+			right: rm(-30);
+			bottom: unset;
+			rotate: 27.264deg;
+		}
+	}
+}
+
+.p-flow-cta__button {
+	margin-block-start: rm(52);
+	height: rm(79);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(720);
+		height: rm(110);
+		margin-block-start: rm(22);
+		margin-inline: auto;
+	}
+}
+
+.p-flow-cta__text {
+	margin-block-start: rm(32);
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.8;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(35);
+		text-align: center;
+		font-size: rm(18);
+	}
+}

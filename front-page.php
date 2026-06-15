@@ -1307,6 +1307,261 @@
    <!-- /.p-reasons -->
 
 
+   <!-- flow   ///////////////////////////////////////////////////// -->
+   <section class="p-flow">
+      <div class="p-flow__inner l-inner">
+         <div class="p-flow__heading">
+            <div class="c-heading">
+               <h2 class="c-heading__title">ブランド買取の<br class="u-only__sp">流れ</h2>
+               <p class="c-heading__en">How It Works</p>
+            </div>
+            <!-- /.c-heading -->
+            <p class="p-flow__lead">
+               お忙しい日常の中でも、お客様がストレスなくご利用いただけるよう、シンプルで分かりやすい2つの買取の流れをご用意しました。<br>お客様のライフスタイルに合わせて、最適な方法をお選びください。<br>忙しい方や遠方の方には自宅から送るだけの「宅配買取」、直接相談したい方には「店頭買取」をご用意しています。<br>査定料・手数料は無料です。
+            </p>
+         </div>
+         <!-- /.p-flow__heading -->
+         <div class="p-flow__content">
+            <div class="p-flow__cta">
+               <section class="p-flow-cta">
+                  <div class="p-flow-cta__box">
+                     <figure class="p-flow-cta__deco">
+                        <img
+                           src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-flow-cta_person.webp')); ?>'
+                           alt='' width='' height='' loading='lazy'>
+                     </figure>
+                     <!-- /.p-flow-cta__deco -->
+                     <div class="p-flow-cta__title">
+                        <h3 class="c-heading-underline">まずはLINEで無料査定</h3>
+                     </div>
+                     <!-- /.p-flow-cta__title -->
+                     <div class="p-flow-cta__body">
+                        <p class="p-flow-cta__pop">写真を送るだけ！<br class="u-only__sp">最短当日で査定OK</p>
+                        <div class="p-flow-cta__button">
+                           <a href="" class="c-button-line -simple -small">
+                              <p class="c-button-line__text">LINEで無料査定する</p>
+                           </a>
+                        </div>
+                        <!-- /.p-flow-cta__button -->
+                     </div>
+                     <!-- /.p-flow-cta__body -->
+                  </div>
+                  <!-- /.p-flow-cta__box -->
+                  <p class="p-flow-cta__text">
+                     店頭に足を運ぶ暇がなかなかない方は、LINEにて無料査定しておりますのでぜひご利用ください。<br>売りたい商品のお写真とともに、ブランド名、アイテム名、ご購入時期、コンディション、<br>その他お品物に関する詳しい情報をお伝えいただくとより正確な金額をご提示できます。
+                  </p>
+               </section>
+            </div>
+            <!-- /.p-flow__cta -->
+            <div class="p-flow__buttonsWrapper">
+               <ul class="p-flow__buttons">
+                  <li class="p-flow__button">
+                     <a href="" class="p-flow__buttonLink -store">
+                        <figure class="p-flow__buttonImage">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/icon_building.svg')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <p class="p-flow__buttonPop">即日売却したい <span>/</span> 対面で丁寧に対応してほしい</p>
+                        <p class="p-flow__buttonText">店頭買取はこちら</p>
+                     </a>
+                  </li>
+                  <li class="p-flow__button">
+                     <a href="" class="p-flow__buttonLink -delivery">
+                        <figure class="p-flow__buttonImage">
+                           <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/icon_car.svg')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <p class="p-flow__buttonPop">自宅で売却したい <span>/</span> 手間なく売却したい</p>
+                        <p class="p-flow__buttonText">宅配買取はこちら</p>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <!-- /.p-flow__buttonsWrapper -->
+            <div class="p-flow__store">
+               <section class="p-flow-store">
+                  <div class="p-flow-store__heading">
+                     <div class="c-heading">
+                        <h2 class="c-heading__title">店頭買取</h2>
+                        <p class="c-heading__en">In Store</p>
+                     </div>
+                     <!-- /.c-heading -->
+                  </div>
+                  <!-- /.p-flow-store__heading -->
+                  <div class="p-flow-store__content">
+                     <ul class="p-flow-store__list">
+                        <li class="p-flow-store__item">
+                           <div class="p-flow-item -store">
+                              <div class="p-flow-item__head">
+                                 <p class="p-flow-item__step">step</p>
+                                 <p class="p-flow-item__number">01</p>
+                              </div>
+                              <!-- /.p-flow-item__head -->
+                              <div class="p-flow-item__body">
+                                 <p class="p-flow-item__title">店舗まで商品を持ち込む</p>
+                                 <p class="p-flow-item__text">
+                                    当店の店舗（渋谷）まで買取をご希望されているお品物一式をお持ち込みください。<br>買取時にご本人様を確認できる、現住所記載の身分証明書が必要になります。<br>商品付属の保証書や鑑定書・購入時に入っていた箱などもご一緒にお持ちいただけますとより高価で買取可能となります。
+                                 </p>
+                                 <div class="p-flow-item__foot">
+                                    <ul class="p-flow-item__footLinks">
+                                       <li class="p-flow-item__footLinkItem">
+                                          <a href="" class="p-flow-item__footLink">店舗情報を見る</a>
+                                       </li>
+                                       <li class="p-flow-item__footLinkItem">
+                                          <a href="" class="p-flow-item__footLink">身分証明書について</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- /.p-flow-item__foot -->
+                              </div>
+                              <!-- /.p-flow-item__body -->
+                           </div>
+                           <!-- /.p-flow-item -->
+                        </li>
+                        <li class="p-flow-store__item">
+                           <div class="p-flow-item -store">
+                              <div class="p-flow-item__head">
+                                 <p class="p-flow-item__step">step</p>
+                                 <p class="p-flow-item__number">02</p>
+                              </div>
+                              <!-- /.p-flow-item__head -->
+                              <div class="p-flow-item__body">
+                                 <p class="p-flow-item__title">その場で無料査定</p>
+                                 <p class="p-flow-item__text">
+                                    当社査定士がその場で査定いたします。<br>事前にLINEで査定いただいた場合にも、改めて現品を確認させていただきますので少々お時間をいただきます。<br>とりあえず査定だけしたいというご要望にもお応えいたします。査定のご予約等は必要ございません。
+                                 </p>
+                              </div>
+                              <!-- /.p-flow-item__body -->
+                           </div>
+                           <!-- /.p-flow-item -->
+                        </li>
+                        <li class="p-flow-store__item">
+                           <div class="p-flow-item -store">
+                              <div class="p-flow-item__head">
+                                 <p class="p-flow-item__step">step</p>
+                                 <p class="p-flow-item__number">03</p>
+                              </div>
+                              <!-- /.p-flow-item__head -->
+                              <div class="p-flow-item__body">
+                                 <p class="p-flow-item__title">お支払い</p>
+                                 <p class="p-flow-item__text">
+                                    査定結果にご納得いただけましたら、その場で現金買取させていただきます。<br>必要書類にご記入をいただき、買取手続きは終了となります。<br>※場合によっては後日お振込みになることがございます。
+                                 </p>
+                              </div>
+                              <!-- /.p-flow-item__body -->
+                           </div>
+                           <!-- /.p-flow-item -->
+                        </li>
+                     </ul>
+                  </div>
+                  <!-- /.p-flow-store__content -->
+               </section>
+            </div>
+            <!-- /.p-flow__store -->
+            <div class="p-flow__delivery">
+               <section class="p-flow-delivery">
+                  <div class="p-flow-delivery__heading">
+                     <div class="c-heading">
+                        <h2 class="c-heading__title">宅配買取</h2>
+                        <p class="c-heading__en">Mail Service</p>
+                     </div>
+                     <!-- /.c-heading -->
+                  </div>
+                  <!-- /.p-flow-delivery__heading -->
+                  <div class="p-flow-delivery__content">
+                     <ul class="p-flow-delivery__list">
+                        <li class="p-flow-delivery__item">
+                           <div class="p-flow-item -delivery">
+                              <div class="p-flow-item__head">
+                                 <p class="p-flow-item__step">step</p>
+                                 <p class="p-flow-item__number">01</p>
+                              </div>
+                              <!-- /.p-flow-item__head -->
+                              <div class="p-flow-item__body">
+                                 <p class="p-flow-item__title">LINE 無料査定</p>
+                                 <p class="p-flow-item__text">売りたい商品の画像を撮って送るだけ！
+                                    <br>ブランド名、アイテム名、ご購入時期、コンディション、その他お品物に関する詳しい情報をお伝えいただくと<br>より正確な金額をご提示できます。
+                                 </p>
+                                 <div class="p-flow-item__foot">
+                                    <div class="p-flow-item__lineButton">
+                                       <a href="" class="c-button-line">
+                                          <p class="c-button-line__pop">写真を送るだけ！最短当日で査定OK</p>
+                                          <p class="c-button-line__text">LINEで無料査定する</p>
+                                       </a>
+                                    </div>
+                                    <!-- /.p-flow-item__lineButton -->
+                                 </div>
+                                 <!-- /.p-flow-item__foot -->
+                              </div>
+                              <!-- /.p-flow-item__body -->
+                           </div>
+                           <!-- /.p-flow-item -->
+                        </li>
+                        <li class="p-flow-store__item">
+                           <div class="p-flow-item -delivery">
+                              <div class="p-flow-item__head">
+                                 <p class="p-flow-item__step">step</p>
+                                 <p class="p-flow-item__number">02</p>
+                              </div>
+                              <!-- /.p-flow-item__head -->
+                              <div class="p-flow-item__body">
+                                 <p class="p-flow-item__title">商品の発送</p>
+                                 <p class="p-flow-item__text">
+                                    事前査定にご納得いただけましたら、LINEで宅配買取をご依頼ください。<br>商品発送などの手順は、LINEにてご案内いたします。<br>梱包資材や伝票が届いたら、お品物を入れて送るだけ！<br>できるだけ商品が傷つかないよう、丁寧に梱包していただけますようお願い申し上げます。
+                                 </p>
+                                 <div class="p-flow-item__foot">
+                                    <div class="p-flow-item__footBox">
+                                       <p class="p-flow-item__footBoxTitle">発送先住所</p>
+                                       <span class="p-flow-item__slash u-only__pc" aria-hidden="true">/</span>
+                                       <address class="p-flow-item__footAddress">〒150-0042 東京都渋谷区宇田川町26-3
+                                          サンルイビル 1 階「東京ぶらんど produce by ALAMODE」</address>
+                                    </div>
+                                    <!-- /.p-flow-item__footBox -->
+                                 </div>
+                                 <!-- /.p-flow-item__foot -->
+                              </div>
+                              <!-- /.p-flow-item__body -->
+                           </div>
+                           <!-- /.p-flow-item -->
+                        </li>
+                        <li class="p-flow-store__item">
+                           <div class="p-flow-item -delivery">
+                              <div class="p-flow-item__head">
+                                 <p class="p-flow-item__step">step</p>
+                                 <p class="p-flow-item__number">03</p>
+                              </div>
+                              <!-- /.p-flow-item__head -->
+                              <div class="p-flow-item__body">
+                                 <p class="p-flow-item__title">査定結果のご連絡 & お振込</p>
+                                 <p class="p-flow-item__text">ご発送いただいた商品をしっかり査定させていただいた後、LINE
+                                    にて買取金額をご連絡させていただきます。<br>内容に同意いただけましたら、弊社指定のご本人確認作業後に、ご指定の口座に買取額をお振込みさせていただきます。</p>
+                                 <div class="p-flow-item__foot">
+                                    <ul class="p-flow-item__footLinks">
+                                       <li class="p-flow-item__footLinkItem">
+                                          <a href="" class="p-flow-item__footLink">身分証明書について</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <!-- /.p-flow-item__foot -->
+                              </div>
+                              <!-- /.p-flow-item__body -->
+                           </div>
+                           <!-- /.p-flow-item -->
+                        </li>
+                     </ul>
+                  </div>
+                  <!-- /.p-flow-store__content -->
+               </section>
+            </div>
+            <!-- /.p-flow__delivery -->
+         </div>
+         <!-- /.p-flow__content -->
+      </div>
+      <!-- /.p-flow__inner-->
+   </section>
+   <!-- /.p-flow -->
+
 
 </main>
 

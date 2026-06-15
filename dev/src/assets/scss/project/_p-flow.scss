@@ -1,0 +1,325 @@
+@use '../global' as *;
+
+.p-flow {
+	padding-block: rm(60);
+	background: $color-bg;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(128) rm(137);
+	}
+}
+
+.p-flow__inner {
+}
+
+.p-flow__heading {
+	padding-inline: rm(20);
+}
+
+.p-flow__lead {
+	margin-block-start: rm(8);
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.8;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(20);
+		font-size: rm(18);
+		text-align: center;
+	}
+}
+
+.p-flow__content {
+	margin-block-start: rm(32);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(44);
+	}
+}
+
+.p-flow__cta {
+}
+
+.p-flow__buttonsWrapper {
+	margin-block-start: rm(60);
+	margin-inline-end: calc(50% - 50vw);
+	margin-inline-start: calc(50% - 50vw);
+	background: #d3e3ff;
+}
+
+.p-flow__buttons {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	gap: rm(34);
+	padding: rm(45) rm(20) rm(30);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-direction: row;
+		max-width: calc(rm(1200) + rm($pc-sidePadding) * 2);
+		margin-inline: auto;
+		padding: rm(66) rm($pc-sidePadding) rm(52);
+	}
+
+	&::before {
+		display: block;
+		position: absolute;
+		bottom: rm(-28);
+		left: 50%;
+		translate: -50%;
+		width: rm(112);
+		height: rm(29);
+		background: #d3e3ff;
+		clip-path: polygon(0 0, 50% 100%, 100% 0);
+		content: '';
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			bottom: rm(-29);
+			width: rm(187);
+			height: rm(30);
+		}
+	}
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+	}
+}
+
+.p-flow__button {
+	width: 100%;
+}
+
+.p-flow__buttonLink {
+	display: flex;
+	align-items: center;
+	gap: rm(12);
+	position: relative;
+	width: 100%;
+	padding: rm(33) rm(23) rm(24) rm(24);
+	border-radius: rm(5);
+	filter: drop-shadow(0 0 rm(12) rgba(3, 31, 79, 0.18));
+	transition: background $easing;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding: rm(58) rm(93) rm(36);
+	}
+}
+
+.p-flow__buttonPop {
+	position: absolute;
+	top: rm(-14);
+	left: 50%;
+	translate: -50%;
+	min-width: rm(332);
+	padding: rm(9) rm(20);
+	background: $white;
+	border-radius: 100vmax;
+	color: #092e6e;
+	text-align: center;
+	font-size: rm(14);
+	font-weight: 700;
+	line-height: 1;
+	filter: drop-shadow(0 0 rm(12) rgba(3, 31, 79, 0.18));
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		min-width: rm(515);
+		padding: rm(7) rm(28) rm(6) rm(29);
+		font-size: rm(22);
+		line-height: 1.409;
+	}
+
+	&::before {
+		display: block;
+		position: absolute;
+		bottom: rm(-7);
+		left: 50%;
+		translate: -50%;
+		width: rm(15);
+		height: rm(9);
+		background: $white;
+		clip-path: polygon(0 0, 100% 100%, 100% 0);
+		content: '';
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			bottom: rm(-9);
+			width: rm(20);
+			height: rm(12);
+		}
+	}
+
+	span {
+		color: #d8d8d8;
+	}
+}
+
+.p-flow__buttonImage {
+	flex-shrink: 0;
+	width: rm(38);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(42);
+	}
+}
+
+.p-flow__buttonText {
+	position: relative;
+	flex-grow: 1;
+	padding-inline-end: rm(45);
+	color: $white;
+	font-size: rm(26);
+	font-weight: 700;
+	line-height: 1;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(36);
+	}
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		translate: 0 -50%;
+		transition: top $easing;
+		content: '';
+	}
+
+	&::before {
+		top: 50%;
+		right: 0;
+		width: rm(26);
+		height: rm(26);
+		background: $white;
+		border-radius: 50%;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			width: rm(32);
+			height: rm(32);
+		}
+	}
+
+	&::after {
+		top: 51%;
+		right: rm(6);
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			right: rm(7);
+		}
+	}
+}
+
+.p-flow__store {
+	margin-block-start: rm(60);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(90);
+	}
+}
+
+.p-flow__delivery {
+	margin-block-start: rm(62);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(108);
+	}
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.p-flow__buttonLink {
+	&.-store {
+		background: $color-accent-001;
+
+		.p-flow__buttonText {
+			&::after {
+				@include chevron($size: rm(14), $thickness: 4, $color: $color-accent-001, $direction: down);
+
+				// ******** responsive(pc)
+				@include mq(pc) {
+					@include chevron($size: rm(18), $thickness: 4, $color: $color-accent-001, $direction: down);
+				}
+			}
+		}
+	}
+
+	&.-delivery {
+		background: $color-main;
+
+		.p-flow__buttonText {
+			&::after {
+				@include chevron($size: rm(14), $thickness: 4, $color: $color-main, $direction: down);
+
+				// ******** responsive(pc)
+				@include mq(pc) {
+					@include chevron($size: rm(18), $thickness: 4, $color: $color-main, $direction: down);
+				}
+			}
+		}
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.p-flow__buttonLink {
+	@media (any-hover: hover) {
+		&:hover {
+			.p-flow__buttonText {
+				&::before {
+					top: 63%;
+				}
+
+				&::after {
+					top: 66%;
+				}
+			}
+
+			&.-store {
+				background: #d95b0d;
+			}
+
+			&.-delivery {
+				background: #092e6e;
+			}
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+
+		.p-flow__buttonText {
+			&::before {
+				top: 63%;
+			}
+
+			&::after {
+				top: 66%;
+			}
+		}
+
+		&.-store {
+			background: #d95b0d;
+		}
+
+		&.-delivery {
+			background: #092e6e;
+		}
+	}
+}
