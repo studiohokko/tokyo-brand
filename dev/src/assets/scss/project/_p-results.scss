@@ -1,0 +1,315 @@
+@use '../global' as *;
+
+.p-results {
+	padding-block: rm(60);
+	background: $color-bg;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(96) rm(92);
+	}
+}
+
+.p-results__inner {
+}
+
+.p-results__heading {
+	padding-inline: rm(20);
+}
+
+.p-results__lead {
+	margin-block-start: rm(8);
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.8;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(20);
+		text-align: center;
+		font-size: rm(18);
+	}
+}
+
+.p-results__content {
+	margin-block-start: rm(32);
+	margin-inline-end: calc(50% - 50vw);
+	margin-inline-start: calc(50% - 50vw);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(44);
+	}
+}
+
+.p-results__swiper-container {
+}
+
+.p-results__swiper {
+	height: auto;
+	padding-block: rm(12);
+	margin-block: rm(-12);
+}
+
+.p-results__swiper-wrapper {
+	align-items: stretch;
+	height: auto;
+}
+
+.p-results__swiper-slide {
+	width: rm(350);
+	height: auto;
+	border-radius: rm(5);
+	background: $white;
+	box-shadow: 0 0 rm(12) 0 rgba(3, 31, 79, 0.18);
+}
+
+.p-results__item {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	gap: rm(20);
+	width: 100%;
+	height: 100%;
+	padding: rm(12) rm(12) rm(16);
+}
+
+.p-results__textArea {
+	padding-inline: rm(9);
+}
+
+.p-results__head {
+}
+
+.p-results__name {
+	text-align: center;
+	font-size: rm(15);
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.p-results__price {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: rm(4);
+	margin-block-start: rm(10);
+}
+
+.p-results__label {
+	flex-shrink: 0;
+	margin-block-start: rm(-7);
+	padding: rm(3) rm(14) rm(4);
+	background: $gradation;
+	border-radius: 100vmax;
+	color: $white;
+	text-align: center;
+	font-size: rm(15);
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.p-results__value {
+	flex-grow: 1;
+	width: fit-content;
+	min-width: rm(216);
+	color: $color-accent-001;
+	text-align: right;
+	font-family: $ff-en;
+	font-size: rm(36);
+	font-weight: 700;
+	line-height: 1;
+
+	span {
+		margin-inline-start: rm(4);
+		translate: 0 rm(-3);
+		font-size: rm(20);
+		font-weight: 800;
+		line-height: 1.7;
+	}
+}
+
+.p-results__comment {
+	margin-block-start: rm(9);
+	padding-block-start: rm(13);
+	border-top: rm(1) dashed rgba($color-main, 0.4);
+}
+
+.p-results__commentTitle {
+	font-size: rm(15);
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.p-results__commentText {
+	margin-block-start: rm(4);
+	color: $color-main;
+	font-size: rm(15);
+	font-weight: 500;
+	line-height: 1.8;
+	opacity: 0.6;
+}
+
+.p-results__imageArea {
+}
+
+.p-results__image {
+	border-radius: rm(5);
+	overflow: hidden;
+
+	img {
+		aspect-ratio: 1 / 1;
+	}
+}
+
+.p-results__swiper-container,
+.p-results__swiper,
+.p-results__swiper-wrapper,
+.p-results__swiper-slide {
+	position: relative;
+}
+
+// ----------------------------
+//  PC：3件以下は横並びリスト（3枚時は1枚目が中央に来るよう並び替え）
+// ----------------------------
+.p-results.is-list {
+	@include mq(pc) {
+		.p-results__content {
+			margin-inline: 0;
+		}
+
+		.p-results__swiper {
+			padding-block: 0;
+			margin-block: 0;
+			overflow: visible;
+		}
+
+		.p-results__swiper-wrapper {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: center;
+			gap: rm(25);
+			transform: none !important;
+		}
+
+		.p-results__swiper-slide {
+			flex-shrink: 0;
+			width: rm(350);
+			height: auto;
+		}
+
+		.p-results__swiper-button-prev,
+		.p-results__swiper-button-next {
+			display: none;
+		}
+	}
+
+	// 3枚：表示順を [2枚目, 1枚目, 3枚目] にして全体中央寄せのまま1枚目を真ん中へ
+	&[data-results-count='3'] {
+		@include mq(pc) {
+			.p-results__swiper-slide:nth-child(1) {
+				order: 2;
+			}
+
+			.p-results__swiper-slide:nth-child(2) {
+				order: 1;
+			}
+
+			.p-results__swiper-slide:nth-child(3) {
+				order: 3;
+			}
+		}
+	}
+}
+
+.p-results__swiper-container {
+	// 位置のreset
+	.swiper-button-prev,
+	.swiper-button-next {
+		top: unset;
+		bottom: unset;
+		left: unset;
+		right: unset;
+		margin: 0;
+		padding: 0;
+	}
+
+	// ======== ナビゲーションボタン
+	//デフォルトのボタンを初期化（Swiper 12 は SVG アイコン）
+	.swiper-button-prev::after,
+	.swiper-button-next::after,
+	.swiper-button-prev svg,
+	.swiper-button-next svg {
+		display: none;
+	}
+
+	//各ボタンのカスタマイズ
+	.swiper-button-prev,
+	.swiper-button-next {
+		position: absolute;
+		top: rm(288);
+		width: rm(60);
+		height: rm(60);
+		background: $color-main;
+		filter: drop-shadow(0 0 rm(12) rgba(3, 31, 79, 0.18));
+		border-radius: 50%;
+		transition: background $easing;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			top: rm(282);
+		}
+
+		&::before {
+			display: block;
+			position: absolute;
+			content: '';
+		}
+	}
+
+	.swiper-button-prev {
+		left: rm(6);
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			left: calc(50% - rm(580));
+		}
+
+		&::before {
+			@include chevron($size: rm(30), $thickness: 3, $color: $white, $direction: left);
+		}
+	}
+
+	.swiper-button-next {
+		right: rm(6);
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			right: calc(50% - rm(580));
+		}
+
+		&::before {
+			@include chevron($size: rm(30), $thickness: 3, $color: $white, $direction: right);
+		}
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.swiper-button-prev,
+.swiper-button-next {
+	@media (any-hover: hover) {
+		&:hover {
+			background: #092e6e;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		background: #092e6e;
+	}
+}

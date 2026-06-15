@@ -956,9 +956,6 @@
                            </span>
                         </summary>
                         <div class="p-brands__orderContent js_content">
-                           <ul class="p-brands__orderSubList">
-                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">買取</span></li>
-                           </ul>
                         </div>
                      </details>
                   </li>
@@ -971,6 +968,103 @@
       <!-- /.p-brands__inner-->
    </section>
    <!-- /.p-brands -->
+
+
+   <!-- results   ///////////////////////////////////////////////////// -->
+   <?php
+   $results_items = get_field('results_group') ?: [];
+   $results_count = count($results_items);
+   $results_is_swiper = $results_count >= 4;
+   $results_loop_count = $results_is_swiper ? 3 : 1;
+   $results_mode_class = $results_is_swiper ? 'is-swiper' : 'is-list';
+   ?>
+   <section class="p-results <?php echo esc_attr($results_mode_class); ?>" data-results-count="<?php echo esc_attr($results_count); ?>">
+      <div class="p-results__inner l-inner">
+         <div class="p-results__heading">
+            <div class="c-heading">
+               <h2 class="c-heading__title">買取実績</h2>
+               <p class="c-heading__en">Results</p>
+            </div>
+            <!-- /.c-heading -->
+            <p class="p-results__lead">おかげさまで累計1万点以上の買取を行っており、その一例をご紹介します。ご依頼の参考にされてください。</p>
+         </div>
+         <!-- /.p-results__heading -->
+         <div class="p-results__content">
+            <div class="p-results__swiper-container <?php echo esc_attr($results_mode_class); ?>">
+               <div class="swiper p-results__swiper">
+                  <div class="swiper-wrapper p-results__swiper-wrapper">
+                     <?php if ($results_items): ?>
+                        <?php for ($results_loop = 0; $results_loop < $results_loop_count; $results_loop++): ?>
+                           <?php foreach ($results_items as $results_item): ?>
+                              <?php
+                              $results_name = $results_item['results_name'] ?? '';
+                              $results_price = $results_item['results_price'] ?? '';
+                              $results_text = $results_item['results_text'] ?? '';
+                              $image_id = $results_item['results_image'] ?? null;
+                              ?>
+                              <div class="swiper-slide p-results__swiper-slide">
+                                 <div class="p-results__item">
+                                    <div class="p-results__textArea">
+                                       <div class="p-results__head">
+                                          <?php if ($results_name): ?>
+                                             <p class="p-results__name"><?php echo nl2br(esc_html($results_name)); ?></p>
+                                          <?php endif; ?>
+                                          <?php if ($results_price): ?>
+                                             <div class="p-results__price">
+                                                <p class="p-results__label">買取金額</p>
+                                                <p class="p-results__value"><?php echo esc_html($results_price); ?><span>円</span>
+                                                </p>
+                                             </div>
+                                             <!-- /.p-results__price -->
+                                          <?php endif; ?>
+                                          <?php if ($results_text): ?>
+                                             <div class="p-results__comment">
+                                                <p class="p-results__commentTitle">鑑定士コメント</p>
+                                                <p class="p-results__commentText"><?php echo nl2br(esc_html($results_text)); ?></p>
+                                             </div>
+                                             <!-- /.p-results__comment -->
+                                          <?php endif; ?>
+                                       </div>
+                                       <!-- /.p-results__head -->
+                                    </div>
+                                    <!-- /.p-results__textArea -->
+                                    <?php if ($image_id): ?>
+                                       <?php
+                                       $image_url = wp_get_attachment_image_src($image_id, 'full');
+                                       $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                                       ?>
+                                       <div class="p-results__imageArea">
+                                          <figure class="p-results__image">
+                                             <img src="<?php echo esc_url($image_url[0]); ?>"
+                                                alt="<?php echo esc_attr($image_alt); ?>"
+                                                width="<?php echo esc_attr($image_url[1]); ?>"
+                                                height="<?php echo esc_attr($image_url[2]); ?>" loading="lazy">
+                                          </figure>
+                                          <!-- /.p-results__image -->
+                                       </div>
+                                       <!-- /.p-results__imageArea -->
+                                    <?php endif; ?>
+                                 </div>
+                                 <!-- /.p-results__item -->
+                              </div>
+                              <!-- /.p-results__swiper-slide -->
+                           <?php endforeach; ?>
+                        <?php endfor; ?>
+                     <?php endif; ?>
+                  </div>
+                  <!-- /.p-results__swiper-wrapper -->
+               </div>
+               <!-- /.p-results__swiper -->
+               <button class="swiper-button-prev p-results__swiper-button-prev"></button>
+               <button class="swiper-button-next p-results__swiper-button-next"></button>
+            </div>
+            <!-- /.p-results__swiper-container -->
+         </div>
+         <!-- /.p-results__content -->
+      </div>
+      <!-- /.p-results__inner-->
+   </section>
+   <!-- /.p-results -->
 
 
 </main>

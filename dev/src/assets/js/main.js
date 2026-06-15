@@ -21,3 +21,7 @@ js_shopsMap(); // 実行
 // アコーディオン
 import { js_accordion } from './js_accordion';
 js_accordion(); // 実行
+
+// 買取実績スライダー
+import { js_swiperResult } from './js_swiperResult';
+js_swiperResult(); // 実行
