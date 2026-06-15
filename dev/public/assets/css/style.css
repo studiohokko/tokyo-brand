@@ -982,6 +982,13 @@ button {
   }
 }
 
+.c-heading-underline.-color {
+  color: #031f4f;
+}
+.c-heading-underline.-color::before {
+  background: #031f4f;
+}
+
 .p-header {
   -webkit-padding-start: 1.25rem;
   height: 100%;
@@ -3930,6 +3937,250 @@ button {
 .swiper-button-next:focus-visible {
   outline: none;
   background: #092e6e;
+}
+
+.p-gold {
+  padding-block: 3.75rem;
+}
+@media (min-width: 768px) {
+  .p-gold {
+    padding-block: 5.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-gold__inner {
+    max-width: 62.625rem;
+  }
+}
+
+.p-gold__newsHeading {
+  -webkit-padding-before: 3.1875rem;
+  position: relative;
+  padding-block-start: 3.1875rem;
+}
+@media (min-width: 768px) {
+  .p-gold__newsHeading {
+    -webkit-padding-before: 3.625rem;
+    padding-block-start: 3.625rem;
+  }
+}
+
+.p-gold__pop {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0.1875rem 2rem 0.25rem 2.0625rem;
+  translate: -50% 0;
+  border-radius: 100vmax;
+  background: #f76b14;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .p-gold__pop {
+    padding: 0.375rem 2.75rem 0.4375rem 2.6875rem;
+    font-size: 1.5rem;
+    line-height: 1.29;
+  }
+}
+.p-gold__pop::before {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+  display: block;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  width: 1.125rem;
+  height: 0.625rem;
+  translate: -50% 0;
+  background: #f76b14;
+  content: "";
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+@media (min-width: 768px) {
+  .p-gold__pop::before {
+    bottom: -0.5625rem;
+    width: 1.375rem;
+    height: 0.75rem;
+  }
+}
+
+.p-gold__newsBody {
+  -webkit-margin-before: 1.875rem;
+  margin-block-start: 1.875rem;
+}
+@media (min-width: 768px) {
+  .p-gold__newsBody {
+    -webkit-margin-before: 2rem;
+    margin-block-start: 2rem;
+  }
+}
+
+.p-gold__newsBanner {
+  overflow: hidden;
+  border-radius: 0.3125rem;
+}
+.p-gold__rate {
+  -webkit-margin-before: 3.75rem;
+  margin-block-start: 3.75rem;
+}
+@media (min-width: 768px) {
+  .p-gold__rate {
+    -webkit-margin-before: 5.5rem;
+    margin-block-start: 5.5rem;
+  }
+}
+
+.p-gold__rateBody {
+  -webkit-margin-before: 1.5rem;
+  margin-block-start: 1.5rem;
+}
+@media (min-width: 768px) {
+  .p-gold__rateBody {
+    -webkit-margin-before: 2.25rem;
+    margin-block-start: 2.25rem;
+  }
+}
+
+.p-gold__rateBoxTitle {
+  padding: 0.875rem 1.8125rem 0.875rem 1.8125rem;
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  background: #031f4f;
+}
+@media (min-width: 768px) {
+  .p-gold__rateBoxTitle {
+    position: relative;
+    padding: 0.75rem 1.875rem;
+  }
+}
+
+.p-gold__rateTitle {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 1.6;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .p-gold__rateTitle {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+}
+
+.p-gold__rateDate {
+  -webkit-margin-before: 0.1875rem;
+  margin-block-start: 0.1875rem;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .p-gold__rateDate {
+    position: absolute;
+    top: 43%;
+    right: 1.375rem;
+    translate: 0 -50%;
+  }
+}
+
+.p-gold__rateTableWrapper {
+  padding: 1.5rem 1.25rem;
+  overflow: hidden;
+  border-radius: 0 0 0.3125rem 0.3125rem;
+  background: #f0f5ff;
+}
+@media (min-width: 768px) {
+  .p-gold__rateTableWrapper {
+    padding: 2rem 2.5rem;
+  }
+}
+
+.p-gold__rateList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4375rem;
+}
+@media (min-width: 768px) {
+  .p-gold__rateList {
+    gap: 1.375rem;
+  }
+}
+
+.p-gold__rateItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+}
+@media (min-width: 768px) {
+  .p-gold__rateItem {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.1875rem;
+  }
+}
+
+.p-gold__rateItemHead {
+  display: inline-block;
+  min-width: 16.25rem;
+  padding: 0.375rem 1rem 0.4375rem;
+  border-radius: 100vmax;
+  background: #ff8e23;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .p-gold__rateItemHead {
+    padding: 0.5rem 0.75rem 0.5625rem;
+    font-size: 1.125rem;
+  }
+}
+
+.p-gold__rateItemBody {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+@media (min-width: 768px) {
+  .p-gold__rateItemBody {
+    flex-shrink: 0;
+  }
+}
+
+.p-gold__rateItemPrice {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1;
+  font-family: "Roboto", sans-serif;
+  text-align: right;
+}
+.p-gold__rateItemPrice span {
+  -webkit-margin-start: 0.25rem;
+  margin-inline-start: 0.25rem;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  font-family: "Noto Sans JP", sans-serif;
+  text-align: center;
+}
+
+.p-gold__rateItemDifference {
+  color: #f00;
+  font-weight: 800;
+  font-size: 1.375rem;
+  line-height: 1.7;
 }
 
 .u-only__sp {

@@ -33,3 +33,16 @@
 		}
 	}
 }
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.c-heading-underline {
+	&.-color {
+		color: $color-text;
+
+		&::before {
+			background: $color-text;
+		}
+	}
+}

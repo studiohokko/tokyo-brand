@@ -978,7 +978,8 @@
    $results_loop_count = $results_is_swiper ? 3 : 1;
    $results_mode_class = $results_is_swiper ? 'is-swiper' : 'is-list';
    ?>
-   <section class="p-results <?php echo esc_attr($results_mode_class); ?>" data-results-count="<?php echo esc_attr($results_count); ?>">
+   <section class="p-results <?php echo esc_attr($results_mode_class); ?>"
+      data-results-count="<?php echo esc_attr($results_count); ?>">
       <div class="p-results__inner l-inner">
          <div class="p-results__heading">
             <div class="c-heading">
@@ -1066,6 +1067,99 @@
    </section>
    <!-- /.p-results -->
 
+
+   <!-- gold   ///////////////////////////////////////////////////// -->
+   <div class="p-gold">
+      <div class="p-gold__inner l-inner">
+         <div class="p-gold__content">
+            <section class="p-gold__news">
+               <div class="p-gold__newsHeading">
+                  <time class="p-gold__pop" datetime="<?php echo esc_attr(date_i18n('Y-m')); ?>">
+                     <?php echo esc_html(date_i18n('Y年n月')); ?>
+                  </time>
+                  <div class="c-heading">
+                     <h2 class="c-heading__title">金相場速報！</h2>
+                     <p class="c-heading__en">Gold Rates</p>
+                  </div>
+               </div>
+               <!-- /.p-gold__newsHeading -->
+               <div class="p-gold__newsBody">
+                  <figure class="p-gold__newsBanner">
+                     <picture>
+                        <source
+                           srcset="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-gold_banner.webp')); ?>"
+                           media="(min-width: 768px)">
+                        <img
+                           src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-gold_banner.webp')); ?>'
+                           alt='' width='' height='' loading='lazy'>
+                     </picture>
+                  </figure>
+               </div>
+               <!-- /.p-gold__newsBody -->
+            </section>
+            <section class="p-gold__rate">
+               <div class="p-gold__rateHeading">
+                  <h2 class="c-heading-underline -color">金・貴金属相場表</h2>
+               </div>
+               <!-- /.p-gold__rateHeading -->
+               <div class="p-gold__rateBody">
+                  <section class="p-gold__rateBox">
+                     <div class="p-gold__rateBoxTitle">
+                        <h3 class="p-gold__rateTitle">今日の金・貴金属1gあたりの<br class="u-only__sp">買取相場価格</h3>
+                        <?php $gold_time = get_field('gold_time');
+
+                        if ($gold_time):
+                           $timestamp = strtotime($gold_time);
+                           ?>
+                           <p class="p-gold__rateDate">
+                              ※
+                              <time class="p-gold__rateTime" datetime="<?php echo esc_attr(date('c', $timestamp)); ?>">
+                                 <?php echo esc_html(date_i18n('Y年n月j日(D) G:i', $timestamp)); ?>
+                              </time>
+                              更新
+                           </p>
+                        <?php endif; ?>
+                     </div>
+                     <!-- /.p-gold__rateBoxTitle -->
+                     <div class="p-gold__rateTableWrapper">
+                        <?php $gold_items = get_field('gold_group') ?: []; ?>
+                        <?php if ($gold_items): ?>
+                           <ul class="p-gold__rateList">
+                              <?php foreach ($gold_items as $gold_row): ?>
+                                 <?php
+                                 $gold_item = $gold_row['gold_item'] ?? '';
+                                 $gold_price = $gold_row['gold_price'] ?? '';
+                                 $gold_difference = $gold_row['gold_difference'] ?? '';
+                                 ?>
+                                 <li class="p-gold__rateItem">
+                                    <?php if ($gold_item): ?>
+                                       <p class="p-gold__rateItemHead"><?php echo esc_html($gold_item); ?></p>
+                                    <?php endif; ?>
+                                    <div class="p-gold__rateItemBody">
+                                       <?php if ($gold_price): ?>
+                                          <p class="p-gold__rateItemPrice"><?php echo esc_html($gold_price); ?><span>円</span></p>
+                                       <?php endif; ?>
+                                       <?php if ($gold_difference): ?>
+                                          <p class="p-gold__rateItemDifference"><?php echo esc_html($gold_difference); ?>円
+                                          </p>
+                                       <?php endif; ?>
+                                    </div>
+                                 </li>
+                              <?php endforeach; ?>
+                           </ul>
+                        <?php endif; ?>
+                     </div>
+                     <!-- /.p-gold__rateTableWrapper -->
+                  </section>
+               </div>
+               <!-- /.p-gold__rateBody -->
+            </section>
+         </div>
+         <!-- /.p-gold__content -->
+      </div>
+      <!-- /.p-gold__inner-->
+   </div>
+   <!-- /.p-gold -->
 
 </main>
 
