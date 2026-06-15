@@ -98,19 +98,6 @@ add_filter('use_block_editor_for_post', function ($use_block_editor, $post) {
 
 
 // -----------------------------------------------------------
-//  デフォルトの投稿タイプの管理画面上の名前を変更する
-// -----------------------------------------------------------
-// function post_has_archive($args, $post_type)
-// {
-//    if ('post' == $post_type) {
-//       $args['label'] = 'お知らせ';
-//    }
-//    return $args;
-// }
-// add_filter('register_post_type_args', 'post_has_archive', 10, 2);
-
-
-// -----------------------------------------------------------
 //  jpg画像の品質を100%でアップロードする
 // -----------------------------------------------------------
 function img_uncompressed()
@@ -118,3 +105,16 @@ function img_uncompressed()
    return 100;
 }
 add_filter('jpeg_quality', 'img_uncompressed');
+
+
+// -----------------------------------------------------------
+//  カスタム投稿タイプのシングルページを生成しない(404ページに飛ぶ)
+// -----------------------------------------------------------
+function redirect_custom_post_type_single_page()
+{
+   if (is_singular(array('price'))) {
+      wp_redirect(home_url('/404.php'), 301);
+      exit;
+   }
+}
+add_action('template_redirect', 'redirect_custom_post_type_single_page');

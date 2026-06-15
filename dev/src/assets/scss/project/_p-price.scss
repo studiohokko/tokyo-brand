@@ -1,0 +1,166 @@
+@use '../global' as *;
+
+.p-price {
+	padding-block: rm(60) rm(96);
+	background: $color-bg;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(117) rm(152);
+	}
+}
+
+.p-price__inner {
+}
+
+.p-price__heading {
+}
+
+.p-price__lead {
+	margin-block-start: rm(8);
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.8;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(20);
+		text-align: center;
+		font-size: rm(18);
+	}
+}
+
+.p-price__content {
+	margin-block-start: rm(32);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(43);
+	}
+}
+
+.p-price__list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rm(15);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+.p-price__item {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	gap: rm(12);
+	padding: rm(10);
+	border-radius: rm(5);
+	background: #fff;
+	box-shadow: 0 0 rm(8) 0 rgba(3, 31, 79, 0.18);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding: rm(8) rm(8) rm(16);
+	}
+}
+
+.p-price__textArea {
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-inline: rm(7);
+	}
+}
+
+.p-price__name {
+	min-height: rm(62);
+	font-size: rm(14);
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.p-price__price {
+	margin-block-start: rm(10);
+}
+
+.p-price__label {
+	width: fit-content;
+	background: $color-main;
+	border-radius: 100vmax;
+	padding: rm(3) rm(11);
+	color: $white;
+	text-align: center;
+	font-size: rm(14);
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.p-price__value {
+	margin-block-start: rm(8);
+	color: $color-accent-001;
+	text-align: right;
+	font-family: $ff-en;
+	font-size: rm(28);
+	font-weight: 700;
+	line-height: 1;
+
+	span {
+		margin-inline-start: rm(2);
+		text-align: center;
+		font-family: $ff-ja;
+		font-size: rm(15);
+		font-weight: 800;
+		line-height: 1.6;
+	}
+}
+
+.p-price__imageArea {
+}
+
+.p-price__image {
+	border-radius: rm(5);
+	overflow: hidden;
+
+	img {
+		aspect-ratio: 1 / 1;
+	}
+}
+
+.p-price__attention {
+	margin-block-start: rm(32);
+	color: $color-main;
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.8;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(45);
+		text-align: center;
+		font-size: rm(18);
+	}
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.p-price__value {
+	&.-small {
+		font-size: rm(20);
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			font-size: rm(28);
+		}
+
+		span {
+			font-size: rm(12);
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				font-size: rm(15);
+			}
+		}
+	}
+}

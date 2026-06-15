@@ -1161,6 +1161,91 @@
    </div>
    <!-- /.p-gold -->
 
+
+   <!-- price   ///////////////////////////////////////////////////// -->
+   <section class="p-price">
+      <div class="p-price__inner l-inner">
+         <div class="p-price__heading">
+            <div class="c-heading">
+               <h2 class="c-heading__title">相場表</h2>
+               <p class="c-heading__en">Price List</p>
+            </div>
+            <!-- /.c-heading -->
+            <p class="p-price__lead">グループ会社でオークションを運営しているので、相場をリアルタイムで把握し、買取金額に反映しています。</p>
+         </div>
+         <!-- /.p-price__heading -->
+         <div class="p-price__content">
+            <ul class="p-price__list">
+               <?php
+               $args = array(
+                  'post_type' => 'price', // ここに投稿タイプを指定 例: 'post', 'custom_post'
+                  'posts_per_page' => '15', // 取得したい件数
+                  'orderby' => 'menu_order', // ここに並び替えの基準を指定 例: 'date', 'title', 'meta_value', 'rand', menu_order
+                  'order' => 'ASC', // ここに順番を指定 'ASC'（昇順）または 'DESC'（降順）
+               );
+               $the_query = new WP_Query($args);
+               ?>
+               <?php if ($the_query->have_posts()): ?>
+                  <?php while ($the_query->have_posts()): ?>
+                     <?php $the_query->the_post(); ?>
+                     <li class="p-price__item">
+                        <div class="p-price__textArea">
+                           <p class="p-price__name"><?php the_title(); ?></p>
+                           <div class="p-price__price">
+                              <p class="p-price__label">買取参考価格</p>
+                              <?php
+                              $text_field = get_field('price_value');
+                              if ($text_field):
+                                 // 数字だけ取り出して桁数をカウント（カンマ・「円」などを除外）
+                                 $digits = mb_strlen(preg_replace('/[^0-9]/', '', $text_field));
+
+                                 // 桁数に応じてサイズ調整クラスを出し分け
+                                 $size_class = match (true) {
+                                    $digits >= 8 => ' -small', // 8〜9桁
+                                    default => '',
+                                 };
+                                 ?>
+                                 <p class="p-price__value<?php echo $size_class; ?>">
+                                    <?php echo esc_html($text_field); ?><span>円</span>
+                                 </p>
+                              <?php endif; ?>
+                           </div>
+                           <!-- /.p-price__price -->
+                        </div>
+                        <!-- /.p-price__textArea -->
+                        <div class="p-price__imageArea">
+                           <?php
+                           if (has_post_thumbnail()):
+                              $image_id = get_post_thumbnail_id();
+                              $image_url = wp_get_attachment_image_src($image_id, 'full');
+                              $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                              $width = $image_url[1];
+                              $height = $image_url[2];
+                              ?>
+                              <figure class="p-price__image">
+                                 <img src="<?php echo esc_url($image_url[0]); ?>" alt="<?php echo esc_attr($image_alt); ?>"
+                                    width="<?php echo esc_attr($width); ?>" height="<?php echo esc_attr($height); ?>"
+                                    loading="lazy">
+                              </figure>
+                           <?php endif; ?>
+                           <!-- /.p-price__image -->
+                        </div>
+                        <!-- /.p-price__imageArea -->
+                     </li>
+                  <?php endwhile; ?>
+                  <?php wp_reset_postdata(); ?>
+               <?php endif; ?>
+            </ul>
+            <p class="p-price__attention">
+               ※ブランド品の買取相場は、市場動向や在庫状況によって日々変動いたします。<br>売却をご検討の際は、LINE無料査定または店頭査定で、最新の買取価格をご確認ください。</p>
+         </div>
+         <!-- /.p-price__content -->
+      </div>
+      <!-- /.p-price__inner-->
+   </section>
+   <!-- /.p-price -->
+
+
 </main>
 
 <?php get_footer(); ?>
