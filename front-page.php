@@ -1667,168 +1667,168 @@
                   <div class="swiper p-reviews__swiper">
                      <div class="swiper-wrapper p-reviews__swiper-wrapper">
                         <?php for ($reviews_loop = 0; $reviews_loop < 3; $reviews_loop++): ?>
-                        <div class="swiper-slide p-reviews__swiper-slide">
-                           <div class="p-reviews__item">
-                              <div class="p-reviews__textArea">
-                                 <p class="p-reviews__catch">「LINEで気軽に相談できたのが良かったです」</p>
-                                 <ul class="p-reviews__profileList">
-                                    <li class="p-reviews__profileItem">40代男性</li>
-                                    <li class="p-reviews__profileItem">高級腕時計</li>
-                                    <li class="p-reviews__profileItem">LINE査定 → 店頭買取</li>
-                                 </ul>
-                                 <p class="p-reviews__comment">
-                                    売るかどうか迷っていた時計があり、まずはLINEで相談してみました。<br>写真を送ると丁寧に返信してくださり、相場や査定ポイントも教えていただけました。無理に来店を勧められることもなく、安心して相談できました。最終的に店舗で査定してもらい、納得して売却することができました。
-                                 </p>
+                           <div class="swiper-slide p-reviews__swiper-slide">
+                              <div class="p-reviews__item">
+                                 <div class="p-reviews__textArea">
+                                    <p class="p-reviews__catch">「LINEで気軽に相談できたのが良かったです」</p>
+                                    <ul class="p-reviews__profileList">
+                                       <li class="p-reviews__profileItem">40代男性</li>
+                                       <li class="p-reviews__profileItem">高級腕時計</li>
+                                       <li class="p-reviews__profileItem">LINE査定 → 店頭買取</li>
+                                    </ul>
+                                    <p class="p-reviews__comment">
+                                       売るかどうか迷っていた時計があり、まずはLINEで相談してみました。<br>写真を送ると丁寧に返信してくださり、相場や査定ポイントも教えていただけました。無理に来店を勧められることもなく、安心して相談できました。最終的に店舗で査定してもらい、納得して売却することができました。
+                                    </p>
+                                 </div>
+                                 <!-- /.p-reviews__textArea -->
+                                 <div class="p-reviews__imageArea">
+                                    <figure class="p-reviews__image">
+                                       <img
+                                          src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_001.webp')); ?>'
+                                          alt='' width='' height='' loading='lazy'>
+                                    </figure>
+                                    <!-- /.p-reviews__image -->
+                                 </div>
+                                 <!-- /.p-reviews__imageArea -->
                               </div>
-                              <!-- /.p-reviews__textArea -->
-                              <div class="p-reviews__imageArea">
-                                 <figure class="p-reviews__image">
-                                    <img
-                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_001.webp')); ?>'
-                                       alt='' width='' height='' loading='lazy'>
-                                 </figure>
-                                 <!-- /.p-reviews__image -->
-                              </div>
-                              <!-- /.p-reviews__imageArea -->
+                              <!-- /.p-reviews__item -->
                            </div>
-                           <!-- /.p-reviews__item -->
-                        </div>
-                        <!-- /.p-reviews__swiper-slide -->
-                        <div class="swiper-slide p-reviews__swiper-slide">
-                           <div class="p-reviews__item">
-                              <div class="p-reviews__textArea">
-                                 <p class="p-reviews__catch">「写真を送るだけで査定できて便利でした」</p>
-                                 <ul class="p-reviews__profileList">
-                                    <li class="p-reviews__profileItem">30代女性</li>
-                                    <li class="p-reviews__profileItem">ブランドバッグ</li>
-                                    <li class="p-reviews__profileItem">LINE査定 → 宅配買取</li>
-                                 </ul>
-                                 <p class="p-reviews__comment">
-                                    自宅にいながら査定できると知り、LINE査定を利用しました。<br>バッグの写真と簡単な情報を送るだけで、すぐに査定額の目安を教えていただけました。おおよその金額が事前に分かったので安心して宅配買取をお願いでき、実際の査定額もほぼ同じでした。忙しい方でも利用しやすいサービスだと思います。
-                                 </p>
+                           <!-- /.p-reviews__swiper-slide -->
+                           <div class="swiper-slide p-reviews__swiper-slide">
+                              <div class="p-reviews__item">
+                                 <div class="p-reviews__textArea">
+                                    <p class="p-reviews__catch">「写真を送るだけで査定できて便利でした」</p>
+                                    <ul class="p-reviews__profileList">
+                                       <li class="p-reviews__profileItem">30代女性</li>
+                                       <li class="p-reviews__profileItem">ブランドバッグ</li>
+                                       <li class="p-reviews__profileItem">LINE査定 → 宅配買取</li>
+                                    </ul>
+                                    <p class="p-reviews__comment">
+                                       自宅にいながら査定できると知り、LINE査定を利用しました。<br>バッグの写真と簡単な情報を送るだけで、すぐに査定額の目安を教えていただけました。おおよその金額が事前に分かったので安心して宅配買取をお願いでき、実際の査定額もほぼ同じでした。忙しい方でも利用しやすいサービスだと思います。
+                                    </p>
+                                 </div>
+                                 <!-- /.p-reviews__textArea -->
+                                 <div class="p-reviews__imageArea">
+                                    <figure class="p-reviews__image">
+                                       <img
+                                          src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_002.webp')); ?>'
+                                          alt='' width='' height='' loading='lazy'>
+                                    </figure>
+                                    <!-- /.p-reviews__image -->
+                                 </div>
+                                 <!-- /.p-reviews__imageArea -->
                               </div>
-                              <!-- /.p-reviews__textArea -->
-                              <div class="p-reviews__imageArea">
-                                 <figure class="p-reviews__image">
-                                    <img
-                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_002.webp')); ?>'
-                                       alt='' width='' height='' loading='lazy'>
-                                 </figure>
-                                 <!-- /.p-reviews__image -->
-                              </div>
-                              <!-- /.p-reviews__imageArea -->
+                              <!-- /.p-reviews__item -->
                            </div>
-                           <!-- /.p-reviews__item -->
-                        </div>
-                        <!-- /.p-reviews__swiper-slide -->
-                        <div class="swiper-slide p-reviews__swiper-slide">
-                           <div class="p-reviews__item">
-                              <div class="p-reviews__textArea">
-                                 <p class="p-reviews__catch">「古いモデルでもきちんと査定してもらえました」</p>
-                                 <ul class="p-reviews__profileList">
-                                    <li class="p-reviews__profileItem">50代男性</li>
-                                    <li class="p-reviews__profileItem">高級腕時計</li>
-                                    <li class="p-reviews__profileItem">店頭買取</li>
-                                 </ul>
-                                 <p class="p-reviews__comment">
-                                    10年以上前に購入した時計だったので値段がつくか不安でしたが、状態やモデルの人気などをしっかり確認して査定していただけました。古い品でも丁寧に見てもらえるお店だと感じました。
-                                 </p>
+                           <!-- /.p-reviews__swiper-slide -->
+                           <div class="swiper-slide p-reviews__swiper-slide">
+                              <div class="p-reviews__item">
+                                 <div class="p-reviews__textArea">
+                                    <p class="p-reviews__catch">「古いモデルでもきちんと査定してもらえました」</p>
+                                    <ul class="p-reviews__profileList">
+                                       <li class="p-reviews__profileItem">50代男性</li>
+                                       <li class="p-reviews__profileItem">高級腕時計</li>
+                                       <li class="p-reviews__profileItem">店頭買取</li>
+                                    </ul>
+                                    <p class="p-reviews__comment">
+                                       10年以上前に購入した時計だったので値段がつくか不安でしたが、状態やモデルの人気などをしっかり確認して査定していただけました。古い品でも丁寧に見てもらえるお店だと感じました。
+                                    </p>
+                                 </div>
+                                 <!-- /.p-reviews__textArea -->
+                                 <div class="p-reviews__imageArea">
+                                    <figure class="p-reviews__image">
+                                       <img
+                                          src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_003.webp')); ?>'
+                                          alt='' width='' height='' loading='lazy'>
+                                    </figure>
+                                    <!-- /.p-reviews__image -->
+                                 </div>
+                                 <!-- /.p-reviews__imageArea -->
                               </div>
-                              <!-- /.p-reviews__textArea -->
-                              <div class="p-reviews__imageArea">
-                                 <figure class="p-reviews__image">
-                                    <img
-                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_003.webp')); ?>'
-                                       alt='' width='' height='' loading='lazy'>
-                                 </figure>
-                                 <!-- /.p-reviews__image -->
-                              </div>
-                              <!-- /.p-reviews__imageArea -->
+                              <!-- /.p-reviews__item -->
                            </div>
-                           <!-- /.p-reviews__item -->
-                        </div>
-                        <!-- /.p-reviews__swiper-slide -->
-                        <div class="swiper-slide p-reviews__swiper-slide">
-                           <div class="p-reviews__item">
-                              <div class="p-reviews__textArea">
-                                 <p class="p-reviews__catch">「宅配買取でも安心して利用できました」</p>
-                                 <ul class="p-reviews__profileList">
-                                    <li class="p-reviews__profileItem">40代女性</li>
-                                    <li class="p-reviews__profileItem">ブランドバッグ・ジュエリー</li>
-                                    <li class="p-reviews__profileItem">宅配買取</li>
-                                 </ul>
-                                 <p class="p-reviews__comment">
-                                    店舗まで行く時間が取れなかったため宅配買取を利用しました。<br>申し込み後すぐにキットが届き、手順も分かりやすかったのでスムーズに発送できました。査定結果の説明も丁寧で、金額に納得して売却することができました。
-                                 </p>
+                           <!-- /.p-reviews__swiper-slide -->
+                           <div class="swiper-slide p-reviews__swiper-slide">
+                              <div class="p-reviews__item">
+                                 <div class="p-reviews__textArea">
+                                    <p class="p-reviews__catch">「宅配買取でも安心して利用できました」</p>
+                                    <ul class="p-reviews__profileList">
+                                       <li class="p-reviews__profileItem">40代女性</li>
+                                       <li class="p-reviews__profileItem">ブランドバッグ・ジュエリー</li>
+                                       <li class="p-reviews__profileItem">宅配買取</li>
+                                    </ul>
+                                    <p class="p-reviews__comment">
+                                       店舗まで行く時間が取れなかったため宅配買取を利用しました。<br>申し込み後すぐにキットが届き、手順も分かりやすかったのでスムーズに発送できました。査定結果の説明も丁寧で、金額に納得して売却することができました。
+                                    </p>
+                                 </div>
+                                 <!-- /.p-reviews__textArea -->
+                                 <div class="p-reviews__imageArea">
+                                    <figure class="p-reviews__image">
+                                       <img
+                                          src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_004.webp')); ?>'
+                                          alt='' width='' height='' loading='lazy'>
+                                    </figure>
+                                    <!-- /.p-reviews__image -->
+                                 </div>
+                                 <!-- /.p-reviews__imageArea -->
                               </div>
-                              <!-- /.p-reviews__textArea -->
-                              <div class="p-reviews__imageArea">
-                                 <figure class="p-reviews__image">
-                                    <img
-                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_004.webp')); ?>'
-                                       alt='' width='' height='' loading='lazy'>
-                                 </figure>
-                                 <!-- /.p-reviews__image -->
-                              </div>
-                              <!-- /.p-reviews__imageArea -->
+                              <!-- /.p-reviews__item -->
                            </div>
-                           <!-- /.p-reviews__item -->
-                        </div>
-                        <!-- /.p-reviews__swiper-slide -->
-                        <div class="swiper-slide p-reviews__swiper-slide">
-                           <div class="p-reviews__item">
-                              <div class="p-reviews__textArea">
-                                 <p class="p-reviews__catch">「査定理由を丁寧に説明してくれて安心でした」</p>
-                                 <ul class="p-reviews__profileList">
-                                    <li class="p-reviews__profileItem">30代女性</li>
-                                    <li class="p-reviews__profileItem">ブランドバッグ・ジュエリー</li>
-                                    <li class="p-reviews__profileItem">店頭買取</li>
-                                 </ul>
-                                 <p class="p-reviews__comment">
-                                    以前利用した買取店では査定額だけを提示されることが多かったのですが、こちらでは状態や人気モデルかどうかなど、査定のポイントを一つひとつ説明していただけました。価格の理由が分かると納得感があり、安心して売却できました。
-                                 </p>
+                           <!-- /.p-reviews__swiper-slide -->
+                           <div class="swiper-slide p-reviews__swiper-slide">
+                              <div class="p-reviews__item">
+                                 <div class="p-reviews__textArea">
+                                    <p class="p-reviews__catch">「査定理由を丁寧に説明してくれて安心でした」</p>
+                                    <ul class="p-reviews__profileList">
+                                       <li class="p-reviews__profileItem">30代女性</li>
+                                       <li class="p-reviews__profileItem">ブランドバッグ・ジュエリー</li>
+                                       <li class="p-reviews__profileItem">店頭買取</li>
+                                    </ul>
+                                    <p class="p-reviews__comment">
+                                       以前利用した買取店では査定額だけを提示されることが多かったのですが、こちらでは状態や人気モデルかどうかなど、査定のポイントを一つひとつ説明していただけました。価格の理由が分かると納得感があり、安心して売却できました。
+                                    </p>
+                                 </div>
+                                 <!-- /.p-reviews__textArea -->
+                                 <div class="p-reviews__imageArea">
+                                    <figure class="p-reviews__image">
+                                       <img
+                                          src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_005.webp')); ?>'
+                                          alt='' width='' height='' loading='lazy'>
+                                    </figure>
+                                    <!-- /.p-reviews__image -->
+                                 </div>
+                                 <!-- /.p-reviews__imageArea -->
                               </div>
-                              <!-- /.p-reviews__textArea -->
-                              <div class="p-reviews__imageArea">
-                                 <figure class="p-reviews__image">
-                                    <img
-                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_005.webp')); ?>'
-                                       alt='' width='' height='' loading='lazy'>
-                                 </figure>
-                                 <!-- /.p-reviews__image -->
-                              </div>
-                              <!-- /.p-reviews__imageArea -->
+                              <!-- /.p-reviews__item -->
                            </div>
-                           <!-- /.p-reviews__item -->
-                        </div>
-                        <!-- /.p-reviews__swiper-slide -->
-                        <div class="swiper-slide p-reviews__swiper-slide">
-                           <div class="p-reviews__item">
-                              <div class="p-reviews__textArea">
-                                 <p class="p-reviews__catch">「無理に売却を勧められないので安心でした」</p>
-                                 <ul class="p-reviews__profileList">
-                                    <li class="p-reviews__profileItem">50代女性</li>
-                                    <li class="p-reviews__profileItem">ダイヤモンドジュエリー</li>
-                                    <li class="p-reviews__profileItem">店頭買取</li>
-                                 </ul>
-                                 <p class="p-reviews__comment">
-                                    母から譲り受けたジュエリーを査定してもらいました。<br>思い入れがある品だったので売るか迷っていましたが、「一度持ち帰って検討しても大丈夫ですよ」と言っていただけて安心しました。お店の雰囲気も落ち着いていて、気軽に相談できるところが良かったです。
-                                 </p>
+                           <!-- /.p-reviews__swiper-slide -->
+                           <div class="swiper-slide p-reviews__swiper-slide">
+                              <div class="p-reviews__item">
+                                 <div class="p-reviews__textArea">
+                                    <p class="p-reviews__catch">「無理に売却を勧められないので安心でした」</p>
+                                    <ul class="p-reviews__profileList">
+                                       <li class="p-reviews__profileItem">50代女性</li>
+                                       <li class="p-reviews__profileItem">ダイヤモンドジュエリー</li>
+                                       <li class="p-reviews__profileItem">店頭買取</li>
+                                    </ul>
+                                    <p class="p-reviews__comment">
+                                       母から譲り受けたジュエリーを査定してもらいました。<br>思い入れがある品だったので売るか迷っていましたが、「一度持ち帰って検討しても大丈夫ですよ」と言っていただけて安心しました。お店の雰囲気も落ち着いていて、気軽に相談できるところが良かったです。
+                                    </p>
+                                 </div>
+                                 <!-- /.p-reviews__textArea -->
+                                 <div class="p-reviews__imageArea">
+                                    <figure class="p-reviews__image">
+                                       <img
+                                          src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_006.webp')); ?>'
+                                          alt='' width='' height='' loading='lazy'>
+                                    </figure>
+                                    <!-- /.p-reviews__image -->
+                                 </div>
+                                 <!-- /.p-reviews__imageArea -->
                               </div>
-                              <!-- /.p-reviews__textArea -->
-                              <div class="p-reviews__imageArea">
-                                 <figure class="p-reviews__image">
-                                    <img
-                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_006.webp')); ?>'
-                                       alt='' width='' height='' loading='lazy'>
-                                 </figure>
-                                 <!-- /.p-reviews__image -->
-                              </div>
-                              <!-- /.p-reviews__imageArea -->
+                              <!-- /.p-reviews__item -->
                            </div>
-                           <!-- /.p-reviews__item -->
-                        </div>
-                        <!-- /.p-reviews__swiper-slide -->
+                           <!-- /.p-reviews__swiper-slide -->
                         <?php endfor; ?>
                      </div>
                      <!-- /.p-reviews__swiper-wrapper -->
@@ -1844,9 +1844,134 @@
          <!-- /.p-reviews__inner-->
       </section>
       <!-- /.p-reviews -->
-
    </div>
    <!-- /.p-wrapper -->
+
+
+   <!-- cta   ///////////////////////////////////////////////////// -->
+   <?php get_template_part('template-parts/cta'); ?>
+
+
+   <!-- faq   ///////////////////////////////////////////////////// -->
+   <section class="p-faq">
+      <div class="p-faq__inner l-inner -narrow">
+         <div class="p-faq__heading">
+            <div class="c-heading">
+               <h2 class="c-heading__title">よくある質問</h2>
+               <p class="c-heading__en">FAQ</p>
+            </div>
+            <!-- /.c-heading -->
+            <p class="p-faq__lead">お客様から特によくいただくご質問とその回答をまとめました。<br>お問合せの前に、ぜひ一度ご確認ください。</p>
+         </div>
+         <!-- /.p-faq__heading -->
+         <div class="p-faq__content">
+            <ul class="p-faq__list">
+               <li class="p-faq__item">
+                  <details class="p-qa-box js_details is_opened" open>
+                     <summary class="p-qa-box__summary js_summary">
+                        <span class="p-qa-box__q">
+                           <span class="p-qa-box__q-text">査定は無料ですか？</span>
+                        </span>
+                     </summary>
+                     <div class="p-qa-box__content js_content">
+                        <span class="p-qa-box__a">
+                           <span class="p-qa-box__a-text">はい、査定は無料で行っております。査定後に必ず売却いただく必要はありませんので、お気軽にご相談ください。</span>
+                        </span>
+                     </div>
+                  </details>
+               </li>
+               <li class="p-faq__item">
+                  <details class="p-qa-box js_details">
+                     <summary class="p-qa-box__summary js_summary">
+                        <span class="p-qa-box__q">
+                           <span class="p-qa-box__q-text">査定だけの利用でも大丈夫ですか？</span>
+                        </span>
+                     </summary>
+                     <div class="p-qa-box__content js_content">
+                        <span class="p-qa-box__a">
+                           <span class="p-qa-box__a-text">もちろん可能です。査定額を確認したうえで、売却するかどうかをご検討いただけます。</span>
+                        </span>
+                     </div>
+                  </details>
+               </li>
+               <li class="p-faq__item">
+                  <details class="p-qa-box js_details">
+                     <summary class="p-qa-box__summary js_summary">
+                        <span class="p-qa-box__q">
+                           <span class="p-qa-box__q-text">キズや汚れがある商品でも買取できますか？</span>
+                        </span>
+                     </summary>
+                     <div class="p-qa-box__content js_content">
+                        <span class="p-qa-box__a">
+                           <span
+                              class="p-qa-box__a-text">状態により査定額は変わりますが、キズや使用感のある商品でも買取可能な場合があります。まずはお気軽にご相談ください。</span>
+                        </span>
+                     </div>
+                  </details>
+               </li>
+               <li class="p-faq__item">
+                  <details class="p-qa-box js_details">
+                     <summary class="p-qa-box__summary js_summary">
+                        <span class="p-qa-box__q">
+                           <span class="p-qa-box__q-text">箱や保証書などの付属品がなくても買取できますか？</span>
+                        </span>
+                     </summary>
+                     <div class="p-qa-box__content js_content">
+                        <span class="p-qa-box__a">
+                           <span class="p-qa-box__a-text">付属品がない場合でも買取可能です。ただし、箱や保証書などが揃っている場合は査定額が上がることがあります。</span>
+                        </span>
+                     </div>
+                  </details>
+               </li>
+               <li class="p-faq__item">
+                  <details class="p-qa-box js_details">
+                     <summary class="p-qa-box__summary js_summary">
+                        <span class="p-qa-box__q">
+                           <span class="p-qa-box__q-text">査定にはどれくらい時間がかかりますか？</span>
+                        </span>
+                     </summary>
+                     <div class="p-qa-box__content js_content">
+                        <span class="p-qa-box__a">
+                           <span class="p-qa-box__a-text">商品点数にもよりますが、通常は数分から30分程度で査定結果をご案内しています。</span>
+                        </span>
+                     </div>
+                  </details>
+               </li>
+               <li class="p-faq__item">
+                  <details class="p-qa-box js_details">
+                     <summary class="p-qa-box__summary js_summary">
+                        <span class="p-qa-box__q">
+                           <span class="p-qa-box__q-text">買取金額はどのように決まりますか？</span>
+                        </span>
+                     </summary>
+                     <div class="p-qa-box__content js_content">
+                        <span class="p-qa-box__a">
+                           <span class="p-qa-box__a-text">ブランド、商品の状態、市場相場、人気度などを総合的に判断し、専門スタッフが適正価格を算出しています。</span>
+                        </span>
+                     </div>
+                  </details>
+               </li>
+               <li class="p-faq__item">
+                  <details class="p-qa-box js_details">
+                     <summary class="p-qa-box__summary js_summary">
+                        <span class="p-qa-box__q">
+                           <span class="p-qa-box__q-text">その場で現金で受け取れますか？</span>
+                        </span>
+                     </summary>
+                     <div class="p-qa-box__content js_content">
+                        <span class="p-qa-box__a">
+                           <span class="p-qa-box__a-text">査定金額にご納得いただけましたら、その場で現金にてお支払い可能です。</span>
+                        </span>
+                     </div>
+                  </details>
+               </li>
+            </ul>
+         </div>
+         <!-- /.p-faq__content -->
+      </div>
+      <!-- /.p-faq__inner-->
+   </section>
+   <!-- /.p-faq -->
 
 </main>
 

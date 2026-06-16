@@ -1,4 +1,172 @@
-@use "../global" as *;
+@use '../global' as *;
 
 .p-qa-box {
+}
+
+.p-qa-box__summary {
+	list-style: none;
+	transition: opacity $easing;
+
+	&::-webkit-details-marker,
+	&::marker {
+		display: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		opacity: 0.7;
+	}
+}
+
+.p-qa-box__q {
+	display: block;
+	position: relative;
+	padding: rm(12) rm(16) rm(14) rm(12);
+	background: $color-main;
+	border-radius: rm(5);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding: rm(20) rm(24);
+	}
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		transition: top $easing;
+		content: '';
+	}
+
+	&::before {
+		top: rm(14);
+		right: rm(17);
+		width: rm(24);
+		height: rm(24);
+		background: $white;
+		border-radius: 50%;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			top: rm(19);
+			right: rm(24);
+			width: rm(32);
+			height: rm(32);
+		}
+	}
+
+	&::after {
+		top: rm(20);
+		right: rm(22);
+		@include chevron($size: rm(14), $thickness: 4, $color: $color-main, $direction: down);
+		transition:
+			top $easing,
+			rotate $easing;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			top: rm(26);
+			right: rm(30);
+			@include chevron($size: rm(20), $thickness: 3, $color: $color-main, $direction: down);
+		}
+	}
+}
+
+// △▽△▽△▽△▽ JS用クラス
+.js_details {
+	&.is_opened {
+		.p-qa-box__q {
+			&::after {
+				top: rm(18);
+				rotate: 180deg;
+
+				// ******** responsive(pc)
+				@include mq(pc) {
+					top: rm(24);
+				}
 			}
+		}
+	}
+}
+
+.p-qa-box__q-text {
+	list-style: none;
+	position: relative;
+	padding-inline: rm(37) rm(27);
+	color: $white;
+	font-size: rm(18);
+	font-weight: 600;
+	line-height: 1.5;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-inline: rm(63) rm(47);
+		font-size: rm(20);
+	}
+
+	&::before {
+		content: 'Q' counter(qa);
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: $white;
+		font-family: $ff-en;
+		font-size: rm(24);
+		font-weight: 500;
+		line-height: 1.2;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			font-size: rm(28);
+			line-height: 1;
+		}
+	}
+}
+
+.p-qa-box__content {
+	overflow: hidden;
+}
+
+.p-qa-box__a {
+	width: 100%;
+	margin-block-start: rm(8);
+	padding: rm(12) rm(16) rm(10) rm(12);
+	background: $color-bg;
+	border-radius: rm(5);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding: rm(20) rm(24);
+	}
+}
+
+.p-qa-box__a-text {
+	list-style: none;
+	position: relative;
+	padding-inline-start: rm(26);
+	color: $color-text;
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.5;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-inline-start: rm(63);
+		line-height: 1.8;
+	}
+
+	&::before {
+		content: 'A';
+		position: absolute;
+		top: rm(-1);
+		left: 0;
+		font-size: rm(24);
+		line-height: 1.2;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			font-size: rm(28);
+			line-height: 1;
+		}
+	}
+}

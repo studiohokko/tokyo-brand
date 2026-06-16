@@ -3732,6 +3732,181 @@ button {
   rotate: 180deg;
 }
 
+.p-qa-box__summary {
+  list-style: none;
+  transition: opacity 0.3s ease-out;
+}
+.p-qa-box__summary::-webkit-details-marker, .p-qa-box__summary::marker {
+  display: none;
+}
+.p-qa-box__summary:focus-visible {
+  outline: none;
+  opacity: 0.7;
+}
+
+.p-qa-box__q {
+  display: block;
+  position: relative;
+  padding: 0.75rem 1rem 0.875rem 0.75rem;
+  border-radius: 0.3125rem;
+  background: #031f4f;
+}
+@media (min-width: 768px) {
+  .p-qa-box__q {
+    padding: 1.25rem 1.5rem;
+  }
+}
+.p-qa-box__q::before, .p-qa-box__q::after {
+  display: block;
+  position: absolute;
+  content: "";
+  transition: top 0.3s ease-out;
+}
+.p-qa-box__q::before {
+  top: 0.875rem;
+  right: 1.0625rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #ffffff;
+}
+@media (min-width: 768px) {
+  .p-qa-box__q::before {
+    top: 1.1875rem;
+    right: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.p-qa-box__q::after {
+  -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(270 12 12)"><path d="M15.54,4.93 L8.47,12 L15.54,19.07"/></g></svg>');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  display: inline-block;
+  top: 1.25rem;
+  right: 1.375rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  background-color: #031f4f;
+  mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(270 12 12)"><path d="M15.54,4.93 L8.47,12 L15.54,19.07"/></g></svg>');
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  transition: top 0.3s ease-out, rotate 0.3s ease-out;
+}
+@media (min-width: 768px) {
+  .p-qa-box__q::after {
+    -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(270 12 12)"><path d="M15.54,4.93 L8.47,12 L15.54,19.07"/></g></svg>');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    display: inline-block;
+    top: 1.625rem;
+    right: 1.875rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: #031f4f;
+    mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(270 12 12)"><path d="M15.54,4.93 L8.47,12 L15.54,19.07"/></g></svg>');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+}
+
+.js_details.is_opened .p-qa-box__q::after {
+  top: 1.125rem;
+  rotate: 180deg;
+}
+@media (min-width: 768px) {
+  .js_details.is_opened .p-qa-box__q::after {
+    top: 1.5rem;
+  }
+}
+
+.p-qa-box__q-text {
+  position: relative;
+  padding-inline: 2.3125rem 1.6875rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .p-qa-box__q-text {
+    padding-inline: 3.9375rem 2.9375rem;
+    font-size: 1.25rem;
+  }
+}
+.p-qa-box__q-text::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Q" counter(qa);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-family: "Roboto", sans-serif;
+}
+@media (min-width: 768px) {
+  .p-qa-box__q-text::before {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+}
+
+.p-qa-box__content {
+  overflow: hidden;
+}
+
+.p-qa-box__a {
+  -webkit-margin-before: 0.5rem;
+  width: 100%;
+  margin-block-start: 0.5rem;
+  padding: 0.75rem 1rem 0.625rem 0.75rem;
+  border-radius: 0.3125rem;
+  background: #f0f5ff;
+}
+@media (min-width: 768px) {
+  .p-qa-box__a {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+.p-qa-box__a-text {
+  -webkit-padding-start: 1.625rem;
+  position: relative;
+  padding-inline-start: 1.625rem;
+  color: #031f4f;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .p-qa-box__a-text {
+    -webkit-padding-start: 3.9375rem;
+    padding-inline-start: 3.9375rem;
+    line-height: 1.8;
+  }
+}
+.p-qa-box__a-text::before {
+  position: absolute;
+  top: -0.0625rem;
+  left: 0;
+  content: "A";
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .p-qa-box__a-text::before {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+}
+
 .p-results {
   padding-block: 3.75rem;
   background: #f0f5ff;
@@ -5402,7 +5577,9 @@ button {
 }
 
 .p-wrapper {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .p-wrapper::before {
   display: block;
@@ -5634,6 +5811,11 @@ button {
   .p-reviews {
     padding-block: 9rem 6.25rem;
   }
+}
+
+.p-reviews__inner {
+  z-index: 3;
+  position: relative;
 }
 
 .p-reviews__heading {
@@ -5882,6 +6064,62 @@ button {
 .p-reviews__swiper-container .swiper-button-prev:focus-visible::before,
 .p-reviews__swiper-container .swiper-button-next:focus-visible::before {
   background-color: #ffffff;
+}
+
+.p-faq {
+  padding-block: 3.8125rem 3.75rem;
+}
+@media (min-width: 768px) {
+  .p-faq {
+    padding-block: 6.25rem;
+  }
+}
+
+.p-faq__heading {
+  padding-inline: 1.25rem;
+}
+
+.p-faq__lead {
+  -webkit-margin-before: 0.5rem;
+  margin-block-start: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+@media (min-width: 768px) {
+  .p-faq__lead {
+    -webkit-margin-before: 1.25rem;
+    margin-block-start: 1.25rem;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}
+
+.p-faq__content {
+  -webkit-margin-before: 2rem;
+  margin-block-start: 2rem;
+}
+@media (min-width: 768px) {
+  .p-faq__content {
+    -webkit-margin-before: 2.5rem;
+    margin-block-start: 2.5rem;
+  }
+}
+
+.p-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  counter-reset: qa;
+}
+@media (min-width: 768px) {
+  .p-faq__list {
+    gap: 1.1875rem;
+  }
+}
+
+.p-faq__item {
+  counter-increment: qa;
 }
 
 .u-only__sp {

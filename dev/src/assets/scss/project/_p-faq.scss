@@ -1,0 +1,56 @@
+@use '../global' as *;
+
+.p-faq {
+	padding-block: rm(61) rm(60);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(100);
+	}
+}
+
+.p-faq__inner {
+}
+
+.p-faq__heading {
+	padding-inline: rm(20);
+}
+
+.p-faq__lead {
+	margin-block-start: rm(8);
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.8;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(20);
+		font-size: rm(18);
+		text-align: center;
+	}
+}
+
+.p-faq__content {
+	margin-block-start: rm(32);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(40);
+	}
+}
+
+.p-faq__list {
+	display: flex;
+	flex-direction: column;
+	gap: rm(16);
+	counter-reset: qa;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		gap: rm(19);
+	}
+}
+
+.p-faq__item {
+	counter-increment: qa;
+}
