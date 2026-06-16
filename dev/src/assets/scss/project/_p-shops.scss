@@ -64,22 +64,37 @@
 }
 
 .p-shops__content {
-	display: flex;
-	flex-direction: column-reverse;
 	gap: rm(18);
+	display: grid;
+	grid-template-areas:
+		'image'
+		'text';
 
 	// ******** responsive(pc)
 	@include mq(pc) {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: center;
+		grid-template-areas: 'image text';
+		gap: rm(40) rm(56);
+		grid-template-columns: rm(484) 1fr;
 		align-items: center;
-		gap: rm(56);
+	}
+
+	&:has(.p-shops__map) {
+		grid-template-areas:
+			'image'
+			'text'
+			'map';
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			grid-template-areas:
+				'image text'
+				'map map';
+		}
 	}
 }
 
 .p-shops__textArea {
-	flex-grow: 1;
+	grid-area: text;
 }
 
 .p-shops__name {
@@ -104,6 +119,112 @@
 	// ******** responsive(pc)
 	@include mq(pc) {
 		font-size: rm(18);
+	}
+}
+
+.p-shops__accessBody {
+	margin-block-start: rm(16);
+	padding-block-start: rm(22);
+	border-top: rm(1) dashed rgba($color-main, 0.4);
+}
+
+.p-shops__accessFootList {
+	display: flex;
+	flex-direction: column;
+	gap: rm(17);
+}
+
+.p-shops__accessGroup {
+	display: flex;
+	align-items: flex-start;
+	gap: rm(16);
+}
+
+.p-shops__accessGroupTerm {
+	flex-shrink: 0;
+	width: rm(92);
+	padding: rm(6) rm(10) rm(7);
+	background: $color-main;
+	border-radius: 100vmax;
+	color: $white;
+	text-align: center;
+	font-size: rm(15);
+	font-weight: 600;
+	line-height: 1;
+}
+
+.p-shops__accessGroupData {
+	flex-grow: 1;
+	font-size: rm(15);
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.p-shops__accessGroupList {
+}
+
+.p-shops__accessGroupItem {
+}
+
+.p-shops__accessGroupTel {
+	transition: opacity $easing;
+}
+
+.p-shops__snsList {
+	display: flex;
+	gap: rm(7);
+	margin-block-start: rm(22);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(17);
+	}
+}
+
+.p-shops__snsItem {
+}
+
+.p-shops__snsLink {
+	position: relative;
+	width: rm(46);
+	height: rm(46);
+	border-radius: 50%;
+	transition: opacity $easing;
+
+	&::before {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+		mask-position: center center;
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		background: $white;
+		content: '';
+	}
+}
+
+.p-shops__map {
+	grid-area: map;
+	width: 100%;
+	border-radius: rm(5);
+	overflow: hidden;
+	margin-block-start: rm(-2);
+
+	// ******** responsive()
+	@include mq() {
+		margin-block-start: rm(-11);
+	}
+
+	iframe {
+		width: 100%;
+		aspect-ratio: 310 / 196;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			aspect-ratio: 1100 / 467;
+		}
 	}
 }
 
@@ -161,7 +282,7 @@
 }
 
 .p-shops__imageArea {
-	flex-shrink: 0;
+	grid-area: image;
 
 	// ******** responsive(pc)
 	@include mq(pc) {
@@ -214,6 +335,135 @@
 }
 
 // ----------------------------
+//  スライダー
+// ----------------------------
+.p-shops__swiper-container,
+.p-shops__main-swiper, // ★追加：メインも基準にする
+.p-shops__swiper,
+.p-shops__swiper-wrapper,
+.p-shops__swiper-slide {
+	position: relative;
+}
+
+.p-shops__swiper-container {
+}
+
+.p-shops__main-swiper {
+	margin-block-end: rm(6);
+}
+
+.p-shops__main-slide {
+	width: 100%;
+}
+
+.p-shops__mainImage {
+	border-radius: rm(5);
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		aspect-ratio: 310 / 190;
+	}
+}
+
+// ======== サムネイル（既存）
+.p-shops__swiper {
+}
+
+.p-shops__swiper-wrapper {
+}
+
+.p-shops__swiper-slide {
+	width: rm(80);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(128);
+	}
+
+	&:not(.swiper-slide-active) {
+		opacity: 0.5;
+	}
+}
+
+.p-shops__slideImage {
+	border-radius: rm(5);
+	overflow: hidden;
+
+	img {
+		aspect-ratio: 128 / 78;
+	}
+}
+
+// ======== ナビゲーションボタン
+.p-shops__swiper-container {
+	// 位置のreset
+	.swiper-button-prev,
+	.swiper-button-next,
+	.swiper-pagination-bullets.swiper-pagination-horizontal {
+		top: unset;
+		bottom: unset;
+		left: unset;
+		right: unset;
+		margin: 0;
+		padding: 0;
+	}
+
+	.swiper-button-prev::after,
+	.swiper-button-next::after,
+	.swiper-button-prev svg,
+	.swiper-button-next svg {
+		display: none;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		position: absolute;
+		top: rm(72);
+		width: rm(24);
+		height: rm(46);
+		background: rgba(3, 31, 79, 0.6);
+		backdrop-filter: blur(rm(3));
+		transition:
+			background $easing,
+			backdrop-filter $easing;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			top: rm(125);
+		}
+
+		&::before {
+			display: block;
+			position: absolute;
+			content: '';
+		}
+	}
+
+	.swiper-button-prev {
+		border-radius: rm(0) rm(5) rm(5) rm(0);
+		left: 0;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+		}
+
+		&::before {
+			@include chevron($size: rm(20), $thickness: 3, $color: $white, $direction: left);
+		}
+	}
+
+	.swiper-button-next {
+		right: 0;
+		border-radius: rm(5) rm(0) rm(0) rm(5);
+
+		&::before {
+			@include chevron($size: rm(20), $thickness: 3, $color: $white, $direction: right);
+		}
+	}
+}
+
+// ----------------------------
 //  ホバー
 // ----------------------------
 .p-shops__tab {
@@ -231,6 +481,59 @@
 		outline: none;
 		background: $white;
 		color: $color-main;
+	}
+}
+
+.p-shops__snsLink {
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		opacity: 0.7;
+	}
+}
+
+.p-shops__accessGroupTel {
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		opacity: 0.7;
+	}
+}
+
+.p-shops__swiper-container {
+	.swiper-button-prev,
+	.swiper-button-next {
+		@media (any-hover: hover) {
+			&:hover {
+				backdrop-filter: none;
+				background: rgba(3, 31, 79, 1);
+			}
+		}
+		&:focus {
+			outline: none;
+		}
+
+		&:focus-visible {
+			outline: none;
+			backdrop-filter: none;
+			background: rgba(3, 31, 79, 1);
+		}
 	}
 }
 
@@ -402,4 +705,45 @@
 
 .p-shops__modal.is_open .p-shops__modalInner {
 	opacity: 1;
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.p-shops__content {
+	&.-start {
+		align-items: flex-start;
+	}
+}
+
+.p-shops__tab {
+	&.-tall {
+		min-height: rm(128);
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			min-height: rm(100);
+		}
+	}
+}
+.p-shops__snsLink {
+	&.-line {
+		background: $color-accent-002;
+
+		&::before {
+			width: rm(22);
+			height: rm(22);
+			mask-image: url(../img/icon_line.svg);
+		}
+	}
+
+	&.-mail {
+		background: #092e6e;
+
+		&::before {
+			width: rm(21);
+			height: rm(16);
+			mask-image: url(../img/icon_mail.svg);
+		}
+	}
 }

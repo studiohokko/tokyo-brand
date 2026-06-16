@@ -66,7 +66,9 @@ export function js_shops() {
 				panels.forEach((panel) => {
 					panel.classList.remove('is_show');
 				});
-				const nextPanel = document.getElementById(panelId);
+				const nextPanel = shop.querySelector(`#${CSS.escape(panelId)}`);
+				if (!nextPanel) return;
+
 				nextPanel.classList.add('is_show');
 
 				syncHeight(nextPanel);
