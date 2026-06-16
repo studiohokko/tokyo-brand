@@ -29,3 +29,7 @@ js_swiperResult(); // 実行
 // お客様の声スライダー
 import { js_swiperReviews } from './js_swiperReviews';
 js_swiperReviews(); // 実行
+
+// 店舗ギャラリースライダー
+import { js_shopsGallery } from './js_shopsGallery';
+js_shopsGallery(); // 実行

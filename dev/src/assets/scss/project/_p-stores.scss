@@ -1,0 +1,26 @@
+@use '../global' as *;
+
+.p-stores {
+	padding-block: rm(57) rm(60);
+	background: $color-bg;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(100) rm(135);
+	}
+}
+
+.p-stores__inner {
+}
+
+.p-stores__heading {
+}
+
+.p-stores__content {
+	margin-block-start: rm(30);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(73);
+	}
+}

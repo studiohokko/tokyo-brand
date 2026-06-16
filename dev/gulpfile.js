@@ -226,10 +226,7 @@ const filterWebpTargets = () =>
 	});
 
 const generateWebp = () => {
-	return src('./public/assets/img/**/*.{png,jpg,jpeg}', { encoding: false })
-		.pipe(filterWebpTargets())
-		.pipe(webp())
-		.pipe(dest('public/assets/img'));
+	return src('./public/assets/img/**/*.{png,jpg,jpeg}', { encoding: false }).pipe(filterWebpTargets()).pipe(webp()).pipe(dest('public/assets/img'));
 };
 
 const cacheBusting = () => {
@@ -258,5 +255,5 @@ module.exports = {
 	image: series(copyImages, tinyPng, generateWebp),
 	cache: cacheBusting,
 	build: series(compileSass, parallel(minifyCss, bundleJs, formatHTML, createScss), copyImages, tinyPng, generateWebp, cacheBusting),
-	default: parallel(buildServer, watchFiles),
+	default: series(bundleJs, parallel(buildServer, watchFiles)),
 };

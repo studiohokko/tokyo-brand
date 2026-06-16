@@ -162,6 +162,7 @@
                            </div>
                            <!-- /.p-shops__imageArea -->
                         </div>
+                        <!-- /.p-shops__content -->
                      </section>
                      <section class="p-shops__panel js_shopsPanel" role="tabpanel" id="shop-panel2"
                         aria-labelledby="shop-tab2" tabindex="0">
@@ -186,6 +187,7 @@
                            </div>
                            <!-- /.p-shops__imageArea -->
                         </div>
+                        <!-- /.p-shops__content -->
                      </section>
                      <section class="p-shops__panel js_shopsPanel" role="tabpanel" id="shop-panel3"
                         aria-labelledby="shop-tab3" tabindex="0">
@@ -210,6 +212,7 @@
                            </div>
                            <!-- /.p-shops__imageArea -->
                         </div>
+                        <!-- /.p-shops__content -->
                      </section>
                   </div>
                   <!-- /.p-shops__panels -->
@@ -341,8 +344,11 @@
                      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                      title="東京ぶらんど Produce by ALAMODE 渋谷本店のGoogleマップ"></iframe>
                </div>
+               <!-- /.p-shops__modalMap -->
             </div>
+            <!-- /.p-shops__modalInner -->
          </div>
+         <!-- /.p-shops__modal -->
          <div class="p-shops__modal js_shopsMapModal" id="shop-map-modal2" role="dialog" aria-modal="true"
             aria-hidden="true">
             <button type="button" class="p-shops__modalOverlay js_shopsMapClose" aria-label="閉じる"></button>
@@ -354,8 +360,11 @@
                      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                      title="ORANGE BOUTIQUE 渋谷店のGoogleマップ"></iframe>
                </div>
+               <!-- /.p-shops__modalMap -->
             </div>
+            <!-- /.p-shops__modalInner -->
          </div>
+         <!-- /.p-shops__modal -->
          <div class="p-shops__modal js_shopsMapModal" id="shop-map-modal3" role="dialog" aria-modal="true"
             aria-hidden="true">
             <button type="button" class="p-shops__modalOverlay js_shopsMapClose" aria-label="閉じる"></button>
@@ -367,8 +376,11 @@
                      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                      title="東京ぶらんど Produce by ALAMODE 渋谷109店のGoogleマップ"></iframe>
                </div>
+               <!-- /.p-shops__modalMap -->
             </div>
+            <!-- /.p-shops__modalInner -->
          </div>
+         <!-- /.p-shops__modal -->
       </div>
       <!-- /.p-shops__modals -->
    </section>
@@ -1972,6 +1984,423 @@
       <!-- /.p-faq__inner-->
    </section>
    <!-- /.p-faq -->
+
+
+   <!-- stores   ///////////////////////////////////////////////////// -->
+   <section class="p-stores">
+      <div class="p-stores__inner l-inner">
+         <div class="p-stores__heading">
+            <div class="c-heading">
+               <h2 class="c-heading__title">店舗紹介</h2>
+               <p class="c-heading__en">Stores</p>
+            </div>
+            <!-- /.c-heading -->
+         </div>
+         <!-- /.p-stores__heading -->
+         <div class="p-stores__content">
+            <div class="p-shops js_shops">
+               <div class="p-shops__inner">
+                  <div class="p-shops__tabs" role="tablist">
+                     <button class="p-shops__tab -tall js_shopsTab is_show" role="tab" id="store-tab1"
+                        aria-controls="store-panel1" aria-selected="true" tabindex="0">東京ぶらんど <br
+                           class="u-only__sp">produce by <br class="u-only__sp">ALAMODE<br>渋谷本店</button>
+                     <button class="p-shops__tab -tall js_shopsTab" role="tab" id="store-tab2"
+                        aria-controls="store-panel2" aria-selected="false" tabindex="-1">ORANGE <br
+                           class="u-only__sp">BOUTIQUE<br>渋谷店</button>
+                     <button class="p-shops__tab -tall js_shopsTab" role="tab" id="store-tab3"
+                        aria-controls="store-panel3" aria-selected="false" tabindex="-1">東京ぶらんど <br
+                           class="u-only__sp">produce by <br class="u-only__sp">ALAMODE<br>渋谷109店</button>
+                  </div>
+                  <!-- /.p-shops__tabs -->
+                  <div class="p-shops__panels">
+                     <section class="p-shops__panel js_shopsPanel is_show" role="tabpanel" id="store-panel1"
+                        aria-labelledby="store-tab1" tabindex="0">
+                        <div class="p-shops__content -start">
+                           <div class="p-shops__textArea">
+                              <h3 class="p-shops__name">東京ぶらんど <br>Produce by ALAMODE <br class="u-only__sp">渋谷本店</h3>
+                              <ul class="p-shops__accessList">
+                                 <li class="p-shops__accessItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                 <li class="p-shops__accessItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
+                              </ul>
+                              <div class="p-shops__accessBody">
+                                 <dl class="p-shops__accessFootList">
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">住　　所</dt>
+                                       <dd class="p-shops__accessGroupData">〒150-0042<br
+                                             class="u-only__sp">東京都渋谷区宇田川町26-3<br class="u-only__sp">サンルイビル1階</dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">電話番号</dt>
+                                       <dd class="p-shops__accessGroupData"><a href=""
+                                             class="p-shops__accessGroupTel u-pointerNone__sp">03-5990-4745</a></dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">アクセス</dt>
+                                       <dd class="p-shops__accessGroupData">
+                                          <ul class="p-shops__accessGroupList">
+                                             <li class="p-shops__accessGroupItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                             <li class="p-shops__accessGroupItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
+                                          </ul>
+                                       </dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">営業時間</dt>
+                                       <dd class="p-shops__accessGroupData">12:30-21:00</dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">定 休 日</dt>
+                                       <dd class="p-shops__accessGroupData">年末年始（年末年始を除く）</dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                 </dl>
+                                 <ul class="p-shops__snsList">
+                                    <li class="p-shops__snsItem">
+                                       <a href="" class="p-shops__snsLink -line"></a>
+                                    </li>
+                                    <li class="p-shops__snsItem">
+                                       <a href="" class="p-shops__snsLink -mail"></a>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <!-- /.p-shops__accessBody -->
+                           </div>
+                           <!-- /.p-shops__textArea -->
+                           <div class="p-shops__imageArea">
+                              <?php
+                              $shop_gallery_images = [
+                                 'p-shops_gallery-001-1.webp',
+                                 'p-shops_gallery-001-2.webp',
+                                 'p-shops_gallery-001-3.webp',
+                                 'p-shops_gallery-001-4.webp',
+                                 'p-shops_gallery-001-5.webp',
+                              ];
+                              $gallery_count = count($shop_gallery_images);
+
+                              $gallery_loop_items = [];
+                              for ($repeat = 0; $repeat < 3; $repeat++) {
+                                 $gallery_loop_items = array_merge($gallery_loop_items, $shop_gallery_images);
+                              }
+                              ?>
+
+                              <div class="p-shops__swiper-container"
+                                 data-gallery-count="<?php echo esc_attr($gallery_count); ?>">
+
+                                 <!-- ▼ メイン（3周分に変更） -->
+                                 <div class="swiper p-shops__main-swiper">
+                                    <div class="swiper-wrapper">
+                                       <?php foreach ($gallery_loop_items as $image): ?>
+                                          <div class="swiper-slide p-shops__main-slide">
+                                             <figure class="p-shops__mainImage">
+                                                <img
+                                                   src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
+                                                   alt="" width="" height="">
+                                             </figure>
+                                          </div>
+                                       <?php endforeach; ?>
+                                    </div>
+
+                                    <button class="swiper-button-prev p-shops__swiper-button-prev"></button>
+                                    <button class="swiper-button-next p-shops__swiper-button-next"></button>
+                                 </div>
+
+                                 <!-- ▼ サムネ（こちらは元のまま3周分） -->
+                                 <div class="swiper p-shops__swiper">
+                                    <div class="swiper-wrapper p-shops__swiper-wrapper">
+                                       <?php foreach ($gallery_loop_items as $image): ?>
+                                          <div class="swiper-slide p-shops__swiper-slide">
+                                             <figure class="p-shops__slideImage">
+                                                <img
+                                                   src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
+                                                   alt="" width="" height="" loading="lazy">
+                                             </figure>
+                                          </div>
+                                       <?php endforeach; ?>
+                                    </div>
+                                    <!-- /.p-shops__swiper-wrapper -->
+                                 </div>
+                                 <!-- /.p-shops__swiper -->
+                              </div>
+                              <!-- /.p-shops__swiper-container -->
+                           </div>
+                           <!-- /.p-shops__imageArea -->
+                           <div class="p-shops__map">
+                              <iframe
+                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d207601.42939836302!2d139.5628184!3d35.6086821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5cbb320c3b%3A0x1dae6547623bae28!2z5p2x5Lqs44G244KJ44KT44GpIFByb2R1Y2UgYnkgQUxBTU9ERSDmuIvosLfmnKzlupc!5e0!3m2!1sja!2sjp!4v1781245689604!5m2!1sja!2sjp"
+                                 style="border:0;" allowfullscreen="" loading="lazy"
+                                 referrerpolicy="no-referrer-when-downgrade"
+                                 title="東京ぶらんど Produce by ALAMODE 渋谷本店のGoogleマップ">
+                              </iframe>
+                           </div>
+                           <!-- /.p-shops__map -->
+                        </div>
+                        <!-- /.p-shops__content -->
+                     </section>
+                     <section class="p-shops__panel js_shopsPanel" role="tabpanel" id="store-panel2"
+                        aria-labelledby="store-tab2" tabindex="0">
+                        <div class="p-shops__content -start">
+                           <div class="p-shops__textArea">
+                              <h3 class="p-shops__name">ORANGE BOUTIQUE <br class="u-only__sp">渋谷店</h3>
+                              <ul class="p-shops__accessList">
+                                 <li class="p-shops__accessItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                 <li class="p-shops__accessItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
+                              </ul>
+                              <div class="p-shops__accessBody">
+                                 <dl class="p-shops__accessFootList">
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">住　　所</dt>
+                                       <dd class="p-shops__accessGroupData">〒150-0042<br
+                                             class="u-only__sp">東京都渋谷区宇田川町26-3<br class="u-only__sp">サンルイビル1階</dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">電話番号</dt>
+                                       <dd class="p-shops__accessGroupData"><a href=""
+                                             class="p-shops__accessGroupTel u-pointerNone__sp">03-5990-4745</a></dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">アクセス</dt>
+                                       <dd class="p-shops__accessGroupData">
+                                          <ul class="p-shops__accessGroupList">
+                                             <li class="p-shops__accessGroupItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                             <li class="p-shops__accessGroupItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
+                                          </ul>
+                                       </dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">営業時間</dt>
+                                       <dd class="p-shops__accessGroupData">12:30-21:00</dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">定 休 日</dt>
+                                       <dd class="p-shops__accessGroupData">年末年始（年末年始を除く）</dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                 </dl>
+                                 <ul class="p-shops__snsList">
+                                    <li class="p-shops__snsItem">
+                                       <a href="" class="p-shops__snsLink -line"></a>
+                                    </li>
+                                    <li class="p-shops__snsItem">
+                                       <a href="" class="p-shops__snsLink -mail"></a>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <!-- /.p-shops__accessBody -->
+                           </div>
+                           <!-- /.p-shops__textArea -->
+                           <div class="p-shops__imageArea">
+                              <?php
+                              $shop_gallery_images = [
+                                 'p-shops_gallery-002-1.webp',
+                                 'p-shops_gallery-002-2.webp',
+                                 'p-shops_gallery-002-3.webp',
+                                 'p-shops_gallery-002-4.webp',
+                                 'p-shops_gallery-002-5.webp',
+                              ];
+                              $gallery_count = count($shop_gallery_images);
+
+                              $gallery_loop_items = [];
+                              for ($repeat = 0; $repeat < 3; $repeat++) {
+                                 $gallery_loop_items = array_merge($gallery_loop_items, $shop_gallery_images);
+                              }
+                              ?>
+
+                              <div class="p-shops__swiper-container"
+                                 data-gallery-count="<?php echo esc_attr($gallery_count); ?>">
+
+                                 <!-- ▼ メイン（3周分に変更） -->
+                                 <div class="swiper p-shops__main-swiper">
+                                    <div class="swiper-wrapper">
+                                       <?php foreach ($gallery_loop_items as $image): ?>
+                                          <div class="swiper-slide p-shops__main-slide">
+                                             <figure class="p-shops__mainImage">
+                                                <img
+                                                   src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
+                                                   alt="" width="" height="">
+                                             </figure>
+                                          </div>
+                                       <?php endforeach; ?>
+                                    </div>
+
+                                    <button class="swiper-button-prev p-shops__swiper-button-prev"></button>
+                                    <button class="swiper-button-next p-shops__swiper-button-next"></button>
+                                 </div>
+
+                                 <!-- ▼ サムネ（こちらは元のまま3周分） -->
+                                 <div class="swiper p-shops__swiper">
+                                    <div class="swiper-wrapper p-shops__swiper-wrapper">
+                                       <?php foreach ($gallery_loop_items as $image): ?>
+                                          <div class="swiper-slide p-shops__swiper-slide">
+                                             <figure class="p-shops__slideImage">
+                                                <img
+                                                   src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
+                                                   alt="" width="" height="" loading="lazy">
+                                             </figure>
+                                          </div>
+                                       <?php endforeach; ?>
+                                    </div>
+                                    <!-- /.p-shops__swiper-wrapper -->
+                                 </div>
+                                 <!-- /.p-shops__swiper -->
+                              </div>
+                              <!-- /.p-shops__swiper-container -->
+                           </div>
+                           <!-- /.p-shops__imageArea -->
+                           <div class="p-shops__map">
+                              <iframe
+                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.694448992338!2d139.6965467762908!3d35.659899031144604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188dc8dcbdbebd%3A0x698742beaeb31b76!2zT1JBTkdFIEJPVVRJUVVFIOa4i-iwtw!5e0!3m2!1sja!2sjp!4v1781245831373!5m2!1sja!2sjp"
+                                 style="border:0;" allowfullscreen="" loading="lazy"
+                                 referrerpolicy="no-referrer-when-downgrade"
+                                 title="ORANGE BOUTIQUE 渋谷店のGoogleマップ"></iframe>
+                           </div>
+                           <!-- /.p-shops__map -->
+                        </div>
+                        <!-- /.p-shops__content -->
+                     </section>
+                     <section class="p-shops__panel js_shopsPanel" role="tabpanel" id="store-panel3"
+                        aria-labelledby="store-tab3" tabindex="0">
+                        <div class="p-shops__content -start">
+                           <div class="p-shops__textArea">
+                              <h3 class="p-shops__name">東京ぶらんど <br>Produce by ALAMODE <br class="u-only__sp">渋谷109店</h3>
+                              <ul class="p-shops__accessList">
+                                 <li class="p-shops__accessItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                 <li class="p-shops__accessItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
+                              </ul>
+                              <div class="p-shops__accessBody">
+                                 <dl class="p-shops__accessFootList">
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">住　　所</dt>
+                                       <dd class="p-shops__accessGroupData">〒150-0043<br
+                                             class="u-only__sp">東京都渋谷区道玄坂2丁目30-4<br class="u-only__sp">玉久ビル 1F</dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">電話番号</dt>
+                                       <dd class="p-shops__accessGroupData"><a href=""
+                                             class="p-shops__accessGroupTel u-pointerNone__sp">03-6712-7331</a></dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">アクセス</dt>
+                                       <dd class="p-shops__accessGroupData">
+                                          <ul class="p-shops__accessGroupList">
+                                             <li class="p-shops__accessGroupItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                             <li class="p-shops__accessGroupItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
+                                          </ul>
+                                       </dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">営業時間</dt>
+                                       <dd class="p-shops__accessGroupData">12:30-21:00</dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                    <div class="p-shops__accessGroup">
+                                       <dt class="p-shops__accessGroupTerm">定 休 日</dt>
+                                       <dd class="p-shops__accessGroupData">年末年始（年末年始を除く）</dd>
+                                    </div>
+                                    <!-- /.p-shops__accessGroup -->
+                                 </dl>
+                                 <ul class="p-shops__snsList">
+                                    <li class="p-shops__snsItem">
+                                       <a href="" class="p-shops__snsLink -line"></a>
+                                    </li>
+                                    <li class="p-shops__snsItem">
+                                       <a href="" class="p-shops__snsLink -mail"></a>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <!-- /.p-shops__accessBody -->
+                           </div>
+                           <!-- /.p-shops__textArea -->
+                           <div class="p-shops__imageArea">
+                              <?php
+                              $shop_gallery_images = [
+                                 'p-shops_gallery-003-1.webp',
+                                 'p-shops_gallery-003-2.webp',
+                                 'p-shops_gallery-003-3.webp',
+                                 'p-shops_gallery-003-4.webp',
+                                 'p-shops_gallery-003-5.webp',
+                              ];
+                              $gallery_count = count($shop_gallery_images);
+
+                              $gallery_loop_items = [];
+                              for ($repeat = 0; $repeat < 3; $repeat++) {
+                                 $gallery_loop_items = array_merge($gallery_loop_items, $shop_gallery_images);
+                              }
+                              ?>
+
+                              <div class="p-shops__swiper-container"
+                                 data-gallery-count="<?php echo esc_attr($gallery_count); ?>">
+
+                                 <!-- ▼ メイン（3周分に変更） -->
+                                 <div class="swiper p-shops__main-swiper">
+                                    <div class="swiper-wrapper">
+                                       <?php foreach ($gallery_loop_items as $image): ?>
+                                          <div class="swiper-slide p-shops__main-slide">
+                                             <figure class="p-shops__mainImage">
+                                                <img
+                                                   src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
+                                                   alt="" width="" height="">
+                                             </figure>
+                                          </div>
+                                       <?php endforeach; ?>
+                                    </div>
+
+                                    <button class="swiper-button-prev p-shops__swiper-button-prev"></button>
+                                    <button class="swiper-button-next p-shops__swiper-button-next"></button>
+                                 </div>
+
+                                 <!-- ▼ サムネ（こちらは元のまま3周分） -->
+                                 <div class="swiper p-shops__swiper">
+                                    <div class="swiper-wrapper p-shops__swiper-wrapper">
+                                       <?php foreach ($gallery_loop_items as $image): ?>
+                                          <div class="swiper-slide p-shops__swiper-slide">
+                                             <figure class="p-shops__slideImage">
+                                                <img
+                                                   src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
+                                                   alt="" width="" height="" loading="lazy">
+                                             </figure>
+                                          </div>
+                                       <?php endforeach; ?>
+                                    </div>
+                                    <!-- /.p-shops__swiper-wrapper -->
+                                 </div>
+                                 <!-- /.p-shops__swiper -->
+                              </div>
+                              <!-- /.p-shops__swiper-container -->
+                           </div>
+                           <!-- /.p-shops__imageArea -->
+                           <div class="p-shops__map">
+                              <iframe
+                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d207601.42939836302!2d139.5628184!3d35.6086821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d199c367869%3A0x8de64d8b86faebdb!2z5p2x5Lqs44G244KJ44KT44GpIFByb2R1Y2UgYnkgQUxBTU9ERSDmuIvosLcxMDnlupc!5e0!3m2!1sja!2sjp!4v1781245792661!5m2!1sja!2sjp"
+                                 style="border:0;" allowfullscreen="" loading="lazy"
+                                 referrerpolicy="no-referrer-when-downgrade"
+                                 title="東京ぶらんど Produce by ALAMODE 渋谷109店のGoogleマップ"></iframe>
+                           </div>
+                           <!-- /.p-shops__map -->
+                        </div>
+                        <!-- /.p-shops__content -->
+                     </section>
+                  </div>
+                  <!-- /.p-shops__panels -->
+               </div>
+               <!-- /.p-shops__inner -->
+            </div>
+            <!-- /.p-shops -->
+         </div>
+         <!-- /.p-stores__content -->
+      </div>
+      <!-- /.p-stores__inner-->
+   </section>
+   <!-- /.p-stores -->
 
 </main>
 
