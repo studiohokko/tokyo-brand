@@ -18,7 +18,6 @@ const hash = crypto.randomBytes(8).toString('hex');
 const replace = require('gulp-replace');
 const tinypng = require('gulp-tinypng-extended');
 const webp = require('gulp-webp');
-const webpackStream = require('webpack-stream');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config');
 const cheerio = require('gulp-cheerio');
@@ -56,13 +55,59 @@ const minifyCss = () => {
 		.pipe(dest('./public/assets/css', { sourcemaps: 'sourcemaps' }));
 };
 
-const bundleJs = () => {
-	return webpackStream(webpackConfig, webpack)
-		.on('error', function (e) {
-			console.error(e);
-			this.emit('end');
-		})
-		.pipe(dest('public/assets/js'));
+const onJsError = notify.onError({
+	title: 'JS Build Error',
+	message: '<%= error.message %>',
+});
+
+const bundleJs = (done) => {
+	const compiler = webpack(webpackConfig);
+
+	compiler.run((err, stats) => {
+		const finish = (error) => {
+			compiler.close((closeErr) => {
+				if (closeErr) {
+					console.error(closeErr);
+				}
+				done(error);
+			});
+		};
+
+		if (err) {
+			console.error(err.stack || err);
+			onJsError(err);
+			return finish(err);
+		}
+
+		if (stats.hasErrors()) {
+			const message = stats
+				.toJson()
+				.errors.map((e) => e.message)
+				.join('\n\n');
+			const error = new Error(message);
+			console.error(message);
+			onJsError(error);
+			return finish(error);
+		}
+
+		if (stats.hasWarnings()) {
+			console.warn(
+				stats
+					.toJson()
+					.warnings.map((w) => w.message)
+					.join('\n\n'),
+			);
+		}
+
+		console.log(
+			stats.toString({
+				colors: true,
+				chunks: false,
+				modules: false,
+			}),
+		);
+		finish();
+	});
 };
 
 const formatHTML = () => {
@@ -238,7 +283,7 @@ const cacheBusting = () => {
 
 const watchFiles = () => {
 	watch('./src/assets/scss/**/*.scss', series(compileSass, minifyCss, browserReload));
-	watch('./src/assets/js/**/*.js', series(bundleJs, browserReload));
+	watch('./src/assets/js/**/*.js', { awaitWriteFinish: { stabilityThreshold: 200, pollInterval: 100 } }, series(bundleJs, browserReload));
 	watch('./src/assets/img/**/*', series(copyImages, tinyPng, generateWebp, browserReload));
 	watch('./src/**/*.html', series(formatHTML, createScss, browserReload));
 	watch('../*.php', series(createScss, browserReload));

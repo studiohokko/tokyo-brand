@@ -1,0 +1,107 @@
+@use '../global' as *;
+
+.p-contact {
+	padding-block: rm(59) rm(60);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(99) rm(72);
+	}
+}
+
+.p-contact__inner {
+}
+
+.p-contact__heading {
+}
+
+.p-contact__lead {
+	margin-block-start: rm(8);
+	padding-inline: rm(23) rm(20);
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.8;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(20);
+		font-size: rm(18);
+		text-align: center;
+	}
+}
+
+.p-contact__content {
+	margin-block-start: rm(32);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(34);
+	}
+}
+
+.p-contact__buttonsBox {
+	padding: rm(30) rm(20);
+	background: $color-bg;
+	border-radius: rm(5);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding: rm(38) rm(94);
+	}
+}
+
+.p-contact__list {
+	display: flex;
+	flex-direction: column;
+	gap: rm(20);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-direction: row;
+		gap: rm(28);
+	}
+}
+
+.p-contact__item {
+	width: 100%;
+	height: rm(80);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		height: rm(122);
+	}
+}
+
+.p-contact__main {
+	margin-block-start: rm(32);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(72);
+	}
+}
+
+.p-contact__mainTitle {
+}
+
+.p-contact__mainTitleText {
+	text-align: center;
+	font-family: $ff-serif;
+	font-size: rm(28);
+	font-weight: 900;
+	line-height: 1.3;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(38);
+	}
+}
+
+.p-contact__form {
+	margin-block-start: rm(29);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(40);
+	}
+}

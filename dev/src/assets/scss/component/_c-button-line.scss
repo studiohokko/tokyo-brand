@@ -17,7 +17,7 @@
 		display: block;
 		position: absolute;
 		width: 100%;
-		height: rm(60);
+		height: rm(50);
 		content: '';
 		transition: opacity $easing;
 
@@ -105,6 +105,16 @@
 // ----------------------------
 .c-button-line {
 	&.-simple {
+		&::before,
+		&::after {
+			height: rm(60);
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				height: rm(70);
+			}
+		}
+
 		.c-button-line__text {
 			position: relative;
 			padding-inline-start: rm(39);

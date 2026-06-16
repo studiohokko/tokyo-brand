@@ -118,3 +118,13 @@ function redirect_custom_post_type_single_page()
    }
 }
 add_action('template_redirect', 'redirect_custom_post_type_single_page');
+
+
+// -----------------------------------------------------------
+//  Contact Form 7の自動pタグ生成無効
+// -----------------------------------------------------------
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false()
+{
+   return false;
+}

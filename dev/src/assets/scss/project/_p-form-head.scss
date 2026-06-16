@@ -1,0 +1,37 @@
+@use '../global' as *;
+
+.p-form-head {
+	display: flex;
+	align-items: center;
+	gap: rm(11);
+	position: relative;
+}
+
+.p-form-head__name {
+	display: flex;
+	align-items: center;
+	gap: rm(11);
+	font-size: rm(18);
+	font-weight: 500;
+	line-height: 1;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(18);
+	}
+}
+
+.p-form-head__label {
+	display: inline-block;
+	padding: rm(6) rm(8);
+	color: $white;
+	font-size: rm(14);
+	font-weight: 500;
+	line-height: 1;
+	border-radius: rm(5);
+	background: #bbb;
+
+	&.-required {
+		background: #f00;
+	}
+}

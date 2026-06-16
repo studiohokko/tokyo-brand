@@ -1,0 +1,36 @@
+@use '../global' as *;
+
+.c-form-text {
+	display: block;
+	width: 100%;
+	padding: rm(13) rm(19);
+	border-radius: rm(5);
+	border: rm(1) solid rgba(3, 31, 79, 0.2);
+	background: #f0f5ff;
+	transition: all $easing;
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1;
+
+	&::placeholder {
+		opacity: 0.3;
+	}
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-inline: rm(23);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.7;
+			border: rm(1) solid $color-main;
+		}
+	}
+
+	&:focus,
+	&:active {
+		outline: none;
+		border: rm(1) solid $color-main;
+	}
+}

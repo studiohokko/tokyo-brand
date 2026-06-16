@@ -1,0 +1,53 @@
+@use '../global' as *;
+
+.p-form-item {
+	display: flex;
+	flex-direction: column;
+	gap: rm(14);
+	width: 100%;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		flex-direction: row;
+		align-items: center;
+		gap: rm(27);
+	}
+}
+
+.p-form-item__head {
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(220);
+		flex-shrink: 0;
+		margin-block-start: 0;
+	}
+}
+
+.p-form-item__body {
+	flex-grow: 1;
+}
+
+.p-form-item__fileWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: rm(16);
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.p-form-item {
+	&.-start {
+		// ******** responsive(pc)
+		@include mq(pc) {
+			align-items: flex-start;
+		}
+
+		.p-form-item__head {
+			// ******** responsive(pc)
+			@include mq(pc) {
+				margin-block-start: rm(11);
+			}
+		}
+	}
+}

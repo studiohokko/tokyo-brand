@@ -1,0 +1,125 @@
+@use '../global' as *;
+
+.c-form-file {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	cursor: pointer;
+	user-select: none;
+}
+
+.wpcf7-form-control-wrap[data-name^='your-file'] {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+// 📦 カスタムファイル入力のコンテナ
+.c-form-file__wrapper {
+	display: flex;
+	align-items: center;
+	user-select: none;
+	cursor: pointer;
+
+	@media (any-hover: hover) {
+		&:hover {
+			.c-form-file__button {
+				background: $color-text;
+				color: $white;
+			}
+		}
+	}
+
+	&:focus-visible {
+		outline: none;
+
+		.c-form-file__button {
+			background: $color-text;
+			color: $white;
+		}
+	}
+}
+
+.c-form-file__foot {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+// 🎯 ファイル選択ボタン
+.c-form-file__button {
+	flex-shrink: 0;
+	padding: rm(14) rm(23);
+	margin-inline-end: rm(19);
+	border-radius: rm(5);
+	border: rm(1) solid #031f4f;
+	background: $color-bg;
+	font-weight: 500;
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1;
+	cursor: pointer;
+	transition: all $easing;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background: $color-text;
+			color: $white;
+		}
+	}
+
+	&:focus-visible {
+		outline: none;
+		background: $color-text;
+		color: $white;
+	}
+}
+
+// 📝 ファイル名表示エリア
+.c-form-file__display {
+	display: inline-block;
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1;
+	pointer-events: none;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+
+	&.-empty {
+		opacity: 0.5;
+	}
+}
+
+// ❌ 削除ボタン
+.c-form-file__remove {
+	background: #ef8488;
+	color: $white;
+	border: none;
+	border-radius: rm(5);
+	width: rm(30);
+	height: rm(30);
+	margin-left: rm(10);
+	cursor: pointer;
+	font-size: rm(18);
+	line-height: 1;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	transition: $transition;
+	flex-shrink: 0;
+
+	&.-show {
+		display: flex;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background: #d96c70;
+		}
+	}
+}

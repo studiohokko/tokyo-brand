@@ -33,3 +33,7 @@ js_swiperReviews(); // 実行
 // 店舗ギャラリースライダー
 import { js_shopsGallery } from './js_shopsGallery';
 js_shopsGallery(); // 実行
+
+// ファイル送信
+import { js_formFile } from './js_formFile';
+js_formFile(); // 実行

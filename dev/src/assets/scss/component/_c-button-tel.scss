@@ -92,6 +92,67 @@
 }
 
 // ----------------------------
+//  モデファイア
+// ----------------------------
+.c-button-tel {
+	&.-small {
+		&::before,
+		&::after {
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: rm(50);
+			content: '';
+			transition: opacity $easing;
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				height: rm(70);
+			}
+		}
+		.c-button-tel__catch {
+			font-size: rm(15);
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				font-size: rm(18);
+			}
+		}
+
+		.c-button-tel__number {
+			padding-inline-start: rm(28);
+			font-size: rm(24);
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				padding-inline-start: rm(34);
+				font-size: rm(36);
+			}
+
+			&::before {
+				width: rm(24);
+				height: rm(24);
+
+				// ******** responsive(pc)
+				@include mq(pc) {
+					width: rm(32);
+					height: rm(32);
+				}
+			}
+		}
+
+		.c-button-tel__time {
+			font-size: rm(12);
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				font-size: rm(14);
+			}
+		}
+	}
+}
+
+// ----------------------------
 //  ホバー
 // ----------------------------
 .c-button-tel {

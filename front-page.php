@@ -2402,6 +2402,64 @@
    </section>
    <!-- /.p-stores -->
 
+
+   <!-- contact   ///////////////////////////////////////////////////// -->
+   <section class="p-contact">
+      <div class="p-contact__inner l-inner -narrow">
+         <div class="p-contact__heading">
+            <div class="c-heading">
+               <h2 class="c-heading__title">お問合せ</h2>
+               <p class="c-heading__en">Contact</p>
+            </div>
+            <!-- /.c-heading -->
+            <p class="p-contact__lead"> LINE、メール、又はお電話からご利用しやすい方法でお問合せください。</p>
+         </div>
+         <!-- /.p-contact__heading -->
+         <div class="p-contact__content">
+            <div class="p-contact__buttonsBox">
+               <ul class="p-contact__list">
+                  <li class="p-contact__item">
+                     <a href="" class="c-button-line">
+                        <p class="c-button-line__pop">写真を送るだけ！最短当日で査定OK</p>
+                        <h3 class="c-button-line__text">LINEで無料査定する</h3>
+                     </a>
+                  </li>
+                  <li class="p-contact__item">
+                     <a href="" class="c-button-tel u-pointerNone__sp -small">
+                        <h3 class="c-button-tel__catch">電話で相談する</h3>
+                        <p class="c-button-tel__number">03-5990-4745</p>
+                        <p class="c-button-tel__time">受付時間12:30-21:00</p>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <!-- /.p-contact__buttonsBox -->
+            <section class="p-contact__main">
+               <div class="p-contact__mainTitle">
+                  <h3 class="p-contact__mainTitleText">メールでのお問合せ</h3>
+               </div>
+               <!-- /.p-contact__mainTitle -->
+               <div class="p-contact__form">
+                  <div class="p-form">
+                     <?php echo do_shortcode('[contact-form-7 id="f135169" title="お問い合わせフォーム"]'); ?>
+                     <!-- <div class="p-form__recaptcha">このサイトはreCAPTCHAによって保護されており、Googleの<a
+                           href="https://policies.google.com/privacy" target="_blank"
+                           rel="nofollow noopener">プライバシーポリシー</a>と<a href="https://policies.google.com/terms"
+                           target="_blank" rel="nofollow noopener">利用規約</a>が適用されます。
+                     </div> -->
+                     <!-- /.p-form__recaptcha -->
+                  </div>
+                  <!-- /.p-form -->
+               </div>
+               <!-- /.p-contact__form -->
+            </section>
+         </div>
+         <!-- /.p-contact__content -->
+      </div>
+      <!-- /.p-contact__inner-->
+   </section>
+   <!-- /.p-contact -->
+
 </main>
 
 <?php get_footer(); ?>
