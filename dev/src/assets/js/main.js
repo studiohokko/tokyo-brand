@@ -25,3 +25,7 @@ js_accordion(); // 実行
 // 買取実績スライダー
 import { js_swiperResult } from './js_swiperResult';
 js_swiperResult(); // 実行
+
+// お客様の声スライダー
+import { js_swiperReviews } from './js_swiperReviews';
+js_swiperReviews(); // 実行

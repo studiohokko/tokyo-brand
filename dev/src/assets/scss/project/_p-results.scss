@@ -297,19 +297,21 @@
 // ----------------------------
 //  ホバー
 // ----------------------------
-.swiper-button-prev,
-.swiper-button-next {
-	@media (any-hover: hover) {
-		&:hover {
+.p-results__swiper-container {
+	.swiper-button-prev,
+	.swiper-button-next {
+		@media (any-hover: hover) {
+			&:hover {
+				background: #092e6e;
+			}
+		}
+		&:focus {
+			outline: none;
+		}
+
+		&:focus-visible {
+			outline: none;
 			background: #092e6e;
 		}
-	}
-	&:focus {
-		outline: none;
-	}
-
-	&:focus-visible {
-		outline: none;
-		background: #092e6e;
 	}
 }

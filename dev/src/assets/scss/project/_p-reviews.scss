@@ -1,0 +1,253 @@
+@use '../global' as *;
+
+.p-reviews {
+	padding-block: rm(59);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(144) rm(100);
+	}
+}
+
+.p-reviews__inner {
+}
+
+.p-reviews__heading {
+	padding-inline: rm(20);
+}
+
+.p-reviews__lead {
+	margin-block-start: rm(8);
+	color: $white;
+	font-size: rm(16);
+	font-weight: 500;
+	line-height: 1.8;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(20);
+		font-size: rm(18);
+		text-align: center;
+	}
+}
+
+.p-reviews__content {
+	margin-block-start: rm(26);
+	margin-inline-end: calc(50% - 50vw);
+	margin-inline-start: calc(50% - 50vw);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(46);
+	}
+}
+
+.p-reviews__swiper-container {
+	padding-block-end: rm(92);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block-end: rm(25);
+	}
+}
+
+.p-reviews__swiper {
+	height: auto;
+}
+
+.p-reviews__swiper-wrapper {
+	align-items: stretch;
+	height: auto;
+}
+
+.p-reviews__swiper-slide {
+	display: flex;
+	padding-block-start: rm(36);
+	width: rm(350);
+	height: auto;
+}
+
+.p-reviews__item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.p-reviews__textArea {
+	flex: 1;
+	padding: rm(137) rm(24) rm(32) rm(25);
+	border-radius: rm(5);
+	background: $white;
+	box-shadow: 0 0 rm(12) 0 rgba(3, 31, 79, 0.18);
+}
+
+.p-reviews__catch {
+	font-size: rm(24);
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.p-reviews__profileList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: rm(4) rm(17);
+	margin-block-start: rm(16);
+	padding: rm(8);
+	background: $color-bg;
+	border-radius: rm(5);
+}
+
+.p-reviews__profileItem {
+	position: relative;
+	font-size: rm(14);
+	font-weight: 500;
+	line-height: 1.3;
+
+	&:not(:last-child) {
+		&::before {
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: rm(-11);
+			translate: 0 -50%;
+			color: #b9b9b9;
+			content: '/';
+		}
+	}
+}
+
+.p-reviews__comment {
+	margin-block-start: rm(15);
+	font-size: rm(15);
+	font-weight: 500;
+	line-height: 1.8;
+}
+
+.p-reviews__imageArea {
+	position: absolute;
+	top: rm(-36);
+	left: 50%;
+	translate: -50%;
+}
+
+.p-reviews__image {
+	width: rm(160);
+	border: rm(6) solid $white;
+	border-radius: 50%;
+	background: $white;
+	overflow: hidden;
+}
+
+.p-reviews__swiper-button-prev {
+}
+
+.p-reviews__swiper-button-next {
+}
+
+.p-reviews__swiper-container {
+	// 位置のreset
+	.swiper-button-prev,
+	.swiper-button-next {
+		top: unset;
+		bottom: unset;
+		left: unset;
+		right: unset;
+		margin: 0;
+		padding: 0;
+	}
+
+	// ======== ナビゲーションボタン
+	//デフォルトのボタンを初期化（Swiper 12 は SVG アイコン）
+	.swiper-button-prev::after,
+	.swiper-button-next::after,
+	.swiper-button-prev svg,
+	.swiper-button-next svg {
+		display: none;
+	}
+
+	//各ボタンのカスタマイズ
+	.swiper-button-prev,
+	.swiper-button-next {
+		position: absolute;
+		bottom: 0;
+		width: rm(60);
+		height: rm(60);
+		background: $white;
+		border: rm(2) solid $color-main;
+		filter: drop-shadow(0 0 rm(12) rgba(3, 31, 79, 0.18));
+		border-radius: 50%;
+		transition: background $easing;
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			bottom: unset;
+			top: rm(478);
+		}
+
+		&::before {
+			display: block;
+			position: absolute;
+			transition: background-color $easing;
+			content: '';
+		}
+	}
+
+	.swiper-button-prev {
+		left: calc(50% - rm(68));
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			left: calc(50% - rm(580));
+		}
+
+		&::before {
+			@include chevron($size: rm(30), $thickness: 3, $color: $color-main, $direction: left);
+		}
+	}
+
+	.swiper-button-next {
+		right: calc(50% - rm(68));
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			right: calc(50% - rm(580));
+		}
+
+		&::before {
+			@include chevron($size: rm(30), $thickness: 3, $color: $color-main, $direction: right);
+		}
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.p-reviews__swiper-container {
+	.swiper-button-prev,
+	.swiper-button-next {
+		@media (any-hover: hover) {
+			&:hover {
+				background: $color-main;
+
+				&::before {
+					background-color: $white;
+				}
+			}
+		}
+		&:focus {
+			outline: none;
+		}
+
+		&:focus-visible {
+			outline: none;
+			background: $color-main;
+
+			&::before {
+				background-color: $white;
+			}
+		}
+	}
+}

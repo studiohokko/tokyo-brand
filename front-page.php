@@ -1577,6 +1577,7 @@
    <div class="p-wrapper">
       <div class="p-wrapper__bg"></div>
       <!-- /.p-wrapper__bg -->
+      <!-- point   ///////////////////////////////////////////////////// -->
       <section class="p-point">
          <div class="p-point__inner l-inner -narrow">
             <div class="p-point__heading">
@@ -1647,6 +1648,203 @@
          <!-- /.p-point__inner-->
       </section>
       <!-- /.p-point -->
+
+
+      <!-- reviews   ///////////////////////////////////////////////////// -->
+      <section class="p-reviews">
+         <div class="p-reviews__inner l-inner">
+            <div class="p-reviews__heading">
+               <div class="c-heading -white">
+                  <h2 class="c-heading__title">お客様の声</h2>
+                  <p class="c-heading__en">Reviews</p>
+               </div>
+               <!-- /.c-heading -->
+               <p class="p-reviews__lead">実際にサービスをご利用いただいたお客様から寄せられた、お喜びの声をご紹介します。</p>
+            </div>
+            <!-- /.p-reviews__heading -->
+            <div class="p-reviews__content">
+               <div class="p-reviews__swiper-container">
+                  <div class="swiper p-reviews__swiper">
+                     <div class="swiper-wrapper p-reviews__swiper-wrapper">
+                        <?php for ($reviews_loop = 0; $reviews_loop < 3; $reviews_loop++): ?>
+                        <div class="swiper-slide p-reviews__swiper-slide">
+                           <div class="p-reviews__item">
+                              <div class="p-reviews__textArea">
+                                 <p class="p-reviews__catch">「LINEで気軽に相談できたのが良かったです」</p>
+                                 <ul class="p-reviews__profileList">
+                                    <li class="p-reviews__profileItem">40代男性</li>
+                                    <li class="p-reviews__profileItem">高級腕時計</li>
+                                    <li class="p-reviews__profileItem">LINE査定 → 店頭買取</li>
+                                 </ul>
+                                 <p class="p-reviews__comment">
+                                    売るかどうか迷っていた時計があり、まずはLINEで相談してみました。<br>写真を送ると丁寧に返信してくださり、相場や査定ポイントも教えていただけました。無理に来店を勧められることもなく、安心して相談できました。最終的に店舗で査定してもらい、納得して売却することができました。
+                                 </p>
+                              </div>
+                              <!-- /.p-reviews__textArea -->
+                              <div class="p-reviews__imageArea">
+                                 <figure class="p-reviews__image">
+                                    <img
+                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_001.webp')); ?>'
+                                       alt='' width='' height='' loading='lazy'>
+                                 </figure>
+                                 <!-- /.p-reviews__image -->
+                              </div>
+                              <!-- /.p-reviews__imageArea -->
+                           </div>
+                           <!-- /.p-reviews__item -->
+                        </div>
+                        <!-- /.p-reviews__swiper-slide -->
+                        <div class="swiper-slide p-reviews__swiper-slide">
+                           <div class="p-reviews__item">
+                              <div class="p-reviews__textArea">
+                                 <p class="p-reviews__catch">「写真を送るだけで査定できて便利でした」</p>
+                                 <ul class="p-reviews__profileList">
+                                    <li class="p-reviews__profileItem">30代女性</li>
+                                    <li class="p-reviews__profileItem">ブランドバッグ</li>
+                                    <li class="p-reviews__profileItem">LINE査定 → 宅配買取</li>
+                                 </ul>
+                                 <p class="p-reviews__comment">
+                                    自宅にいながら査定できると知り、LINE査定を利用しました。<br>バッグの写真と簡単な情報を送るだけで、すぐに査定額の目安を教えていただけました。おおよその金額が事前に分かったので安心して宅配買取をお願いでき、実際の査定額もほぼ同じでした。忙しい方でも利用しやすいサービスだと思います。
+                                 </p>
+                              </div>
+                              <!-- /.p-reviews__textArea -->
+                              <div class="p-reviews__imageArea">
+                                 <figure class="p-reviews__image">
+                                    <img
+                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_002.webp')); ?>'
+                                       alt='' width='' height='' loading='lazy'>
+                                 </figure>
+                                 <!-- /.p-reviews__image -->
+                              </div>
+                              <!-- /.p-reviews__imageArea -->
+                           </div>
+                           <!-- /.p-reviews__item -->
+                        </div>
+                        <!-- /.p-reviews__swiper-slide -->
+                        <div class="swiper-slide p-reviews__swiper-slide">
+                           <div class="p-reviews__item">
+                              <div class="p-reviews__textArea">
+                                 <p class="p-reviews__catch">「古いモデルでもきちんと査定してもらえました」</p>
+                                 <ul class="p-reviews__profileList">
+                                    <li class="p-reviews__profileItem">50代男性</li>
+                                    <li class="p-reviews__profileItem">高級腕時計</li>
+                                    <li class="p-reviews__profileItem">店頭買取</li>
+                                 </ul>
+                                 <p class="p-reviews__comment">
+                                    10年以上前に購入した時計だったので値段がつくか不安でしたが、状態やモデルの人気などをしっかり確認して査定していただけました。古い品でも丁寧に見てもらえるお店だと感じました。
+                                 </p>
+                              </div>
+                              <!-- /.p-reviews__textArea -->
+                              <div class="p-reviews__imageArea">
+                                 <figure class="p-reviews__image">
+                                    <img
+                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_003.webp')); ?>'
+                                       alt='' width='' height='' loading='lazy'>
+                                 </figure>
+                                 <!-- /.p-reviews__image -->
+                              </div>
+                              <!-- /.p-reviews__imageArea -->
+                           </div>
+                           <!-- /.p-reviews__item -->
+                        </div>
+                        <!-- /.p-reviews__swiper-slide -->
+                        <div class="swiper-slide p-reviews__swiper-slide">
+                           <div class="p-reviews__item">
+                              <div class="p-reviews__textArea">
+                                 <p class="p-reviews__catch">「宅配買取でも安心して利用できました」</p>
+                                 <ul class="p-reviews__profileList">
+                                    <li class="p-reviews__profileItem">40代女性</li>
+                                    <li class="p-reviews__profileItem">ブランドバッグ・ジュエリー</li>
+                                    <li class="p-reviews__profileItem">宅配買取</li>
+                                 </ul>
+                                 <p class="p-reviews__comment">
+                                    店舗まで行く時間が取れなかったため宅配買取を利用しました。<br>申し込み後すぐにキットが届き、手順も分かりやすかったのでスムーズに発送できました。査定結果の説明も丁寧で、金額に納得して売却することができました。
+                                 </p>
+                              </div>
+                              <!-- /.p-reviews__textArea -->
+                              <div class="p-reviews__imageArea">
+                                 <figure class="p-reviews__image">
+                                    <img
+                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_004.webp')); ?>'
+                                       alt='' width='' height='' loading='lazy'>
+                                 </figure>
+                                 <!-- /.p-reviews__image -->
+                              </div>
+                              <!-- /.p-reviews__imageArea -->
+                           </div>
+                           <!-- /.p-reviews__item -->
+                        </div>
+                        <!-- /.p-reviews__swiper-slide -->
+                        <div class="swiper-slide p-reviews__swiper-slide">
+                           <div class="p-reviews__item">
+                              <div class="p-reviews__textArea">
+                                 <p class="p-reviews__catch">「査定理由を丁寧に説明してくれて安心でした」</p>
+                                 <ul class="p-reviews__profileList">
+                                    <li class="p-reviews__profileItem">30代女性</li>
+                                    <li class="p-reviews__profileItem">ブランドバッグ・ジュエリー</li>
+                                    <li class="p-reviews__profileItem">店頭買取</li>
+                                 </ul>
+                                 <p class="p-reviews__comment">
+                                    以前利用した買取店では査定額だけを提示されることが多かったのですが、こちらでは状態や人気モデルかどうかなど、査定のポイントを一つひとつ説明していただけました。価格の理由が分かると納得感があり、安心して売却できました。
+                                 </p>
+                              </div>
+                              <!-- /.p-reviews__textArea -->
+                              <div class="p-reviews__imageArea">
+                                 <figure class="p-reviews__image">
+                                    <img
+                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_005.webp')); ?>'
+                                       alt='' width='' height='' loading='lazy'>
+                                 </figure>
+                                 <!-- /.p-reviews__image -->
+                              </div>
+                              <!-- /.p-reviews__imageArea -->
+                           </div>
+                           <!-- /.p-reviews__item -->
+                        </div>
+                        <!-- /.p-reviews__swiper-slide -->
+                        <div class="swiper-slide p-reviews__swiper-slide">
+                           <div class="p-reviews__item">
+                              <div class="p-reviews__textArea">
+                                 <p class="p-reviews__catch">「無理に売却を勧められないので安心でした」</p>
+                                 <ul class="p-reviews__profileList">
+                                    <li class="p-reviews__profileItem">50代女性</li>
+                                    <li class="p-reviews__profileItem">ダイヤモンドジュエリー</li>
+                                    <li class="p-reviews__profileItem">店頭買取</li>
+                                 </ul>
+                                 <p class="p-reviews__comment">
+                                    母から譲り受けたジュエリーを査定してもらいました。<br>思い入れがある品だったので売るか迷っていましたが、「一度持ち帰って検討しても大丈夫ですよ」と言っていただけて安心しました。お店の雰囲気も落ち着いていて、気軽に相談できるところが良かったです。
+                                 </p>
+                              </div>
+                              <!-- /.p-reviews__textArea -->
+                              <div class="p-reviews__imageArea">
+                                 <figure class="p-reviews__image">
+                                    <img
+                                       src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_006.webp')); ?>'
+                                       alt='' width='' height='' loading='lazy'>
+                                 </figure>
+                                 <!-- /.p-reviews__image -->
+                              </div>
+                              <!-- /.p-reviews__imageArea -->
+                           </div>
+                           <!-- /.p-reviews__item -->
+                        </div>
+                        <!-- /.p-reviews__swiper-slide -->
+                        <?php endfor; ?>
+                     </div>
+                     <!-- /.p-reviews__swiper-wrapper -->
+                  </div>
+                  <!-- /.p-reviews__swiper -->
+                  <button class="swiper-button-prev p-reviews__swiper-button-prev"></button>
+                  <button class="swiper-button-next p-reviews__swiper-button-next"></button>
+               </div>
+               <!-- /.p-reviews__swiper-container -->
+            </div>
+            <!-- /.p-reviews__content -->
+         </div>
+         <!-- /.p-reviews__inner-->
+      </section>
+      <!-- /.p-reviews -->
+
    </div>
    <!-- /.p-wrapper -->
 
