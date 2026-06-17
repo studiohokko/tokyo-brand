@@ -6,7 +6,7 @@
                <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logoLink">
                   <figure class="p-header__logoImage">
                      <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/c-logo_b.webp')); ?>' alt=''
-                        width='' height='' loading='lazy'>
+                        width='259' height='60' loading='lazy'>
                   </figure>
                   <!-- /.p-header__logoImage -->
                </a>

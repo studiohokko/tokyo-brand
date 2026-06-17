@@ -18,7 +18,7 @@ $modifier = $args['modifier'] ?? '';
    <div class="p-media__imageArea">
       <figure class="p-media__image">
          <img src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-media_' . $image . '.webp')); ?>"
-            alt="" width="" height="" loading="lazy">
+            alt="" width="465" height="285" loading="lazy">
       </figure>
       <!-- /.p-media__image -->
    </div>

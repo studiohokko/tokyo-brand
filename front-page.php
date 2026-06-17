@@ -55,7 +55,7 @@
             <a href="" class="p-choice__methodLink -store">
                <figure class="p-choice__methodImage">
                   <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/icon_building.svg')); ?>'
-                     alt='' width='' height='' loading='lazy'>
+                     alt='' width='12' height='12' loading='lazy'>
                </figure>
                <p class="p-choice__methodText">店頭買取</p>
             </a>
@@ -64,7 +64,7 @@
             <a href="" class="p-choice__methodLink -delivery">
                <figure class="p-choice__methodImage">
                   <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/icon_car.svg')); ?>' alt=''
-                     width='' height='' loading='lazy'>
+                     width='12' height='12' loading='lazy'>
                </figure>
                <p class="p-choice__methodText">宅配買取</p>
             </a>
@@ -157,7 +157,7 @@
                               <figure class="p-shops__image">
                                  <img
                                     src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-shops_main-001.webp')); ?>'
-                                    alt='' width='' height='' loading='lazy'>
+                                    alt='' width='484' height='296' loading='lazy'>
                               </figure>
                            </div>
                            <!-- /.p-shops__imageArea -->
@@ -182,7 +182,7 @@
                               <figure class="p-shops__image">
                                  <img
                                     src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-shops_main-002.webp')); ?>'
-                                    alt='' width='' height='' loading='lazy'>
+                                    alt='' width='484' height='296' loading='lazy'>
                               </figure>
                            </div>
                            <!-- /.p-shops__imageArea -->
@@ -207,7 +207,7 @@
                               <figure class="p-shops__image">
                                  <img
                                     src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-shops_main-003.webp')); ?>'
-                                    alt='' width='' height='' loading='lazy'>
+                                    alt='' width='484' height='296' loading='lazy'>
                               </figure>
                            </div>
                            <!-- /.p-shops__imageArea -->
@@ -242,7 +242,7 @@
                                        media="(min-width: 768px)">
                                     <img
                                        src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-about-feature_001.webp')); ?>'
-                                       alt='' width='' height='' loading='lazy'>
+                                       alt='' width='350' height='186' loading='lazy'>
                                  </picture>
                               </figure>
                               <!-- /.p-about-feature__image -->
@@ -262,7 +262,7 @@
                                        media="(min-width: 768px)">
                                     <img
                                        src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-about-feature_002.webp')); ?>'
-                                       alt='' width='' height='' loading='lazy'>
+                                       alt='' width='350' height='186' loading='lazy'>
                                  </picture>
                               </figure>
                               <!-- /.p-about-feature__image -->
@@ -282,7 +282,7 @@
                                        media="(min-width: 768px)">
                                     <img
                                        src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-about-feature_003.webp')); ?>'
-                                       alt='' width='' height='' loading='lazy'>
+                                       alt='' width='350' height='186' loading='lazy'>
                                  </picture>
                               </figure>
                               <!-- /.p-about-feature__image -->
@@ -294,7 +294,7 @@
                         <figure class="p-about-feature__deco">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-about-feature_person.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='323' height='324' loading='lazy'>
                         </figure>
                         <p class="p-about-feature__message"><span>歴20年以上の経験を持つ鑑定士</span></p>
                         <p class="p-about-feature__message">が、1点1点の査定理由を丁寧にご</p>
@@ -313,7 +313,7 @@
                         <figure class="p-about-feature__deco">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-about-feature_person.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='323' height='324' loading='lazy'>
                         </figure>
                         <p class="p-about-feature__message"><span>歴20年以上の経験を持つ鑑定士</span>が、1点1点の査定理由を丁寧にご説明します。</p>
                         <p class="p-about-feature__message">渋谷駅から徒歩3分、<span>店頭査定も無料</span>です。</p>
@@ -438,7 +438,7 @@
                         <figure class="p-items__boxImage">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items_box-001.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='248' height='188' loading='lazy'>
                         </figure>
                         <!-- /.p-items__boxImage -->
                      </div>
@@ -453,7 +453,7 @@
                         <figure class="p-items__boxImage">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items_box-002.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='248' height='188' loading='lazy'>
                         </figure>
                         <!-- /.p-items__boxImage -->
                      </div>
@@ -468,7 +468,7 @@
                         <figure class="p-items__boxImage">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items_box-003.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='248' height='188' loading='lazy'>
                         </figure>
                         <!-- /.p-items__boxImage -->
                      </div>
@@ -483,7 +483,7 @@
                         <figure class="p-items__boxImage">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items_box-004.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='248' height='188' loading='lazy'>
                         </figure>
                         <!-- /.p-items__boxImage -->
                      </div>
@@ -503,7 +503,7 @@
                      <figure class="p-items__boxFootImage">
                         <img
                            src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-items_boxFoot.webp')); ?>'
-                           alt='' width='' height='' loading='lazy'>
+                           alt='' width='514' height='288' loading='lazy'>
                      </figure>
                      <!-- /.p-items__boxFootImage -->
                   </div>
@@ -1116,7 +1116,7 @@
                               media="(min-width: 768px)">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-gold_banner.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='87' height='60' loading='lazy'>
                         </picture>
                      </figure>
                      <?php if ($first_gold_price): ?>
@@ -1351,7 +1351,7 @@
                      <figure class="p-flow-cta__deco">
                         <img
                            src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-flow-cta_person.webp')); ?>'
-                           alt='' width='' height='' loading='lazy'>
+                           alt='' width='274' height='326' loading='lazy'>
                      </figure>
                      <!-- /.p-flow-cta__deco -->
                      <div class="p-flow-cta__title">
@@ -1383,7 +1383,7 @@
                         <figure class="p-flow__buttonImage">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/icon_building.svg')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='12' height='12' loading='lazy'>
                         </figure>
                         <p class="p-flow__buttonPop">即日売却したい <span>/</span> 対面で丁寧に対応してほしい</p>
                         <p class="p-flow__buttonText">店頭買取はこちら</p>
@@ -1393,7 +1393,7 @@
                      <a href="" class="p-flow__buttonLink -delivery">
                         <figure class="p-flow__buttonImage">
                            <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/icon_car.svg')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='12' height='12' loading='lazy'>
                         </figure>
                         <p class="p-flow__buttonPop">自宅で売却したい <span>/</span> 手間なく売却したい</p>
                         <p class="p-flow__buttonText">宅配買取はこちら</p>
@@ -1613,7 +1613,7 @@
                         <figure class="p-point__image">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-point_001.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='350' height='217' loading='lazy'>
                         </figure>
                         <!-- /.p-point__image -->
                      </div>
@@ -1629,7 +1629,7 @@
                         <figure class="p-point__image">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-point_002.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='350' height='217' loading='lazy'>
                         </figure>
                         <!-- /.p-point__image -->
                      </div>
@@ -1647,7 +1647,7 @@
                         <figure class="p-point__image">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-point_003.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='350' height='217' loading='lazy'>
                         </figure>
                         <!-- /.p-point__image -->
                      </div>
@@ -1697,7 +1697,7 @@
                                     <figure class="p-reviews__image">
                                        <img
                                           src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_001.webp')); ?>'
-                                          alt='' width='' height='' loading='lazy'>
+                                          alt='' width='147' height='147' loading='lazy'>
                                     </figure>
                                     <!-- /.p-reviews__image -->
                                  </div>
@@ -1724,7 +1724,7 @@
                                     <figure class="p-reviews__image">
                                        <img
                                           src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_002.webp')); ?>'
-                                          alt='' width='' height='' loading='lazy'>
+                                          alt='' width='147' height='147' loading='lazy'>
                                     </figure>
                                     <!-- /.p-reviews__image -->
                                  </div>
@@ -1751,7 +1751,7 @@
                                     <figure class="p-reviews__image">
                                        <img
                                           src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_003.webp')); ?>'
-                                          alt='' width='' height='' loading='lazy'>
+                                          alt='' width='147' height='147' loading='lazy'>
                                     </figure>
                                     <!-- /.p-reviews__image -->
                                  </div>
@@ -1778,7 +1778,7 @@
                                     <figure class="p-reviews__image">
                                        <img
                                           src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_004.webp')); ?>'
-                                          alt='' width='' height='' loading='lazy'>
+                                          alt='' width='147' height='147' loading='lazy'>
                                     </figure>
                                     <!-- /.p-reviews__image -->
                                  </div>
@@ -1805,7 +1805,7 @@
                                     <figure class="p-reviews__image">
                                        <img
                                           src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_005.webp')); ?>'
-                                          alt='' width='' height='' loading='lazy'>
+                                          alt='' width='147' height='147' loading='lazy'>
                                     </figure>
                                     <!-- /.p-reviews__image -->
                                  </div>
@@ -1832,7 +1832,7 @@
                                     <figure class="p-reviews__image">
                                        <img
                                           src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_006.webp')); ?>'
-                                          alt='' width='' height='' loading='lazy'>
+                                          alt='' width='147' height='147' loading='lazy'>
                                     </figure>
                                     <!-- /.p-reviews__image -->
                                  </div>
@@ -2093,11 +2093,12 @@
                                  <div class="swiper p-shops__main-swiper">
                                     <div class="swiper-wrapper">
                                        <?php foreach ($gallery_loop_items as $image): ?>
+                                          <?php [$gallery_width, $gallery_height] = my_get_image_display_size($image); ?>
                                           <div class="swiper-slide p-shops__main-slide">
                                              <figure class="p-shops__mainImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="" height="">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>
@@ -2111,11 +2112,12 @@
                                  <div class="swiper p-shops__swiper">
                                     <div class="swiper-wrapper p-shops__swiper-wrapper">
                                        <?php foreach ($gallery_loop_items as $image): ?>
+                                          <?php [$gallery_width, $gallery_height] = my_get_image_display_size($image); ?>
                                           <div class="swiper-slide p-shops__swiper-slide">
                                              <figure class="p-shops__slideImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="" height="" loading="lazy">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>" loading="lazy">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>
@@ -2219,11 +2221,12 @@
                                  <div class="swiper p-shops__main-swiper">
                                     <div class="swiper-wrapper">
                                        <?php foreach ($gallery_loop_items as $image): ?>
+                                          <?php [$gallery_width, $gallery_height] = my_get_image_display_size($image); ?>
                                           <div class="swiper-slide p-shops__main-slide">
                                              <figure class="p-shops__mainImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="" height="">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>
@@ -2237,11 +2240,12 @@
                                  <div class="swiper p-shops__swiper">
                                     <div class="swiper-wrapper p-shops__swiper-wrapper">
                                        <?php foreach ($gallery_loop_items as $image): ?>
+                                          <?php [$gallery_width, $gallery_height] = my_get_image_display_size($image); ?>
                                           <div class="swiper-slide p-shops__swiper-slide">
                                              <figure class="p-shops__slideImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="" height="" loading="lazy">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>" loading="lazy">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>
@@ -2344,11 +2348,12 @@
                                  <div class="swiper p-shops__main-swiper">
                                     <div class="swiper-wrapper">
                                        <?php foreach ($gallery_loop_items as $image): ?>
+                                          <?php [$gallery_width, $gallery_height] = my_get_image_display_size($image); ?>
                                           <div class="swiper-slide p-shops__main-slide">
                                              <figure class="p-shops__mainImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="" height="">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>
@@ -2362,11 +2367,12 @@
                                  <div class="swiper p-shops__swiper">
                                     <div class="swiper-wrapper p-shops__swiper-wrapper">
                                        <?php foreach ($gallery_loop_items as $image): ?>
+                                          <?php [$gallery_width, $gallery_height] = my_get_image_display_size($image); ?>
                                           <div class="swiper-slide p-shops__swiper-slide">
                                              <figure class="p-shops__slideImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="" height="" loading="lazy">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>" loading="lazy">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>
@@ -2481,7 +2487,7 @@
                         <figure class="p-status__image">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_001.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='284' height='170' loading='lazy'>
                         </figure>
                         <!-- /.p-status__image -->
                      </div>
@@ -2496,7 +2502,7 @@
                         <figure class="p-status__image">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_002.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='284' height='170' loading='lazy'>
                         </figure>
                         <!-- /.p-status__image -->
                      </div>
@@ -2511,7 +2517,7 @@
                         <figure class="p-status__image">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_003.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='284' height='170' loading='lazy'>
                         </figure>
                         <!-- /.p-status__image -->
                      </div>
@@ -2526,7 +2532,7 @@
                         <figure class="p-status__image">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_004.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='284' height='170' loading='lazy'>
                         </figure>
                         <!-- /.p-status__image -->
                      </div>
@@ -2541,7 +2547,7 @@
                         <figure class="p-status__image">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_005.webp')); ?>'
-                              alt='' width='' height='' loading='lazy'>
+                              alt='' width='284' height='170' loading='lazy'>
                         </figure>
                         <!-- /.p-status__image -->
                      </div>
@@ -2584,66 +2590,7 @@
 
 
 <!-- footer   ///////////////////////////////////////////////////// -->
-<footer class="l-footer">
-   <div class="p-footer">
-      <div class="p-footer__inner l-inner">
-         <div class="p-footer__main">
-            <div class="p-footer__content">
-               <div class="p-footer__head">
-                  <div class="p-footer__logo">
-                     <a href="" class="p-footer__logoLink">
-                        <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/c-logo_w.png')); ?>'
-                           alt='' width='' height='' loading='lazy'>
-                     </a>
-                  </div>
-                  <!-- /.p-footer__logo -->
-                  <ul class="p-footer__contactList">
-                     <li class="p-footer__contactItem -line">
-                        <a href="" class="p-footer__contactLink">LINEで査定する</a>
-                     </li>
-                     <li class="p-footer__contactItem -mail">
-                        <a href="" class="p-footer__contactLink">お問合せはこちら</a>
-                     </li>
-                  </ul>
-               </div>
-               <!-- /.p-footer__head -->
-               <div class="p-footer__body">
-                  <div class="p-footer__information">
-                     <p class="p-footer__name">株式会社エイト</p>
-                     <address class="p-footer__address">東京都渋谷区神宮前4-2-12 WESビル5階</address>
-                     <a href="" class="p-footer__telLink u-pointerNone__sp">03-6804-6992</a>
-                     <p class="p-footer__permit">東京都公安委員会許可 第301101505440号</p>
-                  </div>
-                  <!-- /.p-footer__information -->
-                  <div class="p-footer__listWrapper">
-                     <ul class="p-footer__list">
-                        <li class="p-footer__item">
-                           <a href="" class="p-footer__link" target="_blank" rel="nofollow noopener">運営会社</a>
-                        </li>
-                        <li class="p-footer__item">
-                           <a href="" class="p-footer__link target=" _blank" rel="nofollow noopener">利用規約</a>
-                        </li>
-                        <li class="p-footer__item">
-                           <a href="" class="p-footer__link target=" _blank" rel="nofollow noopener">プライバシーポリシー</a>
-                        </li>
-                     </ul>
-                     <div class="p-footer__copy">
-                        <small class="p-footer__copyText">&copy; 2026 株式会社エイト All Rights Reserved.</small>
-                     </div>
-                     <!-- /.p-footer__copy -->
-                  </div>
-                  <!-- /.p-footer__listWrapper -->
-               </div>
-               <!-- /.p-footer__body -->
-            </div>
-            <!-- /.p-footer__content -->
-         </div>
-         <!-- /.p-footer__main -->
-      </div>
-      <!-- /.p-footer__inner-->
-   </div>
-   <!-- /.p-footer -->
-</footer>
+<?php get_template_part('template-parts/footer'); ?>
 
 
 <?php get_footer(); ?>

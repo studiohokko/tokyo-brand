@@ -1,5 +1,34 @@
 <?php
 // -----------------------------------------------------------
+//  画像の表示サイズ（4倍書き出し画像の1/4）を取得
+// -----------------------------------------------------------
+function my_get_image_display_size(string $relative_path): array
+{
+   static $cache = [];
+   $relative_path = ltrim($relative_path, '/');
+
+   if (isset($cache[$relative_path])) {
+      return $cache[$relative_path];
+   }
+
+   $file_path = get_theme_file_path('dev/public/assets/img/' . $relative_path);
+   if (!is_readable($file_path)) {
+      return $cache[$relative_path] = [0, 0];
+   }
+
+   $size = getimagesize($file_path);
+   if ($size === false) {
+      return $cache[$relative_path] = [0, 0];
+   }
+
+   return $cache[$relative_path] = [
+      intdiv($size[0], 4),
+      intdiv($size[1], 4),
+   ];
+}
+
+
+// -----------------------------------------------------------
 //  WordPressの標準機能を拡張する
 // -----------------------------------------------------------
 function my_setup()
@@ -128,3 +157,67 @@ function wpcf7_autop_return_false()
 {
    return false;
 }
+
+
+// -----------------------------------------------------------
+// thanksページへの遷移（front-page.php のフォーム送信後）
+// -----------------------------------------------------------
+add_action('wp_footer', 'custom_redirect_after_submission');
+
+function custom_redirect_after_submission()
+{
+   if (is_front_page()) {
+      ?>
+      <script type="text/javascript">
+         document.addEventListener('wpcf7mailsent', function (event) {
+            // 📧 フォーム送信完了後、少し待ってからリダイレクト
+            setTimeout(function () {
+               window.location.href = '<?php echo home_url('/thanks/'); ?>';
+            }, 100);
+         }, false);
+      </script>
+      <?php
+   }
+}
+
+// -----------------------------------------------------------
+// サンクスページに直接遷移しないようにする(トップページに飛ぶ)
+// -----------------------------------------------------------
+// thanksページは /thanks として作成する（page-thanks.php）
+// フォームは front-page.php から送信される
+
+// function is_referer_from_front_page()
+// {
+//    if (!isset($_SERVER['HTTP_REFERER']) || $_SERVER['HTTP_REFERER'] === '') {
+//       return false;
+//    }
+
+//    $referer_path = wp_parse_url($_SERVER['HTTP_REFERER'], PHP_URL_PATH);
+//    $home_path = wp_parse_url(home_url('/'), PHP_URL_PATH);
+
+//    return untrailingslashit($referer_path ?: '/') === untrailingslashit($home_path ?: '/');
+// }
+
+// add_filter('template_redirect', function () {
+//    if (!is_page()) {
+//       return;
+//    }
+
+//    global $post;
+//    if (is_null($post)) {
+//       return;
+//    }
+
+//    if ($post->post_name !== 'thanks') {
+//       return;
+//    }
+
+//    // error_log('リファラー: ' . ($_SERVER['HTTP_REFERER'] ?? '')); // デバッグ時はコメントを外す
+
+//    if (!is_referer_from_front_page()) {
+//       wp_redirect(home_url('/'));
+//       exit;
+//    }
+// }, 10, 0);
+
+// ?>

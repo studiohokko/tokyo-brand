@@ -1,7 +1,7 @@
 <div class="p-cta">
    <figure class="p-cta__deco">
-      <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-cta_person.webp')); ?>' alt='' width=''
-         height='' loading='lazy'>
+      <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-cta_person.webp')); ?>' alt='' width='274'
+         height='326' loading='lazy'>
    </figure>
    <div class="p-cta__inner l-inner">
       <div class="p-cta__content">

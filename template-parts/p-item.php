@@ -18,7 +18,7 @@ $en_modifier = $args['en_modifier'] ?? '';
                media="(min-width: 768px)">
             <img
                src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-item_' . $image . '.webp')); ?>"
-               alt="" width="" height="" loading="lazy">
+               alt="" width="168" height="120" loading="lazy">
          </picture>
       </figure>
       <!-- /.p-item__image -->
