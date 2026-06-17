@@ -1,11 +1,11 @@
 @use '../global' as *;
 
 .p-contact {
-	padding-block: rm(59) rm(60);
+	padding-block-start: rm(59);
 
 	// ******** responsive(pc)
 	@include mq(pc) {
-		padding-block: rm(99) rm(72);
+		padding-block-start: rm(99);
 	}
 }
 

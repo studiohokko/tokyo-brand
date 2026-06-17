@@ -2460,6 +2460,127 @@
    </section>
    <!-- /.p-contact -->
 
+
+   <!-- status   ///////////////////////////////////////////////////// -->
+   <section class="p-status">
+      <div class="p-status__inner l-inner -narrow">
+         <div class="p-status__content">
+            <div class="p-status__heading">
+               <h2 class="p-status__title">身分証明書について</h2>
+            </div>
+            <!-- /.p-status__heading -->
+            <p class="p-status__description">ご本人様を確認できる、現住所・生年月日記載の身分証明書<br class="u-only__pc">①～⑤のいずれか1つをお持ちください。</p>
+            <div class="p-status__body">
+               <ul class="p-status__list">
+                  <li class="p-status__item">
+                     <div class="p-status__textArea">
+                        <p class="p-status__text">①運転免許証or<br class="u-only__sp">運転経歴証明書</p>
+                     </div>
+                     <!-- /.p-status__textArea -->
+                     <div class="p-status__imageArea">
+                        <figure class="p-status__image">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_001.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-status__image -->
+                     </div>
+                     <!-- /.p-status__imageArea -->
+                  </li>
+                  <li class="p-status__item">
+                     <div class="p-status__textArea">
+                        <p class="p-status__text -letterSpace">②マイナンバーカード</p>
+                     </div>
+                     <!-- /.p-status__textArea -->
+                     <div class="p-status__imageArea">
+                        <figure class="p-status__image">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_002.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-status__image -->
+                     </div>
+                     <!-- /.p-status__imageArea -->
+                  </li>
+                  <li class="p-status__item">
+                     <div class="p-status__textArea">
+                        <p class="p-status__text -letterSpace">③住民基本台帳カード</p>
+                     </div>
+                     <!-- /.p-status__textArea -->
+                     <div class="p-status__imageArea">
+                        <figure class="p-status__image">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_003.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-status__image -->
+                     </div>
+                     <!-- /.p-status__imageArea -->
+                  </li>
+                  <li class="p-status__item">
+                     <div class="p-status__textArea">
+                        <p class="p-status__text">④健康保険証</p>
+                     </div>
+                     <!-- /.p-status__textArea -->
+                     <div class="p-status__imageArea">
+                        <figure class="p-status__image">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_004.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-status__image -->
+                     </div>
+                     <!-- /.p-status__imageArea -->
+                  </li>
+                  <li class="p-status__item">
+                     <div class="p-status__textArea">
+                        <p class="p-status__text">⑤パスポート</p>
+                     </div>
+                     <!-- /.p-status__textArea -->
+                     <div class="p-status__imageArea">
+                        <figure class="p-status__image">
+                           <img
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_005.webp')); ?>'
+                              alt='' width='' height='' loading='lazy'>
+                        </figure>
+                        <!-- /.p-status__image -->
+                     </div>
+                     <!-- /.p-status__imageArea -->
+                  </li>
+               </ul>
+               <p class="p-status__attention">
+                  ※2020年2月4日以降発行のパスポートをお持ちの方<br>本人様名義の現住所が確認できるもので、発行日から3ヶ月以内の公共料金領収書もしくは請求書（電気、水道、ガス、固定電話、未払いでも可能）又は住民票<br>住所変更されていない上記6項目の身分証明書とご一緒にお持ちください。
+               </p>
+            </div>
+            <!-- /.p-status__body -->
+            <div class="p-status__foot">
+               <ul class="p-status__footList">
+                  <li class="p-status__footItem">※店頭買取の際の「身分証明書」は、現住所・生年月日が記載された有効期限内の原本に限ります。</li>
+                  <li class="p-status__footItem">
+                     ※身分証明書の住所に相違がある場合はご本人様名義の現住所が確認できるもので、発行日から3ヶ月以内の公共料金領収書もしくは請求書（電気、水道、ガス、固定電話、未払いでも可能）または住民票が同時に必要となります。
+                  </li>
+                  <li class="p-status__footItem">※国際運転免許証は不可となります。また、運転経歴証明書は交付年月日が平成24年4月1日以降のものに限ります。</li>
+                  <li class="p-status__footItem">※パスポートは所有人記入欄ページに現住所の記載が必須となります。</li>
+                  <li class="p-status__footItem">※在留カードは、令和3年10月1日より消費税法改正に伴い、本人確認書類としてご利用いただけません。</li>
+                  <li class="p-status__footItem">※日本への観光・ビジネス等で訪日されている外国籍の方からの買取はお断りしております。</li>
+                  <li class="p-status__footItem">※買取のご利用は本人確認書類をご提示いただける20歳以上のお客様に限らせていただいております。</li>
+                  <li class="p-status__footItem">
+                     ※宅配買取の際にご提示いただく場合は、「被保険者記号」「番号」等をマスキングしてご提出ください。マスキングの際には、「氏名」「事業所名称」「保険者名称」が隠れないようにご注意ください。</li>
+               </ul>
+            </div>
+            <!-- /.p-status__foot -->
+         </div>
+         <!-- /.p-status__content -->
+      </div>
+      <!-- /.p-status__inner-->
+   </section>
+   <!-- /.p-status -->
+
+
+   <!-- cta   ///////////////////////////////////////////////////// -->
+   <?php get_template_part('template-parts/cta'); ?>
+
+
 </main>
 
 <?php get_footer(); ?>
