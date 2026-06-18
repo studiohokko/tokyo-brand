@@ -2,9 +2,11 @@
 
 .p-thanks {
 	padding-block: rm(49) rm(58);
+	min-height: calc(100vh - rm(520));
 
 	// ******** responsive(pc)
 	@include mq(pc) {
+		min-height: calc(100vh - rm(310));
 		padding-block: rm(79) rm(130);
 	}
 }

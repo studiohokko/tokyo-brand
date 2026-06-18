@@ -1,0 +1,146 @@
+@use '../global' as *;
+
+.p-404 {
+	display: grid;
+	place-content: center;
+	min-height: calc(100vh - rm(520));
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		min-height: calc(100vh - rm(310));
+	}
+}
+
+.p-404__inner {
+}
+
+.p-404__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding-block: rm(120);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(140);
+	}
+}
+
+.p-404__title {
+	color: $color-main;
+	font-weight: 900;
+	font-size: rm(40);
+	font-family: $ff-serif;
+	line-height: 1.1;
+	text-align: center;
+	letter-spacing: 0.1em;
+	background: $gradation;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(80);
+	}
+}
+
+.p-404__subTitle {
+	margin-block-start: rm(20);
+	font-size: rm(22);
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	text-align: center;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(30);
+	}
+}
+
+.p-404__text {
+	margin-block-start: rm(20);
+	font-size: rm(14);
+	font-weight: 600;
+	line-height: 2;
+	text-align: center;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(30);
+		font-size: rm(16);
+	}
+}
+
+.p-404__button {
+	width: rm(304);
+	margin-block-start: rm(38);
+	margin-inline: auto;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(44);
+	}
+}
+
+.p-404__buttonLink {
+	display: grid;
+	position: relative;
+	place-content: center;
+	width: 100%;
+	height: rm(64);
+	border-radius: rm(5);
+	background: $color-main;
+	color: $white;
+	text-align: center;
+	font-size: rm(18);
+	font-weight: 700;
+	line-height: 1.5;
+	transition: opacity $easing;
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		z-index: 3;
+		top: 50%;
+		translate: 0 -50%;
+		content: '';
+	}
+
+	&::before {
+		right: rm(23);
+		width: rm(20);
+		height: rm(20);
+		background: $white;
+		border-radius: 50%;
+	}
+
+	&::after {
+		right: rm(27);
+		@include chevron($size: rm(10), $thickness: 4, $color: $color-main, $direction: right);
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.p-404__buttonLink {
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		opacity: 0.7;
+	}
+}
