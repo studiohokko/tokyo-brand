@@ -1,4 +1,269 @@
-@use "../global" as *;
+@use '../global' as *;
 
 .p-thanks {
-			}
+	padding-block: rm(49) rm(58);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding-block: rm(79) rm(130);
+	}
+}
+
+.p-thanks__inner {
+	// ******** responsive(pc)
+	@include mq(pc) {
+		max-width: calc(rm(800) + rm($pc-sidePadding) * 2);
+	}
+}
+
+.p-thanks__title {
+	text-align: center;
+	font-family: $ff-serif;
+	font-size: rm(40);
+	font-weight: 900;
+	line-height: 1.3;
+	background: $gradation;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(52);
+	}
+}
+
+.p-thanks__content {
+	margin-block-start: rm(38);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(44);
+	}
+}
+
+.p-thanks__textBox {
+}
+
+.p-thanks__text {
+	font-size: rm(16);
+	font-weight: 500;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		font-size: rm(18);
+	}
+
+	&:nth-child(2) {
+		margin-block-start: rm(16);
+	}
+
+	&:nth-child(3) {
+		margin-block-start: rm(4);
+	}
+}
+
+.p-thanks__attention {
+	margin-block-start: rm(20);
+	font-size: rm(13);
+	font-weight: 500;
+	opacity: 0.6;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(24);
+		font-size: rm(14);
+	}
+}
+
+.p-thanks__telBox {
+	width: 100%;
+	margin-block-start: rm(38);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(44);
+	}
+}
+
+.p-thanks__tel {
+	display: block;
+	width: 100%;
+	padding: rm(30) rm(20);
+	background: $color-bg;
+	border-radius: rm(5);
+	transition: background $easing;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		padding: rm(31) rm(30) rm(28);
+	}
+}
+
+.p-thanks__telText {
+	width: 100%;
+	padding: rm(3) rm(20) rm(4);
+	background: $color-main;
+	border-radius: 100vmax;
+	color: $white;
+	text-align: center;
+	font-size: rm(20);
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: 0.03em;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(309);
+		margin-inline: auto;
+	}
+}
+
+.p-thanks__telNumber {
+	position: relative;
+	width: 100%;
+	margin-block-start: rm(18);
+	padding-inline-start: rm(42);
+	font-feature-settings:
+		'liga' off,
+		'clig' off;
+	font-family: $ff-en;
+	font-size: rm(40);
+	font-weight: 600;
+	line-height: 1;
+	text-align: center;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(309);
+		margin-inline: auto;
+	}
+
+	&::before {
+		display: block;
+		position: absolute;
+		top: 50%;
+		translate: 0 -50%;
+		left: rm(5);
+		width: rm(38);
+		height: rm(38);
+		mask-position: center center;
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		mask-image: url(../img/icon_tel.svg);
+		background: $color-main;
+		content: '';
+	}
+}
+
+.p-thanks__telTime {
+	margin-block-start: rm(3);
+	text-align: center;
+	font-size: rm(14);
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.03em;
+}
+
+.p-thanks__buttonWrapper {
+	width: rm(304);
+	margin-block-start: rm(38);
+	margin-inline: auto;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		margin-block-start: rm(44);
+	}
+}
+
+.p-thanks__button {
+	display: grid;
+	position: relative;
+	place-content: center;
+	width: 100%;
+	height: rm(64);
+	border-radius: rm(5);
+	background: $color-main;
+	color: $white;
+	text-align: center;
+	font-size: rm(18);
+	font-weight: 700;
+	line-height: 1.5;
+	transition: opacity $easing;
+
+	&::before,
+	&::after {
+		display: block;
+		position: absolute;
+		z-index: 3;
+		top: 50%;
+		translate: 0 -50%;
+		content: '';
+	}
+
+	&::before {
+		right: rm(23);
+		width: rm(20);
+		height: rm(20);
+		background: $white;
+		border-radius: 50%;
+	}
+
+	&::after {
+		right: rm(27);
+		@include chevron($size: rm(10), $thickness: 4, $color: $color-main, $direction: right);
+	}
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.p-thanks__text {
+	&.-small {
+		font-size: rm(13);
+
+		// ******** responsive(pc)
+		@include mq(pc) {
+			font-size: rm(14);
+		}
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.p-thanks__tel {
+	@media (any-hover: hover) {
+		&:hover {
+			background: $color-accent-003;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		background: $color-accent-003;
+	}
+}
+
+// ----------------------------
+//  ホバー
+// ----------------------------
+.p-thanks__button {
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+		opacity: 0.7;
+	}
+}

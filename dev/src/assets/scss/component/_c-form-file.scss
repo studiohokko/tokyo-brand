@@ -83,10 +83,11 @@
 	display: inline-block;
 	font-size: rm(16);
 	font-weight: 500;
-	line-height: 1;
+	line-height: 1.5;
 	pointer-events: none;
 	white-space: nowrap;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: visible;
 	text-overflow: ellipsis;
 	max-width: 100%;
 

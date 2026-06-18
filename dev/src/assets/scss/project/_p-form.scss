@@ -118,6 +118,10 @@
 	transition: opacity $easing;
 }
 
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
 .p-form__recaptcha {
 	margin-block-start: rm(42);
 	font-size: rm(12);

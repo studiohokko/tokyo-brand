@@ -160,6 +160,30 @@ function wpcf7_autop_return_false()
 
 
 // -----------------------------------------------------------
+//  Contact Form 7のカタカナ・長音符・スペース以外が含まれていたらエラーにする
+// -----------------------------------------------------------
+add_filter('wpcf7_validate_text*', 'custom_kana_validation', 20, 2);
+function custom_kana_validation($result, $tag)
+{
+
+   // 対象フィールド名が「your-kana」のときだけ処理する
+   if ('your-kana' === $tag->name):
+
+      // 送信された値を取得（前後の空白は除去）
+      $value = isset($_POST['your-kana']) ? trim($_POST['your-kana']) : '';
+
+      // 「カタカナ・長音符・全角/半角スペース」だけで構成されているかチェック
+      // \A 〜 \z で「文字列全体」がパターンに一致するかを判定
+      if (!preg_match('/\A[ァ-ヶー　 ]+\z/u', $value)):
+         $result->invalidate($tag, '全角カタカナで入力してください。');
+      endif;
+
+   endif;
+
+   return $result;
+}
+
+// -----------------------------------------------------------
 // thanksページへの遷移（front-page.php のフォーム送信後）
 // -----------------------------------------------------------
 add_action('wp_footer', 'custom_redirect_after_submission');

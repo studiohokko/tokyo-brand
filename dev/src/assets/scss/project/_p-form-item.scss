@@ -9,7 +9,6 @@
 	// ******** responsive(pc)
 	@include mq(pc) {
 		flex-direction: row;
-		align-items: center;
 		gap: rm(27);
 	}
 }
@@ -19,7 +18,7 @@
 	@include mq(pc) {
 		width: rm(220);
 		flex-shrink: 0;
-		margin-block-start: 0;
+		margin-block-start: rm(15);
 	}
 }
 
@@ -31,23 +30,4 @@
 	display: flex;
 	flex-direction: column;
 	gap: rm(16);
-}
-
-// ----------------------------
-//  モディファイア
-// ----------------------------
-.p-form-item {
-	&.-start {
-		// ******** responsive(pc)
-		@include mq(pc) {
-			align-items: flex-start;
-		}
-
-		.p-form-item__head {
-			// ******** responsive(pc)
-			@include mq(pc) {
-				margin-block-start: rm(11);
-			}
-		}
-	}
 }
