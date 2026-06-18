@@ -22,7 +22,7 @@
                <a href="" class="c-button-tel u-pointerNone__sp">
                   <p class="c-button-tel__catch">電話で相談する</p>
                   <p class="c-button-tel__number">03-5990-4745</p>
-                  <p class="c-button-tel__time">受付時間12:30-21:00</p>
+                  <p class="c-button-tel__time">受付時間<?php echo esc_html(get_field('hours_main')); ?></p>
                </a>
             </li>
          </ul>

@@ -2048,7 +2048,8 @@
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">営業時間</dt>
-                                       <dd class="p-shops__accessGroupData">12:30-21:00</dd>
+                                       <dd class="p-shops__accessGroupData">
+                                          <?php echo esc_html(get_field('hours_main')); ?></dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
@@ -2098,7 +2099,8 @@
                                              <figure class="p-shops__mainImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>"
+                                                   height="<?php echo esc_attr($gallery_height); ?>">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>
@@ -2117,7 +2119,8 @@
                                              <figure class="p-shops__slideImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>" loading="lazy">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>"
+                                                   height="<?php echo esc_attr($gallery_height); ?>" loading="lazy">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>
@@ -2176,7 +2179,8 @@
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">営業時間</dt>
-                                       <dd class="p-shops__accessGroupData">12:30-21:00</dd>
+                                       <dd class="p-shops__accessGroupData">
+                                          <?php echo esc_html(get_field('hours_main')); ?></dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
@@ -2226,7 +2230,8 @@
                                              <figure class="p-shops__mainImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>"
+                                                   height="<?php echo esc_attr($gallery_height); ?>">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>
@@ -2245,7 +2250,8 @@
                                              <figure class="p-shops__slideImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>" loading="lazy">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>"
+                                                   height="<?php echo esc_attr($gallery_height); ?>" loading="lazy">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>
@@ -2303,7 +2309,8 @@
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">営業時間</dt>
-                                       <dd class="p-shops__accessGroupData">12:30-21:00</dd>
+                                       <dd class="p-shops__accessGroupData">
+                                          <?php echo esc_html(get_field('hours_109')); ?></dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
@@ -2353,7 +2360,8 @@
                                              <figure class="p-shops__mainImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>"
+                                                   height="<?php echo esc_attr($gallery_height); ?>">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>
@@ -2372,7 +2380,8 @@
                                              <figure class="p-shops__slideImage">
                                                 <img
                                                    src="<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/' . $image)); ?>"
-                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>" height="<?php echo esc_attr($gallery_height); ?>" loading="lazy">
+                                                   alt="" width="<?php echo esc_attr($gallery_width); ?>"
+                                                   height="<?php echo esc_attr($gallery_height); ?>" loading="lazy">
                                              </figure>
                                           </div>
                                        <?php endforeach; ?>

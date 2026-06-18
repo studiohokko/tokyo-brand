@@ -210,38 +210,38 @@ function custom_redirect_after_submission()
 // thanksページは /thanks として作成する（page-thanks.php）
 // フォームは front-page.php から送信される
 
-// function is_referer_from_front_page()
-// {
-//    if (!isset($_SERVER['HTTP_REFERER']) || $_SERVER['HTTP_REFERER'] === '') {
-//       return false;
-//    }
+function is_referer_from_front_page()
+{
+   if (!isset($_SERVER['HTTP_REFERER']) || $_SERVER['HTTP_REFERER'] === '') {
+      return false;
+   }
 
-//    $referer_path = wp_parse_url($_SERVER['HTTP_REFERER'], PHP_URL_PATH);
-//    $home_path = wp_parse_url(home_url('/'), PHP_URL_PATH);
+   $referer_path = wp_parse_url($_SERVER['HTTP_REFERER'], PHP_URL_PATH);
+   $home_path = wp_parse_url(home_url('/'), PHP_URL_PATH);
 
-//    return untrailingslashit($referer_path ?: '/') === untrailingslashit($home_path ?: '/');
-// }
+   return untrailingslashit($referer_path ?: '/') === untrailingslashit($home_path ?: '/');
+}
 
-// add_filter('template_redirect', function () {
-//    if (!is_page()) {
-//       return;
-//    }
+add_filter('template_redirect', function () {
+   if (!is_page()) {
+      return;
+   }
 
-//    global $post;
-//    if (is_null($post)) {
-//       return;
-//    }
+   global $post;
+   if (is_null($post)) {
+      return;
+   }
 
-//    if ($post->post_name !== 'thanks') {
-//       return;
-//    }
+   if ($post->post_name !== 'thanks') {
+      return;
+   }
 
-//    // error_log('リファラー: ' . ($_SERVER['HTTP_REFERER'] ?? '')); // デバッグ時はコメントを外す
+   // error_log('リファラー: ' . ($_SERVER['HTTP_REFERER'] ?? '')); // デバッグ時はコメントを外す
 
-//    if (!is_referer_from_front_page()) {
-//       wp_redirect(home_url('/'));
-//       exit;
-//    }
-// }, 10, 0);
+   if (!is_referer_from_front_page()) {
+      wp_redirect(home_url('/'));
+      exit;
+   }
+}, 10, 0);
 
-// ?>
+?>

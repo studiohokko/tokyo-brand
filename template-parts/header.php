@@ -18,7 +18,7 @@
                <div class="p-header__rightWrapper">
                   <div class="p-header__telLink">
                      <p class="p-header__telNumber">03-5990-4745</p>
-                     <p class="p-header__telTime">受付時間 12:30-21:00</p>
+                     <p class="p-header__telTime">受付時間 <?php echo esc_html(get_field('hours_main')); ?></p>
                   </div>
                   <!-- /.p-header__telLink -->
                   <ul class="p-header__buttons">
