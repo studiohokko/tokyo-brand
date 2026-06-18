@@ -1,12 +1,12 @@
 @use '../global' as *;
 
 .p-footer {
-	padding-block: rm(50) rm(28);
+	padding-block: rm(50) rm(140);
 	background: $color-main;
 
 	// ******** responsive(pc)
 	@include mq(pc) {
-		padding-block: rm(58);
+		padding-block: rm(58) rm(251);
 	}
 }
 

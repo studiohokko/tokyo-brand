@@ -66,6 +66,8 @@
 }
 
 .c-button-mail__lead {
+	position: relative;
+	z-index: 3;
 	margin-block-start: rm(2);
 	color: $white;
 	text-align: center;
@@ -73,6 +75,27 @@
 	font-weight: 500;
 	line-height: 1.5;
 	letter-spacing: 0.03em;
+}
+
+// ----------------------------
+//  モディファイア
+// ----------------------------
+.c-button-mail {
+	&.-big {
+		.c-button-mail__catch {
+			font-size: rm(26);
+
+			&::before {
+				left: -5;
+				width: rm(36);
+				height: rm(36);
+			}
+		}
+
+		.c-button-mail__lead {
+			font-size: rm(18);
+		}
+	}
 }
 
 // ----------------------------

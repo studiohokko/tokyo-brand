@@ -172,6 +172,34 @@
 			}
 		}
 	}
+
+	&.-medium {
+		.c-button-line__text {
+			padding-inline-start: rm(58);
+			font-size: rm(30);
+
+			&::before {
+				width: rm(42);
+				height: rm(42);
+			}
+		}
+	}
+
+	&.-big {
+		.c-button-line__pop {
+			font-size: rm(11);
+		}
+
+		.c-button-line__text {
+			font-size: rm(20);
+
+			&::before {
+				left: rm(-12);
+				width: rm(36);
+				height: rm(38);
+			}
+		}
+	}
 }
 
 // ----------------------------

@@ -2049,7 +2049,8 @@
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">営業時間</dt>
                                        <dd class="p-shops__accessGroupData">
-                                          <?php echo esc_html(get_field('hours_main')); ?></dd>
+                                          <?php echo esc_html(get_field('hours_main')); ?>
+                                       </dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
@@ -2180,7 +2181,8 @@
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">営業時間</dt>
                                        <dd class="p-shops__accessGroupData">
-                                          <?php echo esc_html(get_field('hours_main')); ?></dd>
+                                          <?php echo esc_html(get_field('hours_main')); ?>
+                                       </dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
@@ -2310,7 +2312,8 @@
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">営業時間</dt>
                                        <dd class="p-shops__accessGroupData">
-                                          <?php echo esc_html(get_field('hours_109')); ?></dd>
+                                          <?php echo esc_html(get_field('hours_109')); ?>
+                                       </dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
@@ -2596,6 +2599,43 @@
    <?php get_template_part('template-parts/cta'); ?>
 
 </main>
+
+
+<!-- floating   ///////////////////////////////////////////////////// -->
+<div class="p-floating js_floating">
+   <div class="p-floating__inner l-inner">
+      <div class="p-floating__content">
+         <p class="p-floating__pop u-only__pc">写真を送るだけ！最短当日で査定OK</p>
+         <div class="p-floating__item u-only__sp">
+            <a href="" class="c-button-line -big">
+               <p class="c-button-line__pop">写真を送るだけ！最短当日で査定OK</p>
+               <p class="c-button-line__text">LINEで無料査定する</p>
+            </a>
+         </div>
+         <!-- /.p-floating__item -->
+         <div class="p-floating__listWrapper u-only__pc">
+            <ul class="p-floating__list ">
+               <li class="p-floating__item">
+                  <a href="" class="c-button-line -simple -medium">
+                     <p class="c-button-line__text">LINEで無料査定する</p>
+                  </a>
+               </li>
+               <li class="p-floating__item">
+                  <a href="" class="c-button-mail -big">
+                     <p class="c-button-mail__catch ">メールで無料査定する</p>
+                     <p class="c-button-mail__lead">24時間受付中</p>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <!-- /.p-floating__listWrapper -->
+      </div>
+      <!-- /.p-floating__content -->
+   </div>
+   <!-- /.p-floating__inner -->
+</div>
+<!-- /.p-floating -->
+
 
 
 <!-- footer   ///////////////////////////////////////////////////// -->

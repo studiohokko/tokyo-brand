@@ -1,0 +1,99 @@
+@use '../global' as *;
+
+.p-floating {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: $z-floating;
+	background: rgba($color: $color-main, $alpha: 0.6);
+	backdrop-filter: blur(rm(10));
+}
+
+.p-floating__inner {
+}
+
+.p-floating__content {
+	width: 100%;
+	padding-block: rm(16);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(900);
+		margin-inline: auto;
+		padding-block: rm(20);
+	}
+}
+
+.p-floating__pop {
+	// ******** responsive(pc)
+	@include mq(pc) {
+		position: relative;
+		width: fit-content;
+		margin-inline: auto;
+		color: $white;
+		text-align: center;
+		font-size: rm(26);
+		font-weight: 700;
+		line-height: 1.1;
+
+		&::before,
+		&::after {
+			display: block;
+			position: absolute;
+			top: 0;
+			width: rm(2);
+			height: rm(37);
+			background: $white;
+			content: '';
+		}
+
+		&::before {
+			left: rm(-30);
+			rotate: 152.736deg;
+		}
+
+		&::after {
+			right: rm(-30);
+			rotate: 27.264deg;
+		}
+	}
+}
+
+.p-floating__listWrapper {
+	margin-block-start: rm(14);
+}
+
+.p-floating__list {
+	// ******** responsive(pc)
+	@include mq(pc) {
+		display: flex;
+		gap: rm(20);
+	}
+}
+
+.p-floating__item {
+	width: 100%;
+	height: rm(80);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		height: rm(110);
+	}
+}
+
+// △▽△▽△▽△▽ JS用クラス
+.js_floating {
+	opacity: 0; // 初期は透明
+	visibility: hidden; // クリック判定も無効に
+	transition:
+		opacity $easing,
+		visibility $easing;
+}
+
+.js_floating {
+	&.is_show {
+		opacity: 1;
+		visibility: visible;
+	}
+}

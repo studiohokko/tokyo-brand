@@ -10,6 +10,10 @@ js_smooth(); // 実行
 import { js_drawer } from './js_drawer';
 js_drawer(); // 実行
 
+// フローティングメニュー
+import { js_floating } from './js_floating';
+js_floating(); // 実行
+
 // 店舗タブ切り替え
 import { js_shops } from './js_shops';
 js_shops(); // 実行
