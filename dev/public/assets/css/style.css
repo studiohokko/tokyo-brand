@@ -4271,6 +4271,21 @@ button {
   }
 }
 
+.p-brands__orderListItem.-empty {
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.7);
+  pointer-events: none;
+}
+.p-brands__orderListItem.-empty .p-brands__orderSummary {
+  cursor: default;
+}
+.p-brands__orderListItem.-empty .p-brands__orderSummary::after {
+  display: none;
+}
+.p-brands__orderListItem.-empty .p-brands__orderSummary:focus-visible {
+  opacity: 1;
+}
+
 .p-brands__orderDetails {
   display: flex;
   flex-direction: column;

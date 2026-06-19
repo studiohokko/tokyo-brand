@@ -5,18 +5,18 @@
             <div class="p-footer__content">
                <div class="p-footer__head">
                   <div class="p-footer__logo">
-                     <a href="" class="p-footer__logoLink">
+                     <a href="<?php echo esc_url(home_url('/')); ?>" class="p-footer__logoLink">
                         <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/c-logo_w.png')); ?>'
-                        alt='' width='259' height='57' loading='lazy'>
+                           alt='東京ぶらんど ALAMODE' width='259' height='57' loading='lazy'>
                      </a>
                   </div>
                   <!-- /.p-footer__logo -->
                   <ul class="p-footer__contactList">
                      <li class="p-footer__contactItem -line">
-                        <a href="" class="p-footer__contactLink">LINEで査定する</a>
+                        <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>" class="p-footer__contactLink" target="_blank" rel="nofollow noopener">LINEで査定する</a>
                      </li>
                      <li class="p-footer__contactItem -mail">
-                        <a href="" class="p-footer__contactLink">お問合せはこちら</a>
+                        <a href="#contact" class="p-footer__contactLink">お問合せはこちら</a>
                      </li>
                   </ul>
                </div>
@@ -25,7 +25,7 @@
                   <div class="p-footer__information">
                      <p class="p-footer__name">株式会社エイト</p>
                      <address class="p-footer__address">東京都渋谷区神宮前4-2-12 WESビル5階</address>
-                     <a href="" class="p-footer__telLink u-pointerNone__sp">03-6804-6992</a>
+                     <a href="tel:0368046992" class="p-footer__telLink u-pointerNone__sp">03-6804-6992</a>
                      <p class="p-footer__permit">東京都公安委員会許可 第301101505440号</p>
                   </div>
                   <!-- /.p-footer__information -->
@@ -35,10 +35,10 @@
                            <a href="" class="p-footer__link" target="_blank" rel="nofollow noopener">運営会社</a>
                         </li>
                         <li class="p-footer__item">
-                           <a href="" class="p-footer__link target=" _blank" rel="nofollow noopener">利用規約</a>
+                           <a href="" class="p-footer__link" target="_blank" rel="nofollow noopener">利用規約</a>
                         </li>
                         <li class="p-footer__item">
-                           <a href="" class="p-footer__link target=" _blank" rel="nofollow noopener">プライバシーポリシー</a>
+                           <a href="" class="p-footer__link" target="_blank" rel="nofollow noopener">プライバシーポリシー</a>
                         </li>
                      </ul>
                      <div class="p-footer__copy">

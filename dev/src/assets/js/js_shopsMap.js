@@ -6,6 +6,7 @@ export function js_shopsMap() {
 	if (!openButtons.length) return;
 
 	let scrollPosition = 0;
+	let lastFocusedElement = null;
 
 	function lockScroll() {
 		scrollPosition = window.scrollY;
@@ -19,23 +20,38 @@ export function js_shopsMap() {
 		window.scrollTo(0, scrollPosition);
 	}
 
-	function openModal(modal) {
+	function getFocusableElements(modal) {
+		return [...modal.querySelectorAll(
+			'button:not([disabled]), [href], iframe, [tabindex]:not([tabindex="-1"])',
+		)];
+	}
+
+	function openModal(modal, trigger) {
+		lastFocusedElement = trigger;
 		modal.classList.add('is_open');
 		modal.setAttribute('aria-hidden', 'false');
 		lockScroll();
+
+		const closeBtn = modal.querySelector('.p-shops__modalClose');
+		if (closeBtn) closeBtn.focus();
 	}
 
 	function closeModal(modal) {
 		modal.classList.remove('is_open');
 		modal.setAttribute('aria-hidden', 'true');
 		unlockScroll();
+
+		if (lastFocusedElement) {
+			lastFocusedElement.focus();
+			lastFocusedElement = null;
+		}
 	}
 
 	openButtons.forEach((button) => {
 		button.addEventListener('click', () => {
 			const modalId = button.getAttribute('aria-controls');
 			const modal = document.getElementById(modalId);
-			if (modal) openModal(modal);
+			if (modal) openModal(modal, button);
 		});
 	});
 
@@ -47,8 +63,28 @@ export function js_shopsMap() {
 	});
 
 	document.addEventListener('keydown', (e) => {
-		if (e.key !== 'Escape') return;
 		const activeModal = document.querySelector('.js_shopsMapModal.is_open');
-		if (activeModal) closeModal(activeModal);
+		if (!activeModal) return;
+
+		if (e.key === 'Escape') {
+			closeModal(activeModal);
+			return;
+		}
+
+		if (e.key !== 'Tab') return;
+
+		const focusables = getFocusableElements(activeModal);
+		if (focusables.length === 0) return;
+
+		const first = focusables[0];
+		const last = focusables[focusables.length - 1];
+
+		if (e.shiftKey && document.activeElement === first) {
+			e.preventDefault();
+			last.focus();
+		} else if (!e.shiftKey && document.activeElement === last) {
+			e.preventDefault();
+			first.focus();
+		}
 	});
 }

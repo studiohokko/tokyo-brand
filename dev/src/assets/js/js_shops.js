@@ -54,11 +54,9 @@ export function js_shops() {
 				// タブの切り替え
 				tabs.forEach((t) => {
 					t.setAttribute('aria-selected', 'false');
-					t.setAttribute('tabindex', '-1');
 					t.classList.remove('is_show');
 				});
 				tab.setAttribute('aria-selected', 'true');
-				tab.setAttribute('tabindex', '0');
 				tab.classList.add('is_show');
 
 				// パネルの切り替え

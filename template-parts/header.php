@@ -5,8 +5,8 @@
             <div class="p-header__logo">
                <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logoLink">
                   <figure class="p-header__logoImage">
-                     <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/c-logo_b.webp')); ?>' alt=''
-                        width='259' height='60' loading='lazy'>
+                     <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/c-logo_b.webp')); ?>'
+                        alt='東京ぶらんど ALAMODE' width='259' height='60' loading='lazy'>
                   </figure>
                   <!-- /.p-header__logoImage -->
                </a>
@@ -23,12 +23,13 @@
                   <!-- /.p-header__telLink -->
                   <ul class="p-header__buttons">
                      <li class="p-header__button -line">
-                        <a href="" class="p-header__buttonLink">
+                        <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>" class="p-header__buttonLink"
+                           target="_blank" rel="nofollow noopener">
                            <p class="p-header__buttonText">LINEで査定する</p>
                         </a>
                      </li>
                      <li class="p-header__button -mail">
-                        <a href="" class="p-header__buttonLink">
+                        <a href="#contact" class="p-header__buttonLink">
                            <p class="p-header__buttonText">お問合せはこちら</p>
                         </a>
                      </li>
@@ -53,14 +54,14 @@
          <!-- nav ///////////////////////////// -->
          <nav class="p-header__nav u-only__pc">
             <ul class="p-header__list">
-               <li class="p-header__item"><a href="" class="p-header__link">買取品目</a></li>
-               <li class="p-header__item"><a href="" class="p-header__link">買取ブランド一覧</a></li>
-               <li class="p-header__item"><a href="" class="p-header__link">高価買取の理由</a></li>
-               <li class="p-header__item"><a href="" class="p-header__link">買取の流れ</a></li>
-               <li class="p-header__item"><a href="" class="p-header__link">高価買取のポイント</a></li>
-               <li class="p-header__item"><a href="" class="p-header__link">選ばれる理由</a></li>
-               <li class="p-header__item"><a href="" class="p-header__link">よくある質問</a></li>
-               <li class="p-header__item"><a href="" class="p-header__link">店舗紹介</a></li>
+               <li class="p-header__item"><a href="#items" class="p-header__link">買取品目</a></li>
+               <li class="p-header__item"><a href="#brands" class="p-header__link">買取ブランド一覧</a></li>
+               <li class="p-header__item"><a href="#reasons" class="p-header__link">高価買取の理由</a></li>
+               <li class="p-header__item"><a href="#flow" class="p-header__link">買取の流れ</a></li>
+               <li class="p-header__item"><a href="#point" class="p-header__link">高価買取のポイント</a></li>
+               <li class="p-header__item"><a href="#select" class="p-header__link">選ばれる理由</a></li>
+               <li class="p-header__item"><a href="#faq" class="p-header__link">よくある質問</a></li>
+               <li class="p-header__item"><a href="#stores" class="p-header__link">店舗紹介</a></li>
             </ul>
          </nav>
       </div>
@@ -74,29 +75,30 @@
    <div class="p-drawer__inner">
       <nav class="p-drawer__nav">
          <ul class="p-drawer__list">
-            <li class="p-drawer__item"><a href="" class="p-drawer__link">買取品目</a></li>
-            <li class="p-drawer__item"><a href="" class="p-drawer__link">買取ブランド一覧</a></li>
-            <li class="p-drawer__item"><a href="" class="p-drawer__link">高価買取の理由</a></li>
-            <li class="p-drawer__item"><a href="" class="p-drawer__link">買取の流れ</a></li>
-            <li class="p-drawer__item"><a href="" class="p-drawer__link">高価買取のポイント</a></li>
-            <li class="p-drawer__item"><a href="" class="p-drawer__link">選ばれる理由</a></li>
-            <li class="p-drawer__item"><a href="" class="p-drawer__link">よくある質問</a></li>
-            <li class="p-drawer__item"><a href="" class="p-drawer__link">店舗紹介</a></li>
+            <li class="p-drawer__item"><a href="#items" class="p-drawer__link">買取品目</a></li>
+            <li class="p-drawer__item"><a href="#brands" class="p-drawer__link">買取ブランド一覧</a></li>
+            <li class="p-drawer__item"><a href="#reasons" class="p-drawer__link">高価買取の理由</a></li>
+            <li class="p-drawer__item"><a href="#flow" class="p-drawer__link">買取の流れ</a></li>
+            <li class="p-drawer__item"><a href="#point" class="p-drawer__link">高価買取のポイント</a></li>
+            <li class="p-drawer__item"><a href="#select" class="p-drawer__link">選ばれる理由</a></li>
+            <li class="p-drawer__item"><a href="#faq" class="p-drawer__link">よくある質問</a></li>
+            <li class="p-drawer__item"><a href="#stores" class="p-drawer__link">店舗紹介</a></li>
          </ul>
       </nav>
       <div class="p-drawer__foot">
-         <a href="" class="p-drawer__telLink">
+         <a href="tel:0359904745" class="p-drawer__telLink">
             <p class="p-drawer__telNumber">03-5990-4745</p>
-            <p class="p-drawer__telTime">受付時間 12:30-21:00</p>
+            <p class="p-drawer__telTime"><?php echo esc_html(get_field('hours_main')); ?></p>
          </a>
          <ul class="p-drawer__buttons">
             <li class="p-drawer__button -line">
-               <a href="" class="p-drawer__buttonLink">
+               <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>" class="p-drawer__buttonLink" target="_blank"
+                  rel="nofollow noopener">
                   <p class="p-drawer__buttonText">LINEで査定する</p>
                </a>
             </li>
             <li class="p-drawer__button -mail">
-               <a href="" class="p-drawer__buttonLink">
+               <a href="#contact" class="p-drawer__buttonLink">
                   <p class="p-drawer__buttonText">お問合せはこちら</p>
                </a>
             </li>

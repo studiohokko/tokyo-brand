@@ -136,6 +136,22 @@
 }
 
 .p-brands__orderListItem {
+	&.-empty {
+		pointer-events: none;
+		filter: brightness(0.7);
+
+		.p-brands__orderSummary {
+			cursor: default;
+
+			&::after {
+				display: none;
+			}
+
+			&:focus-visible {
+				opacity: 1;
+			}
+		}
+	}
 }
 
 .p-brands__orderDetails {

@@ -103,6 +103,18 @@ function auto_post_slug($slug, $post_ID, $post_status, $post_type)
 add_filter('wp_unique_post_slug', 'auto_post_slug', 10, 4);
 
 
+
+// -----------------------------------------------------------
+//  title-tag サポートを有効にする
+// -----------------------------------------------------------
+function my_theme_support()
+{
+   add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'my_theme_support');
+
+
+
 // -----------------------------------------------------------
 //  アイキャッチ画像の設定とトリミング
 // -----------------------------------------------------------

@@ -52,19 +52,19 @@
       <p class="p-choice__pop">選べる<span class="-color">2つ</span><span class="-small">の</span>買取方法</p>
       <ul class="p-choice__methods">
          <li class="p-choice__method">
-            <a href="" class="p-choice__methodLink -store">
+            <a href="#in-store" class="p-choice__methodLink -store">
                <figure class="p-choice__methodImage">
                   <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/icon_building.svg')); ?>'
-                     alt='' width='12' height='12' loading='lazy'>
+                     alt='' width='12' height='12' loading='lazy' aria-hidden='true'>
                </figure>
                <p class="p-choice__methodText">店頭買取</p>
             </a>
          </li>
          <li class="p-choice__method">
-            <a href="" class="p-choice__methodLink -delivery">
+            <a href="#delivery" class="p-choice__methodLink -delivery">
                <figure class="p-choice__methodImage">
                   <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/icon_car.svg')); ?>' alt=''
-                     width='12' height='12' loading='lazy'>
+                     width='12' height='12' loading='lazy' aria-hidden='true'>
                </figure>
                <p class="p-choice__methodText">宅配買取</p>
             </a>
@@ -131,16 +131,16 @@
                <div class="p-shops__inner">
                   <div class="p-shops__tabs" role="tablist">
                      <button class="p-shops__tab js_shopsTab is_show" role="tab" id="shop-tab1"
-                        aria-controls="shop-panel1" aria-selected="true" tabindex="0">東京ぶらんど<br>渋谷本店</button>
+                        aria-controls="shop-panel1" aria-selected="true">東京ぶらんど<br>渋谷本店</button>
                      <button class="p-shops__tab js_shopsTab" role="tab" id="shop-tab2" aria-controls="shop-panel2"
-                        aria-selected="false" tabindex="-1">ORANGE <br class="u-only__sp">BOUTIQUE<br>渋谷店</button>
+                        aria-selected="false">ORANGE <br class="u-only__sp">BOUTIQUE<br>渋谷店</button>
                      <button class="p-shops__tab js_shopsTab" role="tab" id="shop-tab3" aria-controls="shop-panel3"
-                        aria-selected="false" tabindex="-1">東京ぶらんど<br>渋谷109店</button>
+                        aria-selected="false">東京ぶらんど<br>渋谷109店</button>
                   </div>
                   <!-- /.p-shops__tabs -->
                   <div class="p-shops__panels">
                      <section class="p-shops__panel js_shopsPanel is_show" role="tabpanel" id="shop-panel1"
-                        aria-labelledby="shop-tab1" tabindex="0">
+                        aria-labelledby="shop-tab1">
                         <div class="p-shops__content">
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">東京ぶらんど <br>Produce by ALAMODE <br class="u-only__sp">渋谷本店</h3>
@@ -157,7 +157,8 @@
                               <figure class="p-shops__image">
                                  <img
                                     src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-shops_main-001.webp')); ?>'
-                                    alt='' width='484' height='296' loading='lazy'>
+                                    alt='東京ぶらんど Produce by ALAMODE 渋谷本店の店内。ガラスケースにエルメスやシャネルなどのブランドバッグが多数並ぶブランド品買取・販売専門店'
+                                    width='484' height='296' loading='lazy'>
                               </figure>
                            </div>
                            <!-- /.p-shops__imageArea -->
@@ -165,7 +166,7 @@
                         <!-- /.p-shops__content -->
                      </section>
                      <section class="p-shops__panel js_shopsPanel" role="tabpanel" id="shop-panel2"
-                        aria-labelledby="shop-tab2" tabindex="0">
+                        aria-labelledby="shop-tab2">
                         <div class="p-shops__content">
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">ORANGE BOUTIQUE <br>渋谷店</h3>
@@ -182,7 +183,8 @@
                               <figure class="p-shops__image">
                                  <img
                                     src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-shops_main-002.webp')); ?>'
-                                    alt='' width='484' height='296' loading='lazy'>
+                                    alt='ORANGE BOUTIQUE 渋谷店の店内。ステンドグラス調の装飾を背景にブランドバッグや財布を展示する高級ブランド品買取・販売店' width='484'
+                                    height='296' loading='lazy'>
                               </figure>
                            </div>
                            <!-- /.p-shops__imageArea -->
@@ -190,7 +192,7 @@
                         <!-- /.p-shops__content -->
                      </section>
                      <section class="p-shops__panel js_shopsPanel" role="tabpanel" id="shop-panel3"
-                        aria-labelledby="shop-tab3" tabindex="0">
+                        aria-labelledby="shop-tab3">
                         <div class="p-shops__content">
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">東京ぶらんど <br>Produce by ALAMODE <br class="u-only__sp">渋谷109店</h3>
@@ -207,7 +209,8 @@
                               <figure class="p-shops__image">
                                  <img
                                     src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-shops_main-003.webp')); ?>'
-                                    alt='' width='484' height='296' loading='lazy'>
+                                    alt='東京ぶらんど Produce by ALAMODE 渋谷109店の外観。腕時計やブランド品を取り扱う店舗入口と大型ディスプレイが並ぶブランド品買取・販売店'
+                                    width='484' height='296' loading='lazy'>
                               </figure>
                            </div>
                            <!-- /.p-shops__imageArea -->
@@ -294,7 +297,7 @@
                         <figure class="p-about-feature__deco">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-about-feature_person.webp')); ?>'
-                              alt='' width='323' height='324' loading='lazy'>
+                              alt='' width='323' height='324' loading='lazy' aria-hidden='true'>
                         </figure>
                         <p class="p-about-feature__message"><span>歴20年以上の経験を持つ鑑定士</span></p>
                         <p class="p-about-feature__message">が、1点1点の査定理由を丁寧にご</p>
@@ -313,7 +316,7 @@
                         <figure class="p-about-feature__deco">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-about-feature_person.webp')); ?>'
-                              alt='' width='323' height='324' loading='lazy'>
+                              alt='' width='323' height='324' loading='lazy' aria-hidden='true'>
                         </figure>
                         <p class="p-about-feature__message"><span>歴20年以上の経験を持つ鑑定士</span>が、1点1点の査定理由を丁寧にご説明します。</p>
                         <p class="p-about-feature__message">渋谷駅から徒歩3分、<span>店頭査定も無料</span>です。</p>
@@ -334,7 +337,7 @@
       <!-- /.p-about__inner-->
       <div class="p-shops__modals">
          <div class="p-shops__modal js_shopsMapModal" id="shop-map-modal1" role="dialog" aria-modal="true"
-            aria-hidden="true">
+            aria-hidden="true" aria-label="東京ぶらんど Produce by ALAMODE 渋谷本店のGoogleマップ">
             <button type="button" class="p-shops__modalOverlay js_shopsMapClose" aria-label="閉じる"></button>
             <div class="p-shops__modalInner">
                <button type="button" class="p-shops__modalClose js_shopsMapClose" aria-label="閉じる"></button>
@@ -350,7 +353,7 @@
          </div>
          <!-- /.p-shops__modal -->
          <div class="p-shops__modal js_shopsMapModal" id="shop-map-modal2" role="dialog" aria-modal="true"
-            aria-hidden="true">
+            aria-hidden="true" aria-label="ORANGE BOUTIQUE 渋谷店のGoogleマップ">
             <button type="button" class="p-shops__modalOverlay js_shopsMapClose" aria-label="閉じる"></button>
             <div class="p-shops__modalInner">
                <button type="button" class="p-shops__modalClose js_shopsMapClose" aria-label="閉じる"></button>
@@ -366,7 +369,7 @@
          </div>
          <!-- /.p-shops__modal -->
          <div class="p-shops__modal js_shopsMapModal" id="shop-map-modal3" role="dialog" aria-modal="true"
-            aria-hidden="true">
+            aria-hidden="true" aria-label="東京ぶらんど Produce by ALAMODE 渋谷109店のGoogleマップ">
             <button type="button" class="p-shops__modalOverlay js_shopsMapClose" aria-label="閉じる"></button>
             <div class="p-shops__modalInner">
                <button type="button" class="p-shops__modalClose js_shopsMapClose" aria-label="閉じる"></button>
@@ -388,7 +391,7 @@
 
 
    <!-- items   ///////////////////////////////////////////////////// -->
-   <section class="p-items">
+   <section id="items" class="p-items">
       <div class="p-items__bg"></div>
       <!-- /.p-items__bg -->
       <div class="p-items__inner l-inner">
@@ -524,7 +527,7 @@
 
 
    <!-- select   ///////////////////////////////////////////////////// -->
-   <section class="p-select">
+   <section id="select" class="p-select">
       <div class="p-select__inner l-inner">
          <div class="p-select__heading">
             <div class="c-heading">
@@ -544,12 +547,14 @@
                      'title' => '経験20年以上の<br class="u-only__sp">ブランド専門鑑定士',
                      'text' => '豊富な知識を持った査定士が、ブランド品や貴金属を一点一点丁寧に査定します。<br>プライバシーに配慮した個室で対応するので安心です。',
                      'image' => '001',
+                     'alt' => '',
                   ],
                   [
                      'number' => 'Reasons 02',
                      'title' => '相場以上の高額査定',
                      'text' => '独自の国内外への販売ルートを持っています。<br class="u-only__pc">だからこそ、一般的な国内相場にとらわれない、真の価値に基づいた高額査定が可能です。<br>査定士が最新の相場をもとに、他店に負けない高額査定を目指します。',
                      'image' => '002',
+                     'alt' => '',
                      'modifier' => '-reverse',
                   ],
                   [
@@ -557,12 +562,14 @@
                      'title' => '査定理由を一点一点ご説明',
                      'text' => '「なぜこの価格なのか」を、相場データと状態評価に基づいて丁寧にお伝えします。納得いただけるまでご質問ください。',
                      'image' => '003',
+                     'alt' => '',
                   ],
                   [
                      'number' => 'Reasons 04',
                      'title' => '無理な営業・押し売りは<br>一切しません',
                      'text' => '「考えてから決めたい」「他店とも比較したい」といったご要望も歓迎。<br>査定だけでお帰りいただくお客様も多数いらっしゃいます',
                      'image' => '004',
+                     'alt' => '',
                      'modifier' => '-reverse',
                   ],
                ];
@@ -584,7 +591,7 @@
 
 
    <!-- brands   ///////////////////////////////////////////////////// -->
-   <section class="p-brands">
+   <section id="brands" class="p-brands">
       <div class="p-brands__bg"></div>
       <!-- /.p-brands__bg -->
       <div class="p-brands__inner l-inner -narrow">
@@ -966,16 +973,14 @@
                         </div>
                      </details>
                   </li>
-                  <li class="p-brands__orderListItem">
-                     <details class="p-brands__orderDetails js_details">
-                        <summary class="p-brands__orderSummary js_summary">
+                  <li class="p-brands__orderListItem -empty">
+                     <div class="p-brands__orderDetails">
+                        <div class="p-brands__orderSummary">
                            <span class="p-brands__orderSummaryText">
                               <span class="p-brands__orderSummaryTitle">「ワ」行から調べる</span>
                            </span>
-                        </summary>
-                        <div class="p-brands__orderContent js_content">
                         </div>
-                     </details>
+                     </div>
                   </li>
                </ul>
                <!-- /.p-brands__orderList -->
@@ -1116,7 +1121,8 @@
                               media="(min-width: 768px)">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-gold_banner.webp')); ?>'
-                              alt='' width='87' height='60' loading='lazy'>
+                              alt='金相場高騰につき、高価買取実施中！本日の買取価格<?php echo esc_html($first_gold_price); ?>' width='87'
+                              height='60' loading='lazy'>
                         </picture>
                      </figure>
                      <?php if ($first_gold_price): ?>
@@ -1276,7 +1282,7 @@
 
 
    <!-- reasons   ///////////////////////////////////////////////////// -->
-   <section class="p-reasons">
+   <section id="reasons" class="p-reasons">
       <div class="p-reasons__bg"></div>
       <!-- /.p-reasons__bg -->
       <div class="p-reasons__inner l-inner -narrow">
@@ -1298,12 +1304,14 @@
                      'title' => '国内相場に左右されない、<br>世界基準の買取',
                      'text' => '世界中からお客様が訪れる店舗を複数展開しているため、安定した販売力を背景に高価買取を実現しています。国内の販売価格に左右されることなく、世界基準の相場で買取が可能です。',
                      'image' => '005',
+                     'alt' => '',
                   ],
                   [
                      'number' => 'Reasons 02',
                      'title' => '経験豊富な鑑定士',
                      'text' => '豊富な知識と経験を持つ鑑定士が、一点一点丁寧に査定いたします。市場動向やモデルごとの価値を見極め、本来の価値を反映した適正価格での買取を行っています。',
                      'image' => '006',
+                     'alt' => '',
                      'modifier' => '-reverse',
                   ],
                   [
@@ -1311,6 +1319,7 @@
                      'title' => '自社オークションの運営',
                      'text' => '自社オークションを運営しているため、幅広い販路を活かした買取が可能です。市場の需要を直接反映できるため、最新の相場を踏まえた高価買取<br class="u-only__pc">を実現しています。',
                      'image' => '007',
+                     'alt' => '',
                   ],
                ];
                foreach ($reasons as $reason) {
@@ -1331,7 +1340,7 @@
 
 
    <!-- flow   ///////////////////////////////////////////////////// -->
-   <section class="p-flow">
+   <section id="flow" class="p-flow">
       <div class="p-flow__inner l-inner">
          <div class="p-flow__heading">
             <div class="c-heading">
@@ -1351,7 +1360,7 @@
                      <figure class="p-flow-cta__deco">
                         <img
                            src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-flow-cta_person.webp')); ?>'
-                           alt='' width='274' height='326' loading='lazy'>
+                           alt='' width='274' height='326' loading='lazy' aria-hidden='true'>
                      </figure>
                      <!-- /.p-flow-cta__deco -->
                      <div class="p-flow-cta__title">
@@ -1361,7 +1370,8 @@
                      <div class="p-flow-cta__body">
                         <p class="p-flow-cta__pop">写真を送るだけ！<br class="u-only__sp">最短当日で査定OK</p>
                         <div class="p-flow-cta__button">
-                           <a href="" class="c-button-line -simple -small">
+                           <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>"
+                              class="c-button-line -simple -small" target="_blank" rel="nofollow noopener">
                               <p class="c-button-line__text">LINEで無料査定する</p>
                            </a>
                         </div>
@@ -1379,21 +1389,21 @@
             <div class="p-flow__buttonsWrapper">
                <ul class="p-flow__buttons">
                   <li class="p-flow__button">
-                     <a href="" class="p-flow__buttonLink -store">
+                     <a href="#in-store" class="p-flow__buttonLink -store">
                         <figure class="p-flow__buttonImage">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/icon_building.svg')); ?>'
-                              alt='' width='12' height='12' loading='lazy'>
+                              alt='' width='12' height='12' loading='lazy' aria-hidden='true'>
                         </figure>
                         <p class="p-flow__buttonPop">即日売却したい <span>/</span> 対面で丁寧に対応してほしい</p>
                         <p class="p-flow__buttonText">店頭買取はこちら</p>
                      </a>
                   </li>
                   <li class="p-flow__button">
-                     <a href="" class="p-flow__buttonLink -delivery">
+                     <a href="#delivery" class="p-flow__buttonLink -delivery">
                         <figure class="p-flow__buttonImage">
                            <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/icon_car.svg')); ?>'
-                              alt='' width='12' height='12' loading='lazy'>
+                              alt='' width='12' height='12' loading='lazy' aria-hidden='true'>
                         </figure>
                         <p class="p-flow__buttonPop">自宅で売却したい <span>/</span> 手間なく売却したい</p>
                         <p class="p-flow__buttonText">宅配買取はこちら</p>
@@ -1403,7 +1413,7 @@
             </div>
             <!-- /.p-flow__buttonsWrapper -->
             <div class="p-flow__store">
-               <section class="p-flow-store">
+               <section id="in-store" class="p-flow-store">
                   <div class="p-flow-store__heading">
                      <div class="c-heading">
                         <h2 class="c-heading__title">店頭買取</h2>
@@ -1429,10 +1439,10 @@
                                  <div class="p-flow-item__foot">
                                     <ul class="p-flow-item__footLinks">
                                        <li class="p-flow-item__footLinkItem">
-                                          <a href="" class="p-flow-item__footLink">店舗情報を見る</a>
+                                          <a href="#stores" class="p-flow-item__footLink">店舗情報を見る</a>
                                        </li>
                                        <li class="p-flow-item__footLinkItem">
-                                          <a href="" class="p-flow-item__footLink">身分証明書について</a>
+                                          <a href="#status" class="p-flow-item__footLink">身分証明書について</a>
                                        </li>
                                     </ul>
                                  </div>
@@ -1483,7 +1493,7 @@
             </div>
             <!-- /.p-flow__store -->
             <div class="p-flow__delivery">
-               <section class="p-flow-delivery">
+               <section id="delivery" class="p-flow-delivery">
                   <div class="p-flow-delivery__heading">
                      <div class="c-heading">
                         <h2 class="c-heading__title">宅配買取</h2>
@@ -1508,7 +1518,7 @@
                                  </p>
                                  <div class="p-flow-item__foot">
                                     <div class="p-flow-item__lineButton">
-                                       <a href="" class="c-button-line">
+                                       <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>" class="c-button-line" target="_blank" rel="nofollow noopener">
                                           <p class="c-button-line__pop">写真を送るだけ！最短当日で査定OK</p>
                                           <p class="c-button-line__text">LINEで無料査定する</p>
                                        </a>
@@ -1562,7 +1572,7 @@
                                  <div class="p-flow-item__foot">
                                     <ul class="p-flow-item__footLinks">
                                        <li class="p-flow-item__footLinkItem">
-                                          <a href="" class="p-flow-item__footLink">身分証明書について</a>
+                                          <a href="#status" class="p-flow-item__footLink">身分証明書について</a>
                                        </li>
                                     </ul>
                                  </div>
@@ -1590,7 +1600,7 @@
       <div class="p-wrapper__bg"></div>
       <!-- /.p-wrapper__bg -->
       <!-- point   ///////////////////////////////////////////////////// -->
-      <section class="p-point">
+      <section id="point" class="p-point">
          <div class="p-point__inner l-inner -narrow">
             <div class="p-point__heading">
                <div class="c-heading -white">
@@ -1865,7 +1875,7 @@
 
 
    <!-- faq   ///////////////////////////////////////////////////// -->
-   <section class="p-faq">
+   <section id="faq" class="p-faq">
       <div class="p-faq__inner l-inner -narrow">
          <div class="p-faq__heading">
             <div class="c-heading">
@@ -1987,7 +1997,7 @@
 
 
    <!-- stores   ///////////////////////////////////////////////////// -->
-   <section class="p-stores">
+   <section id="stores" class="p-stores">
       <div class="p-stores__inner l-inner">
          <div class="p-stores__heading">
             <div class="c-heading">
@@ -2002,19 +2012,19 @@
                <div class="p-shops__inner">
                   <div class="p-shops__tabs" role="tablist">
                      <button class="p-shops__tab -tall js_shopsTab is_show" role="tab" id="store-tab1"
-                        aria-controls="store-panel1" aria-selected="true" tabindex="0">東京ぶらんど <br
+                        aria-controls="store-panel1" aria-selected="true">東京ぶらんど <br
                            class="u-only__sp">produce by <br class="u-only__sp">ALAMODE<br>渋谷本店</button>
                      <button class="p-shops__tab -tall js_shopsTab" role="tab" id="store-tab2"
-                        aria-controls="store-panel2" aria-selected="false" tabindex="-1">ORANGE <br
+                        aria-controls="store-panel2" aria-selected="false">ORANGE <br
                            class="u-only__sp">BOUTIQUE<br>渋谷店</button>
                      <button class="p-shops__tab -tall js_shopsTab" role="tab" id="store-tab3"
-                        aria-controls="store-panel3" aria-selected="false" tabindex="-1">東京ぶらんど <br
+                        aria-controls="store-panel3" aria-selected="false">東京ぶらんど <br
                            class="u-only__sp">produce by <br class="u-only__sp">ALAMODE<br>渋谷109店</button>
                   </div>
                   <!-- /.p-shops__tabs -->
                   <div class="p-shops__panels">
                      <section class="p-shops__panel js_shopsPanel is_show" role="tabpanel" id="store-panel1"
-                        aria-labelledby="store-tab1" tabindex="0">
+                        aria-labelledby="store-tab1">
                         <div class="p-shops__content -start">
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">東京ぶらんど <br>Produce by ALAMODE <br class="u-only__sp">渋谷本店</h3>
@@ -2032,7 +2042,7 @@
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">電話番号</dt>
-                                       <dd class="p-shops__accessGroupData"><a href=""
+                                       <dd class="p-shops__accessGroupData"><a href="tel:0359904745"
                                              class="p-shops__accessGroupTel u-pointerNone__sp">03-5990-4745</a></dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
@@ -2055,16 +2065,17 @@
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">定 休 日</dt>
-                                       <dd class="p-shops__accessGroupData">年末年始（年末年始を除く）</dd>
+                                       <dd class="p-shops__accessGroupData">年中無休（年末年始を除く）</dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                  </dl>
                                  <ul class="p-shops__snsList">
                                     <li class="p-shops__snsItem">
-                                       <a href="" class="p-shops__snsLink -line"></a>
+                                       <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>"
+                                          class="p-shops__snsLink -line" aria-label="LINEで無料査定する" target="_blank" rel="nofollow noopener"></a>
                                     </li>
                                     <li class="p-shops__snsItem">
-                                       <a href="" class="p-shops__snsLink -mail"></a>
+                                       <a href="#contact" class="p-shops__snsLink -mail" aria-label="メールで問い合わせる"></a>
                                     </li>
                                  </ul>
                               </div>
@@ -2146,7 +2157,7 @@
                         <!-- /.p-shops__content -->
                      </section>
                      <section class="p-shops__panel js_shopsPanel" role="tabpanel" id="store-panel2"
-                        aria-labelledby="store-tab2" tabindex="0">
+                        aria-labelledby="store-tab2">
                         <div class="p-shops__content -start">
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">ORANGE BOUTIQUE <br class="u-only__sp">渋谷店</h3>
@@ -2164,7 +2175,7 @@
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">電話番号</dt>
-                                       <dd class="p-shops__accessGroupData"><a href=""
+                                       <dd class="p-shops__accessGroupData"><a href="tel:0359904745"
                                              class="p-shops__accessGroupTel u-pointerNone__sp">03-5990-4745</a></dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
@@ -2187,16 +2198,17 @@
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">定 休 日</dt>
-                                       <dd class="p-shops__accessGroupData">年末年始（年末年始を除く）</dd>
+                                       <dd class="p-shops__accessGroupData">年中無休（年末年始を除く）</dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                  </dl>
                                  <ul class="p-shops__snsList">
                                     <li class="p-shops__snsItem">
-                                       <a href="" class="p-shops__snsLink -line"></a>
+                                       <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>"
+                                          class="p-shops__snsLink -line" aria-label="LINEで無料査定する" target="_blank" rel="nofollow noopener"></a>
                                     </li>
                                     <li class="p-shops__snsItem">
-                                       <a href="" class="p-shops__snsLink -mail"></a>
+                                       <a href="#contact" class="p-shops__snsLink -mail" aria-label="メールで問い合わせる"></a>
                                     </li>
                                  </ul>
                               </div>
@@ -2277,7 +2289,7 @@
                         <!-- /.p-shops__content -->
                      </section>
                      <section class="p-shops__panel js_shopsPanel" role="tabpanel" id="store-panel3"
-                        aria-labelledby="store-tab3" tabindex="0">
+                        aria-labelledby="store-tab3">
                         <div class="p-shops__content -start">
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">東京ぶらんど <br>Produce by ALAMODE <br class="u-only__sp">渋谷109店</h3>
@@ -2295,7 +2307,7 @@
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">電話番号</dt>
-                                       <dd class="p-shops__accessGroupData"><a href=""
+                                       <dd class="p-shops__accessGroupData"><a href="tel:0367127331"
                                              class="p-shops__accessGroupTel u-pointerNone__sp">03-6712-7331</a></dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
@@ -2318,16 +2330,17 @@
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">定 休 日</dt>
-                                       <dd class="p-shops__accessGroupData">年末年始（年末年始を除く）</dd>
+                                       <dd class="p-shops__accessGroupData">年中無休（年末年始を除く）</dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                  </dl>
                                  <ul class="p-shops__snsList">
                                     <li class="p-shops__snsItem">
-                                       <a href="" class="p-shops__snsLink -line"></a>
+                                       <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>"
+                                          class="p-shops__snsLink -line" aria-label="LINEで無料査定する" target="_blank" rel="nofollow noopener"></a>
                                     </li>
                                     <li class="p-shops__snsItem">
-                                       <a href="" class="p-shops__snsLink -mail"></a>
+                                       <a href="#contact" class="p-shops__snsLink -mail" aria-label="メールで問い合わせる"></a>
                                     </li>
                                  </ul>
                               </div>
@@ -2422,7 +2435,7 @@
 
 
    <!-- contact   ///////////////////////////////////////////////////// -->
-   <section class="p-contact">
+   <section id="contact" class="p-contact">
       <div class="p-contact__inner l-inner -narrow">
          <div class="p-contact__heading">
             <div class="c-heading">
@@ -2437,16 +2450,16 @@
             <div class="p-contact__buttonsBox">
                <ul class="p-contact__list">
                   <li class="p-contact__item">
-                     <a href="" class="c-button-line">
+                     <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>" class="c-button-line" target="_blank" rel="nofollow noopener">
                         <p class="c-button-line__pop">写真を送るだけ！最短当日で査定OK</p>
                         <h3 class="c-button-line__text">LINEで無料査定する</h3>
                      </a>
                   </li>
                   <li class="p-contact__item">
-                     <a href="" class="c-button-tel u-pointerNone__sp -small">
+                     <a href="tel:0359904745" class="c-button-tel u-pointerNone__sp -small">
                         <h3 class="c-button-tel__catch">電話で相談する</h3>
                         <p class="c-button-tel__number">03-5990-4745</p>
-                        <p class="c-button-tel__time">受付時間12:30-21:00</p>
+                        <p class="c-button-tel__time">受付時間 <?php echo esc_html(get_field('hours_main')); ?></p>
                      </a>
                   </li>
                </ul>
@@ -2460,11 +2473,11 @@
                <div class="p-contact__form">
                   <div class="p-form">
                      <?php echo do_shortcode('[contact-form-7 id="f135169" title="お問い合わせフォーム"]'); ?>
-                     <!-- <div class="p-form__recaptcha">このサイトはreCAPTCHAによって保護されており、Googleの<a
+                     <div class="p-form__recaptcha">このサイトはreCAPTCHAによって保護されており、Googleの<a
                            href="https://policies.google.com/privacy" target="_blank"
                            rel="nofollow noopener">プライバシーポリシー</a>と<a href="https://policies.google.com/terms"
                            target="_blank" rel="nofollow noopener">利用規約</a>が適用されます。
-                     </div> -->
+                     </div>
                      <!-- /.p-form__recaptcha -->
                   </div>
                   <!-- /.p-form -->
@@ -2480,7 +2493,7 @@
 
 
    <!-- status   ///////////////////////////////////////////////////// -->
-   <section class="p-status">
+   <section id="status" class="p-status">
       <div class="p-status__inner l-inner -narrow">
          <div class="p-status__content">
             <div class="p-status__heading">
@@ -2607,7 +2620,7 @@
       <div class="p-floating__content">
          <p class="p-floating__pop u-only__pc">写真を送るだけ！最短当日で査定OK</p>
          <div class="p-floating__item u-only__sp">
-            <a href="" class="c-button-line -big">
+            <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>" class="c-button-line -big" target="_blank" rel="nofollow noopener">
                <p class="c-button-line__pop">写真を送るだけ！最短当日で査定OK</p>
                <p class="c-button-line__text">LINEで無料査定する</p>
             </a>
@@ -2616,12 +2629,12 @@
          <div class="p-floating__listWrapper u-only__pc">
             <ul class="p-floating__list ">
                <li class="p-floating__item">
-                  <a href="" class="c-button-line -simple -medium">
+                  <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>" class="c-button-line -simple -medium" target="_blank" rel="nofollow noopener">
                      <p class="c-button-line__text">LINEで無料査定する</p>
                   </a>
                </li>
                <li class="p-floating__item">
-                  <a href="" class="c-button-mail -big">
+                  <a href="#contact" class="c-button-mail -big">
                      <p class="c-button-mail__catch ">メールで無料査定する</p>
                      <p class="c-button-mail__lead">24時間受付中</p>
                   </a>

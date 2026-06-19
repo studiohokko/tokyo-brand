@@ -15,13 +15,4 @@ export function js_floating() {
 			floating.classList.remove('is_show');
 		}
 	});
-
-	// クリックでトップへスムーズスクロール
-	floating.addEventListener('click', function (e) {
-		e.preventDefault();
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth',
-		});
-	});
 }
