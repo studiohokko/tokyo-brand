@@ -17,9 +17,11 @@ export function js_drawer() {
 		jQuery('body').addClass('is_fixed').css('top', `-${scrollPosition}px`);
 	}
 
-	function unlockScroll() {
+	function unlockScroll(restoreScroll = true) {
 		jQuery('body').removeClass('is_fixed').css('top', '');
-		window.scrollTo(0, scrollPosition);
+		if (restoreScroll) {
+			window.scrollTo(0, scrollPosition);
+		}
 	}
 
 	//===========================================
@@ -37,10 +39,10 @@ export function js_drawer() {
 		$drawer.removeAttr('inert');
 	}
 
-	function closeDrawer(returnFocus = true) {
+	function closeDrawer(returnFocus = true, restoreScroll = true) {
 		$drawerOpen.removeClass('is_open');
 		jQuery('.js_drawer').removeClass('is_open');
-		unlockScroll();
+		unlockScroll(restoreScroll);
 
 		// ARIA属性を閉じた状態にリセット
 		$drawerOpen.attr('aria-expanded', 'false');
@@ -80,18 +82,42 @@ export function js_drawer() {
 	});
 
 	//===========================================
-	// 3. ドロワー内リンククリック（同一ページ内アンカーのみ閉じる）
+	// 3. ドロワー内アンカーリンク（閉じた後に正しい位置へスクロール）
 	//===========================================
-	jQuery('#drawer a').on('click', function () {
-		// 768px以上では何もしない
-		if (window.innerWidth >= BREAKPOINT) return;
+	const drawerEl = document.querySelector('#drawer');
+	if (drawerEl) {
+		drawerEl.addEventListener(
+			'click',
+			function (e) {
+				if (window.innerWidth >= BREAKPOINT) return;
 
-		// 同一ページ内アンカー（別ページ遷移は通常の遷移を許可）
-		const isSamePageHash = this.hash !== '' && this.pathname === window.location.pathname;
-		if (isSamePageHash) {
-			closeDrawer();
-		}
-	});
+				const link = e.target.closest('a');
+				if (!link) return;
+
+				const isSamePageHash = link.hash !== '' && link.pathname === window.location.pathname;
+				if (!isSamePageHash) return;
+
+				e.preventDefault();
+				e.stopImmediatePropagation();
+
+				const hash = link.hash;
+				closeDrawer(false, false);
+
+				requestAnimationFrame(function () {
+					const gap = jQuery('#header').outerHeight();
+					const target = jQuery(hash);
+					if (!target.length) return;
+					jQuery('html, body').animate({ scrollTop: target.offset().top - gap }, 800, 'swing', function () {
+						const corrected = target.offset().top - gap;
+						if (Math.abs(jQuery(window).scrollTop() - corrected) > 2) {
+							jQuery('html, body').scrollTop(corrected);
+						}
+					});
+				});
+			},
+			true
+		);
+	}
 
 	//===========================================
 	// 4. アクセシビリティ - フォーカストラップ + Escapeで閉じる

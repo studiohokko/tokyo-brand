@@ -19,7 +19,7 @@
 
 	// ******** responsive(pc)
 	@include mq(pc) {
-		padding: rm(76) rm(100);
+		padding: rm(72) rm(100) rm(80);
 	}
 }
 
@@ -40,7 +40,7 @@
 }
 
 .p-status__description {
-	margin-block-start: rm(24);
+	margin-block-start: rm(21);
 	padding: rm(14) rm(21);
 	border-radius: rm(5);
 	border: rm(1) solid rgba(3, 31, 79, 0.2);

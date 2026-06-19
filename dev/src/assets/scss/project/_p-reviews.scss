@@ -1,7 +1,7 @@
 @use '../global' as *;
 
 .p-reviews {
-	padding-block: rm(59);
+	padding-block: rm(59) rm(63);
 
 	// ******** responsive(pc)
 	@include mq(pc) {

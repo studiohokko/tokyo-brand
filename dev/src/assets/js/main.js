@@ -10,6 +10,10 @@ js_smooth(); // 実行
 import { js_drawer } from './js_drawer';
 js_drawer(); // 実行
 
+// u-pointerNone__sp（PCではTabフォーカスも無効）
+import { js_pointerNone } from './js_pointerNone';
+js_pointerNone(); // 実行
+
 // フローティングメニュー
 import { js_floating } from './js_floating';
 js_floating(); // 実行

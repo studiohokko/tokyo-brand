@@ -41,4 +41,8 @@
 <?php get_template_part('template-parts/footer'); ?>
 
 
+<!-- floating   ///////////////////////////////////////////////////// -->
+<?php get_template_part('template-parts/floating'); ?>
+
+
 <?php get_footer(); ?>

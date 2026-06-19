@@ -1,6 +1,13 @@
 @use '../global' as *;
 
 html {
+	scroll-padding-top: rm($sp-header-height);
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		scroll-padding-top: rm($pc-header-height);
+	}
+
 	@media screen and (max-width: #{px($pc-camp) - 1px}) and (min-width: #{px($breakpoint)}) {
 		font-size: calc(16 / #{$pc-camp} * 100vw);
 	}

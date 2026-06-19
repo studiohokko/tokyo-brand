@@ -6,7 +6,7 @@
                <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logoLink">
                   <figure class="p-header__logoImage">
                      <img src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/c-logo_b.webp')); ?>'
-                        alt='東京ぶらんど ALAMODE' width='259' height='60' loading='lazy'>
+                        alt='東京ぶらんど ALAMODE' width='259' height='60'>
                   </figure>
                   <!-- /.p-header__logoImage -->
                </a>

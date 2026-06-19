@@ -17,8 +17,7 @@ export function js_shops() {
 			if (!content) return;
 
 			const styles = getComputedStyle(panelsContainer);
-			const paddingBlock =
-				parseFloat(styles.paddingTop) + parseFloat(styles.paddingBottom);
+			const paddingBlock = parseFloat(styles.paddingTop) + parseFloat(styles.paddingBottom);
 
 			panelsContainer.style.height = `${content.offsetHeight + paddingBlock}px`;
 		};
@@ -49,6 +48,18 @@ export function js_shops() {
 			updatePanelHeight(shop.querySelector('.js_shopsPanel.is_show'));
 		});
 
+		const syncTabFocusability = (tabList) => {
+			tabList.forEach((t) => {
+				if (t.classList.contains('is_show')) {
+					t.setAttribute('tabindex', '-1');
+				} else {
+					t.removeAttribute('tabindex');
+				}
+			});
+		};
+
+		syncTabFocusability(tabs);
+
 		tabs.forEach((tab) => {
 			tab.addEventListener('click', () => {
 				// タブの切り替え
@@ -58,6 +69,7 @@ export function js_shops() {
 				});
 				tab.setAttribute('aria-selected', 'true');
 				tab.classList.add('is_show');
+				syncTabFocusability(tabs);
 
 				// パネルの切り替え
 				const panelId = tab.getAttribute('aria-controls');
