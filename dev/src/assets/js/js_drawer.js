@@ -32,10 +32,9 @@ export function js_drawer() {
 		jQuery('.js_drawer').addClass('is_open');
 		lockScroll();
 
-		// ARIA属性を更新
+		// ARIA属性を更新（aria-hidden は使わず inert を外すだけ）
 		$drawerOpen.attr('aria-expanded', 'true');
 		$drawerOpen.attr('aria-label', 'メニューを閉じる');
-		$drawer.attr('aria-hidden', 'false');
 		$drawer.removeAttr('inert');
 	}
 
@@ -44,16 +43,18 @@ export function js_drawer() {
 		jQuery('.js_drawer').removeClass('is_open');
 		unlockScroll(restoreScroll);
 
-		// ARIA属性を閉じた状態にリセット
-		$drawerOpen.attr('aria-expanded', 'false');
-		$drawerOpen.attr('aria-label', 'メニューを開く');
-		$drawer.attr('aria-hidden', 'true');
-		$drawer.attr('inert', '');
-
-		// フォーカスをハンバーガーメニューに戻す
+		// inert を付ける前に、ドロワー内のフォーカスを必ず外へ逃がす
+		const activeEl = document.activeElement;
 		if (returnFocus) {
 			$drawerOpen.focus();
+		} else if (activeEl && $drawer[0].contains(activeEl)) {
+			activeEl.blur();
 		}
+
+		// ARIA属性を閉じた状態にリセット（aria-hidden は使わず inert を付けるだけ）
+		$drawerOpen.attr('aria-expanded', 'false');
+		$drawerOpen.attr('aria-label', 'メニューを開く');
+		$drawer.attr('inert', '');
 	}
 
 	//===========================================

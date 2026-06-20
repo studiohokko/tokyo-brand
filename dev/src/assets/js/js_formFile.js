@@ -17,6 +17,9 @@ export function js_formFile() {
 			return;
 		}
 
+		// Tab順から非表示inputを除外（カスタムボタンのみ操作対象）
+		realInput.setAttribute('tabindex', '-1');
+
 		// 🎯 ラッパー全体にクリックイベント
 		wrapper.addEventListener('click', (e) => {
 			// 削除ボタンがクリックされた場合は除外

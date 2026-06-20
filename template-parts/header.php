@@ -28,8 +28,10 @@
                            <p class="p-header__buttonText">LINEで査定する</p>
                         </a>
                      </li>
+                     <?php $is_front = is_front_page(); ?>
                      <li class="p-header__button -mail">
-                        <a href="#contact" class="p-header__buttonLink">
+                        <a href="<?php echo $is_front ? '#contact' : esc_url(home_url('/#contact')); ?>"
+                           class="p-header__buttonLink">
                            <p class="p-header__buttonText">お問合せはこちら</p>
                         </a>
                      </li>
@@ -54,14 +56,24 @@
          <!-- nav ///////////////////////////// -->
          <nav class="p-header__nav u-only__pc">
             <ul class="p-header__list">
-               <li class="p-header__item"><a href="#items" class="p-header__link">買取品目</a></li>
-               <li class="p-header__item"><a href="#brands" class="p-header__link">買取ブランド一覧</a></li>
-               <li class="p-header__item"><a href="#reasons" class="p-header__link">高価買取の理由</a></li>
-               <li class="p-header__item"><a href="#flow" class="p-header__link">買取の流れ</a></li>
-               <li class="p-header__item"><a href="#point" class="p-header__link">高価買取のポイント</a></li>
-               <li class="p-header__item"><a href="#select" class="p-header__link">選ばれる理由</a></li>
-               <li class="p-header__item"><a href="#faq" class="p-header__link">よくある質問</a></li>
-               <li class="p-header__item"><a href="#stores" class="p-header__link">店舗紹介</a></li>
+               <?php $is_front = is_front_page(); ?>
+               <li class="p-header__item"><a href="<?php echo $is_front ? '#items' : esc_url(home_url('/#items')); ?>"
+                     class="p-header__link">買取品目</a></li>
+               <li class="p-header__item"><a href="<?php echo $is_front ? '#brands' : esc_url(home_url('/#brands')); ?>"
+                     class="p-header__link">買取ブランド一覧</a></li>
+               <li class="p-header__item"><a
+                     href="<?php echo $is_front ? '#reasons' : esc_url(home_url('/#reasons')); ?>"
+                     class="p-header__link">高価買取の理由</a></li>
+               <li class="p-header__item"><a href="<?php echo $is_front ? '#flow' : esc_url(home_url('/#flow')); ?>"
+                     class="p-header__link">買取の流れ</a></li>
+               <li class="p-header__item"><a href="<?php echo $is_front ? '#point' : esc_url(home_url('/#point')); ?>"
+                     class="p-header__link">高価買取のポイント</a></li>
+               <li class="p-header__item"><a href="<?php echo $is_front ? '#select' : esc_url(home_url('/#select')); ?>"
+                     class="p-header__link">選ばれる理由</a></li>
+               <li class="p-header__item"><a href="<?php echo $is_front ? '#faq' : esc_url(home_url('/#faq')); ?>"
+                     class="p-header__link">よくある質問</a></li>
+               <li class="p-header__item"><a href="<?php echo $is_front ? '#stores' : esc_url(home_url('/#stores')); ?>"
+                     class="p-header__link">店舗紹介</a></li>
             </ul>
          </nav>
       </div>
@@ -71,24 +83,33 @@
 </header>
 
 <!-- drawer ///////////////////////////// -->
-<div id="drawer" class="p-drawer u-only__sp js_drawer" aria-hidden="true" inert>
+<div id="drawer" class="p-drawer u-only__sp js_drawer" inert>
    <div class="p-drawer__inner">
       <nav class="p-drawer__nav">
          <ul class="p-drawer__list">
-            <li class="p-drawer__item"><a href="#items" class="p-drawer__link">買取品目</a></li>
-            <li class="p-drawer__item"><a href="#brands" class="p-drawer__link">買取ブランド一覧</a></li>
-            <li class="p-drawer__item"><a href="#reasons" class="p-drawer__link">高価買取の理由</a></li>
-            <li class="p-drawer__item"><a href="#flow" class="p-drawer__link">買取の流れ</a></li>
-            <li class="p-drawer__item"><a href="#point" class="p-drawer__link">高価買取のポイント</a></li>
-            <li class="p-drawer__item"><a href="#select" class="p-drawer__link">選ばれる理由</a></li>
-            <li class="p-drawer__item"><a href="#faq" class="p-drawer__link">よくある質問</a></li>
-            <li class="p-drawer__item"><a href="#stores" class="p-drawer__link">店舗紹介</a></li>
+            <?php $is_front = is_front_page(); ?>
+            <li class="p-drawer__item"><a href="<?php echo $is_front ? '#items' : esc_url(home_url('/#items')); ?>"
+                  class="p-drawer__link">買取品目</a></li>
+            <li class="p-drawer__item"><a href="<?php echo $is_front ? '#brands' : esc_url(home_url('/#brands')); ?>"
+                  class="p-drawer__link">買取ブランド一覧</a></li>
+            <li class="p-drawer__item"><a href="<?php echo $is_front ? '#reasons' : esc_url(home_url('/#reasons')); ?>"
+                  class="p-drawer__link">高価買取の理由</a></li>
+            <li class="p-drawer__item"><a href="<?php echo $is_front ? '#flow' : esc_url(home_url('/#flow')); ?>"
+                  class="p-drawer__link">買取の流れ</a></li>
+            <li class="p-drawer__item"><a href="<?php echo $is_front ? '#point' : esc_url(home_url('/#point')); ?>"
+                  class="p-drawer__link">高価買取のポイント</a></li>
+            <li class="p-drawer__item"><a href="<?php echo $is_front ? '#select' : esc_url(home_url('/#select')); ?>"
+                  class="p-drawer__link">選ばれる理由</a></li>
+            <li class="p-drawer__item"><a href="<?php echo $is_front ? '#faq' : esc_url(home_url('/#faq')); ?>"
+                  class="p-drawer__link">よくある質問</a></li>
+            <li class="p-drawer__item"><a href="<?php echo $is_front ? '#stores' : esc_url(home_url('/#stores')); ?>"
+                  class="p-drawer__link">店舗紹介</a></li>
          </ul>
       </nav>
       <div class="p-drawer__foot">
          <a href="tel:0359904745" class="p-drawer__telLink">
             <p class="p-drawer__telNumber">03-5990-4745</p>
-            <p class="p-drawer__telTime"><?php echo esc_html(get_field('hours_main')); ?></p>
+            <p class="p-drawer__telTime">受付時間 <?php echo esc_html(get_field('hours_main')); ?></p>
          </a>
          <ul class="p-drawer__buttons">
             <li class="p-drawer__button -line">
@@ -98,7 +119,9 @@
                </a>
             </li>
             <li class="p-drawer__button -mail">
-               <a href="#contact" class="p-drawer__buttonLink">
+               <?php $is_front = is_front_page(); ?>
+               <a href="<?php echo $is_front ? '#contact' : esc_url(home_url('/#contact')); ?>"
+                  class="p-drawer__buttonLink">
                   <p class="p-drawer__buttonText">お問合せはこちら</p>
                </a>
             </li>

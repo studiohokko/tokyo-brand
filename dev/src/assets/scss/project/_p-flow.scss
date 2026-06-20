@@ -103,6 +103,7 @@
 	padding: rm(33) rm(23) rm(24) rm(24);
 	border-radius: rm(5);
 	filter: drop-shadow(0 0 rm(12) rgba(3, 31, 79, 0.18));
+	will-change: filter;
 	transition: background $easing;
 
 	// ******** responsive(pc)
@@ -130,7 +131,7 @@
 	// ******** responsive(pc)
 	@include mq(pc) {
 		min-width: rm(515);
-		padding: rm(7) rm(28) rm(6) rm(29);
+		padding: rm(7) rm(25) rm(6) rm(26);
 		font-size: rm(22);
 		line-height: 1.409;
 	}

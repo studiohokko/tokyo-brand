@@ -2013,8 +2013,8 @@
                <div class="p-shops__inner">
                   <div class="p-shops__tabs" role="tablist">
                      <button class="p-shops__tab -tall js_shopsTab is_show" role="tab" id="store-tab1"
-                        aria-controls="store-panel1" aria-selected="true" tabindex="-1">東京ぶらんど <br class="u-only__sp">produce by <br
-                           class="u-only__sp">ALAMODE<br>渋谷本店</button>
+                        aria-controls="store-panel1" aria-selected="true" tabindex="-1">東京ぶらんど <br
+                           class="u-only__sp">produce by <br class="u-only__sp">ALAMODE<br>渋谷本店</button>
                      <button class="p-shops__tab -tall js_shopsTab" role="tab" id="store-tab2"
                         aria-controls="store-panel2" aria-selected="false">ORANGE <br
                            class="u-only__sp">BOUTIQUE<br>渋谷店</button>

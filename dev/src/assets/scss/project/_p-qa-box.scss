@@ -6,6 +6,7 @@
 .p-qa-box__summary {
 	list-style: none;
 	transition: opacity $easing;
+	cursor: pointer;
 
 	&::-webkit-details-marker,
 	&::marker {
