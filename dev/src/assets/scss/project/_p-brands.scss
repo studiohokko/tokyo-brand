@@ -240,7 +240,7 @@
 	display: flex;
 	align-items: center;
 	padding: rm(5) rm(4) rm(5) rm(6);
-	height: rm(80);
+	min-height: rm(80);
 	border-radius: rm(5);
 	border: rm(2) solid rgba(3, 31, 79, 0.2);
 	background: #f0f5ff;
