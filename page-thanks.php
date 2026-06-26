@@ -21,7 +21,7 @@
                <a href="tel:0359904745" class="p-thanks__tel u-pointerNone__sp">
                   <p class="p-thanks__telText">お電話でのお問合せ</p>
                   <p class="p-thanks__telNumber">03-5990-4745</p>
-                  <p class="p-thanks__telTime">受付時間<?php echo esc_html(get_field('hours_main')); ?></p>
+                  <p class="p-thanks__telTime">受付時間 <?php echo esc_html(get_field('hours_main', get_option('page_on_front'))); ?></p>
                </a>
             </div>
             <!-- /.p-thanks__telBox -->

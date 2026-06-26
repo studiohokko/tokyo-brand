@@ -9,7 +9,7 @@ export function js_floating() {
 
 	// スクロール量に応じて表示/非表示を切り替え
 	window.addEventListener('scroll', function () {
-		if (window.scrollY > 100) {
+		if (window.scrollY > 10) {
 			floating.classList.add('is_show');
 		} else {
 			floating.classList.remove('is_show');

@@ -2,12 +2,18 @@
 
 .p-thanks {
 	padding-block: rm(49) rm(58);
-	min-height: calc(100vh - rm(520));
+	min-height: calc(100vh - rm(583) - rm($sp-header-height));
 
 	// ******** responsive(pc)
 	@include mq(pc) {
-		min-height: calc(100vh - rm(310));
+		min-height: calc(100vh - rm(428) - rm($pc-header-height));
 		padding-block: rm(79) rm(130);
+
+		// ビューポートが縦長の場合、コンテンツを縦中央に配置
+		@media (orientation: portrait) {
+			display: grid;
+			place-content: center;
+		}
 	}
 }
 

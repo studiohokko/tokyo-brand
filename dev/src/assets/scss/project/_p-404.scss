@@ -3,11 +3,11 @@
 .p-404 {
 	display: grid;
 	place-content: center;
-	min-height: calc(100vh - rm(520));
+	min-height: calc(100vh - rm(583) - rm($sp-header-height));
 
 	// ******** responsive(pc)
 	@include mq(pc) {
-		min-height: calc(100vh - rm(310));
+		min-height: calc(100vh - rm(428) - rm($pc-header-height));
 	}
 }
 

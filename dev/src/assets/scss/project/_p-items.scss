@@ -136,7 +136,7 @@
 	// ******** responsive(pc)
 	@include mq(pc) {
 		grid-template-columns: repeat(2, 1fr);
-		gap: rm(15) rm(8);
+		gap: rm(15) rm(14);
 		max-width: rm(842);
 		margin-block-start: rm(25);
 		margin-inline: auto;

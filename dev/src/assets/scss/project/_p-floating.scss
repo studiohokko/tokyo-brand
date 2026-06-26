@@ -2,26 +2,30 @@
 
 .p-floating {
 	position: fixed;
-	right: 0;
 	bottom: 0;
-	left: 0;
+	left: 50%;
+	translate: -50%;
 	z-index: $z-floating;
-	background: rgba($color: $color-main, $alpha: 0.6);
-	backdrop-filter: blur(rm(10));
+	width: 100%;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: fit-content;
+	}
 }
 
 .p-floating__inner {
+	padding-inline: 0;
 }
 
 .p-floating__content {
 	width: 100%;
-	padding-block: rm(16);
 
 	// ******** responsive(pc)
 	@include mq(pc) {
 		width: rm(900);
 		margin-inline: auto;
-		padding-block: rm(20);
+		padding-block-end: rm(20);
 	}
 }
 
@@ -74,7 +78,7 @@
 
 .p-floating__item {
 	width: 100%;
-	height: rm(80);
+	height: rm(76);
 
 	// ******** responsive(pc)
 	@include mq(pc) {

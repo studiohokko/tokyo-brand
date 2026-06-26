@@ -101,7 +101,7 @@
 
 	// ******** responsive(pc)
 	@include mq(pc) {
-		flex-direction: row-reverse;
+		flex-direction: row;
 		align-items: stretch;
 		justify-content: center;
 		gap: rm(25);

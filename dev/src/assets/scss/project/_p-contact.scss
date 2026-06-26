@@ -73,11 +73,11 @@
 }
 
 .p-contact__main {
-	margin-block-start: rm(32);
+	padding-block-start: rm(32);
 
 	// ******** responsive(pc)
 	@include mq(pc) {
-		margin-block-start: rm(72);
+		padding-block-start: rm(72);
 	}
 }
 

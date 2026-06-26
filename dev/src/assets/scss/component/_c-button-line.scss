@@ -187,16 +187,35 @@
 
 	&.-big {
 		.c-button-line__pop {
-			font-size: rm(11);
+			font-size: rm(12);
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				padding: rm(2) rm(30) rm(5);
+				font-size: rm(15);
+			}
 		}
 
 		.c-button-line__text {
-			font-size: rm(20);
+			font-size: rm(24);
+
+			// ******** responsive(pc)
+			@include mq(pc) {
+				padding-inline-start: rm(72);
+				font-size: rm(30);
+			}
 
 			&::before {
-				left: rm(-12);
+				left: rm(0);
 				width: rm(36);
 				height: rm(38);
+
+				// ******** responsive(pc)
+				@include mq(pc) {
+					left: rm(2);
+					width: rm(52);
+					height: rm(52);
+				}
 			}
 		}
 	}

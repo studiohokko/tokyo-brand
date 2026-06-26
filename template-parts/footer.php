@@ -13,7 +13,8 @@
                   <!-- /.p-footer__logo -->
                   <ul class="p-footer__contactList">
                      <li class="p-footer__contactItem -line">
-                        <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>" class="p-footer__contactLink" target="_blank" rel="nofollow noopener">LINEで査定する</a>
+                        <a href="<?php echo esc_url('https://lin.ee/TtR8jHd'); ?>" class="p-footer__contactLink"
+                           target="_blank" rel="nofollow noopener">LINEで査定する</a>
                      </li>
                      <li class="p-footer__contactItem -mail">
                         <a href="#contact" class="p-footer__contactLink">お問合せはこちら</a>
@@ -32,13 +33,16 @@
                   <div class="p-footer__listWrapper">
                      <ul class="p-footer__list">
                         <li class="p-footer__item">
-                           <a href="" class="p-footer__link" target="_blank" rel="nofollow noopener">運営会社</a>
+                           <a href="<?php echo esc_url('https://eight-inc.co.jp/'); ?>" class="p-footer__link"
+                              target="_blank" rel="nofollow noopener">運営会社</a>
                         </li>
                         <li class="p-footer__item">
-                           <a href="" class="p-footer__link" target="_blank" rel="nofollow noopener">利用規約</a>
+                           <a href="<?php echo esc_url('https://eight-inc.co.jp/terms-of-use/'); ?>"
+                              class="p-footer__link" target="_blank" rel="nofollow noopener">利用規約</a>
                         </li>
                         <li class="p-footer__item">
-                           <a href="" class="p-footer__link" target="_blank" rel="nofollow noopener">プライバシーポリシー</a>
+                           <a href="<?php echo esc_url('https://eight-inc.co.jp/privacy-policy/'); ?>"
+                              class="p-footer__link" target="_blank" rel="nofollow noopener">プライバシーポリシー</a>
                         </li>
                      </ul>
                      <div class="p-footer__copy">

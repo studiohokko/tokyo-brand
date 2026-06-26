@@ -145,7 +145,7 @@
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">東京ぶらんど <br>Produce by ALAMODE <br class="u-only__sp">渋谷本店</h3>
                               <ul class="p-shops__accessList">
-                                 <li class="p-shops__accessItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                 <li class="p-shops__accessItem">東急東横線 渋谷駅 A2出口より徒歩2分</li>
                                  <li class="p-shops__accessItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
                               </ul>
                               <button type="button" class="p-shops__mapButton js_shopsMapOpen"
@@ -171,7 +171,7 @@
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">ORANGE BOUTIQUE <br>渋谷店</h3>
                               <ul class="p-shops__accessList">
-                                 <li class="p-shops__accessItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                 <li class="p-shops__accessItem">東急東横線 渋谷駅 A2出口より徒歩2分</li>
                                  <li class="p-shops__accessItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
                               </ul>
                               <button type="button" class="p-shops__mapButton js_shopsMapOpen"
@@ -197,7 +197,7 @@
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">東京ぶらんど <br>Produce by ALAMODE <br class="u-only__sp">渋谷109店</h3>
                               <ul class="p-shops__accessList">
-                                 <li class="p-shops__accessItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                 <li class="p-shops__accessItem">東急東横線 渋谷駅 A2出口より徒歩2分</li>
                                  <li class="p-shops__accessItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
                               </ul>
                               <button type="button" class="p-shops__mapButton js_shopsMapOpen"
@@ -567,7 +567,7 @@
                   [
                      'number' => 'Reasons 04',
                      'title' => '無理な営業・押し売りは<br>一切しません',
-                     'text' => '「考えてから決めたい」「他店とも比較したい」といったご要望も歓迎。<br>査定だけでお帰りいただくお客様も多数いらっしゃいます',
+                     'text' => '「考えてから決めたい」「他店とも比較したい」といったご要望も歓迎。<br>査定だけでお帰りいただくお客様も多数いらっしゃいます。',
                      'image' => '004',
                      'alt' => '',
                      'modifier' => '-reverse',
@@ -608,7 +608,7 @@
                <div class="p-brands__campaignHeading">
                   <h3 class="c-heading-underline">高価買取中のブランド</h3>
                   <!-- /.c-heading-underline -->
-                  <p class="p-brands__campaignLead">時計・ジュエリーからバッグ、アパレルまで、<br class="u-only__sp">幅広いブランド品の買取に対応しています。</p>
+                  <p class="p-brands__campaignLead">高価買取に自信のあるブランドの一部をご紹介します。</p>
                </div>
                <!-- /.p-brands__campaignHeading -->
                <ul class="p-brands__campaignList">
@@ -936,7 +936,7 @@
                            <ul class="p-brands__orderSubList">
                               <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ユリス・ナルダン<span
                                        aria-hidden="true">（ULYSSE NARDIN）</span>買取</span></li>
-                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">4ドシー<span
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ヨンドシー<span
                                        aria-hidden="true">（4℃）</span>買取</span></li>
                            </ul>
                         </div>
@@ -951,7 +951,7 @@
                         </summary>
                         <div class="p-brands__orderContent js_content">
                            <ul class="p-brands__orderSubList">
-                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ライバン<span
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">レイバン<span
                                        aria-hidden="true">（RayBan）</span>買取</span></li>
                               <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">リモワ<span
                                        aria-hidden="true">（Rimowa）</span>買取</span></li>
@@ -972,15 +972,6 @@
                            </ul>
                         </div>
                      </details>
-                  </li>
-                  <li class="p-brands__orderListItem -empty">
-                     <div class="p-brands__orderDetails">
-                        <div class="p-brands__orderSummary">
-                           <span class="p-brands__orderSummaryText">
-                              <span class="p-brands__orderSummaryTitle">「ワ」行から調べる</span>
-                           </span>
-                        </div>
-                     </div>
                   </li>
                </ul>
                <!-- /.p-brands__orderList -->
@@ -1031,7 +1022,7 @@
                                     <div class="p-results__textArea">
                                        <div class="p-results__head">
                                           <?php if ($results_name): ?>
-                                             <p class="p-results__name"><?php echo nl2br(esc_html($results_name)); ?></p>
+                                             <h3 class="p-results__name"><?php echo nl2br(esc_html($results_name)); ?></h3>
                                           <?php endif; ?>
                                           <?php if ($results_price): ?>
                                              <div class="p-results__price">
@@ -1139,13 +1130,13 @@
             </section>
             <section class="p-gold__rate">
                <div class="p-gold__rateHeading">
-                  <h2 class="c-heading-underline -color">金・貴金属相場表</h2>
+                  <h3 class="c-heading-underline -color">金・貴金属相場表</h3>
                </div>
                <!-- /.p-gold__rateHeading -->
                <div class="p-gold__rateBody">
                   <section class="p-gold__rateBox">
                      <div class="p-gold__rateBoxTitle">
-                        <h3 class="p-gold__rateTitle">今日の金・貴金属1gあたりの<br class="u-only__sp">買取相場価格</h3>
+                        <h4 class="p-gold__rateTitle">今日の金・貴金属1gあたりの<br class="u-only__sp">買取相場価格</h4>
                         <?php if ($gold_time): ?>
                            <p class="p-gold__rateDate">
                               ※
@@ -1225,7 +1216,7 @@
                      <?php $the_query->the_post(); ?>
                      <li class="p-price__item">
                         <div class="p-price__textArea">
-                           <p class="p-price__name"><?php the_title(); ?></p>
+                           <h3 class="p-price__name"><?php the_title(); ?></h3>
                            <div class="p-price__price">
                               <p class="p-price__label">買取参考価格</p>
                               <?php
@@ -1416,7 +1407,7 @@
                <section id="in-store" class="p-flow-store">
                   <div class="p-flow-store__heading">
                      <div class="c-heading">
-                        <h2 class="c-heading__title">店頭買取</h2>
+                        <h3 class="c-heading__title">店頭買取</h3>
                         <p class="c-heading__en">In Store</p>
                      </div>
                      <!-- /.c-heading -->
@@ -1496,7 +1487,7 @@
                <section id="delivery" class="p-flow-delivery">
                   <div class="p-flow-delivery__heading">
                      <div class="c-heading">
-                        <h2 class="c-heading__title">宅配買取</h2>
+                        <h3 class="c-heading__title">宅配買取</h3>
                         <p class="c-heading__en">Mail Service</p>
                      </div>
                      <!-- /.c-heading -->
@@ -1616,14 +1607,16 @@
                <ul class="p-point__list">
                   <li class="p-point__item">
                      <div class="p-point__textArea">
-                        <h3 class="p-point__title">売り時を逃さない</h3>
-                        <p class="p-point__text">需要が高い時期や流行のモデルが出た直後は相場が高い傾向があります。相場情報を確認し、タイミング良く売却しましょう。</p>
+                        <h3 class="p-point__title">お品物の状態を整える</h3>
+                        <p class="p-point__text">
+                           お持ち込み前に簡単なお手入れをしていただくことで、より良い査定結果につながる場合があります。汚れや傷があっても問題ございませんが、可能な範囲で整えていただくことをおすすめしております。
+                        </p>
                      </div>
                      <!-- /.p-point__textArea -->
                      <div class="p-point__imageArea">
                         <figure class="p-point__image">
                            <img
-                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-point_001.webp')); ?>'
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-point_003.webp')); ?>'
                               alt='' width='350' height='217' loading='lazy'>
                         </figure>
                         <!-- /.p-point__image -->
@@ -1648,16 +1641,14 @@
                   </li>
                   <li class="p-point__item">
                      <div class="p-point__textArea">
-                        <h3 class="p-point__title">お品物の状態を整える</h3>
-                        <p class="p-point__text">
-                           お持ち込み前に簡単なお手入れをしていただくことで、より良い査定結果につながる場合があります。汚れや傷があっても問題ございませんが、可能な範囲で整えていただくことをおすすめしております。
-                        </p>
+                        <h3 class="p-point__title">売り時を逃さない</h3>
+                        <p class="p-point__text">需要が高い時期や流行のモデルが出た直後は相場が高い傾向があります。相場情報を確認し、タイミング良く売却しましょう。</p>
                      </div>
                      <!-- /.p-point__textArea -->
                      <div class="p-point__imageArea">
                         <figure class="p-point__image">
                            <img
-                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-point_003.webp')); ?>'
+                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-point_001.webp')); ?>'
                               alt='' width='350' height='217' loading='lazy'>
                         </figure>
                         <!-- /.p-point__image -->
@@ -1690,6 +1681,60 @@
                   <div class="swiper p-reviews__swiper">
                      <div class="swiper-wrapper p-reviews__swiper-wrapper">
                         <?php for ($reviews_loop = 0; $reviews_loop < 3; $reviews_loop++): ?>
+                           <div class="swiper-slide p-reviews__swiper-slide">
+                              <div class="p-reviews__item">
+                                 <div class="p-reviews__textArea">
+                                    <p class="p-reviews__catch">「査定理由を丁寧に説明してくれて安心でした」</p>
+                                    <ul class="p-reviews__profileList">
+                                       <li class="p-reviews__profileItem">30代女性</li>
+                                       <li class="p-reviews__profileItem">ブランドバッグ・ジュエリー</li>
+                                       <li class="p-reviews__profileItem">店頭買取</li>
+                                    </ul>
+                                    <p class="p-reviews__comment">
+                                       以前利用した買取店では査定額だけを提示されることが多かったのですが、こちらでは状態や人気モデルかどうかなど、査定のポイントを一つひとつ説明していただけました。価格の理由が分かると納得感があり、安心して売却できました。
+                                    </p>
+                                 </div>
+                                 <!-- /.p-reviews__textArea -->
+                                 <div class="p-reviews__imageArea">
+                                    <figure class="p-reviews__image">
+                                       <img
+                                          src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_005.webp')); ?>'
+                                          alt='' width='147' height='147' loading='lazy'>
+                                    </figure>
+                                    <!-- /.p-reviews__image -->
+                                 </div>
+                                 <!-- /.p-reviews__imageArea -->
+                              </div>
+                              <!-- /.p-reviews__item -->
+                           </div>
+                           <!-- /.p-reviews__swiper-slide -->
+                           <div class="swiper-slide p-reviews__swiper-slide">
+                              <div class="p-reviews__item">
+                                 <div class="p-reviews__textArea">
+                                    <p class="p-reviews__catch">「無理に売却を勧められないので安心でした」</p>
+                                    <ul class="p-reviews__profileList">
+                                       <li class="p-reviews__profileItem">50代女性</li>
+                                       <li class="p-reviews__profileItem">ダイヤモンドジュエリー</li>
+                                       <li class="p-reviews__profileItem">店頭買取</li>
+                                    </ul>
+                                    <p class="p-reviews__comment">
+                                       母から譲り受けたジュエリーを査定してもらいました。<br>思い入れがある品だったので売るか迷っていましたが、「一度持ち帰って検討しても大丈夫ですよ」と言っていただけて安心しました。お店の雰囲気も落ち着いていて、気軽に相談できるところが良かったです。
+                                    </p>
+                                 </div>
+                                 <!-- /.p-reviews__textArea -->
+                                 <div class="p-reviews__imageArea">
+                                    <figure class="p-reviews__image">
+                                       <img
+                                          src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_006.webp')); ?>'
+                                          alt='' width='147' height='147' loading='lazy'>
+                                    </figure>
+                                    <!-- /.p-reviews__image -->
+                                 </div>
+                                 <!-- /.p-reviews__imageArea -->
+                              </div>
+                              <!-- /.p-reviews__item -->
+                           </div>
+                           <!-- /.p-reviews__swiper-slide -->
                            <div class="swiper-slide p-reviews__swiper-slide">
                               <div class="p-reviews__item">
                                  <div class="p-reviews__textArea">
@@ -1789,60 +1834,6 @@
                                     <figure class="p-reviews__image">
                                        <img
                                           src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_004.webp')); ?>'
-                                          alt='' width='147' height='147' loading='lazy'>
-                                    </figure>
-                                    <!-- /.p-reviews__image -->
-                                 </div>
-                                 <!-- /.p-reviews__imageArea -->
-                              </div>
-                              <!-- /.p-reviews__item -->
-                           </div>
-                           <!-- /.p-reviews__swiper-slide -->
-                           <div class="swiper-slide p-reviews__swiper-slide">
-                              <div class="p-reviews__item">
-                                 <div class="p-reviews__textArea">
-                                    <p class="p-reviews__catch">「査定理由を丁寧に説明してくれて安心でした」</p>
-                                    <ul class="p-reviews__profileList">
-                                       <li class="p-reviews__profileItem">30代女性</li>
-                                       <li class="p-reviews__profileItem">ブランドバッグ・ジュエリー</li>
-                                       <li class="p-reviews__profileItem">店頭買取</li>
-                                    </ul>
-                                    <p class="p-reviews__comment">
-                                       以前利用した買取店では査定額だけを提示されることが多かったのですが、こちらでは状態や人気モデルかどうかなど、査定のポイントを一つひとつ説明していただけました。価格の理由が分かると納得感があり、安心して売却できました。
-                                    </p>
-                                 </div>
-                                 <!-- /.p-reviews__textArea -->
-                                 <div class="p-reviews__imageArea">
-                                    <figure class="p-reviews__image">
-                                       <img
-                                          src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_005.webp')); ?>'
-                                          alt='' width='147' height='147' loading='lazy'>
-                                    </figure>
-                                    <!-- /.p-reviews__image -->
-                                 </div>
-                                 <!-- /.p-reviews__imageArea -->
-                              </div>
-                              <!-- /.p-reviews__item -->
-                           </div>
-                           <!-- /.p-reviews__swiper-slide -->
-                           <div class="swiper-slide p-reviews__swiper-slide">
-                              <div class="p-reviews__item">
-                                 <div class="p-reviews__textArea">
-                                    <p class="p-reviews__catch">「無理に売却を勧められないので安心でした」</p>
-                                    <ul class="p-reviews__profileList">
-                                       <li class="p-reviews__profileItem">50代女性</li>
-                                       <li class="p-reviews__profileItem">ダイヤモンドジュエリー</li>
-                                       <li class="p-reviews__profileItem">店頭買取</li>
-                                    </ul>
-                                    <p class="p-reviews__comment">
-                                       母から譲り受けたジュエリーを査定してもらいました。<br>思い入れがある品だったので売るか迷っていましたが、「一度持ち帰って検討しても大丈夫ですよ」と言っていただけて安心しました。お店の雰囲気も落ち着いていて、気軽に相談できるところが良かったです。
-                                    </p>
-                                 </div>
-                                 <!-- /.p-reviews__textArea -->
-                                 <div class="p-reviews__imageArea">
-                                    <figure class="p-reviews__image">
-                                       <img
-                                          src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-reviews_006.webp')); ?>'
                                           alt='' width='147' height='147' loading='lazy'>
                                     </figure>
                                     <!-- /.p-reviews__image -->
@@ -2030,15 +2021,15 @@
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">東京ぶらんど <br>Produce by ALAMODE <br class="u-only__sp">渋谷本店</h3>
                               <ul class="p-shops__accessList">
-                                 <li class="p-shops__accessItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                 <li class="p-shops__accessItem">東急東横線 渋谷駅 A2出口より徒歩2分</li>
                                  <li class="p-shops__accessItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
                               </ul>
                               <div class="p-shops__accessBody">
                                  <dl class="p-shops__accessFootList">
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">住　　所</dt>
-                                       <dd class="p-shops__accessGroupData">〒150-0042<br
-                                             class="u-only__sp">東京都渋谷区宇田川町26-3<br class="u-only__sp">サンルイビル1階</dd>
+                                       <dd class="p-shops__accessGroupData">〒150-0042 <br
+                                             class="u-only__sp">東京都渋谷区宇田川町26-3 <br class="u-only__sp">サンルイビル1階</dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
@@ -2051,7 +2042,7 @@
                                        <dt class="p-shops__accessGroupTerm">アクセス</dt>
                                        <dd class="p-shops__accessGroupData">
                                           <ul class="p-shops__accessGroupList">
-                                             <li class="p-shops__accessGroupItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                             <li class="p-shops__accessGroupItem">東急東横線 渋谷駅 A2出口より徒歩2分</li>
                                              <li class="p-shops__accessGroupItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
                                           </ul>
                                        </dd>
@@ -2163,15 +2154,15 @@
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">ORANGE BOUTIQUE <br class="u-only__sp">渋谷店</h3>
                               <ul class="p-shops__accessList">
-                                 <li class="p-shops__accessItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                 <li class="p-shops__accessItem">東急東横線 渋谷駅 A2出口より徒歩2分</li>
                                  <li class="p-shops__accessItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
                               </ul>
                               <div class="p-shops__accessBody">
                                  <dl class="p-shops__accessFootList">
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">住　　所</dt>
-                                       <dd class="p-shops__accessGroupData">〒150-0042<br
-                                             class="u-only__sp">東京都渋谷区宇田川町26-3<br class="u-only__sp">サンルイビル1階</dd>
+                                       <dd class="p-shops__accessGroupData">〒150-0042 <br
+                                             class="u-only__sp">東京都渋谷区宇田川町26-3 <br class="u-only__sp">サンルイビル1階</dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
@@ -2184,7 +2175,7 @@
                                        <dt class="p-shops__accessGroupTerm">アクセス</dt>
                                        <dd class="p-shops__accessGroupData">
                                           <ul class="p-shops__accessGroupList">
-                                             <li class="p-shops__accessGroupItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                             <li class="p-shops__accessGroupItem">東急東横線 渋谷駅 A2出口より徒歩2分</li>
                                              <li class="p-shops__accessGroupItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
                                           </ul>
                                        </dd>
@@ -2296,15 +2287,15 @@
                            <div class="p-shops__textArea">
                               <h3 class="p-shops__name">東京ぶらんど <br>Produce by ALAMODE <br class="u-only__sp">渋谷109店</h3>
                               <ul class="p-shops__accessList">
-                                 <li class="p-shops__accessItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                 <li class="p-shops__accessItem">東急東横線 渋谷駅 A2出口より徒歩2分</li>
                                  <li class="p-shops__accessItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
                               </ul>
                               <div class="p-shops__accessBody">
                                  <dl class="p-shops__accessFootList">
                                     <div class="p-shops__accessGroup">
                                        <dt class="p-shops__accessGroupTerm">住　　所</dt>
-                                       <dd class="p-shops__accessGroupData">〒150-0043<br
-                                             class="u-only__sp">東京都渋谷区道玄坂2丁目30-4 玉久ビル 1F</dd>
+                                       <dd class="p-shops__accessGroupData">〒150-0043 <br
+                                             class="u-only__sp">東京都渋谷区道玄坂2丁目30-4 玉久ビル1F</dd>
                                     </div>
                                     <!-- /.p-shops__accessGroup -->
                                     <div class="p-shops__accessGroup">
@@ -2317,7 +2308,7 @@
                                        <dt class="p-shops__accessGroupTerm">アクセス</dt>
                                        <dd class="p-shops__accessGroupData">
                                           <ul class="p-shops__accessGroupList">
-                                             <li class="p-shops__accessGroupItem">東急東横線 渋谷駅A2出口より徒歩2分</li>
+                                             <li class="p-shops__accessGroupItem">東急東横線 渋谷駅 A2出口より徒歩2分</li>
                                              <li class="p-shops__accessGroupItem">JR山手線 渋谷駅 ハチ公口より徒歩3分</li>
                                           </ul>
                                        </dd>
@@ -2438,7 +2429,7 @@
 
 
    <!-- contact   ///////////////////////////////////////////////////// -->
-   <section id="contact" class="p-contact">
+   <section class="p-contact">
       <div class="p-contact__inner l-inner -narrow">
          <div class="p-contact__heading">
             <div class="c-heading">
@@ -2469,7 +2460,7 @@
                </ul>
             </div>
             <!-- /.p-contact__buttonsBox -->
-            <section class="p-contact__main">
+            <section id="contact" class="p-contact__main">
                <div class="p-contact__mainTitle">
                   <h3 class="p-contact__mainTitleText">メールでのお問合せ</h3>
                </div>

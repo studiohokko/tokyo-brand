@@ -219,7 +219,7 @@
 
 	iframe {
 		width: 100%;
-		aspect-ratio: 310 / 196;
+		aspect-ratio: 310 / 250;
 
 		// ******** responsive(pc)
 		@include mq(pc) {
@@ -375,6 +375,7 @@
 
 .p-shops__swiper-slide {
 	width: rm(80);
+	cursor: pointer;
 
 	// ******** responsive(pc)
 	@include mq(pc) {
@@ -383,6 +384,11 @@
 
 	&:not(.swiper-slide-active) {
 		opacity: 0.5;
+	}
+
+	&.swiper-slide-active {
+		pointer-events: none;
+		cursor: default;
 	}
 }
 
@@ -603,7 +609,7 @@
 	position: relative;
 	z-index: 1;
 	flex-shrink: 0;
-	width: min(rm(800), 100%);
+	width: rm(1000);
 	margin-block: auto;
 	background: $white;
 	opacity: 0;

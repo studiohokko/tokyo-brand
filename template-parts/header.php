@@ -18,7 +18,7 @@
                <div class="p-header__rightWrapper">
                   <div class="p-header__telLink">
                      <p class="p-header__telNumber">03-5990-4745</p>
-                     <p class="p-header__telTime">受付時間 <?php echo esc_html(get_field('hours_main')); ?></p>
+                     <p class="p-header__telTime">受付時間 <?php echo esc_html(get_field('hours_main', get_option('page_on_front'))); ?></p>
                   </div>
                   <!-- /.p-header__telLink -->
                   <ul class="p-header__buttons">
@@ -109,7 +109,7 @@
       <div class="p-drawer__foot">
          <a href="tel:0359904745" class="p-drawer__telLink">
             <p class="p-drawer__telNumber">03-5990-4745</p>
-            <p class="p-drawer__telTime">受付時間 <?php echo esc_html(get_field('hours_main')); ?></p>
+            <p class="p-drawer__telTime">受付時間 <?php echo esc_html(get_field('hours_main', get_option('page_on_front'))); ?></p>
          </a>
          <ul class="p-drawer__buttons">
             <li class="p-drawer__button -line">
