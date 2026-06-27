@@ -1689,7 +1689,7 @@ button {
   top: 5rem;
   right: 0;
   width: 100%;
-  height: calc(100vh - 5rem);
+  height: calc(100dvh - 5rem);
   overflow-y: auto;
   translate: 100% 0;
   background: #ffffff;

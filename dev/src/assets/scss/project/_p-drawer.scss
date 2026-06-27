@@ -6,7 +6,7 @@
 	right: 0;
 	z-index: $z-drawer;
 	width: 100%;
-	height: calc(100vh - rm($sp-header-height));
+	height: calc(100dvh - rm($sp-header-height));
 	background: $white;
 	overflow-y: auto;
 	transition: $transition;
