@@ -33,7 +33,7 @@
                   <div class="p-footer__listWrapper">
                      <ul class="p-footer__list">
                         <li class="p-footer__item">
-                           <a href="<?php echo esc_url('https://eight-inc.co.jp/'); ?>" class="p-footer__link"
+                           <a href="<?php echo esc_url('https://eight-inc.co.jp/company/'); ?>" class="p-footer__link"
                               target="_blank" rel="nofollow noopener">運営会社</a>
                         </li>
                         <li class="p-footer__item">
