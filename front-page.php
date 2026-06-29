@@ -951,14 +951,14 @@
                         </summary>
                         <div class="p-brands__orderContent js_content">
                            <ul class="p-brands__orderSubList">
-                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">レイバン<span
-                                       aria-hidden="true">（RayBan）</span>買取</span></li>
                               <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">リモワ<span
                                        aria-hidden="true">（Rimowa）</span>買取</span></li>
                               <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ルイ・ヴィトン<span
                                        aria-hidden="true">（LOUIS VUITTON）</span>買取</span></li>
                               <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ルミノックス<span
                                        aria-hidden="true">（Luminox）</span>買取</span></li>
+                              <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">レイバン<span
+                                       aria-hidden="true">（RayBan）</span>買取</span></li>
                               <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ロエベ<span
                                        aria-hidden="true">（LOEWE）</span>買取</span></li>
                               <li class="p-brands__orderSubItem"><span class="p-brands__orderSubText">ロジェ・デュブイ<span

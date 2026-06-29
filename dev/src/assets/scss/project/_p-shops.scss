@@ -609,11 +609,16 @@
 	position: relative;
 	z-index: 1;
 	flex-shrink: 0;
-	width: rm(1000);
+	width: 100%;
 	margin-block: auto;
 	background: $white;
 	opacity: 0;
 	transition: opacity $easing;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		width: rm(1100);
+	}
 }
 
 .p-shops__modalClose {
@@ -658,6 +663,13 @@
 	position: relative;
 	width: 100%;
 	aspect-ratio: 3 / 2;
+
+	// ******** responsive(pc)
+	@include mq(pc) {
+		@media (orientation: landscape) {
+			aspect-ratio: 16 / 9;
+		}
+	}
 }
 
 .p-shops__modalMap iframe {
