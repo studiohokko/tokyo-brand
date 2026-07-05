@@ -1112,8 +1112,8 @@
                               media="(min-width: 768px)">
                            <img
                               src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/sp/p-gold_banner.webp')); ?>'
-                              alt='金相場高騰につき、高価買取実施中！本日の買取価格<?php echo esc_html($first_gold_price); ?>' width='87'
-                              height='60' loading='lazy'>
+                              alt='金相場高騰につき、高価買取実施中！本日の買取価格<?php echo esc_html($first_gold_price); ?>' width='350'
+                              height='240' loading='lazy'>
                         </picture>
                      </figure>
                      <?php if ($first_gold_price): ?>
@@ -1826,7 +1826,7 @@
                                        <li class="p-reviews__profileItem">宅配買取</li>
                                     </ul>
                                     <p class="p-reviews__comment">
-                                       店舗まで行く時間が取れなかったため宅配買取を利用しました。<br>申し込み後すぐにキットが届き、手順も分かりやすかったのでスムーズに発送できました。査定結果の説明も丁寧で、金額に納得して売却することができました。
+                                       店舗まで行く時間が取れなかったため宅配買取を利用しました。<br>手順も分かりやすかったのでスムーズに発送できました。査定結果の説明も丁寧で、金額に納得して売却することができました。
                                     </p>
                                  </div>
                                  <!-- /.p-reviews__textArea -->
