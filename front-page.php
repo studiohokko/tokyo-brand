@@ -2495,9 +2495,11 @@
                <h2 class="p-status__title">身分証明書について</h2>
             </div>
             <!-- /.p-status__heading -->
-            <p class="p-status__description">ご本人様を確認できる、現住所・生年月日記載の身分証明書<br class="u-only__pc">①～⑤のいずれか1つをお持ちください。</p>
+            <p class="p-status__description">ご本人様を確認できる、現住所・生年月日記載の身分証明書<br
+                  class="u-only__pc">①～⑤のいずれか1つをお持ちください。<br>顔写真付き・住所記載の身分証明書（運転免許証・マイナンバーカードなど）は<br
+                  class="u-only__pc">1点でご利用いただけます。</p>
             <div class="p-status__body">
-               <ul class="p-status__list">
+               <ul class="p-status__list -column03">
                   <li class="p-status__item">
                      <div class="p-status__textArea">
                         <p class="p-status__text">①運転免許証or<br class="u-only__sp">運転経歴証明書</p>
@@ -2530,7 +2532,7 @@
                   </li>
                   <li class="p-status__item">
                      <div class="p-status__textArea">
-                        <p class="p-status__text -letterSpace">③住民基本台帳カード</p>
+                        <p class="p-status__text -letterSpace">③特別永住者証明書</p>
                      </div>
                      <!-- /.p-status__textArea -->
                      <div class="p-status__imageArea">
@@ -2543,40 +2545,56 @@
                      </div>
                      <!-- /.p-status__imageArea -->
                   </li>
-                  <li class="p-status__item">
-                     <div class="p-status__textArea">
-                        <p class="p-status__text">④健康保険証</p>
+               </ul>
+               <ul class="p-status__list -column01">
+                  <li class="p-status__item -detail">
+                     <p class="p-status__text">④健康保険資格確認書</p>
+                     <div class="p-status__detail">
+                        <div class="p-status__imageArea">
+                           <figure class="p-status__image">
+                              <img
+                                 src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_004.webp')); ?>'
+                                 alt='' width='284' height='170' loading='lazy'>
+                           </figure>
+                           <!-- /.p-status__image -->
+                        </div>
+                        <!-- /.p-status__imageArea -->
+                        <div class="p-status__leadArea">
+                           <p class="p-status__leadNote">※健康保険資格確認書をご利用の場合、健康保険資格確認書単品での受付はできません。</p>
+                           <p class="p-status__leadGuide">以下のいずれかを合わせてご用意ください。</p>
+                           <ul class="p-status__leadList">
+                              <li class="p-status__leadItem">・顔写真付きの身分証明書（運転免許証・マイナンバーカードなど）</li>
+                              <li class="p-status__leadItem">・発行日から3か月以内の住所確認ができる書類（住民票・公共料金の支払い領収書など）</li>
+                           </ul>
+                        </div>
+                        <!-- /.p-status__leadArea -->
                      </div>
-                     <!-- /.p-status__textArea -->
-                     <div class="p-status__imageArea">
-                        <figure class="p-status__image">
-                           <img
-                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_004.webp')); ?>'
-                              alt='' width='284' height='170' loading='lazy'>
-                        </figure>
-                        <!-- /.p-status__image -->
-                     </div>
-                     <!-- /.p-status__imageArea -->
+                     <!-- /.p-status__detail -->
                   </li>
-                  <li class="p-status__item">
-                     <div class="p-status__textArea">
-                        <p class="p-status__text">⑤パスポート</p>
+                  <li class="p-status__item -detail">
+                     <p class="p-status__text">⑤パスポート</p>
+                     <div class="p-status__detail">
+                        <div class="p-status__imageArea">
+                           <figure class="p-status__image">
+                              <img
+                                 src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_005.webp')); ?>'
+                                 alt='' width='284' height='170' loading='lazy'>
+                           </figure>
+                           <!-- /.p-status__image -->
+                        </div>
+                        <!-- /.p-status__imageArea -->
+                        <div class="p-status__leadArea">
+                           <p class="p-status__leadNote">※パスポートをご利用の場合、パスポート単品での受付はできません。</p>
+                           <p class="p-status__leadGuide">以下のいずれかを合わせてご用意ください。</p>
+                           <ul class="p-status__leadList">
+                              <li class="p-status__leadItem">・発行日から3か月以内の住所確認ができる書類（住民票・公共料金の支払い領収書など）</li>
+                           </ul>
+                        </div>
+                        <!-- /.p-status__leadArea -->
                      </div>
-                     <!-- /.p-status__textArea -->
-                     <div class="p-status__imageArea">
-                        <figure class="p-status__image">
-                           <img
-                              src='<?php echo esc_url(get_theme_file_uri('dev/public/assets/img/p-status_005.webp')); ?>'
-                              alt='' width='284' height='170' loading='lazy'>
-                        </figure>
-                        <!-- /.p-status__image -->
-                     </div>
-                     <!-- /.p-status__imageArea -->
+                     <!-- /.p-status__detail -->
                   </li>
                </ul>
-               <p class="p-status__attention">
-                  ※2020年2月4日以降発行のパスポートをお持ちの方<br>本人様名義の現住所が確認できるもので、発行日から3ヶ月以内の公共料金領収書もしくは請求書（電気、水道、ガス、固定電話、未払いでも可能）又は住民票<br>住所変更されていない上記6項目の身分証明書とご一緒にお持ちください。
-               </p>
             </div>
             <!-- /.p-status__body -->
             <div class="p-status__foot">
@@ -2589,7 +2607,6 @@
                   <li class="p-status__footItem">※パスポートは所有人記入欄ページに現住所の記載が必須となります。</li>
                   <li class="p-status__footItem">※在留カードは、令和3年10月1日より消費税法改正に伴い、本人確認書類としてご利用いただけません。</li>
                   <li class="p-status__footItem">※日本への観光・ビジネス等で訪日されている外国籍の方からの買取はお断りしております。</li>
-                  <li class="p-status__footItem">※買取のご利用は本人確認書類をご提示いただける20歳以上のお客様に限らせていただいております。</li>
                   <li class="p-status__footItem">
                      ※宅配買取の際にご提示いただく場合は、「被保険者記号」「番号」等をマスキングしてご提出ください。マスキングの際には、「氏名」「事業所名称」「保険者名称」が隠れないようにご注意ください。</li>
                </ul>

@@ -7302,17 +7302,16 @@ button {
 
 .p-status__body {
   -webkit-margin-before: 1.5rem;
+  display: flex;
+  flex-direction: column;
   margin-block-start: 1.5rem;
+  gap: 0.75rem;
 }
 @media (min-width: 768px) {
   .p-status__body {
-    -ms-grid-columns: 1fr 1.5rem 1fr 1.5rem 1fr;
     -webkit-margin-before: 2.75rem;
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     margin-block-start: 2.75rem;
-    gap: 1.75rem 1.5rem;
+    gap: 1.5rem;
   }
 }
 
@@ -7325,7 +7324,7 @@ button {
 }
 @media (min-width: 768px) {
   .p-status__list {
-    display: contents;
+    gap: 1.5rem;
   }
 }
 
@@ -7358,8 +7357,85 @@ button {
   }
 }
 
+.p-status__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .p-status__detail {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
 .p-status__imageArea {
+  flex-shrink: 0;
   width: 100%;
+}
+.p-status__item.-detail .p-status__imageArea {
+  width: calc((100% - 0.875rem) / 2);
+}
+@media (min-width: 768px) {
+  .p-status__item.-detail .p-status__imageArea {
+    width: 17.75rem;
+  }
+}
+
+.p-status__image img {
+  width: 100%;
+  height: auto;
+}
+
+.p-status__leadArea {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.25rem;
+}
+
+.p-status__leadNote {
+  color: #e60012;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .p-status__leadNote {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.p-status__leadGuide {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .p-status__leadGuide {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.p-status__leadList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.p-status__leadItem {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .p-status__leadItem {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 }
 
 .p-status__attention {
@@ -7425,6 +7501,23 @@ button {
 @media (min-width: 768px) {
   .p-status__text.-letterSpace {
     letter-spacing: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-status__list.-column03 {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.p-status__list.-column01 {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .p-status__list.-column01 {
+    max-width: 43.75rem;
+    margin-inline: auto;
   }
 }
 
