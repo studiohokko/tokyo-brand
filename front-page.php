@@ -2081,8 +2081,6 @@
                                  'p-shops_gallery-001-1.webp',
                                  'p-shops_gallery-001-2.webp',
                                  'p-shops_gallery-001-3.webp',
-                                 'p-shops_gallery-001-4.webp',
-                                 'p-shops_gallery-001-5.webp',
                               ];
                               $gallery_count = count($shop_gallery_images);
 
@@ -2214,8 +2212,6 @@
                                  'p-shops_gallery-002-1.webp',
                                  'p-shops_gallery-002-2.webp',
                                  'p-shops_gallery-002-3.webp',
-                                 'p-shops_gallery-002-4.webp',
-                                 'p-shops_gallery-002-5.webp',
                               ];
                               $gallery_count = count($shop_gallery_images);
 
@@ -2347,8 +2343,6 @@
                                  'p-shops_gallery-003-1.webp',
                                  'p-shops_gallery-003-2.webp',
                                  'p-shops_gallery-003-3.webp',
-                                 'p-shops_gallery-003-4.webp',
-                                 'p-shops_gallery-003-5.webp',
                               ];
                               $gallery_count = count($shop_gallery_images);
 
@@ -2495,8 +2489,8 @@
                <h2 class="p-status__title">身分証明書について</h2>
             </div>
             <!-- /.p-status__heading -->
-            <p class="p-status__description">ご本人様を確認できる、現住所・生年月日記載の身分証明書<br
-                  class="u-only__pc">①～⑤のいずれか1つをお持ちください。<br>顔写真付き・住所記載の身分証明書（運転免許証・マイナンバーカードなど）は<br
+            <p class="p-status__description">
+               ご本人様を確認できる、現住所・生年月日記載の身分証明書をお持ちください。<br>顔写真付き・住所記載の身分証明書（運転免許証・マイナンバーカードなど）は<br
                   class="u-only__pc">1点でご利用いただけます。</p>
             <div class="p-status__body">
                <ul class="p-status__list -column03">
